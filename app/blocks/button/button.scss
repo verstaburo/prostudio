@@ -1,15 +1,28 @@
 .button {
   display: inline-block;
-  padding: 5px 10px;
-  border: 1px solid $color-border;
+  padding: 10px 22px;
+  border: 1px solid $color-bg-button;
+  border-radius: 25px;
+  //height: 37px;
   vertical-align: middle;
   box-sizing: border-box;
-  color: $color-basic;
-  background-color: transparent;
+  color: $color-main;
+  background-color: $color-bg-button;
   transition: opacity $ease-main;
   cursor: pointer;
+  font-family: 'Intro Bold Alt';
 
-  @include text;
+  @include text-button;
+
+  &_blue {
+    background: $color-main;
+    border-color: $color-main;
+    color: white;
+  }
+
+  &_big {
+    padding: 12px 35px;
+  }
 
   &:disabled,
   &.is-disabled {

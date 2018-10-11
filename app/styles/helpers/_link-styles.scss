@@ -1,15 +1,20 @@
 @mixin link {
-  color: $color-main;
+  //color: $color-main;
+  color: black;
   border: 0;
   transition: fill $ease-main, color $ease-main, opacity $ease-main, border-color $ease-main;
   fill: $color-main;
+
+  @include text;
 
   &__text {
     border-bottom: 1px solid;
     border-color: inherit;
   }
 
-  &:hover { opacity: .5; }
+  &:hover {
+    opacity: .5;
+  }
 }
 
 @mixin link-disabled {

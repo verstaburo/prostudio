@@ -1,0 +1,51 @@
+@import '../../node_modules/pagepiling.js/dist/jquery.pagepiling.min.css';
+
+.slide {
+  height: 100%;
+  position: relative;
+}
+
+#pp-nav {
+
+  li {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 100px;
+
+      &::after {
+        @include pseudo;
+
+        height: 97px;
+        background: $color-border-2;
+        width: 1px;
+        left: 10px;
+        top: 19px;
+      }
+    }
+  }
+
+  .active {
+
+    &::before {
+      @include pseudo;
+
+      left: 7px;
+      top: 7px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: $color-main;
+    }
+  }
+
+  span {
+    background: none !important;
+    width: 15px;
+    height: 15px;
+  }
+
+  &.left {
+    left: 48px;
+  }
+}

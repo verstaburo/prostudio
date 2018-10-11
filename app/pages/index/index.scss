@@ -1,4 +1,202 @@
-.index {
-  display: block;
-  height: 100000px;
+.slide1 {
+  //height: 100%;
+  //position: relative;
+
+  &__box {
+    padding-top: 198px;
+    padding-left: 274px;
+  }
+
+  &__title {
+    color: $color-main;
+    font-family: 'Intro Bold Alt';
+
+    @include heading-1;
+  }
+
+  &__subtitle {
+    margin-top: 53px;
+
+    @include heading-3;
+  }
+
+  &__btn {
+    margin-top: 107px;
+
+    @include text-button-big;
+  }
+
+  &__slider {
+    position: absolute;
+    height: 100vh;
+    width: 60%;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  //&__footer {
+  //  position: absolute;
+  //  bottom: 79px;
+  //  margin: 0 auto;
+  //  left: 0;
+  //  right: 0;
+  //}
 }
+
+.slide2 {
+
+  &__box {
+    padding-top: 316px;
+    padding-left: 233px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advantage {
+
+    &:not(:last-child) {
+      margin-right: 143px;
+    }
+
+    &__plus {
+      fill: $color-svg-gray;
+      width: 90px;
+      height: 90px;
+      display: inline-block;
+    }
+
+    &__num {
+      color: $color-main;
+      display: inline-block;
+      margin-left: 21px;
+
+      @include heading-bignum;
+    }
+
+    &__text {
+      margin-top: 47px;
+
+      @include heading-4;
+    }
+  }
+
+  &__text {
+    margin-top: 113px;
+
+    @include heading-5;
+  }
+}
+
+.slide3 {
+
+  &__box {
+    padding: 84px 168px 0 112px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .usluga {
+    width: 460px;
+    height: 225px;
+    position: relative;
+    margin-top: 140px;
+
+    &__title {
+      position: absolute;
+      left: calc(50% - 145px);
+      top: 40px;
+
+      @include heading-6;
+    }
+
+    .linkbox {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 40px;
+      left: calc(50% + 40px);
+
+      &__link {
+        //display: block;
+      }
+    }
+
+    &:first-child {
+      background: url('../images/site_bg.png') no-repeat center center;
+    }
+
+    &:nth-child(2) {
+      background: url('../images/promo_bg.png') no-repeat center center;
+    }
+
+    &:nth-child(3) {
+      background: url('../images/brand_bg.png') no-repeat center center;
+    }
+
+    &:nth-child(4) {
+      background: url('../images/app_bg.png') no-repeat center center;
+    }
+
+    &:nth-child(5) {
+      background: url('../images/analit_bg.png') no-repeat center center;
+    }
+
+    &:nth-child(6) {
+      background: url('../images/support_bg.png') no-repeat center center;
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 79px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__play {
+    cursor: pointer;
+  }
+
+  &__scroll {
+    display: flex;
+    align-items: center;
+    margin-left: 183px;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    color: $color-gray;
+    margin-left: 26px;
+
+    @include text-bold;
+  }
+
+  &__portfolio {
+    text-transform: uppercase;
+    margin-left: 380px;
+    position: relative;
+
+    @include text-bold;
+
+    &::before {
+      @include pseudo;
+
+      position: absolute;
+      width: 334px;
+      height: 1px;
+      background: $color-gray;
+      top: 25px;
+      right: -351px;
+    }
+  }
+}
+

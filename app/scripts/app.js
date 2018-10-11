@@ -11,6 +11,7 @@ import slider from '../blocks/slider/slider';
 import tooltips from '../blocks/tooltip/tooltip';
 import tabs from '../blocks/tabs/tabs';
 import maps from '../blocks/map/map';
+import mainSlider from '../blocks/pagepiling/pagepiling';
 import '../blocks/rating/rating';
 import '../blocks/accordion/accordion';
 import '../blocks/dropdown/dropdown';
@@ -28,6 +29,7 @@ $(() => {
   popups();
   scrollbar();
   slider();
+  mainSlider();
   tooltips();
   tabs();
   datepicker();

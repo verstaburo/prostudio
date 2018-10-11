@@ -8,7 +8,7 @@
     url('webfont.eot?#iefix') format('embedded-opentype'),
     url('webfont.woff2') format('woff2'),
     url('webfont.woff') format('woff'),
-    url('webfont.otf')  format('opentype'),
+    url('webfont.otf')  format('../fonts/Opentype'),
     url('webfont.ttf')  format('truetype'),
     url('webfont.svg#webfont') format('svg');
 }
@@ -25,3 +25,80 @@
 800 — Extra Bold, Ultra Bold
 900 — Black, Heavy
 */
+
+@font-face {
+    font-family: 'Intro Book';
+    src: url('../fonts/Intro-Book.eot');
+    src: url('../fonts/Intro-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Intro-Book.woff2') format('woff2'),
+    url('../fonts/Intro-Book.woff') format('woff'),
+    url('../fonts/Intro-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans.eot');
+    src: url('../fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans.woff2') format('woff2'),
+    url('../fonts/OpenSans.woff') format('woff'),
+    url('../fonts/OpenSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Intro Bold Alt';
+    src: url('../fonts/Intro-Bold-Alt.eot');
+    src: url('../fonts/Intro-Bold-Alt.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Intro-Bold-Alt.woff2') format('woff2'),
+    url('../fonts/Intro-Bold-Alt.woff') format('woff'),
+    url('../fonts/Intro-Bold-Alt.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Intro Book Alt';
+    src: url('../fonts/Intro-Book-Alt.eot');
+    src: url('../fonts/Intro-Book-Alt.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Intro-Book-Alt.woff2') format('woff2'),
+    url('../fonts/Intro-Book-Alt.woff') format('woff'),
+    url('../fonts/Intro-Book-Alt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Intro Book';
+    src: url('../fonts/Intro-Bold.eot');
+    src: url('../fonts/Intro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Intro-Bold.woff2') format('woff2'),
+    url('../fonts/Intro-Bold.woff') format('woff'),
+    url('../fonts/Intro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Intro Black Caps';
+    src: url('../fonts/Intro-Black-Caps.eot');
+    src: url('../fonts/Intro-Black-Caps.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Intro-Black-Caps.woff2') format('woff2'),
+    url('../fonts/Intro-Black-Caps.woff') format('woff'),
+    url('../fonts/Intro-Black-Caps.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+//@font-face {
+//    font-family: 'Intro - Book - Alt';
+//    src: url('../fonts/Intro-Book-Alt.eot');
+//    src: url('../fonts/Intro-Book-Alt.eot?#iefix') format('embedded-opentype'),
+//    url('../fonts/Intro-Book-Alt.woff2') format('woff2'),
+//    url('../fonts/Intro-Book-Alt.woff') format('woff'),
+//    url('../fonts/Intro-Book-Alt.ttf') format('truetype');
+//    font-weight: normal;
+//    font-style: normal;
+//}

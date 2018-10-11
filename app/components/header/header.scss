@@ -1,0 +1,84 @@
+.header {
+  height: 112px;
+  padding: 45px 0 0;
+  box-sizing: content-box;
+  position: fixed;
+  margin-left: 20px;
+  width: 1386px;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  transition: all .6s ease;
+  //display: flex;
+  //justify-content: space-between;
+
+  &_wide {
+    transition: all .6s ease;
+    width: 100%;
+    //margin: 0 auto;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0 !important;
+    align-items: center;
+    transition: all .6s ease;
+
+    &_wide {
+
+      .buttons__project {
+        //display: inline-block !important;
+        margin-right: 0 !important;
+        opacity: 1 !important;
+      }
+
+      .header__menu {
+        //margin: 0 !important;
+      }
+    }
+  }
+
+  &__logo {
+    height: 32px;
+  }
+
+  &__menu {
+    //flex: 1;
+    margin: 0 78px 0 143px;
+    //margin: 0 160px 0 216px;
+
+    @include text-menu;
+  }
+
+  .buttons {
+    overflow: hidden;
+    white-space: nowrap;
+
+    &__ico {
+      display: inline-block;
+      margin-right: 27px;
+    }
+
+    &__project {
+      display: inline-block;
+      margin-right: -100%;
+      opacity: 0;
+      transition: margin .3s ease .3s;
+      transition: opacity .3s ease;
+      //display: none;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-right: 62px;
+    }
+  }
+}

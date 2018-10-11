@@ -6014,6 +6014,10 @@ p-try@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
 
+pagepiling.js@^1.5.5:
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/pagepiling.js/-/pagepiling.js-1.5.5.tgz#5053b312496837cfe39a078a5f5f8397e3456393"
+
 pako@~0.2.0:
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/pako/-/pako-0.2.9.tgz#f3f7522f4ef782348da8161bad9ecfd51bf83a75"
