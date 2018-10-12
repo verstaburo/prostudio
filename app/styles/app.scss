@@ -29,3 +29,21 @@
 .js-sr {
   visibility: hidden;
 }
+
+@include screen('lg', max) {
+
+  .container {
+    width: 100%;
+    padding-left: 31px;
+    padding-right: 31px;
+  }
+}
+
+@include screen('md', max) {
+
+  .container {
+    //width: 706px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

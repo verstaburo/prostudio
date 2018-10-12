@@ -13,18 +13,42 @@ block content
           +e.title Создание <br>и продвижение<br> сайтов
           +e.subtitle Развитие вашего бизнеса<br> в Digital и не только ...
           +button.slide1__btn.button_blue.button_big Обсудить проект
-        +e.slider
+        +e.slider.slider_portfolio
           +slider(false, false)
             +slide
-              img(src='/assets/images/h-slide1.png')
+              .slide__bg
+                img(src='/assets/images/slide1l.jpg').slide__left
+                img(src='/assets/images/slide1r.jpg').slide__right
+              img(src='/assets/images/slide1c.png').slide__center
             +slide
-              img(src='/assets/images/h-slide1.png')
+              .slide__bg
+                img(src='/assets/images/slide2l.jpg').slide__left
+                img(src='/assets/images/slide2r.jpg').slide__right
+              img(src='/assets/images/slide2c.png').slide__center
+              .slide__plate
+                .slide__title Разработка интернет-магазина<br>«Ангел и демон»
+                +button._fullwhite._huge WEB
             +slide
-              img(src='/assets/images/h-slide1.png')
+              .slide__bg
+                img(src='/assets/images/slide3l.jpg').slide__left
+                img(src='/assets/images/slide3r.jpg').slide__right
+              img(src='/assets/images/slide3c.png').slide__center.slide__center_offset
+              .slide__plate
+                .slide__title Разработка приложения<br>«VELVET»
+                +button._fullwhite._huge APP
             +slide
-              img(src='/assets/images/h-slide1.png')
+              .slide__bg
+                img(src='/assets/images/slide4l.jpg').slide__left
+                img(src='/assets/images/slide4r.jpg').slide__right
+              img(src='/assets/images/slide4c.png').slide__center.slide__center_offset2
             +slide
-              img(src='/assets/images/h-slide1.png')
+              .slide__bg
+                img(src='/assets/images/slide5l.jpg').slide__left
+                img(src='/assets/images/slide5r.jpg').slide__right
+              img(src='/assets/images/slide5c.png').slide__center
+              .slide__plate
+                .slide__title Разработка сайта<br>«titus.ru»
+                +button._fullwhite._huge WEB
         +b.footer
           .container.footer__container
             +e.IMG(src='/assets/images/play.svg').play
@@ -32,6 +56,7 @@ block content
               +e.IMG(src='/assets/images/mouse.png').mouse
               +e.text листайте вниз
             +e.portfolio портфолио
+        +b.slider-pag
     +pagepiling-slide
       +b.slide2.slide
         +e.box
@@ -52,8 +77,8 @@ block content
             +e.num 30
             +e.text Более 30<br> профессионалов
           +e.text Мы не только разрабатвыем превосходные digital проекты.<br>
-            |Мы искренне пытаемся поточь в достижении вашей цели и это не просто слова.<br>
-            |<b>Свяжитесь с нами и вы убедитесь в этом сами.</b>
+            | Мы искренне пытаемся поточь в достижении вашей цели и это не просто слова.<br>
+            | <b>Свяжитесь с нами и вы убедитесь в этом сами.</b>
         +b.footer
           .container.footer__container
             +e.IMG(src='/assets/images/play.svg').play
@@ -110,12 +135,100 @@ block content
         +b.footer
           .container.footer__container
             +e.IMG(src='/assets/images/play.svg').play
+    +pagepiling-slide
+      +b.slide4.slide
+        +e.box
+          +slider(false, false).slider_journal
+            +slide
+              .slide__img
+                img(src='/assets/images/slide21.jpg')
+              .slide__text Мы запустили новый сайт<br> для компании.
+              .slide__date 20  10  17
+            +slide
+              .slide__img
+                img(src='/assets/images/slide22.jpg')
+              .slide__text Как эффективно настроить контекстную рекламу и увеличить продажи?
+              .slide__date 14  10  17
+            +slide
+              .slide__img
+                img(src='/assets/images/slide23.jpg')
+              .slide__text Запустили новое приложение для компании.
+              .slide__date 08  10  17
+            +slide
+              .slide__img
+                img(src='/assets/images/slide24.jpg')
+              .slide__text Выступление нашего маркетолога на DIGTALE
+              .slide__date 20  10  17
+            +slide
+              .slide__img
+                img(src='/assets/images/slide21.jpg')
+              .slide__text Мы запустили новый сайт<br> для компании.
+              .slide__date 14  10  17
+            +slide
+              .slide__img
+                img(src='/assets/images/slide22.jpg')
+              .slide__text Как эффективно настроить контекстную рекламу и увеличить продажи?
+              .slide__date 08  10  17
+            +slide
+              .slide__img
+                img(src='/assets/images/slide23.jpg')
+              .slide__text Запустили новое приложение для компании.
+              .slide__date 20  10  17
+            +slide
+              .slide__img
+                img(src='/assets/images/slide24.jpg')
+              .slide__text Выступление нашего маркетолога на DIGTALE
+              .slide__date 14  10  17
+        +b.footer
+          .container.footer__container
+            +e.IMG(src='/assets/images/play.svg').play
+            +b.journal-pag
+              +e.IMG(src='/assets/images/prev.svg').prev
+              +e.IMG(src='/assets/images/next.svg').next
+            +e.line
+            +e.news все новости
+            +b.FORM.subscribe
+              +inputbox
+                +input(placeholder="Email").subscribe__email
+              +button('button')(type='submit')._img
+                +e.IMG(src='/assets/images/send.svg').send
+    +pagepiling-slide
+      +b.slide5.slide
+        +e.box
+          +b.city
+            +e.title
+              +e.IMG(src='/assets/images/piter.png')
+              +e.name_piter Петербург
+            +e.address 196247,<br>Ленинский проспект, дом 151<br>офис 315
+            +e.tel  +7 (812) 645-65-96
+          +b.city
+            +e.title
+              +e.IMG(src='/assets/images/moscow.png')
+              +e.name_moscow Москва
+            +e.address 196247,<br>Проспект вернадского, дом 43<br>офис 49
+            +e.tel  +7 (495) 645-65-96
+          +e.title Хотите проект от Prostudio?
+          +e.subtitle Заполните форму на сайте или напишите нам на почту #[+link(href='mailto:mail@prostudio.ru')._blue._nounder.slide5__link mail@prostudio.ru]
+          +button._white._big-medium.__btn Обсудить проект
+        +b.footer._end
+          .container.footer__container
+            +e.IMG(src='/assets/images/play.svg').play
+            +b.menu
+              ul
+                li.menu__item
+                  +link(href='#')._nounder._gray Vkontake
+                li.menu__item
+                  +link(href='#')._nounder._gray behance
+                li.menu__item
+                  +link(href='#')._nounder._gray youtube
+                li.menu__item
+                  +link(href='#')._nounder._gray instagram
+                li.menu__item
+                  +link(href='#')._nounder._gray facebook
+                li.menu__item
+                  +link(href='#')._nounder._gray telegram
+            +e.lang RU EN
 
-    +pagepiling-slide
-      +b.slide
-    +pagepiling-slide
-      +b.slide
-  +b.slider-pag
     //+e.item
     //+e.item
 

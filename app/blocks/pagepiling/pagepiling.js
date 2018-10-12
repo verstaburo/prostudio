@@ -8,8 +8,8 @@ export default function mainSlider() {
   $('#pagepiling').pagepiling({
     menu: null,
     direction: 'vertical',
-    // verticalCentered: true,
-    sectionsColor: ['white', 'white', 'white'],
+    verticalCentered: true,
+    sectionsColor: ['white', 'white', 'white', 'white', 'white'],
     anchors: [],
     scrollingSpeed: 700,
     easing: 'swing',
@@ -36,6 +36,24 @@ export default function mainSlider() {
         // alert('Section 3 ended loading');
       }
       if (index === 2) {
+        $('.header__container').addClass('header__container_wide');
+        $('.header').addClass('header_wide');
+        $('.slider-pag').hide();
+        // alert('Section 3 ended loading');
+      }
+      if (index === 3) {
+        $('.header__container').addClass('header__container_wide');
+        $('.header').addClass('header_wide');
+        $('.slider-pag').hide();
+        // alert('Section 3 ended loading');
+      }
+      if (index === 4) {
+        $('.header__container').addClass('header__container_wide');
+        $('.header').addClass('header_wide');
+        $('.slider-pag').hide();
+        // alert('Section 3 ended loading');
+      }
+      if (index === 5) {
         $('.header__container').addClass('header__container_wide');
         $('.header').addClass('header_wide');
         $('.slider-pag').hide();

@@ -4,14 +4,24 @@ mixin header()
       //+icon('logo').__logo
       +e.IMG(src='/assets/images/logo.svg').logo
       +b.UL.menu.header__menu
-        +e.LI.item Компания
-        +e.LI.item Услуги
-        +e.LI.item Кейсы
-        +e.LI.item Журнал
-        +e.LI.item Клиенты
-        +e.LI.item Вакансии
-        +e.LI.item Контакты
+        +e.LI.item
+          +link(href='#')._nounder._medium Компания
+        +e.LI.item
+          +link(href='#')._nounder._medium Услуги
+        +e.LI.item
+          +link(href='#')._nounder._medium Кейсы
+        +e.LI.item
+          +link(href='#')._nounder._medium Журнал
+        +e.LI.item
+          +link(href='#')._nounder._medium Клиенты
+        +e.LI.item
+          +link(href='#')._nounder._medium Вакансии
+        +e.LI.item
+          +link(href='#')._nounder._medium Контакты
       +b.buttons
         +button.buttons__ico ico
         +button._blue.buttons__project обсудить проект
+        +e.burger.js-padmenu
+          span
+
     block

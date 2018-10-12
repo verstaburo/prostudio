@@ -24,6 +24,7 @@
     margin-left: 0 !important;
     align-items: center;
     transition: all .6s ease;
+    position: relative;
 
     &_wide {
 
@@ -47,8 +48,7 @@
     //flex: 1;
     margin: 0 78px 0 143px;
     //margin: 0 160px 0 216px;
-
-    @include text-menu;
+    //@include text-menu;
   }
 
   .buttons {
@@ -68,6 +68,70 @@
       transition: opacity .3s ease;
       //display: none;
     }
+
+    &__burger {
+      display: none;
+      width: 45px;
+      height: 25px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      span {
+        background: $color-main;
+        height: 3px;
+        width: 22px;
+        display: block;
+      }
+
+      &::before {
+        @include pseudo();
+
+        height: 3px;
+        width: 45px;
+        background: $color-main;
+        top: 0;
+      }
+
+      &::after {
+        @include pseudo();
+
+        height: 3px;
+        width: 34px;
+        background: $color-main;
+        bottom: 0;
+      }
+
+      &_active {
+        height: 29px;
+        width: 29px;
+
+        span {
+          display: none;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+          transition: all .5s ease;
+          width: 38px;
+          top: 12px;
+          left: -4px;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          transition: all .5s ease;
+          width: 37px;
+          bottom: 14px;
+          left: -4px;
+        }
+      }
+    }
   }
 }
 
@@ -79,6 +143,62 @@
 
     &:not(:last-child) {
       margin-right: 62px;
+    }
+  }
+}
+
+@include screen('lg', max) {
+
+  .header {
+    width: unset;
+    margin-left: 0;
+    padding-top: 15px;
+
+    &__menu {
+      //display: none;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 50px;
+      width: 100%;
+      margin: 0 -31px;
+      text-align: center;
+      right: -100%;
+      transition: right .5s ease;
+
+      &_active {
+        right: 31px;
+      }
+    }
+
+    .menu {
+
+      &__item {
+        margin-right: 0;
+
+        &:hover {
+          background: $color-main-gray;
+
+          .link {
+            color: $color-main;
+          }
+        }
+
+        .link {
+          @include text-menu-pad;
+        }
+      }
+    }
+
+    .buttons {
+
+      &__ico, &__project {
+        display: none;
+      }
+
+      &__burger {
+        display: flex;
+      }
     }
   }
 }

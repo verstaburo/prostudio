@@ -13,6 +13,25 @@
     padding-left: 25px;
   }
 
+  &_blue {
+    color: $color-main;
+  }
+
+  &_gray {
+    color: $color-placeholder2;
+  }
+
+  &_nounder {
+
+    .link__text {
+      border-bottom: none;
+    }
+  }
+
+  &_medium {
+    @include text-menu;
+  }
+
   &__icon {
     position: absolute;
     left: 0;
@@ -27,6 +46,7 @@
   &.is-disabled {
     pointer-events: none;
     fill: $color-border;
+
     @include link-disabled;
   }
 }

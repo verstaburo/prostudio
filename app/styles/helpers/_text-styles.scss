@@ -53,6 +53,13 @@
   letter-spacing: .5px;
 }
 
+@mixin heading-7 {
+  font-size: 33px;
+  font-weight: 700;
+  line-height: (74/33);
+  letter-spacing: .82px;
+}
+
 @mixin text {
   font-size: 14px;
   line-height: (32/14);
@@ -88,6 +95,14 @@
   letter-spacing: .96px;
 }
 
+@mixin text-menu-pad {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: (59/16);
+  text-transform: uppercase;
+  letter-spacing: 1.28px;
+}
+
 @mixin text-button-big {
   font-family: 'Intro Bold Alt';
   font-size: 14px;
@@ -103,4 +118,40 @@
   line-height: (26/16);
   text-transform: uppercase;
   letter-spacing: 1.17px;
+}
+
+@mixin text-foto {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: (33.23/21);
+  letter-spacing: .63px;
+}
+
+@mixin text-date {
+  font-family: 'Intro Black Caps';
+  font-size: 22px;
+  font-weight: 900;
+  line-height: (32/24);
+  letter-spacing: .6px;
+}
+
+@mixin text-city {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: (26/24);
+  letter-spacing: 1.2px;
+}
+
+@mixin text-address {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 1.54px;
+  line-height: (40/22);
+}
+
+@mixin text-tel {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: .6px;
+  line-height: (29/24);
 }

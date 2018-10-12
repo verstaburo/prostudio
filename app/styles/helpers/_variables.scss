@@ -12,8 +12,8 @@ $grid-gap-vertical: 20px; // Расстояние между строками в
 $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной колонки
 $breakpoints: (
   'xl': 1920px,
-  'lg': 768px,
-  'md': 480px,
+  'lg': 769px,
+  'md': 481px,
 );
 
 // ##########
@@ -21,14 +21,19 @@ $breakpoints: (
 // ##########
 $color-basic: black; // Основной цвет текста (применяется к body)
 $color-placeholder: black; // Основной цвет для placeholder
+$color-placeholder2: #bababa;
 $color-input: black; // Основной цвет input, select и textarea
 $color-main: #0081cb; // Основной фирменный цвет
+$color-main-black: #0d1c2c;
+$color-main-gray: #eee;
 $color-border: #e3e3e3; // Основной цвет границ таблиц, секций
 $color-border-2: #d4d4d4;
 $color-bg: #f6f6f6;
 $color-bg-button: #ededed;
 $color-gray: #c9c9c9;
 $color-svg-gray: #e1e1e1;
+$color-date: #d9d9d9;
+$color-red: #c91516;
 
 // ##########
 // Transitions

@@ -1,22 +1,81 @@
 @import '../../node_modules/swiper/dist/css/swiper.css';
 
 .slider {
-  position: relative;
-  height: 100%;
   //border: 1px solid $color-border;
 
-  &__slide {
-    //padding: 100px;
-    //text-align: center;
-    //width: 100vw;
-    height: 100%;
-    position: relative;
+  &_portfolio {
 
-    img {
-      position: absolute;
-      right: 0;
-      //float: right;
+    .slider {
+      position: relative;
       height: 100%;
+
+      &__slide {
+        //padding: 100px;
+        //text-align: center;
+        //width: 100vw;
+        height: 100%;
+        position: relative;
+
+        .slide {
+
+          &__bg {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          &__right {
+            float: right;
+            //position: absolute;
+            //right: 0;
+            //top: 0;
+            //height: 100%;
+          }
+
+          &__left {
+            float: right;
+          }
+
+          &__center {
+            position: absolute;
+            top: 201px;
+            bottom: 0;
+            right: 200px;
+            height: 100vh;
+
+            &_offset {
+              height: 50vh;
+              right: 385px;
+            }
+
+            &_offset2 {
+              height: unset;
+              right: 185px;
+            }
+          }
+
+          &__plate {
+            position: absolute;
+            width: 505px;
+            bottom: 86px;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          &__title {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+
+            @include text-tel;
+          }
+        }
+      }
     }
   }
 
@@ -145,5 +204,50 @@
         }
       }
     }
+  }
+
+  &_journal {
+
+    .slider {
+      position: relative;
+      border: 1px solid $color-border;
+
+      &__slide {
+        padding: 50px;
+        //text-align: center;
+        //width: 350px;
+        width: 357px;
+        position: relative;
+      }
+    }
+  }
+
+  .swiper-slide {
+    width: auto;
+  }
+
+  .slide__img {
+    position: relative;
+    //height: 243px;
+
+    img {
+      //@include fill-img;
+    }
+  }
+
+  .slide__text {
+    margin-top: 27px;
+
+    @include text-foto;
+  }
+
+  .slide__date {
+    position: absolute;
+    color: $color-date;
+    transform: rotate(90deg);
+    top: 79px;
+    right: -15px;
+
+    @include text-date;
   }
 }

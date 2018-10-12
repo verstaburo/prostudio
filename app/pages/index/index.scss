@@ -1,5 +1,5 @@
 .slide1 {
-  //height: 100%;
+  height: 100vh;
   //position: relative;
 
   &__box {
@@ -29,7 +29,7 @@
   &__slider {
     position: absolute;
     height: 100vh;
-    width: 60%;
+    width: 100%;
     right: 0;
     top: 0;
     z-index: -1;
@@ -149,10 +149,104 @@
   }
 }
 
+.slide4 {
+  //height: unset;
+  //display: flex;
+  //align-items: center;
+  //width: 100vw;
+
+  &__box {
+    margin-left: 226px;
+    padding-top: 150px;
+  }
+}
+
+.slide5 {
+
+  &__box {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    //align-items: center;
+    align-content: flex-start;
+    //height: 100%;
+    padding-top: 130px;
+  }
+
+  &__title {
+    margin-top: 51px;
+    width: 100%;
+
+    @include heading-7;
+  }
+
+  &__subtitle {
+    width: 100%;
+    margin-top: 12px;
+
+    @include text-address;
+
+    letter-spacing: .55px;
+  }
+
+  &__link {
+    @include text-address;
+
+    letter-spacing: .55px;
+  }
+
+  &__btn {
+    margin-top: 67px;
+  }
+
+  .city {
+    padding: 36px 74px 39px 36px;
+    background: $color-bg;
+    text-align: left;
+
+    &:first-child {
+      margin-right: 35px;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+    }
+
+    &__name {
+      margin-left: 28px;
+
+      @include text-city;
+
+      &_piter {
+        color: $color-main;
+      }
+
+      &_moscow {
+        color: $color-red;
+      }
+    }
+
+    &__address {
+      margin-top: 41px;
+
+      @include text-address;
+    }
+
+    &__tel {
+      margin-top: 18px;
+
+      @include text-tel;
+    }
+  }
+}
+
 .footer {
   position: absolute;
   bottom: 79px;
-  margin: 0 auto;
+  //margin: 0 auto;
+  width: 100vw;
   left: 0;
   right: 0;
 
@@ -197,6 +291,81 @@
       top: 25px;
       right: -351px;
     }
+  }
+
+  .journal-pag {
+    display: flex;
+    align-items: center;
+    margin-left: 183px;
+
+    &__prev {
+      cursor: pointer;
+    }
+
+    &__next {
+      margin-left: 14px;
+      cursor: pointer;
+    }
+  }
+
+  &__line {
+    height: 1px;
+    flex: 1;
+    background: $color-border-2;
+    margin: 0 29px;
+  }
+
+  &__news {
+    text-transform: uppercase;
+
+    @include text-bold;
+  }
+
+  .subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    width: 398px;
+    margin-left: 108px;
+    border-radius: 27px;
+    border: 1px solid $color-border;
+    padding: 8px;
+    box-sizing: border-box;
+
+    .inputbox {
+      flex: 1;
+    }
+
+    &__email {
+      border: none;
+
+      &::placeholder {
+        color: $color-placeholder2;
+      }
+    }
+  }
+
+  &_end {
+    bottom: 35px;
+  }
+
+  .menu {
+    display: flex;
+    margin: 0 auto;
+
+    &__item {
+      display: inline-block;
+
+      @include text-button-big;
+    }
+  }
+}
+
+@include screen('lg', max) {
+
+  #pagepiling, #pp-nav {
+    display: none;
   }
 }
 
