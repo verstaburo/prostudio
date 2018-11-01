@@ -24,6 +24,11 @@
   //  justify-content: space-between;
   //  align-items: center;
   //}
+
+  &_inner {
+    width: 1250px;
+    box-sizing: content-box;
+  }
 }
 
 .js-sr {
@@ -33,17 +38,49 @@
 @include screen('lg', max) {
 
   .container {
-    width: 100%;
-    padding-left: 31px;
-    padding-right: 31px;
+
+    &_inner {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@include screen('lg-r', max) {
+
+  .container {
+
+    &_inner {
+      //width: 707px;
+      box-sizing: border-box;
+    }
   }
 }
 
 @include screen('md', max) {
 
   .container {
+    width: 100%;
+    padding-left: 31px;
+    padding-right: 31px;
+
+    &_inner {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+}
+
+@include screen('sm', max) {
+
+  .container {
     //width: 706px;
-    padding-left: 16px;
-    padding-right: 16px;
+    //padding-left: 16px;
+    //padding-right: 16px;
+
+    //&_inner {
+    //  padding-right: 16px;
+    //  padding-left: 16px ;
+    //}
   }
 }

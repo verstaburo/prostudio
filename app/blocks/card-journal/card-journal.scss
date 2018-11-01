@@ -1,0 +1,47 @@
+.card-journal {
+  display: block;
+  //width: 357px;
+  position: relative;
+  padding-right: 42px;
+
+  &__img {
+    position: relative;
+    //height: 243px;
+
+    img {
+      //@include fill-img;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    margin-top: 27px;
+
+    @include text-foto;
+  }
+
+  &__date {
+    position: absolute;
+    color: $color-date;
+    transform: rotate(90deg);
+    top: 30px;
+    right: -37px;
+
+    @include text-date;
+  }
+
+  &__title {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.63px;
+  }
+
+  &_popular {
+    padding: 40px 50px;
+    background: $color-main;
+    margin-right: 42px;
+  }
+}
+

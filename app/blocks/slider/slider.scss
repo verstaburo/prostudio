@@ -222,6 +222,107 @@
     }
   }
 
+  &_padportfolio {
+    text-align: left;
+    margin-top: 100px;
+
+    .slider__slide {
+      width: 424px;
+      height: 563px;
+      position: relative;
+      opacity: .9;
+
+      img {
+        @include fill-img;
+      }
+    }
+
+    .slide {
+
+      &__title {
+        margin-top: 45px;
+        visibility: hidden;
+
+        @include heading-5;
+      }
+
+      &__link {
+        visibility: hidden;
+
+        @include text-tel;
+      }
+    }
+
+    .swiper-slide-active {
+
+      .slider__slide {
+        opacity: 1;
+      }
+
+      .slide {
+
+        &__title {
+          visibility: visible;
+        }
+
+        &__link {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &_advantage {
+
+    .slider__slide {
+      width: 520px;
+      height: 520px;
+      background: $color-main;
+      border-radius: 10px;
+      opacity: .6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .swiper-slide-active {
+
+      .slider__slide {
+        opacity: 1;
+      }
+    }
+  }
+
+  &_padjournal {
+
+    .slider__slide {
+      //width: 520px;
+      //height: 520px;
+      //background: $color-main;
+      border-radius: 10px;
+      opacity: .6;
+      //display: flex;
+      //justify-content: center;
+      //align-items: center;
+      //flex-direction: column;
+      //position: relative;
+
+      //img {
+      //  @include fill-img;
+      //
+      //  border-radius: 10px;
+      //}
+    }
+
+    .swiper-slide-active {
+
+      .slider__slide {
+        opacity: 1;
+      }
+    }
+  }
+
   .swiper-slide {
     width: auto;
   }

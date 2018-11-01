@@ -17,6 +17,17 @@ $(document).ready(() => {
     $('.header__menu').toggleClass('header__menu_active');
   });
 
+  $('.js-vacancy-hot .switcher__box').click(() => {
+    // e.preventDefault();
+  // $('.js-vacancy-hot').on('click'() => {
+    // console.log($('.vacancy__title').not('.vacancy__title_hot'));
+    console.log('piu');
+    $('.vacancy__title').not('.vacancy__title_hot').each(function () {
+
+      $(this).parents('.accordion').toggle(300);
+    })
+  });
+
 });
 
 /* eslint-enable */

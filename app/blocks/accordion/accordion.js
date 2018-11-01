@@ -14,6 +14,13 @@ $(document).on('click', '.js-accordion-button', function (e) {
   const body = block.find('.accordion__body');
   const isActive = Number(block.hasClass('is-active'));
   const isMultiple = block.parents('.accordions').data('accordion-multiple');
+  // const header = button.parent();
+  button.parent().toggleClass('is-active');
+  if (block.hasClass('is-active')) {
+    button.find('.button').html('подробнее');
+  } else {
+    button.find('.button').html('закрыть');
+  }
 
   if (block.hasClass('is-disabled')) {
     return;
@@ -24,20 +31,20 @@ $(document).on('click', '.js-accordion-button', function (e) {
 
   body.trigger(beforeEvent).slideToggle(DURATION, () => {
     block
-      .toggleClass('is-active')
-      .trigger(afterEvent);
+        .toggleClass('is-active')
+        .trigger(afterEvent);
   });
 
   if (!isMultiple) {
     const siblings = block.siblings('.accordion.is-active');
 
     siblings
-      .trigger(BEFORE_HIDE)
-      .find('.accordion__body')
-      .slideUp(DURATION, () => {
-        siblings
-          .removeClass('is-active')
-          .trigger(HIDDEN);
-      });
+        .trigger(BEFORE_HIDE)
+        .find('.accordion__body')
+        .slideUp(DURATION, () => {
+          siblings
+              .removeClass('is-active')
+              .trigger(HIDDEN);
+        });
   }
 });

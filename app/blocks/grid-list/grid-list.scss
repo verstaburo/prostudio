@@ -1,0 +1,68 @@
+.grid-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-size: 0;
+
+  @include screen('sm') {
+    margin: 0 -22.5px 0;
+  }
+
+  @include screen('lg') {
+    margin: 0 -30px 0;
+  }
+
+  &__item {
+    display: inline-block;
+    box-sizing: border-box;
+    //width: 100%;
+    width: 33.33%;
+    margin: 0;
+    align-self: flex-start;
+    padding: 0 22px;
+
+    @include screen('lg', max) {
+      width: 50%;
+      padding: 0 22.5px 0;
+    }
+
+    @include screen('md', max) {
+      width: 100%;
+    }
+
+    //@include screen('desktop') {
+    //  width: 25%;
+    //}
+    //
+    //@include screen('desktop-wide') {
+    //  padding: 0 30px 0;
+    //}
+  }
+
+  &.js-mix {
+
+    .grid-list__item {
+
+      @include screen('md', max) {
+        &:not(:first-child) {
+          display: none;
+        }
+      }
+
+      @include screen('lg', max) {
+        &:nth-child(3),
+        &:nth-child(4) {
+          display: none;
+        }
+      }
+
+      @include screen('xl', max) {
+        &:nth-child(4) {
+          display: none;
+        }
+      }
+    }
+  }
+}

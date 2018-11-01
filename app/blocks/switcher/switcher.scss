@@ -1,0 +1,137 @@
+$width: 67px;
+$height: 34px;
+$circle: 24px;
+$ease: .3s ease;
+$padding: $height/2;
+
+.switcher {
+  display: flex;
+  align-items: center;
+  //width: $width;
+  //margin: 0 12px;
+
+  &__box {
+    box-sizing: border-box;
+    border-radius: 100px;
+    width: $width;
+    cursor: pointer;
+    background: $color-main;
+    padding: 0 $padding;
+    margin: 0 12px;
+    //height: $height;
+    //display: inline-block;
+    // border: 1px solid rgba(black, .15);
+    transition: border-color $ease;
+
+    input:checked + & {
+      //border-color: #64DD17;
+    }
+  }
+
+  input {
+    display: none;
+  }
+
+  &__mover {
+    width: 50%;
+    height: $height;
+    position: relative;
+    transform: translate3d(-50%, 0, 0);
+    transition: transform $ease;
+
+    input:checked ~ .switcher__box & {
+      transform: translate3d(150%, 0, 0);
+    }
+  }
+
+  &__circle {
+    content: '';
+    width: $circle;
+    height: $circle;
+    background-color: white;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    //box-shadow: 0 7px 15px -5px rgba(black, .5);
+    transition: background-color $ease, box-shadow $ease;
+
+    input:checked ~ .switcher__box & {
+      background-color: transparent;
+      //box-shadow: 0 7px 15px -5px rgba(#64DD17, 1);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      // background: linear-gradient(60deg, #AEEA00, #1DE9B6);
+      background: white;
+      opacity: 0;
+      transition: opacity $ease;
+
+      input:checked ~ .switcher__box & {
+        opacity: 1;
+      }
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 2;
+      transform: scale3d(0, 0, 1);
+      transition: transform $ease;
+      fill: black;
+
+      input:checked ~ .switcher__box & {
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__value {
+    @include text-button-md;
+
+    &_on {
+      color: $color-main;
+    }
+
+    &_off {
+      color: $color-placeholder2;
+    }
+  }
+
+  input:checked ~ .switcher {
+
+    &__value {
+
+      &_on {
+        color: $color-placeholder2;
+      }
+
+      &_off {
+        color: $color-orange;
+      }
+    }
+
+    &__box {
+      background: $color-orange;
+    }
+  }
+}

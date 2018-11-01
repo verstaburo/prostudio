@@ -1,8 +1,8 @@
-mixin header()
+mixin header(fixed)
   +b.header&attributes(attributes)
     .container.header__container
       //+icon('logo').__logo
-      +e.IMG(src='/assets/images/logo.svg').logo
+      +e.IMG(src='./assets/images/logo.svg').logo
       +b.UL.menu.header__menu
         +e.LI.item
           +link(href='#')._nounder._medium Компания
@@ -15,9 +15,15 @@ mixin header()
         +e.LI.item
           +link(href='#')._nounder._medium Клиенты
         +e.LI.item
-          +link(href='#')._nounder._medium Вакансии
-        +e.LI.item
+          +link(href='./vacancies.html')._nounder._medium Вакансии
+        +e.LI.item._last
           +link(href='#')._nounder._medium Контакты
+        +e.LI.item._btn
+          +button._blue._big-big.menu__btn Оформить заказ
+        +e.LI.item._present
+          +link._nounder._gray._flex
+            img(src='./assets/images/pdf.png')
+            | скачать презентацию<br>5МБ
       +b.buttons
         +button.buttons__ico ico
         +button._blue.buttons__project обсудить проект

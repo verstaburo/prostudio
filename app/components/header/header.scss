@@ -1,14 +1,14 @@
 .header {
   height: 112px;
   padding: 45px 0 0;
-  box-sizing: content-box;
-  position: fixed;
-  margin-left: 20px;
+  box-sizing: border-box;
+  padding-left: 20px;
   width: 1386px;
   left: 0;
   right: 0;
   z-index: 6;
   transition: all .6s ease;
+  position: relative;
   //display: flex;
   //justify-content: space-between;
 
@@ -16,6 +16,25 @@
     transition: all .6s ease;
     width: 100%;
     //margin: 0 auto;
+
+    .buttons__project {
+      //display: inline-block !important;
+      margin-right: 0 !important;
+      opacity: 1 !important;
+    }
+
+    .header__container {
+      padding-right: 30px !important;
+    }
+  }
+
+  &_fixed {
+    position: fixed;
+  }
+
+  &_inner {
+    padding-top: 34px;
+    border-bottom: 1px solid $color-border-2;
   }
 
   &__container {
@@ -144,22 +163,49 @@
     &:not(:last-child) {
       margin-right: 62px;
     }
+
+    &_last {
+      margin-right: 0 !important;
+    }
+
+    &_btn {
+      display: none;
+    }
+
+    &_present {
+      display: none;
+    }
   }
 }
 
-@include screen('lg', max) {
+@include screen('xl-r', max) {
 
   .header {
-    width: unset;
+    width: 100vw;
     margin-left: 0;
-    padding-top: 15px;
+    padding-top: 21px;
+    //background: white;
+
+    &__container {
+      //width: calc(100vw - 505px) !important;
+      width: unset !important;
+      padding-right: 535px !important;
+    }
+
+    &__logo {
+      z-index: 1;
+    }
 
     &__menu {
       //display: none;
+      background: white;
       position: absolute;
       display: flex;
       flex-direction: column;
-      top: 50px;
+      top: -21px;
+      padding-top: 80px;
+      //top: 50px;
+      padding-bottom: 1000px;
       width: 100%;
       margin: 0 -31px;
       text-align: center;
@@ -169,6 +215,11 @@
       &_active {
         right: 31px;
       }
+    }
+
+    &_inner {
+      height: 80px;
+      padding-left: 0;
     }
 
     .menu {
@@ -187,6 +238,23 @@
         .link {
           @include text-menu-pad;
         }
+
+        &_btn {
+          display: block;
+          margin-top: 50px;
+        }
+
+        &_present {
+          display: flex;
+          justify-content: center;
+          margin-top: 50px;
+
+          .link__text {
+            font-size: 14px;
+            text-align: left;
+            text-transform: initial;
+          }
+        }
       }
     }
 
@@ -201,4 +269,40 @@
       }
     }
   }
+}
+
+@include screen('md', max) {
+
+  //.header {
+  //  padding-left: 0;
+  //
+  //  &__container {
+  //    padding-right: 31px !important;
+  //  }
+  //}
+
+  .header {
+
+    &_wide {
+
+      .header__container {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+      }
+    }
+  }
+}
+
+@include screen('sm', max) {
+
+  //.header {
+  //
+  //  &_wide {
+  //
+  //    .header__container {
+  //      padding-right: 16px !important;
+  //      padding-left: 16px !important;
+  //    }
+  //  }
+  //}
 }

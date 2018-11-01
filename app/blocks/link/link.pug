@@ -8,3 +8,9 @@ mixin link-icon(iconname)
     +icon(iconname).__icon
     +e.SPAN.text
       block
+
+mixin link-icon-right(iconname)
+  +b.A.link&attributes(attributes)._icon-right
+    +icon(iconname).__icon_right
+    +e.SPAN.text
+      block

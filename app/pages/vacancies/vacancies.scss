@@ -1,0 +1,252 @@
+.vacancies {
+  display: block;
+
+  &__title {
+    margin-top: 54px;
+
+    @include inner-title;
+  }
+
+  &__selector {
+    margin-top: 46px;
+  }
+
+  &__list {
+    margin-top: 22px;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &__contact {
+    padding: 42px;
+    border: 1px solid $color-border;
+    border-top: none;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__right {
+      margin-left: 48px;
+    }
+
+    &__title {
+      @include heading-6;
+    }
+
+    &__link {
+
+      .link__text {
+        @include heading-6;
+      }
+    }
+
+    &__text {
+      @include heading-6;
+
+      font-weight: 300;
+    }
+  }
+}
+
+.vacancy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    color: $color-main;
+    display: inline;
+    position: relative;
+
+    @include text-city;
+
+    //line-height: 40px;
+    letter-spacing: .6px;
+
+    &_hot {
+
+      &::after {
+        @include pseudo;
+
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: $color-orange;
+        right: -19px;
+        top: 12px;
+      }
+    }
+  }
+
+  &__description {
+    margin-top: 19px;
+    margin-left: 3px;
+
+    @include text-16-300;
+  }
+
+  &__left {
+    padding-right: 30px;
+  }
+}
+
+.requirements {
+
+  &__block {
+    margin-top: 24px;
+
+    &:nth-child(n+3) {
+      margin-top: 48px;
+    }
+
+    ul {
+      margin-top: 19px;
+    }
+
+    li {
+      @include text-16-300;
+    }
+  }
+
+  &__title {
+    @include heading-6;
+  }
+
+  &__subtitle {
+    color: $color-main;
+
+    @include text-pag;
+
+    letter-spacing: .4px;
+    text-transform: initial;
+  }
+
+  &__buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+    :first-child {
+      margin-right: 30px;
+    }
+  }
+
+  &__description {
+    display: none;
+  }
+}
+
+@include screen('lg-r', max) {
+
+  .vacancies {
+
+    &__title {
+      margin-top: 46px;
+
+      @include text-address;
+
+      letter-spacing: .22px;
+      line-height: 36px;
+    }
+
+    &__selector {
+      margin-top: 34px;
+    }
+  }
+
+  .vacancy {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__button {
+      margin-top: 40px;
+    }
+  }
+}
+
+@include screen('lg-r', max) {
+
+  .vacancy {
+
+    &__description {
+      margin-top: 6px;
+    }
+
+    &__left {
+      padding-right: 0;
+    }
+  }
+}
+
+@include screen('md', max) {
+
+  .vacancies {
+
+    &__title {
+      font-size: 20px;
+      margin-top: 35px;
+      //letter-spacing: .22px;
+      //line-height: 36px;
+    }
+
+    &__list {
+
+      .accordion {
+
+        &__header {
+
+          &::after {
+            content: '';
+            background: url('../images/arrow_down.svg') no-repeat;
+            width: 18px;
+            height: 19px;
+            transform: unset;
+            border: none;
+            fill: $color-gray;
+          }
+
+          &.is-active {
+
+            &::after {
+              background: url('../images/close.svg') no-repeat;
+            }
+          }
+        }
+      }
+    }
+
+    &__selector {
+      margin-top: 15px;
+    }
+
+    .contact {
+      display: none;
+    }
+  }
+
+  .vacancy {
+
+    &__description {
+      display: none;
+    }
+
+    &__button {
+      display: none;
+    }
+  }
+
+  .requirements {
+
+    &__description {
+      display: block;
+
+      @include text-16-300;
+    }
+
+    &__title {
+      margin-top: 45px;
+    }
+  }
+}

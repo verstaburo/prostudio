@@ -11,6 +11,7 @@
   transition: opacity $ease-main;
   cursor: pointer;
   font-family: 'Intro Bold Alt';
+  height: 39px;
 
   @include text-button;
 
@@ -32,14 +33,33 @@
     border: 1px solid white;
   }
 
+  &_red {
+    background: $color-red;
+    border: 1px solid $color-red;
+    color: white;
+  }
+
   &_big {
-    padding: 12px 35px;
+    padding: 20px 35px;
+    height: 54px;
+
+    @include text;
+
+    line-height: 1;
   }
 
   &_big-medium {
     padding: 14px 32px;
     font-size: 14px;
     letter-spacing: 1.12px;
+      }
+
+  &_big-big {
+    padding: 30px 50px;
+    height: 75px;
+
+    @include btn-big-big;
+
   }
 
   &_huge {

@@ -38,6 +38,17 @@
 }
 
 @font-face {
+    font-family: 'Intro Book';
+    src: url('../fonts/Intro-Light.eot');
+    src: url('../fonts/Intro-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Intro-Light.woff2') format('woff2'),
+    url('../fonts/Intro-Light.woff') format('woff'),
+    url('../fonts/Intro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Open Sans';
     src: url('../fonts/OpenSans.eot');
     src: url('../fonts/OpenSans.eot?#iefix') format('embedded-opentype'),

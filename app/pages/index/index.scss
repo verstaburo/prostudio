@@ -1,3 +1,15 @@
+.slide {
+
+  &__footer {
+    position: absolute;
+    bottom: 79px;
+    //margin: 0 auto;
+    width: 100vw;
+    left: 0;
+    right: 0;
+  }
+}
+
 .slide1 {
   height: 100vh;
   //position: relative;
@@ -23,7 +35,7 @@
   &__btn {
     margin-top: 107px;
 
-    @include text-button-big;
+    //@include text-button-big;
   }
 
   &__slider {
@@ -153,7 +165,7 @@
   //height: unset;
   //display: flex;
   //align-items: center;
-  //width: 100vw;
+  width: 100vw;
 
   &__box {
     margin-left: 226px;
@@ -242,13 +254,13 @@
   }
 }
 
-.footer {
-  position: absolute;
-  bottom: 79px;
-  //margin: 0 auto;
-  width: 100vw;
-  left: 0;
-  right: 0;
+.slide-footer {
+  //position: absolute;
+  //bottom: 79px;
+  ////margin: 0 auto;
+  //width: 100vw;
+  //left: 0;
+  //right: 0;
 
   &__container {
     display: flex;
@@ -362,10 +374,196 @@
   }
 }
 
-@include screen('lg', max) {
+.pad {
+  display: block;
+  text-align: center;
+
+  &__title {
+    color: $color-main;
+    text-align: center;
+    margin-top: 148px;
+
+    @include heading-8;
+  }
+
+  &__discuss {
+    text-align: center;
+    color: $color-gray;
+    display: block;
+    margin: 73px auto 0;
+    letter-spacing: 1px;
+  }
+
+  .padportfolio {
+    text-align: center;
+    margin-top: 15px;
+
+    &__nav {
+      display: inline-flex;
+      align-items: center;
+      max-width: 380px;
+    }
+
+    &__pag {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 152px !important;
+      //width: 300px !important;
+      margin: 0 45px;
+    }
+
+    .slider__dot {
+      position: unset;
+      border: none;
+      background: $color-border-2;
+      width: 5px;
+      height: 5px;
+      //margin: 0 25px;
+      flex-shrink: 0;
+
+      &.active-main {
+        width: 14px;
+        height: 14px;
+      }
+
+      &.active-prev, &.active-next {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  &__more {
+    margin-top: 50px;
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Intro Book';
+    text-transform: unset;
+
+    @include text-tel;
+
+    svg {
+      margin-left: 18px;
+      width: 20px;
+      height: 18px;
+      fill: $color-main;
+    }
+  }
+
+  &__advantage {
+    margin-top: 100px;
+  }
+
+  .pad-advantage {
+    color: white;
+
+    &__num {
+      @include heading-9;
+    }
+
+    &__text {
+      @include text34;
+    }
+  }
+
+  &__journal {
+    margin-top: 100px;
+  }
+
+  .pad-journal {
+    text-align: left;
+
+    &__imgbox {
+      width: 520px;
+      height: 520px;
+      display: inline-block;
+      position: relative;
+
+      img {
+        @include fill-img;
+
+        border-radius: 10px;
+      }
+    }
+
+    &__title {
+      margin-top: 50px;
+      visibility: hidden;
+
+      @include text-tel;
+    }
+
+    &__date {
+      margin-top: 40px;
+      visibility: hidden;
+      color: $color-date;
+      text-transform: uppercase;
+
+      @include text-date-md;
+    }
+
+    .swiper-slide-active {
+
+      .pad-journal__title {
+        visibility: visible;
+      }
+
+      .pad-journal__date {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__question {
+    margin-top: 114px;
+    color: $color-main;
+
+    @include heading-10;
+  }
+
+  &__btn {
+    margin-top: 56px;
+  }
+}
+
+@include screen('md') {
+
+  .pad {
+    display: none;
+  }
+}
+
+@include screen('md', max) {
 
   #pagepiling, #pp-nav {
     display: none;
   }
 }
 
+@include screen('sm', max) {
+
+  .pad {
+
+    &__title {
+      font-size: 41px;
+    }
+  }
+}
+
+@include screen('xs', max) {
+
+  .pad {
+
+    &__title {
+      font-size: 28px;
+    }
+  }
+
+  .padportfolio {
+
+    &__nav {
+      width: 260px;
+    }
+  }
+}
