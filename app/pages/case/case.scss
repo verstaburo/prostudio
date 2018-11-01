@@ -77,8 +77,63 @@
     margin-top: auto;
   }
 
+  &__arrow {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(42, 32, 32, .16);
+    cursor: pointer;
+
+    svg {
+      width: 19px;
+      height: 17px;
+      fill: white;
+    }
+  }
+
+  &__prev {
+    left: 0;
+  }
+
+  &__next {
+    right: 0;
+  }
+
   .container {
     height: 100%;
+  }
+
+  &_process {
+
+    .case {
+
+      &__title {
+        color: $color-main;
+      }
+
+      &__subtitle {
+        color: black;
+      }
+
+      &__box {
+        height: unset;
+      }
+
+      &__wrapper {
+        height: unset;
+        position: static;
+      }
+
+    }
+
+    .container {
+      height: unset;
+    }
   }
 }
 
@@ -99,6 +154,15 @@
 
   &__img4 {
     margin-top: 145px;
+  }
+
+  &__img5 {
+    margin: 100px 145px 0;
+    width: auto !important;
+  }
+
+  &_process {
+    margin-top: 100px;
   }
 }
 

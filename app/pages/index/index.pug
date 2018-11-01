@@ -195,21 +195,25 @@ block content
     +pagepiling-slide
       +b.slide5.slide
         +e.box
-          +b.city
+          +b.city_piter
             +e.title
-              +e.IMG(src='./assets/images/piter.png')
+              +e.IMG(src='./assets/images/piter.png').nohover
+              +e.IMG(src='./assets/images/piter_white.png').hover
               +e.name_piter Петербург
             +e.address 196247,<br>Ленинский проспект, дом 151<br>офис 315
+            +link(href='#')._white._xl.city__map Как проехать
             +e.tel  +7 (812) 645-65-96
-          +b.city
+          +b.city_moscow
             +e.title
-              +e.IMG(src='./assets/images/moscow.png')
+              +e.IMG(src='./assets/images/moscow.png').nohover
+              +e.IMG(src='./assets/images/moscow_white.png').hover
               +e.name_moscow Москва
             +e.address 196247,<br>Проспект вернадского, дом 43<br>офис 49
+            +link(href='#')._white._xl.city__map Как проехать
             +e.tel  +7 (495) 645-65-96
           +e.title Хотите проект от Prostudio?
           +e.subtitle Заполните форму на сайте или напишите нам на почту #[+link(href='mailto:mail@prostudio.ru')._blue._nounder.slide5__link mail@prostudio.ru]
-          +button._white._big-medium.__btn Обсудить проект
+          +button._white._big.__btn Обсудить проект
         +b.slide-footer.slide__footer._end
           .container.slide-footer__container
             +e.IMG(src='./assets/images/play.svg').play

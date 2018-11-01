@@ -206,6 +206,10 @@
     }
   }
 
+  &-wrapper {
+    position: relative;
+  }
+
   &_journal {
 
     .slider {
@@ -327,6 +331,13 @@
     width: auto;
   }
 
+  &_case {
+
+    .swiper-slide {
+      width: 100%;
+    }
+  }
+
   .slide__img {
     position: relative;
     //height: 243px;
@@ -352,3 +363,4 @@
     @include text-date;
   }
 }
+

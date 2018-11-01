@@ -196,5 +196,36 @@ export default function slider() {
       },
     },
   });
+
+  const caseSlider = new Swiper('.js-slider.slider_case', {
+    loop: true,
+    // loopedSlides: 4,
+    speed: 700,
+    // autoplay: {
+    //   delay: 2000,
+    // },
+    autoHeight: true,
+    slidesPerView: 1,
+    // effect: 'coverflow',
+    // slidesPerView: 'auto',
+    // spaceBetween: 27,
+    navigation: {
+      nextEl: '.case__next',
+      prevEl: '.case__prev',
+    },
+    // pagination: {
+    //   el: '.slider__dots',
+    //   clickable: true,
+    //   paginationClickableClass: 'slider__dots_clickable',
+    //   bulletClass: 'slider__dot',
+    //   bulletActiveClass: 'active',
+    // },
+    roundLengths: true,
+    // breakpoints: {
+    //   320: {
+    //     slidesPerView: 1,
+    //   },
+    // },
+  });
 }
 /* eslint-enable no-unused-vars */
