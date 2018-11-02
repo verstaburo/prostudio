@@ -7,3 +7,20 @@
 .fancybox-close-small:focus::after { outline: none; }
 
 .fancybox-enabled { overflow: initial; }
+
+.fancybox {
+
+  &-slide {
+    text-align: left;
+    padding-top: 0;
+  }
+
+  &-content {
+    margin-bottom: 0 !important;
+    padding: 70px;
+  }
+
+  &-container {
+    font-family: unset;
+  }
+}

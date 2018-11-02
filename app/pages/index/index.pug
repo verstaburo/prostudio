@@ -12,7 +12,7 @@ block content
         +e.box
           +e.title Создание <br>и продвижение<br> сайтов
           +e.subtitle Развитие вашего бизнеса<br> в Digital и не только ...
-          +button._blue._big.slide1__btn Обсудить проект
+          +button(href="#contact")._blue._big.slide1__btn.js-fancybox Обсудить проект
         +e.slider.slider_portfolio
           +slider(false, false)
             +slide
@@ -213,7 +213,8 @@ block content
             +e.tel  +7 (495) 645-65-96
           +e.title Хотите проект от Prostudio?
           +e.subtitle Заполните форму на сайте или напишите нам на почту #[+link(href='mailto:mail@prostudio.ru')._blue._nounder.slide5__link mail@prostudio.ru]
-          +button._white._big.__btn Обсудить проект
+          +button(href="#contact")._white._big.__btn.js-fancybox Обсудить проект
+
         +b.slide-footer.slide__footer._end
           .container.slide-footer__container
             +e.IMG(src='./assets/images/play.svg').play
@@ -306,6 +307,35 @@ block content
       +e.question Хотите проект от Prostudio?
       +button.pad__btn.button_blue.button_big Обсудить проект
   +footer
+
+  +b.contact#contact
+    +e.title Заполните заявку на проект?
+    +e.FORM.form
+      +e.box
+        +inputbox.contact__inputbox.contact__inputbox_half Выберите проект:
+          +select
+            option(value="Веб-сайт") Веб-сайт
+            option(value="Продвижение") Продвижение
+            option(value="Брендинг") Брендинг
+            option(value="Приложение") Приложение
+            option(value="Аналитика") Аналитика
+            option(value="Поддержка") Поддержка
+        +inputbox.inputbox_noborder.contact__inputbox.contact__inputbox_half.contact__inputbox_flexstart
+          //+input(placeholder="Плейсхолдер")
+          .inputbox__title Бюджет:
+          +radio('budget', 'test', 'true') 100-200 тыс. руб
+          +radio('budget', 'test-2') от 500 тыс. руб
+        +inputbox('Имя').contact__inputbox.contact__inputbox_half
+          +input(placeholder="")
+        +inputbox.contact__inputbox.contact__inputbox_half
+          +input(placeholder="Телефон")
+        +inputbox.contact__inputbox.contact__inputbox_half
+          +input(placeholder="Email")
+        +inputbox.contact__inputbox.contact__inputbox_half
+          +input(placeholder="Добавить файл")
+        +inputbox.contact__inputbox
+          +input(placeholder="Сообщение")
+
 
 
 

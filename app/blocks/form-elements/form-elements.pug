@@ -1,9 +1,11 @@
-mixin inputbox()
-  .inputbox&attributes(attributes)
+mixin inputbox(placeholder)
+  +b.inputbox&attributes(attributes)
+    +e.placeholder= placeholder
     block
 
 mixin input()
   input.input&attributes(attributes)
+
 
 mixin input-number()
   .input-numberbox
@@ -26,11 +28,11 @@ mixin checkbox(name, value, checked)
     +e.SPAN.box
     +e.SPAN.content
       block
-      
+
 mixin radio(name, value, checked)
   +b.LABEL.checkradio&attributes(attributes)
     +e.INPUT.input(name=name, value=value, checked=checked, type="radio")
-    +e.SPAN.box
+    //+e.SPAN.box
     +e.SPAN.content
       block
 

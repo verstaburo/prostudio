@@ -15,7 +15,7 @@ const $ = window.$;
 export function selects() {
   /* eslint-disable no-unused-vars */
   if ($('.js-select').length) {
-    const choices = new Choices('.js-select', {
+    window.choices = new Choices('.js-select', {
       searchEnabled: false,
       itemSelectText: '',
     });

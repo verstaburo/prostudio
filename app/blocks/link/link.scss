@@ -8,6 +8,29 @@
     }
   }
 
+  &_btn {
+    display: inline-block;
+    border-radius: 50px;
+    vertical-align: middle;
+    box-sizing: border-box;
+
+    &-white {
+      color: $color-main;
+      border: 2px solid $color-main;
+    }
+
+    &-big {
+      padding: 20px 35px;
+      height: 54px;
+
+      .link__text {
+        @include text;
+
+        line-height: 1;
+      }
+    }
+  }
+
   &_icon {
     position: relative;
     padding-left: 25px;
