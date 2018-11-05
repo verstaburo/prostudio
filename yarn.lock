@@ -3,8 +3,8 @@
 
 
 "@fancyapps/fancybox@^3.1.25":
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/@fancyapps/fancybox/-/fancybox-3.3.4.tgz#00fa83a9e61c694d4be23a1c7b96089aa99bc4a5"
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/@fancyapps/fancybox/-/fancybox-3.5.2.tgz#d6ff4bf3bc99dd69c53bcee9397d8cf698462fe3"
 
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.1"

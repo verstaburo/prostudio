@@ -4,7 +4,7 @@ import './globalOptions';
 import anchor from '../blocks/js-functions/anchor';
 import { freezebuttons } from '../blocks/js-functions/freeze';
 import scrollanimation from '../blocks/js-functions/scrollanimation';
-import { selects, sliders, datepicker, inputmask, numberinput } from '../blocks/form-elements/form-elements';
+import { selects, sliders, datepicker, inputmask, numberinput, inputfile } from '../blocks/form-elements/form-elements';
 import popups from '../blocks/popups/popups';
 import scrollbar from '../blocks/scrollbar/scrollbar';
 import slider from '../blocks/slider/slider';
@@ -37,6 +37,7 @@ $(() => {
   datepicker();
   inputmask();
   numberinput();
+  inputfile();
   maps();
   scrollanimation();
 });

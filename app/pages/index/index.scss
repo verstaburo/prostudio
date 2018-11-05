@@ -598,6 +598,8 @@
   //min-width: 50%;
   width: 1036px;
   margin-bottom: 0;
+  display: inline-flex !important;
+  flex-direction: column;
 
   &__title {
     font-size: 38px;
@@ -606,11 +608,19 @@
     letter-spacing: .95px;
   }
 
+  &__form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
   &__box {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 50px;
+    //margin-top: 50px;
   }
 
   &__inputbox {
@@ -635,6 +645,16 @@
     display: inline-block;
     width: 185px;
     color: $color-main;
+  }
+
+  &__text {
+    //margin-top: 70px;
+    font-size: 15px;
+    //line-height: 26px;
+  }
+
+  &__btn {
+    //margin-top: 80px;
   }
 }
 

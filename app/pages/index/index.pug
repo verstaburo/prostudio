@@ -326,15 +326,22 @@ block content
           +radio('budget', 'test', 'true') 100-200 тыс. руб
           +radio('budget', 'test-2') от 500 тыс. руб
         +inputbox('Имя').contact__inputbox.contact__inputbox_half
-          +input(placeholder="")
-        +inputbox.contact__inputbox.contact__inputbox_half
-          +input(placeholder="Телефон")
-        +inputbox.contact__inputbox.contact__inputbox_half
-          +input(placeholder="Email")
-        +inputbox.contact__inputbox.contact__inputbox_half
-          +input(placeholder="Добавить файл")
-        +inputbox.contact__inputbox
-          +input(placeholder="Сообщение")
+          +input()
+        +inputbox("Телефон").contact__inputbox.contact__inputbox_half
+          +input()
+        +inputbox("Email").contact__inputbox.contact__inputbox_half
+          +input
+        +inputbox()._file.contact__inputbox.contact__inputbox_half
+          label
+            +input(type='file')
+            span.filename Добавить файл
+            img(src='./assets/images/addfile.svg').addfile
+        +inputbox("Сообщение").contact__inputbox
+          +input
+      +e.text Нажимая на кнопку  «Отправить», вы соглашаетесь на обработку персональных данных<br>в соответсвии с
+        +link._blue Политикой конфиденциальности.
+      +button('input')(type='submit', value='отправить заявку')._blue._big.contact__btn
+
 
 
 

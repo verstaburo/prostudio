@@ -81,3 +81,10 @@ export function numberinput() {
     if ($(this).val() < 0) $(this).val(0);
   });
 }
+
+export function inputfile() {
+  $('.inputbox_file input[type=file]').change(function () {
+    const filename = $(this).val().replace(/.*\\/, '');
+    $('.filename').html(filename);
+  });
+}
