@@ -309,38 +309,44 @@ block content
   +footer
 
   +b.contact#contact
-    +e.title Заполните заявку на проект?
-    +e.FORM.form
-      +e.box
-        +inputbox.contact__inputbox.contact__inputbox_half Выберите проект:
-          +select
-            option(value="Веб-сайт") Веб-сайт
-            option(value="Продвижение") Продвижение
-            option(value="Брендинг") Брендинг
-            option(value="Приложение") Приложение
-            option(value="Аналитика") Аналитика
-            option(value="Поддержка") Поддержка
-        +inputbox.inputbox_noborder.contact__inputbox.contact__inputbox_half.contact__inputbox_flexstart
-          //+input(placeholder="Плейсхолдер")
-          .inputbox__title Бюджет:
-          +radio('budget', 'test', 'true') 100-200 тыс. руб
-          +radio('budget', 'test-2') от 500 тыс. руб
-        +inputbox('Имя').contact__inputbox.contact__inputbox_half
-          +input()
-        +inputbox("Телефон").contact__inputbox.contact__inputbox_half
-          +input()
-        +inputbox("Email").contact__inputbox.contact__inputbox_half
-          +input
-        +inputbox()._file.contact__inputbox.contact__inputbox_half
-          label
-            +input(type='file')
-            span.filename Добавить файл
-            img(src='./assets/images/addfile.svg').addfile
-        +inputbox("Сообщение").contact__inputbox
-          +input
-      +e.text Нажимая на кнопку  «Отправить», вы соглашаетесь на обработку персональных данных<br>в соответсвии с
-        +link._blue Политикой конфиденциальности.
-      +button('input')(type='submit', value='отправить заявку')._blue._big.contact__btn
+    +e.step1
+      +e.title Заполните заявку на проект?
+      +e.FORM.form
+        +e.box
+          +inputbox.contact__inputbox.contact__inputbox_half Выберите проект:
+            +select
+              option(value="Веб-сайт") Веб-сайт
+              option(value="Продвижение") Продвижение
+              option(value="Брендинг") Брендинг
+              option(value="Приложение") Приложение
+              option(value="Аналитика") Аналитика
+              option(value="Поддержка") Поддержка
+          +inputbox.inputbox_noborder.contact__inputbox.contact__inputbox_half.contact__inputbox_flexstart
+            //+input(placeholder="Плейсхолдер")
+            .inputbox__title Бюджет:
+            +radio('budget', 'test', 'true') 100-200 тыс. руб
+            +radio('budget', 'test-2') от 500 тыс. руб
+          +inputbox('Имя').contact__inputbox.contact__inputbox_half
+            +input()
+          +inputbox("Телефон").contact__inputbox.contact__inputbox_half
+            +input()
+          +inputbox("Email").contact__inputbox.contact__inputbox_half
+            +input
+          +inputbox()._file.contact__inputbox.contact__inputbox_half
+            label
+              +input(type='file')
+              span.filename Добавить файл
+              img(src='./assets/images/addfile.svg').addfile
+          +inputbox("Сообщение").contact__inputbox
+            +input
+        +e.text Нажимая на кнопку  «Отправить», вы соглашаетесь на обработку персональных данных<br>в соответсвии с
+          +link._blue Политикой конфиденциальности.
+        +button('input')(type='submit', value='отправить заявку')._blue._big.contact__btn.js-submit
+    +e.step2
+      img(src='./assets/images/msg_send.jpg')
+      +e.title Отправлено!
+      +e.subtitle Спасибо за обращение в нашу студию.
+      +button._blue._big.contact__btn_mt.js-popup-close на главную
 
 
 
