@@ -19,13 +19,28 @@ $(document).ready(() => {
 
   $('.js-vacancy-hot .switcher__box').click(() => {
     // e.preventDefault();
-  // $('.js-vacancy-hot').on('click'() => {
+    // $('.js-vacancy-hot').on('click'() => {
     // console.log($('.vacancy__title').not('.vacancy__title_hot'));
     console.log('piu');
     $('.vacancy__title').not('.vacancy__title_hot').each(function () {
 
       $(this).parents('.accordion').toggle(300);
     })
+  });
+
+  $('.js-submit').click((e) => {
+    e.preventDefault();
+    $('.contact__step1').fadeOut();
+    setTimeout(() => {
+      $('.contact__step2').addClass('is-active');
+    }, 500);
+
+  });
+
+  $('.js-popup-close').click(() => {
+    $.fancybox.close();
+    $('.contact__step1').fadeIn();
+    $('.contact__step2').removeClass('is-active');
   });
 
 });

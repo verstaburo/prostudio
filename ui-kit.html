@@ -296,6 +296,7 @@
                             <p class="ui-kit__description">.input</p>
                             <div class="inputbox">
                                 <input class="input" placeholder="Плейсхолдер" />
+                                <div class="inputbox__placeholder"></div>
                             </div>
                         </div>
                         <div class="grid__col grid__col_xl_6">
@@ -306,6 +307,7 @@
                                     <option value="Опция 2">Опция 2</option>
                                     <option value="Опция 3">Опция 3</option>
                                 </select>
+                                <div class="inputbox__placeholder"></div>
                             </div>
                         </div>
                         <div class="grid__col grid__col_xl_6">
@@ -313,6 +315,7 @@
                                 <br> Параметры задаются через дата-атрибуты</p>
                             <div class="inputbox">
                                 <input class="input js-datepicker" placeholder="Выберите дату" readonly="readonly" />
+                                <div class="inputbox__placeholder"></div>
                             </div>
                         </div>
                         <div class="grid__col grid__col_xl_6">
@@ -320,6 +323,7 @@
                                 <br> Маска определяется через атрибут data-type="tel"</p>
                             <div class="inputbox">
                                 <input class="input" placeholder="+7 (___) ___-__-__" data-type="tel" />
+                                <div class="inputbox__placeholder"></div>
                             </div>
                         </div>
                         <div class="grid__col grid__col_xl_6">
@@ -327,6 +331,7 @@
                                 <br> Маска определяется через атрибут data-type="email"</p>
                             <div class="inputbox">
                                 <input class="input" placeholder="E-mail" data-type="email" />
+                                <div class="inputbox__placeholder"></div>
                             </div>
                         </div>
                         <div class="grid__col grid__col_xl_6">
@@ -338,6 +343,7 @@
                                     <input class="input input-numberbox__input js-numberbox-input" placeholder="Количество товара" />
                                     <span class="input-numberbox__button js-numberbox-plus"></span>
                                 </div>
+                                <div class="inputbox__placeholder"></div>
                             </div>
                         </div>
                         <div class="grid__col grid__col_xl_12">
@@ -351,23 +357,25 @@
                                     <span class="checkradio__box"></span>
                                     <span class="checkradio__content">Чекбокс</span>
                                 </label>
+                                <div class="inputbox__placeholder"></div>
                             </div>
                         </div>
                         <div class="grid__col grid__col_xl_6">
                             <p class="ui-kit__description">.checkradio</p>
                             <div class="inputbox">
-                                <div class="ui-kit__elements-list">
+                                <div class="inputbox__elements-list">
                                     <label class="checkradio">
                                         <input class="checkradio__input" name="ui-radio" value="test" checked="true" type="radio" />
-                                        <span class="checkradio__box"></span>
+                                        <!--+e.SPAN.box-->
                                         <span class="checkradio__content">Радиокнопка</span>
                                     </label>
                                     <label class="checkradio">
                                         <input class="checkradio__input" name="ui-radio" value="test-2" type="radio" />
-                                        <span class="checkradio__box"></span>
+                                        <!--+e.SPAN.box-->
                                         <span class="checkradio__content">Радиокнопка</span>
                                     </label>
                                 </div>
+                                <div class="inputbox__placeholder"></div>
                             </div>
                         </div>
                         <div class="grid__col grid__col_xl_6">
@@ -375,6 +383,7 @@
                                 <br> Все параметры задаются дата-атрибутами</p>
                             <div class="inputbox">
                                 <div class="range js-range" data-start="40" data-connect="[true, false]" data-min="0" data-max="100"></div>
+                                <div class="inputbox__placeholder"></div>
                             </div>
                         </div>
                     </div>
@@ -428,6 +437,12 @@
                     </a>
                     <div class="popups ui-kit__ui-popups">
                         <div class="popup" id="testpopup">
+                            <!--+inputbox-->
+                            <select class="select js-select">
+                                <option value="Опция 1">Опция 1</option>
+                                <option value="Опция 2">Опция 2</option>
+                                <option value="Опция 3">Опция 3</option>
+                            </select>
                             <div class="content-zone">
                                 <h2>Тестовый попап</h2>
                                 <p>С тестовым контентом</p>

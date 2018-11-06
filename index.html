@@ -67,7 +67,7 @@
             </ul>
             <div class="buttons">
                 <a class="button buttons__ico">ico</a>
-                <a class="button button_blue buttons__project">обсудить проект</a>
+                <a class="button button_blue buttons__project js-fancybox" href="#contact">обсудить проект</a>
                 <div class="buttons__burger js-padmenu">
                     <span></span>
                 </div>
@@ -83,7 +83,7 @@
                         <br> сайтов</div>
                     <div class="slide1__subtitle">Развитие вашего бизнеса
                         <br> в Digital и не только ...</div>
-                    <a class="button button_blue button_big slide1__btn">Обсудить проект</a>
+                    <a class="button button_blue button_big slide1__btn js-fancybox" href="#contact">Обсудить проект</a>
                 </div>
                 <div class="slide1__slider slider slider_portfolio">
                     <div class="slider swiper-container js-slider">
@@ -425,6 +425,7 @@
                         <form class="subscribe">
                             <div class="inputbox">
                                 <input class="input subscribe__email" placeholder="Email" />
+                                <div class="inputbox__placeholder"></div>
                             </div>
                             <button class="button button_img" type="submit">
                                 <img class="button__send" src="./assets/images/send.svg" alt="" role="presentation" />
@@ -471,7 +472,7 @@
                             <span class="link__text">mail@prostudio.ru</span>
                         </a>
                     </div>
-                    <a class="button button_white button_big slide5__btn">Обсудить проект</a>
+                    <a class="button button_white button_big slide5__btn js-fancybox" href="#contact">Обсудить проект</a>
                 </div>
                 <div class="slide-footer slide__footer slide__footer_end">
                     <div class="container slide-footer__container">
@@ -531,7 +532,7 @@
             <h1 class="pad__title">Сайты
                 <br>Продвижение
                 <br>дизайн</h1>
-            <a class="link link_nounder pad__discuss" href="#">
+            <a class="link link_nounder pad__discuss js-fancybox" href="#contact">
                 <span class="link__text">Обсудить проект</span>
             </a>
             <div class="padportfolio pad__portfolio">
@@ -676,7 +677,7 @@
                 </div>
             </div>
             <div class="pad__question">Хотите проект от Prostudio?</div>
-            <a class="button pad__btn button button_blue button button_big">Обсудить проект</a>
+            <a class="button pad__btn button button_blue button button_big js-fancybox" href="#contact">Обсудить проект</a>
         </div>
     </div>
     <div class="footer">
@@ -825,6 +826,80 @@
                     <div class="switcher__value switcher__value_off">EN</div>
                 </label>
                 <div class="footer__copyright footer__copyright_mobil">© 2009-2017 ООО «Цифровая империя»</div>
+            </div>
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <div class="contact__wrapper">
+            <div class="contact__step1">
+                <div class="contact__title">Заполните заявку на проект?</div>
+                <form class="contact__form">
+                    <div class="contact__box">
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half">Выберите проект:
+                            <select class="select js-select">
+                                <option value="Веб-сайт">Веб-сайт</option>
+                                <option value="Продвижение">Продвижение</option>
+                                <option value="Брендинг">Брендинг</option>
+                                <option value="Приложение">Приложение</option>
+                                <option value="Аналитика">Аналитика</option>
+                                <option value="Поддержка">Поддержка</option>
+                            </select>
+                            <div class="inputbox__placeholder"></div>
+                        </div>
+                        <div class="inputbox inputbox inputbox_noborder contact__inputbox contact__inputbox contact__inputbox_half contact__inputbox contact__inputbox_flexstart">
+                            <!--+input(placeholder="Плейсхолдер")-->
+                            <div class="inputbox__title">Бюджет:</div>
+                            <label class="checkradio">
+                                <input class="checkradio__input" name="budget" value="test" checked="true" type="radio" />
+                                <!--+e.SPAN.box-->
+                                <span class="checkradio__content">100-200 тыс. руб</span>
+                            </label>
+                            <label class="checkradio">
+                                <input class="checkradio__input" name="budget" value="test-2" type="radio" />
+                                <!--+e.SPAN.box-->
+                                <span class="checkradio__content">от 500 тыс. руб</span>
+                            </label>
+                            <div class="inputbox__placeholder"></div>
+                        </div>
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half">
+                            <input class="input" />
+                            <div class="inputbox__placeholder">Имя</div>
+                        </div>
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half">
+                            <input class="input" />
+                            <div class="inputbox__placeholder">Телефон</div>
+                        </div>
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half">
+                            <input class="input" />
+                            <div class="inputbox__placeholder">Email</div>
+                        </div>
+                        <div class="inputbox inputbox_file contact__inputbox contact__inputbox contact__inputbox_half">
+                            <label>
+                                <input class="input" type="file" />
+                                <span class="filename">Добавить файл</span>
+                                <img class="addfile" src="./assets/images/addfile.svg">
+                            </label>
+                            <div class="inputbox__placeholder"></div>
+                        </div>
+                        <div class="inputbox contact__inputbox">
+                            <input class="input" />
+                            <div class="inputbox__placeholder">Сообщение</div>
+                        </div>
+                    </div>
+                    <div class="contact__text">Нажимая на кнопку «Отправить», вы соглашаетесь на обработку персональных данных
+                        <br>в соответсвии с
+                        <a class="link link_blue">
+                            <span class="link__text">Политикой конфиденциальности.</span>
+                        </a>
+                    </div>
+                    <input class="button button_blue button_big contact__btn js-submit" type="submit" value="отправить заявку" />
+                </form>
+            </div>
+            <div class="contact__step2">
+                <img src="./assets/images/msg_send.jpg">
+                <div class="contact__title">Отправлено!</div>
+                <div class="contact__subtitle">Спасибо за обращение в нашу студию.</div>
+                <a class="button button_blue button_big contact__btn contact__btn_mt js-popup-close">на главную</a>
             </div>
         </div>
     </div>
