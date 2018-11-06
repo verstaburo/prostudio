@@ -1,0 +1,35 @@
+.contacts {
+  //display: flex;
+  //justify-content: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.mapcard {
+  background: white;
+  //padding: 7px 18px 26px;
+  width: 312px;
+
+  &__box {
+    padding: 7px 42px 50px;
+    border-bottom: 1px solid #d9dee2;
+  }
+
+  &__title {
+    color: $color-main;
+    font-size: 17px;
+    letter-spacing: 1.19px;
+    margin-top: 40px;
+  }
+
+  &__value {
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  &__links {
+    padding: 26px 18px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

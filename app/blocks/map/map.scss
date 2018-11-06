@@ -2,9 +2,10 @@
 
 .map {
   display: block;
-  height: 400px;
+  //height: 400px;
   position: relative;
   z-index: 1;
+  height: 612px;
 }
 
 .leaflet-control-layers-toggle {
@@ -53,4 +54,6 @@
   @include text;
 }
 
-.leaflet-container .leaflet-control-attribution { display: none; }
+.leaflet-container .leaflet-control-attribution {
+  display: none;
+}

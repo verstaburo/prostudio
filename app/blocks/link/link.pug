@@ -14,3 +14,7 @@ mixin link-icon-right(iconname)
     +icon(iconname).__icon_right
     +e.SPAN.text
       block
+
+mixin link-img (img)
+  +b.A
+    img(src= img)

@@ -1,0 +1,41 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Prostudio'
+
+block content
+  +header._wide._inner
+  +b.contacts
+    +tabs._contacts
+      +tab()(data-tab-target="tab1")._blue.active
+        img(src='./assets/images/piter.png').tabs__img.tabs__img_active
+        img(src='./assets/images/piter_gray.png').tabs__img
+        | Петербург
+      +tab()(data-tab-target="tab2")._red
+        img(src='./assets/images/moscow.png').tabs__img.tabs__img_active
+        img(src='./assets/images/moscow_gray.png').tabs__img
+        | Москва
+    +tabs-content._contacts
+      +tab-wrapper()(data-tab="tab1" data-tab-group="contacts").active
+        //<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aab8f43e013825df8279fd7c2d8bc013528e1c072752a27526138bc9c3f21a337&amp;source=constructor" width="100%" height="611" frameborder="0"></iframe>
+        +map()#map_piter
+        +e.card
+          +b.mapcard
+            +e.box
+              +e.title Адрес:
+              +e.value Ленинский 151
+              +e.title Телефон:
+              +e.value +7 (812) 645-65-96
+              +e.title Почта:
+              +e.value info@prostudio.ru
+            +e.links
+              +link-img('./assets/images/vk_color.svg')
+              +link-img('./assets/images/behance_color.svg')
+              +link-img('./assets/images/youtube_color.svg')
+              +link-img('./assets/images/insta_color.svg')
+              +link-img('./assets/images/fb_color.svg')
+              +link-img('./assets/images/tg_color.svg')
+
+      +tab-wrapper()(data-tab="tab2" data-tab-group="contacts")
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad001411a32e979041b5f28e9a9d087f6e9e8d76b1f654cd955d3c38b6e0e38e8&amp;source=constructor" width="100%" height="611" frameborder="0"></iframe>
+  +footer
