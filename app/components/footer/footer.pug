@@ -15,7 +15,7 @@ mixin footer()
             img(src='/assets/images/apple.png')
             |iPhone
           +link._nounder._gray._flex.apps__link
-            img(src='/assets/images/android.png')
+            img(src='./assets/images/android.png')
             | Android
       +e.right
         +b.icons
@@ -23,13 +23,13 @@ mixin footer()
           +link-icon('behance')._gray
           +link-icon('youtube')._gray
           +link._nounder
-            img(src='/assets/images/instagram.png')
+            img(src='./assets/images/instagram.png')
           //+link-icon('instagram')._gray
           +link-icon('facebook')._gray
           +link-icon('telegram')._gray
         +e.second
           +link._nounder._gray._flex
-            img(src='/assets/images/pdf.png')
+            img(src='./assets/images/pdf.png')
             | скачать презентацию<br>5МБ
           +b.langs
             +link._nounder._gray.langs__lang_active RU
@@ -38,10 +38,10 @@ mixin footer()
           +b.apps
             +e.title cкачать приложение:
             +link._nounder._gray._flex.apps__link
-              img(src='/assets/images/apple.png')
+              img(src='./assets/images/apple.png')
               | iPhone
             +link._nounder._gray._flex.apps__link
-              img(src='/assets/images/android.png')
+              img(src='./assets/images/android.png')
               | Android
           +b.langs
             +link._nounder._gray.langs__lang_active RU
@@ -50,22 +50,22 @@ mixin footer()
         +b.city
           +e.name Петербург
           +link._nounder._xl._img.city__address
-            img(src='/assets/images/ext_link.png')
+            img(src='./assets/images/ext_link.png')
             | Ленинский проспект, 151
           +link._dashed._xl.city__tel +7(812) 645-65-96
         +b.city
           +e.name Москва
           +link._nounder._xl._img.city__address
-            img(src='/assets/images/ext_link.png')
+            img(src='./assets/images/ext_link.png')
             | Проспект вернадского, 43
           +link._dashed._xl.city__tel +7(495) 645-65-96
         +link(href='mailto:mail@prostudio.ru')._nounder._xl._blue.footer__mail_mobil mail@prostudio.ru
         +b.apps_mobil
           +e.title Cкачать приложение:
           +link._nounder._gray._flex.apps__link
-            img(src='/assets/images/apple.png')
+            img(src='./assets/images/apple.png')
           +link._nounder._gray._flex.apps__link
-            img(src='/assets/images/android.png')
+            img(src='./assets/images/android.png')
         +switcher('RU', 'EN').footer__switcher
         +e.copyright_mobil © 2009-2017  ООО «Цифровая империя»
 

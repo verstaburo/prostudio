@@ -15,11 +15,14 @@ export default function tabs() {
         tab = $(document).find('[data-tab="' + targetTab + '"]'),
         tabGroup = tab.data('tab-group');
 
-    $(document).find('[data-tab-group="' + tabGroup + '"]').hide().removeClass('active');
+    // $(document).find('[data-tab-group="' + tabGroup + '"]').hide().removeClass('active');
+    $(document).find('[data-tab-group="' + tabGroup + '"]').removeClass('active');
 
-    tab.show(0, function () {
-      $(this).addClass('active');
-    });
+    // tab.show(0, function () {
+    //   $(this).addClass('active');
+    // });
+
+    tab.addClass('active')
   });
 }
 /* eslint-enable */

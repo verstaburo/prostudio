@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="66"
+   height="66"
+   viewBox="0 0 66 66"
+   version="1.1"
+   id="svg3747"
+   sodipodi:docname="prev_active.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata3751">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     id="namedview3749"
+     showgrid="false"
+     inkscape:zoom="6.5"
+     inkscape:cx="-8.5751195"
+     inkscape:cy="17.064302"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3747" />
+  <defs
+     id="defs3735">
+    <path
+       id="b0cqa"
+       d="M1036 791c18.225 0 33 14.775 33 33s-14.775 33-33 33-33-14.775-33-33 14.775-33 33-33z" />
+    <path
+       id="b0cqb"
+       d="M1036.385 816l-2.235 2.185 4.848 4.773h-12.837v3.084h12.837l-4.848 4.773 2.235 2.185 8.615-8.5z" />
+  </defs>
+  <g
+     id="g3745"
+     transform="rotate(180,33,33)">
+    <g
+       transform="translate(-1003,-791)"
+       id="g3739">
+      <use
+         xlink:href="#b0cqa"
+         id="use3737"
+         style="fill:#0081cb"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+    </g>
+    <g
+       transform="translate(-1003,-791)"
+       id="g3743">
+      <use
+         xlink:href="#b0cqb"
+         id="use3741"
+         style="fill:#ffffff"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+    </g>
+  </g>
+</svg>

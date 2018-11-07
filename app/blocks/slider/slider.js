@@ -227,5 +227,28 @@ export default function slider() {
     //   },
     // },
   });
+
+  const aboutSlider = new Swiper('.about__slider .js-slider', {
+    loop: true,
+    slidesPerView: 1,
+    pagination: {
+      el: '.about__pag',
+      // type: 'fraction',
+      type: 'custom',
+      // renderBullet(index, className) {
+      //   return `<span class="${className}">0${index + 1}</span>`;
+      // },
+      // renderFraction(currentClass, totalClass, index) {
+    //   return `<span class="${currentClass}">0${index}</span><span class="${totalClass}"></span>`;
+      // },
+      renderCustom(swiper, current, total) {
+        return `<span class="swiper-pagination-current">0${current}</span><span class="swiper-pagination-total">0${total}</span>`;
+      },
+    },
+    navigation: {
+      nextEl: '.about__next',
+      prevEl: '.about__prev',
+    },
+  });
 }
 /* eslint-enable no-unused-vars */
