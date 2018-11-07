@@ -250,5 +250,15 @@ export default function slider() {
       prevEl: '.about__prev',
     },
   });
+
+  const teamSlider = new Swiper('.js-slider.team__slider', {
+    loop: true,
+    slidesPerView: 1,
+    centeredSlides: true,
+    centerInsufficientSlides: true,
+    pagination: {
+      el: '.slider__dots',
+    },
+  });
 }
 /* eslint-enable no-unused-vars */

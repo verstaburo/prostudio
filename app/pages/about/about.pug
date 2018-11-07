@@ -32,58 +32,22 @@ block content
       .container.container_inner
         +e.title Команда
       +e.box
-        +e.item
-          +e.img
-            img(src='./assets/images/worker1.jpg')
-            +e.links
-              +link._nounder
-                img(src='./assets/images/inst_small.png')
-              +link._nounder
-                img(src='./assets/images/fb_small.png')
-              +link._nounder
-                img(src='./assets/images/tg_small.png')
-          +e.position Директор
-          +e.name Беличенко Анатолий
-          +e.desc «Здесь будет написана цитата или текст сотрудника.»
-        +e.item
-          +e.img
-            img(src='./assets/images/worker2.jpg')
-            +e.links
-              +link._nounder
-                img(src='./assets/images/inst_small.png')
-              +link._nounder
-                img(src='./assets/images/fb_small.png')
-              +link._nounder
-                img(src='./assets/images/tg_small.png')
-          +e.position Управляющий партнер
-          +e.name Иванов Назар
-          +e.desc «Здесь будет написана цитата»
-        +e.item
-          +e.img
-            img(src='./assets/images/worker3.jpg')
-            +e.links
-              +link._nounder
-                img(src='./assets/images/inst_small.png')
-              +link._nounder
-                img(src='./assets/images/fb_small.png')
-              +link._nounder
-                img(src='./assets/images/tg_small.png')
-          +e.position Начальник отдела продаж
-          +e.name Анна Трофимова
-          +e.desc «Здесь будет написана цитата или текст сотрудника.»
-        +e.item
-          +e.img
-            img(src='./assets/images/worker4.jpg')
-            +e.links
-              +link._nounder
-                img(src='./assets/images/inst_small.png')
-              +link._nounder
-                img(src='./assets/images/fb_small.png')
-              +link._nounder
-                img(src='./assets/images/tg_small.png')
-          +e.position Руководитель проектов
-          +e.name Петр Симоненко
-          +e.desc «Здесь будет написана цитата или текст сотрудника.»
+        +worker-card('./assets/images/worker1.jpg', 'Директор', 'Беличенко Анатолий', '«Здесь будет написана цитата или текст сотрудника.»')
+        +worker-card('./assets/images/worker2.jpg', 'Управляющий партнер', 'Иванов Назар', '«Здесь будет написана цитата»')
+        +worker-card('./assets/images/worker3.jpg', 'Начальник отдела продаж', 'Анна Трофимова', '«Здесь будет написана цитата»')
+        +worker-card('./assets/images/worker4.jpg', 'Руководитель проектов', 'Петр Симоненко', '«Здесь будет написана цитата»')
+      +slider(true, false).team__slider
+        +slide
+          +worker-card('./assets/images/worker1.jpg', 'Директор', 'Беличенко Анатолий', '«Здесь будет написана цитата или текст сотрудника.»')
+        +slide
+          +worker-card('./assets/images/worker2.jpg', 'Управляющий партнер', 'Иванов Назар', '«Здесь будет написана цитата»')
+        +slide
+          +worker-card('./assets/images/worker3.jpg', 'Начальник отдела продаж', 'Анна Трофимова', '«Здесь будет написана цитата»')
+        +slide
+          +worker-card('./assets/images/worker4.jpg', 'Руководитель проектов', 'Петр Симоненко', '«Здесь будет написана цитата»')
+      +e.question Хочешь работать вместе с нами?
+        +link._nounder._blue._inherit Присоединяйся!
+
 
 
   +footer

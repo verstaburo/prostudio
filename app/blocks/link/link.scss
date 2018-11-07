@@ -113,6 +113,10 @@
     }
   }
 
+  &_inherit {
+    font-size: inherit;
+  }
+
   &__icon {
     position: absolute;
     left: 0;
