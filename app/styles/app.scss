@@ -29,6 +29,11 @@
     width: 1250px;
     box-sizing: content-box;
   }
+
+  &_flex {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .js-sr {

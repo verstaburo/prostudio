@@ -233,14 +233,7 @@ export default function slider() {
     slidesPerView: 1,
     pagination: {
       el: '.about__pag',
-      // type: 'fraction',
       type: 'custom',
-      // renderBullet(index, className) {
-      //   return `<span class="${className}">0${index + 1}</span>`;
-      // },
-      // renderFraction(currentClass, totalClass, index) {
-    //   return `<span class="${currentClass}">0${index}</span><span class="${totalClass}"></span>`;
-      // },
       renderCustom(swiper, current, total) {
         return `<span class="swiper-pagination-current">0${current}</span><span class="swiper-pagination-total">0${total}</span>`;
       },
@@ -258,6 +251,29 @@ export default function slider() {
     centerInsufficientSlides: true,
     pagination: {
       el: '.slider__dots',
+      clickable: true,
+    },
+  });
+
+  const principlesSlider = new Swiper('.principles__slider .js-slider', {
+    loop: true,
+    slidesPerView: 1,
+    centeredSlides: true,
+    centerInsufficientSlides: true,
+    pagination: {
+      el: '.principles__pag',
+      // type: 'custom',
+      // renderCustom(swiper, current, total) {
+      //   return `<span class="principles__slidenum">0${current}</span>`;
+      // },
+      bulletClass: 'principles__slidenum',
+      bulletActiveClass: 'principles__slidenum_active',
+      clickable: true,
+      renderBullet(index, className) {
+        // index+=1;
+        const num = index + 1;
+        return `<span class="${className}">0${num}</span>`;
+      },
     },
   });
 }
