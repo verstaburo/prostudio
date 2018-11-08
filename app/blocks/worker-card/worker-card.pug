@@ -1,0 +1,15 @@
+mixin worker-card(img, position, name, desc)
+  +b.worker-card&attributes(attributes)
+    +e.img
+      img(src= img)
+      +e.links
+        +link._nounder
+          img(src='./assets/images/inst_small.png')
+        +link._nounder
+          img(src='./assets/images/fb_small.png')
+        +link._nounder
+          img(src='./assets/images/tg_small.png')
+    +e.position= position
+    +e.name= name
+    +e.desc= desc
+    block

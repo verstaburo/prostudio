@@ -1,0 +1,62 @@
+.worker-card {
+  display: block;
+  width: 354px;
+  margin: 50px 15px 0;
+
+  &__position {
+    color: $color-main;
+    font-family: 'Intro Black Caps';
+    text-transform: uppercase;
+    font-size: 14px;
+    //font-weight: 700;
+    letter-spacing: 1.05px;
+    margin-top: 30px;
+  }
+
+  &__name {
+    font-size: 21px;
+    line-height: 33px;
+    margin-top: 5px;
+  }
+
+  &__desc {
+    color: #bababa;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 1.35px;
+    margin-top: 30px;
+  }
+
+  &__img {
+    position: relative;
+    font-size: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__links {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 129, 203, .8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    top: 0;
+    transition: all .5s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@include screen('lg-r', max) {
+
+  .worker-card {
+    width: 338px;
+  }
+}
