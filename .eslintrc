@@ -2,7 +2,8 @@
   "extends": "airbnb-base",
   "rules": {
     "linebreak-style": 0,
-    "no-underscore-dangle": 0
+    "no-underscore-dangle": 0,
+    "arrow-body-style": 1
     },
   "env": {
     "browser": true,

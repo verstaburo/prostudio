@@ -13,10 +13,12 @@ import tabs from '../blocks/tabs/tabs';
 import maps from '../blocks/map/map';
 import mainSlider from '../blocks/pagepiling/pagepiling';
 import mixContent from '../blocks/grid-list/grid-list';
+import PorftolioFilter from '../pages/portfolio/portfolio';
 import '../blocks/rating/rating';
 import '../blocks/accordion/accordion';
 import '../blocks/dropdown/dropdown';
 import '../blocks/put-block-into-slot/put-block-into-slot';
+
 
 const $ = window.$;
 
@@ -40,4 +42,5 @@ $(() => {
   inputfile();
   maps();
   scrollanimation();
+  PorftolioFilter();
 });

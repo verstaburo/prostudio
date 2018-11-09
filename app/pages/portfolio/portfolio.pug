@@ -1,0 +1,25 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Versta Project Template'
+
+block content
+  +header._wide._inner
+  .container.container_inner
+    +b.portfolio
+      +e.title Мы разрабатываем и интегрируем сложные высоконагруженные проекты для крупного бизнеса. Упрощаем жизнь людей и повышаем продажи.
+      +e.filters
+        +e.filter._active.js-portfolio-filer Все
+        +e.filter.js-portfolio-filer Сайты
+        +e.filter.js-portfolio-filer Продвижения
+        +e.filter.js-portfolio-filer Брендинг
+        +e.filter.js-portfolio-filer Аналитика
+        +e.filter.js-portfolio-filer Приложения
+        +e.filter.js-portfolio-filer Поддержка
+      +e.box
+        +card-portfolio('./assets/images/portfolio1.jpg', 'Разработка<br> и продвижение приложения<br> Velvet.money', '#Приложения  #Поддержка', false)._wide
+        +card-portfolio('./assets/images/portfolio2.jpg', 'Создание сайта<br> Peoples choice.studio', '#Сайты', true)
+        +card-portfolio('./assets/images/portfolio3.jpg', 'Брендинги создание сайта<br>для Style.expert', '#Брендинг  #Сайты', false)._blue
+        +card-portfolio('./assets/images/portfolio4.jpg', 'Создание сайта<br>printui.ru', '#Сайты', false)._wide
+
+  +footer

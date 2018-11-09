@@ -638,13 +638,26 @@
     width: 100%;
     border-bottom: 2px solid #e3e3e3;
     padding-bottom: 10px;
+    height: 40px;
 
     &_half {
       width: 400px;
     }
 
+    &_third {
+      width: 360px;
+    }
+
+    &_twothird {
+      flex: 1 1 690px;
+    }
+
     &_flexstart {
       justify-content: flex-start;
+    }
+
+    &_noborder {
+      border-bottom: none;
     }
   }
 
@@ -696,9 +709,63 @@
     letter-spacing: 1.5px;
     margin-top: 30px;
   }
+
+  &_about {
+    width: unset;
+
+    .contact {
+
+      &__box {
+        margin-right: -42px;
+        margin-left: -42px;
+        //justify-content: flex-start;
+      }
+
+      &__inputbox {
+        margin-right: 42px;
+        margin-left: 42px;
+      }
+
+      &__btn {
+        margin-top: 50px;
+      }
+    }
+
+    .inputbox {
+
+      &__title {
+        width: unset;
+      }
+    }
+
+    .checkradio {
+      margin-right: 0;
+      margin-left: 50px;
+    }
+  }
 }
 
 // MEDIA START
+
+@include screen('lg', max) {
+
+  .contact {
+
+    &_about {
+      margin-top: 85px;
+
+      .contact {
+
+        &__inputbox {
+
+          &_third {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
 
 @include screen('md') {
 
@@ -711,6 +778,24 @@
 
   #pagepiling, #pp-nav {
     display: none;
+  }
+
+  .contact {
+
+    &__inputbox {
+
+      &_budget {
+        justify-content: space-between;
+
+        .checkradio {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 30px;
+    }
   }
 }
 

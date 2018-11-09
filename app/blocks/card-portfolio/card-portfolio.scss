@@ -1,0 +1,49 @@
+$card-gap: 12px;
+
+.card-portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: calc(50% - #{$card-gap} * 2);
+  margin: 24px $card-gap 0;
+  padding: 55px 58px;
+  position: relative;
+  height: 590px;
+  box-sizing: border-box;
+  color: white;
+
+  &_wide {
+    width: 100%;
+  }
+
+  &__bg {
+    @include fill-img;
+  }
+
+  &__title {
+    z-index: 1;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: .55px;
+  }
+
+  &__tags {
+    z-index: 1;
+  }
+
+  &_blue {
+
+    .card-portfolio {
+
+      &__title {
+        color: black;
+      }
+      &__tags {
+        color: $color-main;
+      }
+
+    }
+  }
+}
+

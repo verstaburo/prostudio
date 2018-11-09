@@ -540,10 +540,12 @@
     letter-spacing: .45px;
   }
 
-  &__apptext {
+  &__mobil {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: 14px;
   }
 
   &__img {
@@ -556,6 +558,10 @@
 
   &__btn {
     margin-left: 12px;
+  }
+
+  &__left {
+    width: 100%;
   }
 }
 
@@ -874,5 +880,19 @@
       }
     }
 
+  }
+}
+
+
+@include screen('sm', max ) {
+
+  .care {
+
+    &__btn {
+      margin-top: 10px;
+      margin-left: 0;
+      margin-right: 12px;
+
+    }
   }
 }

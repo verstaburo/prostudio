@@ -1,0 +1,8 @@
+mixin card-portfolio(img, title, tags, test)
+  +b.card-portfolio&attributes(attributes)
+    +e.IMG(src= img).bg
+    +e.title !{title}
+    +e.tags= tags
+    if test
+      +e.test
+    block
