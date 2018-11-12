@@ -12,18 +12,12 @@
 $(document).ready(() => {
 
   $('.js-padmenu').click(() => {
-    // $('.burger').toggleClass('rbc-padmenu_active');
     $('.buttons__burger').toggleClass('buttons__burger_active');
     $('.header__menu').toggleClass('header__menu_active');
   });
 
   $('.js-vacancy-hot .switcher__box').click(() => {
-    // e.preventDefault();
-    // $('.js-vacancy-hot').on('click'() => {
-    // console.log($('.vacancy__title').not('.vacancy__title_hot'));
-    console.log('piu');
     $('.vacancy__title').not('.vacancy__title_hot').each(function () {
-
       $(this).parents('.accordion').toggle(300);
     })
   });
