@@ -36,8 +36,43 @@
     margin-top: 6px;
     margin-left: -$card-gap;
     margin-right: -$card-gap;
-
   }
+}
 
+@include screen('lg-r', max) {
 
+  .portfolio {
+
+    &__title {
+      font-size: 22px;
+      line-height: 36px;
+      letter-spacing: .22px;
+    }
+
+    &__box {
+      margin-left: -$card-gap;
+      margin-right: -$card-gap;
+    }
+
+    &__filters {
+      overflow-x: scroll;
+    }
+  }
+}
+
+@include screen('md', max) {
+
+  .portfolio {
+
+    &__title {
+      font-size: 20px;
+      line-height: 36px;
+      letter-spacing: 0.2px;
+    }
+
+    &__box {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 }
