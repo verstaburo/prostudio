@@ -1,0 +1,20 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = '123'
+
+block content
+  +header._wide._inner
+  section
+    +b.page-404
+      .container.container_inner
+        +e.body
+          img(src="assets/images/404.png" alt="Страница не найдена").page-404__img
+      +e.footer
+        +e.text-wrap
+          +e.text.__text_big ОЙ!
+          +e.text Страница не найдена...
+        +e.to-home
+          +button()._big.page-404__button
+            +icon("arrow-left2").404__icon
+            span на главную

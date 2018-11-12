@@ -1,0 +1,313 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Usluga'
+
+block content
+  +header._wide._inner
+  section
+    +b.usluga-header
+      .container.container_inner
+        +e.title Корпоративный сайт
+        +e.text.__text-1 <b>Корпоративный сайт</b> это ваш виртуальный офис, в котором работают лучшие сотрудники. Они <b>всегда расскажут посетителям</b> обо всех достижениях и преимуществах вашей компании, примут заказ и ответят на вопросы. 
+        +e.text.__text-2 Cайт это ваш виртуальный офис, в котором работают лучшие сотрудники. Они всегда расскажут посетителям обо всех достижениях <b>и преимуществах вашей компании</b>, примут заказ и ответят на вопросы.
+        +button().button_big.usluga-header__button обсудить проект
+      +e.info
+        +e.info-box
+          +e.info-score
+            +e.info-number + 112
+            +e.info-text корпоративных сайта было создано командой Prostudio.
+          +e.A.info-icon(href="")
+            +icon('eye')
+          +e.info-look
+            +e.info-look__title Посмотри кейсы
+            +e.info-look__desc узнай, почему лучше заказывать корпоративный сайт в Prostudio.
+  section
+    +b.usluga-how
+      .container.container_inner
+        +e.title  Как мы работаем
+        +e.box
+          +b.usluga-card
+            +e.title Первое знакомство
+            +e.text
+              p Получение и обработки заявки
+              p Встреча и <a href="/">заполнение брифа</a> 
+              p Подготовка и утверждение технического задания
+              p Формирование коммерческого предложения
+            +e.footer
+              +e.time 3 дня
+              +e.number 01
+          +b.usluga-card
+            +e.title Согласование документов 
+            +e.text
+              p Утверждение коммерческого предложения
+              p Подготовка и согласование договора
+              p Подписание договора
+            +e.footer
+              +e.time  1 неделя
+              +e.number 02
+          +b.usluga-card
+            +e.title Начало работ
+            +e.text
+              p Начало сотрудничества
+              p Отчет о проделанной работе
+              p Подписание закрывающих документов
+              p Дальнейшее сотрудничество
+            +e.footer
+              +e.time.__time_big   ∞
+              +e.number 03     
+        +slider(true, false).usluga-how__slider
+          +slide
+            +b.usluga-card
+              +e.title Первое знакомство
+              +e.text
+                p Получение и обработки заявки
+                p Встреча и <a href="/">заполнение брифа</a> 
+                p Подготовка и утверждение технического задания
+                p Формирование коммерческого предложения
+              +e.footer
+                +e.time 3 дня
+                +e.number 01
+          +slide
+            +b.usluga-card
+              +e.title Согласование документов 
+              +e.text
+                p Утверждение коммерческого предложения
+                p Подготовка и согласование договора
+                p Подписание договора
+              +e.footer
+                +e.time  1 неделя
+                +e.number 02
+          +slide
+            +b.usluga-card
+              +e.title Начало работ
+              +e.text
+                p Начало сотрудничества
+                p Отчет о проделанной работе
+                p Подписание закрывающих документов
+                p Дальнейшее сотрудничество
+              +e.footer
+                +e.time.__time_big   ∞
+                +e.number 03
+  section
+    +b.usluga-cms
+      +e.title Системы управления
+      .container.container_inner
+        +e.box
+          +e.item
+            +e.head 1С Битрикс 
+            +e.text Этот текст предназначен для того, чтобыпоказать, как будет выглядить текств данном текстовом блоке.
+          +e.item
+            +e.head WordPress
+            +e.text Этот текст предназначен для того, чтобыпоказать, как будет выглядить текств данном текстовом блоке.
+          +e.item
+            +e.head Yii Framework
+            +e.text Этот текст предназначен для того, чтобыпоказать, как будет выглядить  текств данном текстовом блоке.
+          +e.item
+            +e.head CMS Prostudio
+            +e.text Этот текст предназначен для того, чтобыпоказать, как будет выглядить  текств данном текстовом блоке.
+
+  section
+    +b.usluga-steps
+      .container.container_inner
+        +e.title Мы делаем
+      +e.wrapper
+        .container.container_inner
+          +e.box
+            +b.step.step-1
+              +e.icon
+                +icon("target").icon-target
+                +e.number 01
+              +e.text._1 Определение целей и задач.
+            +b.step.step-2
+              +e.icon
+                +icon("binoculars").icon-binoculars
+                +e.number 02
+              +e.text._2 Анализ рынка и конкурентов. Позиционирование и концепция проекта.
+            +b.step.step-3
+              +e.icon
+                +icon("sitemap").icon-sitemap
+                +e.number 03
+              +e.text._3 Разработка структуры и прототипов сайта. Создание дизайна страниц.
+            +b.step.step-4
+              +e.icon
+                +icon("code").icon-code
+                +e.number 04
+              +e.text._4 Верстка макетов сайта.
+            +b.step.step-5
+              +e.icon
+                +icon("control").icon-control
+                +e.number 05
+              +e.text._5 Интеграция с системой управления сайтом.
+
+            +b.step.step-6
+              +e.icon
+                +icon("code-2").icon-code-2
+                +e.number 06
+              +e.text._6 Программирование и доработка функционала.
+            +b.step.step-7
+              +e.icon
+                +icon("picture").icon-picture
+                +e.number 07
+              +e.text._7 Наполнение контентом.
+            +b.step.step-8
+              +e.icon
+                +icon("cursor").icon-cursor
+                +e.number 08
+              +e.text._8 Тестирование и отладка сайта.
+            +b.step.step-9.step_last
+              +e.icon
+                +icon("rocket").icon-rocket
+                +e.number 09
+              +e.text._9 Запуск проекта и дальнейшее сотрудничество.  
+          +slider(false, false).usluga-steps__slider
+            +slide
+              +b.step.step-1
+                +e.icon
+                  +icon("target").icon-target
+                  +e.number 01
+                +e.text._1 Определение целей и задач.
+            +slide
+              +b.step.step-2
+                +e.icon
+                  +icon("binoculars").icon-binoculars
+                  +e.number 02
+                +e.text._2 Анализ рынка и конкурентов. Позиционирование и концепция проекта.
+            +slide
+              +b.step.step-3
+                +e.icon
+                  +icon("sitemap").icon-sitemap
+                  +e.number 03
+                +e.text._3 Разработка структуры и прототипов сайта. Создание дизайна страниц.
+            +slide
+              +b.step.step-4
+                +e.icon
+                  +icon("code").icon-code
+                  +e.number 04
+                +e.text._4 Верстка макетов сайта.
+            +slide
+              +b.step.step-5
+                +e.icon
+                  +icon("control").icon-control
+                  +e.number 05
+                +e.text._5 Интеграция с системой управления сайтом.
+            +slide
+              +b.step.step-6
+                +e.icon
+                  +icon("code-2").icon-code-2
+                  +e.number 06
+                +e.text._6 Программирование и доработка функционала.
+            +slide
+              +b.step.step-7
+                +e.icon
+                  +icon("picture").icon-picture
+                  +e.number 07
+                +e.text._7 Наполнение контентом.
+            +slide
+              +b.step.step-8
+                +e.icon
+                  +icon("cursor").icon-cursor
+                  +e.number 08
+                +e.text._8 Тестирование и отладка сайта.
+            +slide
+              +b.step.step-9
+                +e.icon
+                  +icon("rocket").icon-rocket
+                  +e.number 09
+                +e.text._9 Запуск проекта и дальнейшее сотрудничество.
+          +e.nav
+            +e.prev
+            +e.next       
+
+
+  
+   
+ 
+
+  section
+    +b.usluga-work
+      .container.container_inner
+        +e.title Кто работает над вашим проектом?
+        +e.box
+          +usluga-workers Менеджер проекта
+          +usluga-workers Копирайтер
+          +usluga-workers Программист
+          +usluga-workers Аналитик
+          +usluga-workers Верстальщик
+          +usluga-workers Проектировщик
+          +usluga-workers Дизайнер
+          +usluga-workers Арт-директор
+
+  section
+    +b.care.usluga__care
+      .container.container_inner
+        +e.box
+          +e.left
+            +e.title Мы заботимся,
+            +e.text
+              p о вашем времени, нервах и деньгах, поэтому разработали приложение для контроля процесса выполнения вашего проекта.
+              p Вы можете отслеживать стадии выполнения проекта, задать вопросы поддержке и вести обсуждение прямо в приложении.
+              +e.img
+                img(src='./assets/images/care_app.png')
+            +e.apptitle Отслеживание процесса разработки сайта:
+            +e.mobil
+              +e.apptext Скачать приложения для
+              +link._nounder._btn._btn-gray._center._nowrap.care__btn
+                img(src='./assets/images/apple_blue.png')
+                | iPhone
+              +link._nounder._btn._btn-gray._center._nowrap.care__btn
+                img(src='./assets/images/android_blue.png')
+                | Android
+          +e.right
+            img(src='./assets/images/care_app.png')
+  section
+    .container.container_inner
+      +b.contact_about
+        //+e.wrapper
+          //+e.step1
+        +e.title Хотите заказать проект?
+        +e.FORM.form
+          +e.box
+            +inputbox.contact__inputbox.contact__inputbox_third.contact__inputbox_mr Выберите проект:
+              +select
+                option(value="Веб-сайт") Веб-сайт
+                option(value="Продвижение") Продвижение
+                option(value="Брендинг") Брендинг
+                option(value="Приложение") Приложение
+                option(value="Аналитика") Аналитика
+                option(value="Поддержка") Поддержка
+            +inputbox.inputbox_noborder.contact__inputbox.contact__inputbox_twothird.contact__inputbox_flexstart.contact__inputbox_noborder.contact__inputbox_budget
+              //+input(placeholder="Плейсхолдер")
+              .inputbox__title Бюджет:
+              +radio('budget', 'test', 'true') 100-200 тыс. руб
+              +radio('budget', 'test-2') от 500 тыс. руб
+            +inputbox('Имя').contact__inputbox.contact__inputbox_third.contact__inputbox_mr
+              +input()
+            +inputbox("Телефон").contact__inputbox.contact__inputbox_third.contact__inputbox_mr
+              +input()
+            +inputbox("Email").contact__inputbox.contact__inputbox_third
+              +input
+            +inputbox("Сообщение").contact__inputbox.contact__inputbox_twothird.contact__inputbox_mr
+              +input
+            +inputbox()._file.contact__inputbox.contact__inputbox_third
+              label
+                +input(type='file')
+                span.filename Добавить файл
+                img(src='./assets/images/addfile.svg').addfile
+          //+e.text Нажимая на кнопку  «Отправить», вы соглашаетесь на обработку персональных данных<br>в соответсвии с
+          //  +link._blue Политикой конфиденциальности.
+          +button('input')(type='submit', value='отправить заявку')._blue._big.contact__btn.js-submit
+
+  +footer        
+
+
+
+
+
+               
+
+
+
+
+
+

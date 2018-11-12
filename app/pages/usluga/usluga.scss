@@ -1,0 +1,787 @@
+.usluga {
+  
+  &-header {
+    margin-top: 95px;
+    position: relative;
+
+    @include screen('xl', max) {
+      margin-top: 54px;
+    }
+
+    @include screen('md', max) {
+      margin-top: 50px;
+    }
+
+    &__title {
+      @include heading-10;
+      padding-top: 46px;
+
+      @include screen('xl', max) {
+        padding-top: 0;
+      }
+
+      @include screen('md', max) {
+        font-size: 30px;
+        line-height: 46px;
+        letter-spacing: 0.75px;
+      }
+    }
+
+    &__button {
+      @include screen('md', max) {
+        display: table;
+        margin: 0 auto;
+      }
+    }
+
+    &__text {
+      width: 423px;
+      font-size: 18px;
+      line-height: 31px;
+      letter-spacing: 0.18px;
+
+      @include screen('lg', max) {
+        width: 100%;
+      }
+
+      @include screen('md', max) {
+        font-size: 16px;
+      }
+    }
+
+    &__text-1 {
+      margin-top: 80px;
+
+      @include screen('xl', max) {
+        margin-top: 40px;
+      }
+
+      @include screen('md', max) {
+        margin-top: 37px;
+      }
+    }
+
+    &__text-2 {
+      margin: 40px 0 85px;
+
+      @include screen('xl', max) {
+        margin: 40px 0 50px;
+      }
+
+      @include screen('md', max) {
+        margin: 40px 0;
+      }
+    }
+
+    &__info {
+      position: absolute;
+      width: 55vw;
+      max-width: 1036px;
+      height: 693px;
+      right: 0;
+      top: 0;
+      color: #fff;
+      font-size: 16px;
+      background: url("../images/usluga_header.jpg") 50% 0 no-repeat;
+      background-size: cover;
+
+      @include screen('xl', max) {
+        height: 524px;
+      }
+
+      @include screen('lg', max) {
+        width: 100%;
+        max-width: calc(100% - 30px);
+        margin-top: 86px;
+        margin-left: auto;
+        position: relative;
+      }
+
+      @include screen('md', max) {
+        margin-top: 40px;
+        height: 342px;
+        max-width: unset;
+        display: flex;
+        justify-content: center;
+      }
+
+      &-score {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-right: 191px;
+
+        @include screen('xl', max) {
+          padding-right: 78px;
+        }
+
+        @include screen('md', max) {
+          display: none;
+        }
+      }
+
+      &-img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      &-box {
+        position: absolute;
+        left: 73px;
+        top: 333px;
+        display: flex;
+        z-index: 2;
+
+        @include screen('xl', max) {
+          top: 241px;
+          left: 53px;
+        }
+
+        @include screen('md', max) {
+          position: relative;
+          margin: 122px auto 0;
+          flex-direction: column;
+          align-items: center;
+          top: 0;
+          left: 0;
+        }
+      }
+
+      &-number {
+        font-size: 48px;
+        line-height: 31px;
+        font-weight: 700;
+        letter-spacing: 0.48px;
+        margin-bottom: 27px;
+        position: relative;
+        padding-right: 25px;
+
+        &::after {
+          @include pseudo;
+          width: 227px;
+          height: 1px;
+          background-color: #fff;
+          top: 45%;
+          transform: translateY(-50%);
+          left: 100%;
+          opacity: .23;
+
+          @include screen('xl', max) {
+            width: 134px;
+          }
+
+        }
+      }
+
+      &-text {
+        font-size: 16px;
+        letter-spacing: 1.2px;
+        line-height: 24px;
+        color: #ffffff;
+        width: 206px;
+      }
+
+      &-icon {
+        width: 99px;
+        height: 99px;
+        border-radius: 50%;
+        background-color: $color-main;
+        position: relative;
+        margin-right: 40px;
+        top: -35px;
+        transition: all $ease-main;
+        opacity: 1;
+
+        @include screen('xl', max) {
+          margin-right: 25px;
+        }
+
+        @include screen('md', max) {
+          top: 0;
+          margin-right: 0;
+          margin-bottom: 39px;
+        }
+
+        svg {
+          width: 32px;
+          height: 19px;
+          @include center-image;
+          fill: #fff;
+        }
+
+        &:hover {
+          opacity: 0.5;
+        }
+        
+      }
+
+      &-look {
+        width: 291px;
+        letter-spacing: 1.57px;
+        line-height: 24px;
+        margin-top: 5px;
+
+        @include screen('xl', max) {
+          width: 245px;
+        }
+
+        @include screen('md', max) {
+          text-align: center;
+        }
+
+        &__title {
+          
+          font-size: 21px;
+          margin-bottom: 30px;
+        }
+
+        &__desc {
+          font-weight: 300;
+
+          @include screen('md', max) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &-how {
+    margin-top: 119px;
+
+    @include screen('lg', max) {
+      margin-top: 83px;
+    }
+
+    @include screen('sm', max) {
+      margin-top: 52px;
+    }
+
+    &__title {
+      font-size: 36px;
+      color :#010101;
+      line-height: 46px;
+      font-weight: 700;
+      margin-bottom: 101px;
+
+      @include screen('lg', max) {
+        margin-bottom: 42px;
+      }
+
+      @include screen('sm', max) {
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__box {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      @include screen('sm', max) {
+        display: none;
+      }
+    }
+
+    &__slider {
+      display: none;
+
+      @include screen('sm', max) {
+        display: block;
+      }
+    }
+
+    &__slider {
+      .slider__dots {
+        position: static;
+      }
+      .swiper-pagination-bullet {
+        margin: 0 10px!important;
+      }
+    }
+
+  }
+
+  &-card {
+    box-sizing: border-box;
+    min-height: 428px;
+    width: 377px;
+    padding: 48px 35px 0 59px;
+    background-color: $color-bg-card;
+    position: relative;
+
+    @include screen('lg', max) {
+      width: 100%;
+      margin-bottom: 33px;
+      min-height: 361px;
+    }
+
+    @include screen('sm', max) {
+      padding: 48px 50px 0 35px;
+      min-height: 404px;
+    }
+
+    &:not(:last-child){
+      margin-right: 58px;
+
+      @include screen('lg', max) {
+        margin-right: 0;
+      }
+    }
+
+    &__title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 26px;
+      color: $color-main;
+      height: 52px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.4px;
+
+      @include screen('lg', max) {
+        padding-bottom: 107px;
+      }
+
+      @include screen('sm', max) {
+        padding-bottom: 120px;
+      }
+      
+      p:not(:last-child) {
+        padding-bottom: 17px;
+      }
+
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      position: absolute;
+      bottom: 0;
+      left: 59px;
+      width: 78%;
+
+      @include screen('lg', max) {
+        width: 90%;
+      }
+
+      @include screen('sm', max) {
+        width: 85%;
+        left: 35px;
+      }
+    }
+
+    &__time {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 43px;
+      letter-spacing: 0.2px;
+      color: $color-dark;
+      align-self: center;
+
+      &_big {
+        font-size: 55px;
+        font-weight: 400;
+      }
+    }
+
+    &__number {
+      font-size: 143px;
+      font-weight: 700;
+      line-height: 94px;
+      color: #fff;
+      letter-spacing: 1.43px;
+    }
+
+    a {
+      color: $color-main;
+      text-decoration: underline;
+    }
+
+  }
+
+  &-cms {
+    margin: 191px 0 0;
+    padding-top: 196px;
+    position: relative;
+    @include screen("lg", max) {
+      padding-top: 0;
+      margin: 84px 0 0;
+    }
+
+    @include screen("md", max) {
+      margin: 59px 0 0;
+    }
+
+    &__title {
+      font-size: 110px;
+      width: 100%;
+      text-align: right;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 13.85px;
+      color: $color-bg-card;
+      position: absolute;
+      right: -22px;
+      top: 0;
+
+      @include screen("xl", max) {
+        font-size: 80px;
+      }
+      @include screen("lg", max) {
+        font-size: 49px;
+        text-align: center;
+        position: static;
+        letter-spacing: 6.62px;
+      }
+      @include screen("md", max) {
+        font-size: 31px;
+        letter-spacing: 4.22px;
+      }
+    }
+
+    &__box {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin-top: 116px;
+
+      @include screen("lg", max) {
+        margin-top: 56px;
+      }
+
+      @include screen("lg-r", max) {
+        justify-content: space-between;
+      }
+
+      @include screen("md", max) {
+        margin-top: 52px;
+      }
+    }
+
+    &__item {
+      width: 292px;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.4px;
+      margin-bottom: 52px;
+
+      @include screen("lg-r", max) {
+        margin-bottom: 65px;
+        width: 40%;
+      }
+
+      @include screen("md", max) {
+        margin-bottom: 38px;
+        width: 100%;
+      }
+
+      &:not(:nth-of-type(1)) {
+        margin-left: 328px;
+
+        @include screen("lg", max) {
+          margin-left: 20%;
+        }
+
+        @include screen("lg-r", max) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__head {
+      color: $color-main;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 23px;
+      letter-spacing: 1.32px;
+      margin-bottom: 29px;
+
+      @include screen("md", max) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &-work {
+
+    &__title {
+      font-size: 36px;
+      color :#010101;
+      line-height: 46px;
+      font-weight: 700;
+      margin: 129px 0 97px;
+      letter-spacing: 0.9px;
+
+      @include screen('lg', max) {
+        margin: 85px 0 42px;
+      }
+
+      @include screen('md', max) {
+        font-size: 30px;
+        letter-spacing: 0.75px;
+        margin: 54px 0 37px;
+      }
+    }
+
+    &__box {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    
+  }
+
+  &__care {
+    margin-top: 120px;
+  }
+
+  &-steps {
+    &__title {
+      font-size: 36px;
+      color: #010101;
+      font-weight: 700;
+      letter-spacing: 0.9px;
+      margin: 142px 0 120px;
+
+      @include screen("lg", max) {
+        margin: 30px 0 42px;
+      }
+      @include screen("md", max) {
+        margin: 0 0 35px;
+      }
+    }
+
+    &__box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-left: 116px;
+      padding-right: 59px;
+
+      @include screen("md", max) {
+        display: none;
+      }
+    }
+
+    &__wrapper {
+      background-color: $color-bg-card;
+      padding-top: 96px;
+      position: relative;
+
+      @include screen("lg", max) {
+        padding-top: 91px;
+      }
+      @include screen("md", max) {
+        padding-top: 0;
+      }
+    }
+    &__slider {
+      display: none;
+
+      @include screen("md", max) {
+        display: block;
+      }
+    }
+
+    &__nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 55px;
+      z-index: 2;
+      display: none;
+
+      @include screen("md", max) {
+        display: block;
+      }
+
+    }
+
+    &__prev {
+      cursor: pointer;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin-right: 18px;
+      background: url(../images/prev.svg);
+      width: 55px;
+      height: 55px;
+      background-size: contain;
+      transition: all .5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+
+        &::before {
+          width: 100%;
+          height: 100%;
+          transform: scale(1.1);
+        }
+      }
+      &::before {
+        background: url(../images/prev_active.svg) no-repeat;
+        background-size: contain;
+        transition: transform .5s ease;
+        z-index: -1;
+        content: "";
+        display: block;
+        position: absolute;
+      }
+    }
+
+    &__next {
+      cursor: pointer;
+      position: absolute;
+      right: 15px;
+      top: 0;
+      margin-right: 18px;
+      background: url(../images/next.svg);
+      width: 55px;
+      height: 55px;
+      background-size: contain;
+      transition: all .5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+
+        &::before {
+          width: 100%;
+          height: 100%;
+          transform: scale(1.1);
+        }
+      }
+      &::before {
+        background: url(../images/next_active.svg) no-repeat;
+        background-size: contain;
+        transition: transform .5s ease;
+        z-index: -1;
+        content: "";
+        display: block;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  margin-bottom: 85px;
+
+  @include screen("lg", max) {
+    width: 43%;
+  }
+
+  @include screen("md", max) {
+    width: 100%;
+    align-items: center;
+    padding-top: 67px;
+    min-height: 314px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  &_last {
+    @include screen("lg", max) {
+      margin-left: 38%;
+    }
+    @include screen("md", max) {
+      margin-left: 0;
+    }
+  }
+
+
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87px;
+    height: 87px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 42px;
+
+    &-target {
+      width: 36px;
+      height: 30px;
+    }
+    &-binoculars {
+      width: 36px;
+      height: 24px;
+    }
+    &-binoculars {
+      width: 36px;
+      height: 24px;
+    }
+    &-sitemap {
+      width: 36px;
+      height: 36px;
+    }
+    &-code {
+      width: 36px;
+      height: 36px;
+    }
+    &-control {
+      width: 36px;
+      height: 36px;
+    }
+    &-code-2 {
+      width: 34px;
+      height: 30px;
+    }
+    &-picture {
+      width: 36px;
+      height: 28px;
+    }
+    &-cursor {
+      width: 24px;
+      height: 36px;
+    }
+    &-rocket {
+      width: 28px;
+      height: 36px;
+    }
+
+    svg {
+      fill: $color-main;
+    }
+
+
+  }
+
+  &__number {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    color: $color-dark;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+
+    @include screen("md", max) {
+      width: 60%;
+    }
+  }
+}
+

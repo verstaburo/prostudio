@@ -276,5 +276,26 @@ export default function slider() {
       },
     },
   });
+
+  const uslugiHowSlider = new Swiper('.js-slider.usluga-how__slider ', {
+    slidesPerView: 1,
+    centeredSlides: true,
+    autoHeight: true,
+    centerInsufficientSlides: true,
+    pagination: {
+      el: '.slider__dots',
+      clickable: true,
+    },
+  });
+
+  const uslugiStepsSlider = new Swiper('.js-slider.usluga-steps__slider', {
+    slidesPerView: 1,
+    centeredSlides: true,
+    centerInsufficientSlides: true,
+    navigation: {
+      nextEl: '.usluga-steps__next',
+      prevEl: '.usluga-steps__prev',
+    },
+  });
 }
 /* eslint-enable no-unused-vars */

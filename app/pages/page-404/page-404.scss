@@ -1,0 +1,97 @@
+.page-404 {
+  margin-top: 45px;
+
+  &__img {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 61px;
+    display: block;
+
+    @include screen("lg", max) {
+      max-width: 97%;
+    }
+
+    @include screen("lg-r", max) {
+      max-width: 97%;
+      padding-bottom: 95px;
+    }
+
+    @include screen("md", max) {
+      padding-bottom: 90px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 97px;
+    width: 100%;
+    padding: 0 68px;
+    margin-bottom: 80px;
+    box-sizing: border-box;
+
+    @include screen("lg-r", max) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 75px;
+    }
+
+    @include screen("md", max) {
+      padding: 0 15px;
+    }
+  }
+
+  &__text {
+    color: $color-main;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 91.12px;
+    letter-spacing: 0.36px;
+
+    @include screen("lg-r", max) {
+      text-align: center;
+    }
+
+    @include screen("md", max) {
+      font-size: 37px;
+      line-height: 52.28px;
+    }
+
+    &_big {
+      font-size: 107px;
+      letter-spacing: 0.72px;
+
+      @include screen("md", max) {
+        font-size: 74px;
+      }
+    }
+  }
+
+
+  &__button {
+    padding: 20px 30px;
+    position: relative;
+    top: -15px;
+
+    @include screen("lg-r", max) {
+      top: 0;
+      margin-top: 80px;
+    }
+
+    @include screen("md", max) {
+      top: 0;
+      margin-top: 65px;
+    }
+  }
+
+}
+.button__404__icon {
+  width: 19px;
+  height: 17px;
+  fill: $color-main;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
