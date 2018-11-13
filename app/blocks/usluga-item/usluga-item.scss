@@ -1,0 +1,76 @@
+.usluga-item {
+  display: flex;
+  box-sizing: border-box;
+  width: 50%;
+  min-height: 299px;
+
+  @include screen("lg-r", max) {
+    width: 100%;
+    min-height: unset;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 76px 60px 40px 74px;
+    background-color: transparent;
+    transition: all $ease-main;
+
+    @include screen("lg-r", max) {
+      padding: 35px 0;
+    }
+
+    @include screen("sm", max) {
+      padding: 28px 0;
+    }
+
+    &:hover {
+      background-color: $color-bg-card;
+
+      @include screen("lg-r", max) {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__img {
+
+    max-width: 61px;
+    max-height: 61px;
+
+    &-wrap {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 40px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 30px;
+    color: $color-basic;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.75px;
+    padding-bottom: 22px;
+    position: relative;
+    top: -4px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.48px;
+    color: $color-text_grey;
+  }
+
+
+
+}

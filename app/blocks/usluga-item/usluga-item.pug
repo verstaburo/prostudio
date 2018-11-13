@@ -1,0 +1,9 @@
+mixin usluga-item(icon, title, text)
+  +b.usluga-item&attributes(attributes)
+    +e.A(src="/").link
+      +e.img-wrap
+        +e.IMG(src=icon).img
+      +e.info
+        +e.title= title
+        +e.text= text
+      block

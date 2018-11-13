@@ -1,0 +1,106 @@
+.uslugi-spisok {
+
+  margin-top: 76px;
+
+  @include screen("lg-r", max) {
+    margin-top: 56px;
+  }
+  
+  &__title {
+    color: $color-main;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 26px;
+    display: inline-block;
+    margin-bottom: 77px;
+    padding-left: 53px;
+    cursor: pointer;
+    position: relative;
+    transition: all $ease-main;
+
+    @include screen("lg-r", max) {
+      padding-left: 0;
+      margin-bottom: 35px;
+      cursor: auto;
+    }
+
+    @include screen("xl-b", max) {
+      cursor: auto;
+    }
+
+    &::before {
+      content: "";
+      vertical-align: middle;
+      mask: url("../images/arrow_left.svg");
+      background-color: $color-main;
+      width: 19px;
+      height: 17px;
+      display: inline-block;
+      transform: scale(0);
+      opacity: 0;
+      margin-right: 0;
+      position: relative;
+      top: -4px;
+      transition: all $ease-main;
+
+      @include screen("lg-r", max) {
+        display: none;
+      }
+
+    }
+
+    &:hover {
+      @include screen("xl-b") {
+
+        &::before {
+          transform: scale(1);
+          opacity: 1;
+          margin-right: 25px;
+        }
+
+        .uslugi-spisok__aside-menu {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  &__aside-menu {
+    position: absolute;
+    transform: scale(0);
+    display: none;
+    left: -86px;
+    top: -14px;
+    display: flex;
+    flex-direction: column;
+    transition: all $ease-main;
+
+    &__item {
+      list-style: none;
+
+      &:not(:last-child) {
+        padding-bottom: 20px;
+      }
+    }
+
+    &__link {
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 1.35px;
+      color: $color-silver;
+      transition: all $ease-main;
+
+      &:hover {
+        color: $color-main;
+      }
+    }
+  }
+}
+

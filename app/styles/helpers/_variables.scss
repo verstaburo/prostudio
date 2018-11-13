@@ -13,6 +13,7 @@ $grid-col-width: $grid-container-width/$grid-cols; // Ширина одной к
 $breakpoints: (
   'xl': 1920px,
   'xl-r': 1880px,
+  'xl-b': 1500px,
   'lg': 1310px,
   'lg-r': 1200px,
   'md': 768px,
@@ -38,6 +39,8 @@ $color-bg-card: #f4f4f4;
 $color-dark: #b9b9b9;
 $color-gray: #c9c9c9;
 $color-gray-2: #f2f2f2;
+$color-text_grey: #898989;
+$color-silver: #ababab;
 $color-svg-gray: #e1e1e1;
 $color-date: #d9d9d9;
 $color-red: #c91516;
