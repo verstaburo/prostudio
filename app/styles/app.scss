@@ -34,6 +34,15 @@
     display: flex;
     justify-content: space-between;
   }
+
+  &_big {
+    width: 1325px;
+
+    @include screen("md", max) {
+      padding-left: 0!important;
+      padding-right: 0!important;
+    }
+  }
 }
 
 .js-sr {

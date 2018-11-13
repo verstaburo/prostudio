@@ -1,0 +1,469 @@
+.uslugi {
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 97px;
+    position: relative;
+
+    @include screen("lg", max) {
+      align-items: center;
+      margin-top: 75px!important;
+    }
+
+    @include screen("md", max) {
+      background-color: $color-gray-2;
+      min-height: 422px;
+      margin-top: 86px!important;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    &:not(:first-child) {
+      @include screen("md", max) {
+        margin-top: 110px!important;
+      }
+    }
+    
+    &_left {
+      justify-content: space-between;
+
+      @include screen("md", max) {
+        justify-content: flex-start;
+      }
+    }
+
+    &_right {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+
+      @include screen("lg", max) {
+        justify-content: space-between;
+      }
+
+      @include screen("md", max) {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+    }
+
+    &_sites {
+      margin-top: 97px;
+
+      &::before {
+        @include screen("md", max) {
+          @include pseudo;
+          background-image: url("../images/site_bg.png");
+          background-size: cover;
+          width: 86px;
+          height: 100px;
+          top: -50px;
+          left: 50px;
+          z-index: 2;
+        }
+      }
+    }
+
+    &_prodv {
+      margin-top: 169px;
+
+      &::before {
+        @include screen("md", max) {
+          @include pseudo;
+          background-image: url("../images/promo_bg.png");
+          background-size: cover;
+          width: 107px;
+          height: 107px;
+          top: -54.5px;
+          left: 40px;
+          z-index: 2;
+        }
+      }
+    }
+
+    &_brending {
+      margin-top: 165px;
+
+      &::before {
+        @include screen("md", max) {
+          @include pseudo;
+          background-image: url("../images/brand_bg.png");
+          background-size: cover;
+          width: 95px;
+          height: 95px;
+          top: -47.5px;
+          left: 46px;
+          z-index: 2;
+        }
+      }
+    }
+
+    &_soft {
+      margin-top: 192px;
+
+      &::before {
+        @include screen("md", max) {
+          @include pseudo;
+          background-image: url("../images/app_bg.png");
+          background-size: cover;
+          width: 95px;
+          height: 109px;
+          top: -54.5px;
+          left: 46px;
+          z-index: 2;
+        }
+      }
+    }
+
+    &_analitic {
+      margin-top: 108px;
+
+      &::before {
+        @include screen("md", max) {
+          @include pseudo;
+          background-image: url("../images/analit_bg.png");
+          background-size: cover;
+          width: 86px;
+          height: 86px;
+          top: -43px;
+          left: 50px;
+          z-index: 2;
+        }
+      }
+    }
+
+    &_support {
+      margin-top: 181px;
+      margin-bottom: 165px;
+
+      @include screen("lg", max) {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        @include screen("md", max) {
+          @include pseudo;
+          background-image: url("../images/support_bg.png");
+          background-size: cover;
+          width: 85px;
+          height: 85px;
+          top: -42.5px;
+          left: 50px;
+          z-index: 2;
+        }
+      }
+    }
+
+    &__text {
+
+      &_left {
+        margin-left: 73px;
+
+        @include screen("lg", max) {
+          margin-left: 0;
+        }
+      }
+
+      &_prodv {
+        margin-left: 160px;
+        @include screen("lg", max) {
+          margin-left: 0;
+        }
+      }
+
+      &_brending {
+        margin-left: 75px;
+
+        @include screen("lg", max) {
+          margin-left: 0;
+        }
+      }
+
+      &_soft {
+        margin-left: 231px;
+
+        @include screen("lg", max) {
+          margin-left: 0;
+        }
+      }
+
+      &_analitic {
+        margin-left: 70px;
+
+        @include screen("lg", max) {
+          margin-left: 0;
+        }
+      }
+
+      &_support {
+        margin-left: 231px;
+
+        @include screen("lg", max) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 48px;
+      line-height: 35px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: $color-basic;
+      margin-bottom: 88px;
+      margin-top: 38px;
+
+      @include screen("md", max) {
+        font-size: 40px;
+        position: absolute;
+        bottom: 37px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0;
+      }
+
+      &_brend {
+        margin-top: 0;
+      }
+      
+      &_soft {
+        margin-top: 55px;
+      }
+
+      &_analitic {
+        margin-top: 54px;
+      }
+
+      &_support {
+        margin-top: 44px;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+
+      @include screen("md", max) {
+        display: none;
+      }
+
+      &-item {
+        font-size: 20px;
+        line-height: 1;
+        letter-spacing: 0.5px;
+        list-style: none;
+        
+
+        &:not(:last-child) {
+          padding-bottom: 53px;
+
+          @include screen("lg", max) {
+            padding-bottom: 40px;
+          }
+        }
+      }
+
+      &-link {
+        color: $color-main;
+        opacity: 1;
+        transition: all $ease-main;
+
+        &:hover {
+          opacity: .5;
+        }
+        
+      }
+    }
+
+    &__img-wrap {
+
+      @include screen("lg", max) {
+        max-width: 55%;
+      }
+
+      @include screen("md", max) {
+        display: none;
+        max-width: 100%;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      &_sites {
+        @include screen("md", max) {
+          margin-top: 42px;
+        }
+      }
+
+      &_prodv {
+        @include screen("md", max) {
+          margin-top: 46px;
+        }
+      }
+
+      &_brending {
+        @include screen("md", max) {
+          margin-top: 71px;
+        }
+      }
+
+      &_soft {
+        margin-left: 73px;
+
+        @include screen("lg", max) {
+          margin-left: 0;
+        }
+
+        @include screen("md", max) {
+          margin-top: 78px;
+        }
+      }
+
+      &_analitic {
+        @include screen("md", max) {
+          margin-top: 43px;
+        }
+      }
+
+      &_support {
+        margin-left: 73px;
+
+        @include screen("lg", max) {
+          margin-left: 0;
+        }
+
+        @include screen("md", max) {
+          margin-top: 33px;
+        }
+      }
+
+      &_left {
+        @include screen("lg", max) {
+          margin-left: 30px;
+        }
+      }
+
+      &_right {
+        @include screen("lg", max) {
+          margin-right: 30px;
+        }
+      }
+
+      &_mobile {
+        display: none;
+
+        @include screen("md", max) {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+        }
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+
+    &__icon {
+      &-right {
+        width: 66px;
+        height: 66px;
+        box-sizing: border-box;
+        border: 2px solid $color-main;
+        border-radius: 50%;
+        position: relative;
+        display: block;
+        padding-left: 0;
+
+        @include screen("md", max) {
+          display: none;
+        }
+
+        svg {
+          fill: $color-main;
+          width: 19px;
+          height: 17px;
+          @include center-image;
+        }
+        
+      }
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: absolute;
+
+      @include screen("lg", max) {
+        position: static;
+        margin-top: 40px;
+      }
+
+      @include screen("md", max) {
+        display: none;
+      }
+      
+
+      &_sites {
+        bottom: -29px;
+        left: 73px;
+      }
+
+      &_prodv {
+        bottom: 7px;
+        right: 0;
+      }
+
+      &_reverse {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+      }
+
+      &_brending {
+        bottom: -71px;
+        left: 75px;
+      }
+
+      &_soft {
+        bottom: 12px;
+        right: 0;
+      }
+
+      &_analitic {
+        left: 74px;
+        bottom: -52px;
+      }
+
+      &_support {
+        bottom: -62px;
+        right: 0;
+      }
+    }
+
+    &__line {
+      width: 349px;
+      height: 1px;
+      background-color: #d9dee2;
+      margin-left: 47px;
+
+      @include screen("lg", max) {
+        width: calc(100% - 120px);;
+      }
+
+      &_right {
+        margin-left: 0;
+        margin-right: 47px;
+      }
+    }
+
+    
+  }
+}
