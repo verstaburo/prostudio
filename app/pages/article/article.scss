@@ -1,4 +1,5 @@
 .head {
+  margin-top: 112px;
   height: 671px;
   background: url('../images/article_bg.jpg') no-repeat;
   background-size: cover;
@@ -96,7 +97,7 @@
 
   &__main {
     margin-right: 100px;
-    //margin-top: 60px;
+    margin-top: 10px;
   }
 
   &__sidebar {
@@ -137,5 +138,112 @@
 
 .disqus {
   max-width: 924px;
-  margin-top: 130px;
+  margin-top: 50px;
+}
+
+.progress {
+  position: fixed;
+  height: 8px;
+  margin-top: 112px;
+  width: 100%;
+  z-index: 1;
+  display: none;
+
+  &__fill {
+    width: 100%;
+    height: 100%;
+    background: $color-main;
+    transform-origin: left;
+  }
+
+  &::before {
+    @include pseudo;
+
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    background-color: #ececec;
+    z-index: -1;
+  }
+}
+
+@include screen('xl-r', max) {
+
+  .head, .progress {
+    margin-top: 80px;
+  }
+}
+
+@include screen('lg-r', max) {
+
+  .head {
+    height: 552px;
+
+    &__title {
+      margin-top: 180px;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 57px;
+      letter-spacing: .9px;
+    }
+
+    &__view {
+      margin-right: 0;
+    }
+  }
+
+  .article {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+
+    &__main {
+      margin-right: 0;
+    }
+
+    &__sidebar {
+      width: 100%;
+    }
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+
+    &__desc {
+      margin-left: 30px;
+      width: 210px;
+    }
+  }
+}
+
+@include screen('md', max) {
+
+  .head {
+    height: 392px;
+
+    &__title {
+      margin-top: 105px;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 42px;
+      letter-spacing: .6px;
+    }
+
+    &__subtitle {
+      display: none;
+    }
+
+    &__left {
+      flex-direction: column;
+      line-height: 22px;
+    }
+
+    &__category {
+      margin-left: 0;
+    }
+
+    &__bottom {
+      padding: 28px 0;
+    }
+  }
 }

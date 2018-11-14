@@ -30,6 +30,7 @@
 
   &_fixed {
     position: fixed;
+    background: white;
   }
 
   &_inner {
@@ -92,7 +93,7 @@
       display: none;
       width: 45px;
       height: 25px;
-      padding-right: 15px;
+      //padding-right: 15px;
       flex-direction: column;
       justify-content: center;
       align-items: flex-end;

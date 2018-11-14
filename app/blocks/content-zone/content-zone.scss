@@ -65,7 +65,7 @@
     font-weight: 300;
     line-height: 36px;
     letter-spacing: .5px;
-    margin-top: 60px;
+    margin-top: 50px;
 
     //&:not(:last-child) {
     //  margin-bottom: 60px;
@@ -150,18 +150,52 @@
   ol { @include ollist; }
 
   a {
-    display: inline-block;
+    //display: inline-block;
     font-size: 18px;
     //line-height: 43px;
+    font-weight: 400;
     letter-spacing: .45px;
     color: $color-main;
     padding-bottom: 1px;
+    //text-decoration: dotted;
     border-bottom: 1px dashed $color-main;
-    margin-top: 24px;
+    //margin-top: 24px;
     //@include link;
 
-    &:first-of-type {
-      margin-top: 50px;
+    //&:first-of-type {
+    //  margin-top: 50px;
+    //}
+  }
+}
+
+@include screen('lg-r', max) {
+
+  .content-zone {
+
+    p {
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: .45px;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 46px;
+      letter-spacing: .75px;
+    }
+
+    ul {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 30px;
+      letter-spacing: .45px;
+    }
+
+    blockquote {
+      font-size: 24px;
+      line-height: 36px;
+      letter-spacing: 0.6px;
     }
   }
 }
