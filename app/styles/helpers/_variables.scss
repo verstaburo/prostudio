@@ -16,6 +16,7 @@ $breakpoints: (
   'xl-b': 1500px,
   'lg': 1310px,
   'lg-r': 1200px,
+  'md-r': 880px,
   'md': 768px,
   'sm': 480px,
   'xs': 460px,
@@ -34,6 +35,7 @@ $color-main-gray: #eee;
 $color-border: #e3e3e3; // Основной цвет границ таблиц, секций
 $color-border-2: #d4d4d4;
 $color-bg: #f6f6f6;
+$color-bg-dark: #0a0a0a;
 $color-bg-button: #ededed;
 $color-bg-card: #f4f4f4;
 $color-dark: #b9b9b9;
@@ -46,6 +48,11 @@ $color-date: #d9d9d9;
 $color-red: #c91516;
 $color-soc: #ccc;
 $color-orange: #ff5252;
+$color-green: #1bb05a;
+$color-blue: #31a5e7;
+$color-blue-light: #85d3ff;
+$color-tundora: #454545;
+
 // ##########
 // Transitions
 // ##########

@@ -1,0 +1,135 @@
+extends ../../layouts/default_dark
+
+block head
+  - var pageTitle = 'Versta Project Template'
+
+block content
+  +header_dark._wide._inner._no-border
+  +b.ico
+  section
+    +b.ico-project
+      .container.container_inner
+        +e.title Подготовка проектов к <span class="ico-project__title_big">ICO</span>
+        +e.text Юридическое сопровождение, технологическая  разработка, маркетинговые стратегии.
+        +button._big._fullwhite._border-size-2.ico-project__button обсудить проект
+        +e.mouse
+          img(src="assets/images/mouse_white.png")
+        +e.pad
+          +e.pad-text Обсудить проект
+          +e.box
+            +link-icon("arrow_right").ico-project__icon
+            +e.circles
+              +e.circle
+              +e.circle
+              +e.circle
+              +e.circle
+              +e.circle
+            +e.ball  
+  section
+    .container.container_inner
+      +b.ico-recomend
+        +e.box
+          +e.title.ico-title Рекомендации по проведению ICO
+          +e.img-wrap
+            +e.IMG.img(src="assets/images/ico-recomend.png")
+            +e.text-number-1 109
+            +e.text-number-2 412
+            +e.text
+              p 109 из 412 
+              p проектов нет юр.лица
+          +e.footer
+            +e.footer__proc 50% ICO 
+            +e.footer__btn
+              +e.footer__btn-text <
+            +e.footer__summ $ 100 000    
+  section
+    +b.ico-stat
+      .container.container_inner
+        +e.title  Только половина проектов ICO удалось собрать более 100 000 долларов США.*
+        +e.box
+          +e.item.ico-stat__item-1
+            +e.item-header.ico-stat__item-1-header
+              +e.item-title.ico-stat__item-1-title 46.6%
+              +e.item-name.ico-stat__item-1-name Idea
+            +e.item-text.ico-stat__item-1-text 46.6% ICO началось с идеи и лишь 0,5% с готовым продуктом. Что говорит о непривлекательности ICO проектов, для привлечения инвестиций.*
+          +e.item.ico-stat__item-2
+            +e.item-header.ico-stat__item-2-header
+              +e.item-title.ico-stat__item-2-title 26.2%
+              +e.item-name.ico-stat__item-2-name MVP
+          +e.item.ico-stat__item-3
+            +e.item-header.ico-stat__item-3-header
+              +e.item-title.ico-stat__item-3-title 15.5%
+              +e.item-name.ico-stat__item-3-name Alpha
+          +e.item.ico-stat__item-4
+            +e.item-header.ico-stat__item-4-header
+              +e.item-title.ico-stat__item-4-title 11.2%
+              +e.item-name.ico-stat__item-4-name Beta
+          +e.item.ico-stat__item-5
+            +e.item-header.ico-stat__iitem-5-header
+              +e.item-title.ico-stat__item-5-title 0.5%
+              +e.item-name.ico-stat__item-5-name Code
+        +e.info *согласно данным <a href="https://icorating.com">icorating.com</a>
+      +e.bg
+        img(src="assets/images/ico-stat_bg.png")   
+  section
+    +b.ico-uslugi
+      .container.container_inner
+        +e.title.ico-title Наши услуги
+        +e.box
+          +e.box-bg
+            img(src="assets/images/ico-uslugi_bg.png")
+          +e.item
+            +e.number
+              img(src="assets/images/01.png")
+            +e.text Формулирование идеи.
+          +e.item
+            +e.number
+              img(src="assets/images/02.png")
+            +e.text Анализ рынка и конкурентов.
+          +e.item
+            +e.number
+              img(src="assets/images/03.png")
+            +e.text Обоснование внедрения технологии блокчейн для компании.
+          +e.item
+            +e.number
+              img(src="assets/images/04.png")
+            +e.text Формирование профессиональной команды исполнителей.
+          +e.item
+            +e.number
+              img(src="assets/images/05.png")
+            +e.text Написание смарт-контрактов.
+          +e.item
+            +e.number 10
+            +e.text._grey Создание защиты для бесперебойной работы системы.
+          +e.item
+            +e.number 09
+            +e.text._grey Разработка White Paper.
+          +e.item
+            +e.number
+              img(src="assets/images/08.png")
+            +e.text Составление структуры ICO.
+          +e.item
+            +e.number
+              img(src="assets/images/07.png")
+            +e.text Разработка дорожной карты.
+          +e.item
+            +e.number
+              img(src="assets/images/06.png")
+            +e.text Разработка рекламной компании для привлечения инвесторов.
+          +e.item
+            +e.number 11
+            +e.text._grey Разработка сайта с личным кабинетом для инвестора и мобильных приложений.
+          +e.item
+            +e.number 12
+            +e.text._grey Регистрация предприятия в наиболее подходящей для этого юрисдикции.
+          +e.item
+            +e.number 13
+            +e.text._grey Выпуск токенов.
+          +e.item
+            +e.number 14
+            +e.text._grey Выпуск токенов.
+          +e.item
+            +e.number 15
+            +e.text._grey Старт ICO.
+        +e.pad
+      +e.bg

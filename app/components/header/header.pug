@@ -31,3 +31,38 @@ mixin header(fixed)
           span
 
     block
+
+
+mixin header_dark(fixed)
+  +b.header&attributes(attributes)
+    .container.header__container
+      //+icon('logo').__logo
+      +e.IMG(src='./assets/images/logo_dark.png').logo
+      +b.UL.menu.header__menu
+        +e.LI.item
+          +link(href='#')._nounder._medium._white Компания
+        +e.LI.item
+          +link(href='#')._nounder._medium._white Услуги
+        +e.LI.item
+          +link(href='#')._nounder._medium._white Кейсы
+        +e.LI.item
+          +link(href='#')._nounder._medium._white Журнал
+        +e.LI.item
+          +link(href='#')._nounder._medium._white Клиенты
+        +e.LI.item
+          +link(href='./vacancies.html')._nounder._medium._white Вакансии
+        +e.LI.item._last
+          +link(href='#')._nounder._medium._white Контакты
+        +e.LI.item._btn
+          +button._blue._big-big.menu__btn Оформить заказ
+        +e.LI.item._present
+          +link._nounder._gray._flex
+            img(src='./assets/images/pdf.png')
+            | скачать презентацию<br>5МБ
+      +b.buttons
+        +button.buttons__ico ico
+        +button(href='#contact')._blue.buttons__project.js-fancybox обсудить проект
+        +e.burger.js-padmenu
+          span
+
+    block

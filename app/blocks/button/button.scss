@@ -33,6 +33,10 @@
     border: 1px solid white;
   }
 
+  &_border-size-2 {
+    border: 2px solid white;
+  }
+
   &_red {
     background: $color-red;
     border: 1px solid $color-red;

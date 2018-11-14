@@ -38,6 +38,10 @@
     border-bottom: 1px solid $color-border-2;
   }
 
+  &_no-border {
+    border-bottom: none;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
