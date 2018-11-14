@@ -10,12 +10,18 @@
   }
 
   h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: .9px;
+    color: $color-main;
+    margin-top: 40px;
 
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
-
-    @include heading-2;
+    //&:not(:last-child) {
+    //  margin-bottom: 10px;
+    //}
+    //
+    //@include heading-2;
   }
 
   h3 {
@@ -55,10 +61,15 @@
   }
 
   p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: .5px;
+    margin-top: 60px;
 
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
+    //&:not(:last-child) {
+    //  margin-bottom: 60px;
+    //}
 
     small {
       display: block;
@@ -66,33 +77,62 @@
       @include text-small;
     }
 
-    @include text;
+    //@include text;
+  }
+
+  small {
+    display: block;
+    color: #b3b3b3;
+    font-size: 16px;
+    font-weight: 300;
+    //line-height: 36px;
+    letter-spacing: .4px;
   }
 
   blockquote {
-    margin: 0;
-    padding-left: 40px;
-    border-left: 2px solid black;
-    display: block;
+    font-size: 24px;
+    text-align: center;
+    line-height: 36px;
+    letter-spacing: .6px;
+    margin: 100px auto 0;
+    width: 90%;
+    padding-bottom: 60px;
+    position: relative;
 
-    &:not(:first-child) {
-      margin-top: 30px;
+    &::before {
+      @include pseudo;
+
+      bottom: 0;
+      width: 120px;
+      height: 1px;
+      background: $color-main;
+      left: calc(50% - 60px);
     }
 
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
+    //margin: 0;
+    //padding-left: 40px;
+    //border-left: 2px solid black;
+    //display: block;
+    //
+    //&:not(:first-child) {
+    //  margin-top: 30px;
+    //}
+    //
+    //&:not(:last-child) {
+    //  margin-bottom: 30px;
+    //}
   }
 
   img {
     max-width: 100%;
+    width: 100%;
 
     &:not(:first-child) {
-      margin-top: 30px;
+      margin-top: 43px;
     }
 
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
   }
 
@@ -109,5 +149,19 @@
 
   ol { @include ollist; }
 
-  a { @include link; }
+  a {
+    display: inline-block;
+    font-size: 18px;
+    //line-height: 43px;
+    letter-spacing: .45px;
+    color: $color-main;
+    padding-bottom: 1px;
+    border-bottom: 1px dashed $color-main;
+    margin-top: 24px;
+    //@include link;
+
+    &:first-of-type {
+      margin-top: 50px;
+    }
+  }
 }

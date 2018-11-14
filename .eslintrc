@@ -3,7 +3,8 @@
   "rules": {
     "linebreak-style": 0,
     "no-underscore-dangle": 0,
-    "arrow-body-style": 1
+    "arrow-body-style": 1,
+    "max-len": 0
     },
   "env": {
     "browser": true,

@@ -1,5 +1,9 @@
 @mixin list {
-  @include text;
+  //@include text;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 36px;
+  letter-spacing: .5px;
 
   ul, ol {
     padding-top: 5px;
@@ -7,7 +11,8 @@
   }
 
   li {
-    padding-left: 35px;
+    margin-top: 55px;
+    padding-left: 70px;
     position: relative;
   }
 }
@@ -17,13 +22,15 @@
   li::before {
     position: absolute;
     left: 0;
-    top: 9px;
+    top: 10px;
     //content: '•';
     content: '';
-    width: 8px;
-    height: 8px;
+    //width: 8px;
+    //height: 8px;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
-    background: $color-placeholder2;
+    border: 2px solid $color-main;
   }
 }
 

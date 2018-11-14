@@ -14,6 +14,7 @@ import maps from '../blocks/map/map';
 import mainSlider from '../blocks/pagepiling/pagepiling';
 import mixContent from '../blocks/grid-list/grid-list';
 import PorftolioFilter from '../pages/portfolio/portfolio';
+import Article from '../pages/article/article';
 import '../blocks/rating/rating';
 import '../blocks/accordion/accordion';
 import '../blocks/dropdown/dropdown';
@@ -43,4 +44,5 @@ $(() => {
   maps();
   scrollanimation();
   PorftolioFilter();
+  Article();
 });
