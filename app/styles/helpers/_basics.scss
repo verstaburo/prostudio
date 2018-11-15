@@ -64,14 +64,16 @@ body {
 }
 
 .body_dark {
-  background-image: url("../images/ico_bg-1.jpg");
-  background-position: top center;
+  background-image: url("../images/ico_bg-1.jpg"),
+                    url("../images/ico-footer-bg.png");
+  background-position: top center,
+                       bottom center;
   background-repeat: no-repeat;
   background-color: $color-bg-dark;
   color: #fff;
 
   @include screen("md", max) {
-    background-position: 50% -254px;
+    background-position: 50% -254px, center 85%;
     background-size: 184% 1000px;
     background-repeat: no-repeat;
   }

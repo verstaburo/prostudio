@@ -297,5 +297,46 @@ export default function slider() {
       prevEl: '.usluga-steps__prev',
     },
   });
+
+  const icoUslugiSlider = new Swiper('.js-slider.ico-uslugi-slider', {
+    slidesPerView: 3,
+    navigation: {
+      nextEl: '.ico-uslugi__button_right',
+      prevEl: '.ico-uslugi__button_left',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+      },
+    },
+  });
+
+  const icoworksSlider = new Swiper('.js-slider.ico-works__slider', {
+    slidesPerView: 1,
+    centeredSlides: true,
+    pagination: {
+      el: '.ico-works__slider-num',
+      type: 'custom',
+      renderCustom(swiper, current, total) {
+        return `<span class="ico-works__slider-num__current">0${current}</span><span class="ico-works__slider-num__total">0${total}</span>`;
+      },
+    },
+    navigation: {
+      nextEl: '.ico-works__button_right',
+      prevEl: '.ico-works__button_left',
+    },
+  });
+
+  const icoPartnersSlider = new Swiper('.js-slider.ico-partners__slider', {
+    slidesPerView: 1,
+    centeredSlides: true,
+    centerInsufficientSlides: true,
+    pagination: {
+      el: '.ico-partners__slider-pag',
+      bulletClass: 'ico-partners__slider-pag-item',
+      bulletActiveClass: 'ico-partners__slider-pag-item_active',
+      clickable: true,
+    },
+  });
 }
 /* eslint-enable no-unused-vars */

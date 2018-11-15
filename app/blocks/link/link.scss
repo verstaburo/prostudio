@@ -61,6 +61,12 @@
     fill: $color-soc;
   }
 
+  &_dark {
+    opacity: 0.2;
+    color: $color-placeholder2!important;
+    fill: $color-soc;
+  }
+
   &_white {
     color: white;
 

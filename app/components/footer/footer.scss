@@ -7,6 +7,11 @@
   color: $color-placeholder2;
   fill: $color-placeholder2;
 
+  &_dark {
+    background: transparent;
+    border-top: 1px solid rgba(#fff, .1);
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -248,6 +253,10 @@
 
     &__switcher {
       margin-top: 50px;
+
+      &_opacity {
+        opacity: .2;
+      }
     }
   }
 }
