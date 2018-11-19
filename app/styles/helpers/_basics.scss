@@ -67,19 +67,21 @@ body {
   background-image: url("../images/ico_bg-1.jpg"),
                     url("../images/ico-footer-bg.png");
   background-position: top center,
-                       bottom center;
+                       -33% 103.1%;
   background-repeat: no-repeat;
   background-color: $color-bg-dark;
   color: #fff;
 
-  @include screen("md", max) {
-    background-position: 50% -254px, center 85%;
-    background-size: 184% 1000px;
-    background-repeat: no-repeat;
+  @include screen("lg", max) {
+    background-position: 33% -55px,
+                         74% 97.5%;
+    background-size: 158% auto;
   }
 
-  @include screen("sm", max) {
-    background-size: 1000px 1000px;
+  @include screen("md", max) {
+    background-position: 44% -33px,
+                         64% 89.5%;
+    background-size: 158% auto;
   }
 }
 

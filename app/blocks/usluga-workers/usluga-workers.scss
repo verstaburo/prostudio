@@ -2,11 +2,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 46.5%;
+  width: 46%;
   margin-bottom: 44px;
+
+  @include screen("lg", max) {
+    width: 45%;
+  }
 
   @include screen("md", max) {
     width: 100%;
+  }
+
+  &:nth-of-type(2n + 1) {
+    @include screen("lg", max) {
+      width: 49%;
+    }
+
+    @include screen("md", max) {
+      width: 100%;
+    }
   }
 
   &__plus {

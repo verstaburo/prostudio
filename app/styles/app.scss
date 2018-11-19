@@ -37,10 +37,23 @@
 
   &_big {
     width: 1325px;
+    box-sizing: content-box;
+
+    @include screen("xl-t", max) {
+      box-sizing: border-box;
+    }
 
     @include screen("md", max) {
       padding-left: 0!important;
       padding-right: 0!important;
+    }
+  }
+
+  &_xl {
+    width: 1326px;
+
+    @include screen("xl-t", max) {
+      width: 1250px;
     }
   }
 }

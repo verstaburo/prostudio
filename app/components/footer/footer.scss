@@ -10,6 +10,11 @@
   &_dark {
     background: transparent;
     border-top: 1px solid rgba(#fff, .1);
+    margin-top: 247px;
+
+    @include screen("lg", max) {
+      margin-top: 63px;
+    }
   }
 
   &__container {

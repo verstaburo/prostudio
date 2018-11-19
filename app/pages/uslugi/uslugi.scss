@@ -51,6 +51,11 @@
 
     &_sites {
       margin-top: 97px;
+      margin-right: 25px;
+
+      @include screen("xl-t", max) {
+        margin-right: 0;
+      }
 
       &::before {
         @include screen("md", max) {
@@ -84,7 +89,7 @@
     }
 
     &_brending {
-      margin-top: 165px;
+      margin-top: 122px;
 
       &::before {
         @include screen("md", max) {
@@ -101,7 +106,12 @@
     }
 
     &_soft {
-      margin-top: 192px;
+      margin-top: 189px;
+      margin-left: -26px;
+
+      @include screen("xl-t", max) {
+        margin-left: 0;
+      }
 
       &::before {
         @include screen("md", max) {
@@ -135,11 +145,10 @@
     }
 
     &_support {
-      margin-top: 181px;
-      margin-bottom: 165px;
+      margin: 175px 0 158px -27px;
 
       @include screen("lg", max) {
-        margin-bottom: 0;
+        margin: 0;
       }
 
       &::before {
@@ -159,7 +168,7 @@
     &__text {
 
       &_left {
-        margin-left: 73px;
+        margin-left: 47px;
 
         @include screen("lg", max) {
           margin-left: 0;
@@ -167,7 +176,7 @@
       }
 
       &_prodv {
-        margin-left: 160px;
+        margin-left: 157px;
         @include screen("lg", max) {
           margin-left: 0;
         }
@@ -225,6 +234,10 @@
         margin-bottom: 0;
       }
 
+      &_prodv {
+        margin-top: 33px;
+      }
+
       &_brend {
         margin-top: 0;
       }
@@ -251,17 +264,29 @@
       }
 
       &-item {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 1;
         letter-spacing: 0.5px;
         list-style: none;
         
 
         &:not(:last-child) {
-          padding-bottom: 53px;
+          padding-bottom: 33px;
 
           @include screen("lg", max) {
             padding-bottom: 40px;
+          }
+        }
+
+        &_sites {
+          letter-spacing: 0.5px;
+          font-size: 20px;
+          &:not(:last-child) {
+            padding-bottom: 52px;
+  
+            @include screen("lg", max) {
+              padding-bottom: 40px;
+            }
           }
         }
       }
@@ -295,18 +320,30 @@
       }
 
       &_sites {
+        
         @include screen("md", max) {
           margin-top: 42px;
         }
       }
 
       &_prodv {
+        margin-left: -25px;
+        margin-top: -3px;
+
+        @include screen("xl-t", max) {
+          margin-left: 0;
+        }
+
         @include screen("md", max) {
           margin-top: 46px;
+          margin-left: 0;
         }
       }
 
       &_brending {
+        margin-right: 26px;
+        margin-top: 35px;
+
         @include screen("md", max) {
           margin-top: 71px;
         }
@@ -325,8 +362,15 @@
       }
 
       &_analitic {
+        margin-right: 50px;
+
+        @include screen("xl-t", max) {
+          margin-right: 0;
+        }
+
         @include screen("md", max) {
           margin-top: 43px;
+          margin-right: 0;
         }
       }
 
@@ -413,13 +457,13 @@
       
 
       &_sites {
-        bottom: -29px;
-        left: 73px;
+        bottom: -24px;
+        left: 49px;
       }
 
       &_prodv {
-        bottom: 7px;
-        right: 0;
+        bottom: 12px;
+        right: 26px;
       }
 
       &_reverse {
@@ -429,22 +473,22 @@
 
       &_brending {
         bottom: -71px;
-        left: 75px;
+        left: 49px;
       }
 
       &_soft {
-        bottom: 12px;
-        right: 0;
+        bottom: 14px;
+        right: 27px;
       }
 
       &_analitic {
-        left: 74px;
-        bottom: -52px;
+        left: 49px;
+        bottom: -46px;
       }
 
       &_support {
-        bottom: -62px;
-        right: 0;
+        bottom: -58px;
+        right: 27px;
       }
     }
 

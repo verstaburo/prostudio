@@ -5,6 +5,10 @@
   @include screen("lg-r", max) {
     margin-top: 56px;
   }
+
+  @include screen("md", max) {
+    margin-top: 51px;
+  }
   
   &__title {
     color: $color-main;
@@ -22,11 +26,18 @@
     @include screen("lg-r", max) {
       padding-left: 0;
       margin-bottom: 35px;
+      font-size: 36px;
       cursor: auto;
     }
 
     @include screen("xl-b", max) {
       cursor: auto;
+    }
+
+    @include screen("md", max) {
+      font-size: 30px;
+      letter-spacing: 0.75px;
+      margin-bottom: 31px;
     }
 
     &::before {
@@ -76,17 +87,18 @@
     position: absolute;
     transform: scale(0);
     display: none;
-    left: -86px;
-    top: -14px;
+    left: -103px;
+    top: -13px;
     display: flex;
     flex-direction: column;
     transition: all $ease-main;
+    text-align: right;
 
     &__item {
       list-style: none;
 
       &:not(:last-child) {
-        padding-bottom: 20px;
+        padding-bottom: 21px;
       }
     }
 

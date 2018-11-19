@@ -221,6 +221,10 @@
       &_active {
         right: 31px;
       }
+
+      &_dark {
+        background-color: $color-bg-dark;
+      }
     }
 
     &_inner {
