@@ -13,7 +13,13 @@
     margin-top: 247px;
 
     @include screen("lg", max) {
-      margin-top: 63px;
+      margin-top: 63px!important;
+      padding-top: 0;
+    }
+
+    @include screen("md", max) {
+      margin-top: 26px!important;
+      padding-top: 0;
     }
   }
 

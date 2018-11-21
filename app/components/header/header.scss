@@ -103,6 +103,15 @@
       align-items: flex-end;
       position: relative;
 
+      &_white {
+
+        span,
+        &::before,
+        &::after {
+          background: #fff!important;
+        }
+      }
+
       &:hover {
         cursor: pointer;
       }
