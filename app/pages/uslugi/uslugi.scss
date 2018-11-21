@@ -244,6 +244,10 @@
       
       &_soft {
         margin-top: 55px;
+
+        @include screen("md", max) {
+          font-size: 48px;
+        }
       }
 
       &_analitic {
@@ -346,6 +350,7 @@
 
         @include screen("md", max) {
           margin-top: 71px;
+          margin-right: 0;
         }
       }
 

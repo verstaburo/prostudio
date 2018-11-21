@@ -1,9 +1,12 @@
 .uslugi-spisok {
 
-  margin-top: 76px;
+  margin-top: 77px;
+  position: relative;
+  left: -30px;
 
   @include screen("lg-r", max) {
-    margin-top: 56px;
+    margin-top: 53px;
+    left: 0;
   }
 
   @include screen("md", max) {
@@ -28,6 +31,7 @@
       margin-bottom: 35px;
       font-size: 36px;
       cursor: auto;
+      letter-spacing: 0.9px;
     }
 
     @include screen("xl-b", max) {
@@ -63,7 +67,7 @@
 
     &:hover {
       @include screen("xl-b") {
-
+        padding-left: 76px;
         &::before {
           transform: scale(1);
           opacity: 1;
@@ -87,8 +91,8 @@
     position: absolute;
     transform: scale(0);
     display: none;
-    left: -103px;
-    top: -13px;
+    left: -80px;
+    top: -10px;
     display: flex;
     flex-direction: column;
     transition: all $ease-main;

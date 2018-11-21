@@ -1,8 +1,10 @@
 .page-404 {
-  margin-top: 7px;
+  margin-top: 19px;
+  padding-left: 15px;
 
   @include screen("lg", max) {
-    margin-top: 67px;
+    margin-top: 65px;
+    padding-left: 0;
   }
 
   @include screen("md", max) {
@@ -26,6 +28,7 @@
 
     @include screen("md", max) {
       padding-bottom: 79px;
+      max-width: 93%;
     }
   }
 
@@ -34,7 +37,7 @@
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
-    padding: 14px 76px 97px 88px;
+    padding: 14px 76px 97px 73px;
     box-sizing: border-box;
 
     @include screen("lg-r", max) {
@@ -45,7 +48,7 @@
     }
 
     @include screen("lg", max) {
-      padding: 14px 0 97px 0;
+      padding: 0 0 97px 0;
     }
 
     @include screen("md", max) {
@@ -59,7 +62,7 @@
     font-weight: 700;
     line-height: 91.12px;
     letter-spacing: 0.9px;
-    padding-top: 2px;
+    padding-top: 3px;
 
     @include screen("lg-r", max) {
       text-align: center;
@@ -78,16 +81,18 @@
 
       @include screen("md", max) {
         font-size: 74px;
+        letter-spacing: 0.72px;
       }
     }
   }
 
 
   &__button {
-    padding: 20px 30px;
+    padding: 20px 32px;
     position: relative;
     top: -14px;
     right: -3px;
+    letter-spacing: 0.98px;
 
 
     @include screen("lg-r", max) {
