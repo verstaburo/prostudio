@@ -269,7 +269,7 @@
     }
 
     @include screen('md', max) {
-      margin-top: 47px;
+      margin-top: 49px;
     }
 
     &__title {
@@ -295,7 +295,7 @@
       justify-content: flex-start;
       flex-wrap: wrap;
 
-      @include screen('sm', max) {
+      @include screen('md', max) {
         display: none;
       }
     }
@@ -303,17 +303,18 @@
     &__slider {
       display: none;
 
-      @include screen('sm', max) {
+      @include screen('md', max) {
         display: block;
       }
     }
 
     &__slider {
       .slider__dots {
-        position: static;
+        position: relative;
+        bottom: -7px;
       }
       .swiper-pagination-bullet {
-        margin: 0 10px!important;
+        margin: 0 15.5px!important;
       }
     }
 
@@ -334,9 +335,9 @@
       padding: 44px 39px 0 59px;
     }
 
-    @include screen('sm', max) {
-      padding: 48px 50px 0 35px;
-      min-height: 404px;
+    @include screen('md', max) {
+      padding: 52px 39px 0 35px;
+      min-height: 409px;
     }
 
     &:not(:last-child){
@@ -394,8 +395,8 @@
         width: 85%;
       }
 
-      @include screen('sm', max) {
-        width: 85%;
+      @include screen('md', max) {
+        width: 87%;
         left: 35px;
       }
     }
@@ -413,6 +414,11 @@
       @include screen('lg', max) {
         top: -5px;
         right: 3px;
+      }
+
+      @include screen('md', max) {
+        top: -11px;
+        right: 1px;
       }
 
       &_big {
@@ -558,7 +564,7 @@
       letter-spacing: 0.9px;
 
       @include screen('lg', max) {
-        margin: 54px 0 42px;
+        margin: 54px 0 39px;
       }
 
       @include screen('md', max) {
@@ -579,6 +585,14 @@
 
   &__care {
     margin-top: 120px;
+
+    @include screen("lg", max) {
+      margin-top: 35px;
+    }
+
+    @include screen("md", max) {
+      margin-top: 0;
+    }
   }
 
   &-steps {
@@ -785,6 +799,7 @@
 
   &-6 {
     order: 4;
+    margin-bottom: 130px;
   }
 
   &-7 {
@@ -816,6 +831,7 @@
 
     &-3 {
       order: 4;
+      margin-bottom: 82px;
     }
 
     &-4 {
@@ -830,6 +846,7 @@
 
     &-6 {
       order: 6;
+      margin-bottom: 0;
     }
 
     &-7 {
@@ -847,20 +864,6 @@
   }
 
 
-  &-3 {
-    @include screen("lg", max) {
-      margin-bottom: 82px;
-    }
-  }
-
-  &-6 {
-    margin-bottom: 130px;
-
-    @include screen("lg", max) {
-      margin-bottom: 0;
-    }
-  }
-
   &-3,
   &-4,
   &-9 {
@@ -873,7 +876,7 @@
   @include screen("md", max) {
     width: 100%;
     align-items: center;
-    padding-top: 67px;
+    padding-top: 66px;
     min-height: 314px;
     margin-bottom: 0;
     box-sizing: border-box;
@@ -907,7 +910,7 @@
     transition: all $ease-main;
 
     @include screen("md", max) {
-      margin-bottom: 36px;
+      margin-bottom: 41px;
     }
 
     &-target {
@@ -969,8 +972,8 @@
     color: $color-dark;
 
     @include screen("md", max) {
-      top: -24px;
-      right: -69px;
+      top: -20px;
+      right: -59px;
     }
     
   }
@@ -985,7 +988,7 @@
     }
 
     @include screen("md", max) {
-      width: 40%;
+      width: 36%;
     }
   }
 

@@ -6,7 +6,7 @@
   margin-bottom: 44px;
 
   @include screen("lg", max) {
-    width: 45%;
+    width: 46.5%;
   }
 
   @include screen("md", max) {
@@ -15,7 +15,7 @@
 
   &:nth-of-type(2n + 1) {
     @include screen("lg", max) {
-      width: 49%;
+      width: 47%;
     }
 
     @include screen("md", max) {

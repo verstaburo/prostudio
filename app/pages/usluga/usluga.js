@@ -8,6 +8,7 @@ $(document).ready(function () {
 
   var windowWidth = $(window).width();
   var svg = Snap('#steps-svg');
+  var svgWidth = $('.usluga-steps__svg-wrap').width();
   // отрисовка stroke
   if (windowWidth > 1292) {
     var pathAdaptive = 'm 11 11 h 1104 c 195,0, 195,284, 0,284 l -960 0 c -195,0, -195,284, 0,284 h 1060';
@@ -18,9 +19,9 @@ $(document).ready(function () {
   } else if (windowWidth <= 1292) {
 
     // Считаем длину линий
-    var svgWidth = $('.usluga-steps__svg-wrap').width();
-    var pathWidth = svgWidth - 66;
-    var cercleWidht = 146.5;
+    
+    var pathWidth = svgWidth - 10;
+    var cercleWidht = 148.5;
     var lineWidht = pathWidth - cercleWidht*2;
     var firstLine = pathWidth - cercleWidht;
     var lastLine = pathWidth - cercleWidht - 40;
@@ -101,9 +102,10 @@ $(document).ready(function () {
         container = $(".usluga-steps__svg-wrap").height(),
         contTop = $(".usluga-steps__svg-wrap").offset().top,
         beginAnime = contTop - container -100,
-        endAnime = beginAnime + container - 1500;
+        endAnime = beginAnime + container - 1500,
+        windowWidth = $(window).width();
 
-      if($(window).width() <= 1292) {
+      if(windowWidth <= 1292) {
         beginAnime = contTop -750;
       }    
 
@@ -155,7 +157,7 @@ $(document).ready(function () {
 
   $(window).on("resize", function(){
     var windowWidth = $(window).width();
-
+    var svgWidth = $('.usluga-steps__svg-wrap').width() + 60;
     if (windowWidth > 1292) {
       var pathAdaptive = 'm 11 11 h 1104 c 195,0, 195,284, 0,284 l -960 0 c -195,0, -195,284, 0,284 h 1060';
 
@@ -166,15 +168,22 @@ $(document).ready(function () {
       pathBg.animate({
         'd': pathAdaptive,
       }, 500)
+
+      svg.attr({
+        width: svgWidth,
+        height: svgHeight,
+        fill: 'none',
+        zIndex: -1,
+      });
+
       initArrow();
       animateSVG();
 
     } else if (windowWidth >=768) {
   
       // Считаем длину линий
-      var svgWidth = $('.usluga-steps__svg-wrap').width() + 60;
       var pathWidth = svgWidth - 66;
-      var cercleWidht = 146.5;
+      var cercleWidht = 148.5;
       var lineWidht = pathWidth - cercleWidht*2;
       var firstLine = pathWidth - cercleWidht;
       var lastLine = pathWidth - cercleWidht - 40;
@@ -189,6 +198,14 @@ $(document).ready(function () {
       pathBg.animate({
         'd': pathAdaptive,
       }, 500)
+
+      svg.attr({
+        width: svgWidth,
+        height: 1400,
+        fill: 'none',
+        zIndex: -1,
+      });
+
       initArrow();
       animateSVG();
     };
