@@ -112,7 +112,10 @@ block content
       .container.container_inner
         +e.title Мы делаем
       +e.wrapper
-        .container.container_inner
+        .container.container_inner.usluga-steps__svg-container
+          +e.svg-wrap
+            svg(id = "steps-svg")
+            +icon("gall").__done
           +e.box
             +b.step.step-1
               +e.icon
@@ -131,20 +134,20 @@ block content
               +e.text._3 Разработка структуры и прототипов сайта. Создание дизайна страниц.
             +b.step.step-4
               +e.icon
-                +icon("code").icon-code
+                +icon("code-2").icon-code
                 +e.number 04
-              +e.text._4 Верстка макетов сайта.
+              +e.text._4 Программирование и доработка функционала.
             +b.step.step-5
               +e.icon
                 +icon("control").icon-control
                 +e.number 05
               +e.text._5 Интеграция с системой управления сайтом.
-
             +b.step.step-6
               +e.icon
-                +icon("code-2").icon-code-2
+                +icon("code").icon-code-2
                 +e.number 06
-              +e.text._6 Программирование и доработка функционала.
+              +e.text._6 Верстка макетов сайта.
+
             +b.step.step-7
               +e.icon
                 +icon("picture").icon-picture
@@ -184,7 +187,7 @@ block content
                 +e.icon
                   +icon("code").icon-code
                   +e.number 04
-                +e.text._4 Верстка макетов сайта.
+                +e.text._4 Программирование и доработка функционала.
             +slide
               +b.step.step-5
                 +e.icon
@@ -196,7 +199,7 @@ block content
                 +e.icon
                   +icon("code-2").icon-code-2
                   +e.number 06
-                +e.text._6 Программирование и доработка функционала.
+                +e.text._6 Верстка макетов сайта.
             +slide
               +b.step.step-7
                 +e.icon

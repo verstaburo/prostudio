@@ -43,11 +43,11 @@
 
       @include screen('lg', max) {
         width: 100%;
+        letter-spacing: 0.16px;
       }
 
       @include screen('md', max) {
         font-size: 16px;
-        letter-spacing: 0.16px;
       }
     }
 
@@ -72,6 +72,12 @@
 
       @include screen('md', max) {
         margin: 31px 0 37px 0;
+      }
+    }
+
+    &__button {
+      @include screen("lg", max) {
+        letter-spacing: 1.2px;
       }
     }
 
@@ -317,13 +323,13 @@
     box-sizing: border-box;
     min-height: 428px;
     width: 377px;
-    padding: 42px 35px 0 63px;
+    padding: 44px 35px 0 59px;
     background-color: $color-bg-card;
     position: relative;
 
     @include screen('lg', max) {
       width: 100%;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
       min-height: 361px;
       padding: 44px 39px 0 59px;
     }
@@ -362,7 +368,7 @@
       letter-spacing: 0.4px;
 
       @include screen('lg', max) {
-        padding-bottom: 107px;
+        padding-bottom: 98px;
       }
 
       @include screen('sm', max) {
@@ -385,7 +391,7 @@
       width: 80%;
 
       @include screen('lg', max) {
-        width: 90%;
+        width: 85%;
       }
 
       @include screen('sm', max) {
@@ -403,6 +409,11 @@
       align-self: center;
       position: relative;
       top: -12px;
+
+      @include screen('lg', max) {
+        top: -5px;
+        right: 3px;
+      }
 
       &_big {
         font-size: 55px;
@@ -470,9 +481,11 @@
       justify-content: flex-start;
       flex-wrap: wrap;
       margin-top: 22px;
+      padding-left: 10px;
 
       @include screen("lg", max) {
-        margin-top: 45px;
+        margin-top: 49px;
+        padding-left: 0;
       }
 
       @include screen("lg-r", max) {
@@ -492,8 +505,8 @@
       margin-bottom: 52px;
 
       @include screen("lg-r", max) {
-        margin-bottom: 36px;
-        width: 40%;
+        margin-bottom: 61px;
+        width: 42%;
       }
 
       @include screen("md", max) {
@@ -508,7 +521,7 @@
       }
 
       &:not(:nth-of-type(1)) {
-        margin-left: 328px;
+        margin-left: 326px;
 
         @include screen("lg", max) {
           margin-left: 20%;
@@ -577,7 +590,7 @@
       margin: 128px 0 58px;
 
       @include screen("lg", max) {
-        margin: 13px 0 36px;
+        margin: 11px 0 36px;
       }
       @include screen("md", max) {
         margin: 0 0 35px;
@@ -593,7 +606,8 @@
       padding-left: 117px;
 
       @include screen("lg", max) {
-        padding-left: 92px;
+        padding-left: 94px;
+        justify-content: flex-start;
       }
 
       @include screen("md", max) {
@@ -613,6 +627,45 @@
         padding-top: 0;
       }
     }
+
+    &__svg-container {
+      position: relative;
+    }
+
+    &__svg-wrap {
+      position: absolute;
+      left: 20px;
+      top: 33px;
+      width: 100%;
+
+      @include screen("lg", max) {
+        width: calc(100% - 60px);
+      }
+
+      @include screen("md", max) {
+        display: none;
+      }
+    }
+
+    &__done {
+      position: absolute;
+      bottom: 18px;
+      right: 21px;
+      fill: #c6c6c6;
+      width: 23px;
+      height: 17px;
+      fill: #c6c6c6;
+
+      @include screen("lg", max) {
+        right: -7px;
+        bottom: 246px;
+      }
+
+      &_active {
+        fill: $color-main;
+      }
+    }
+
     &__slider {
       display: none;
 
@@ -706,13 +759,55 @@
   display: flex;
   flex-direction: column;
   width: 290px;
-  margin-bottom: 80px;
+  margin-bottom: 82px;
+  position: relative;
+  z-index: 2;
+
+  &-1 {
+    order: 1;
+  }
+
+  &-2 {
+    order: 2;
+  }
+
+  &-3 {
+    order: 3;
+  }
+
+  &-4 {
+    order: 6;
+  }
+
+  &-5 {
+    order: 5;
+  }
+
+  &-6 {
+    order: 4;
+  }
+
+  &-7 {
+    order: 7;
+  }
+
+  &-8 {
+    order: 8;
+  }
+
+  &-9 {
+    order: 9;
+  }
 
   @include screen("lg", max) {
     margin-bottom: 85px;
+    width: 50%;
+    min-height: 200px;
+
 
     &-1 {
       order: 1;
+      width: 48%;
     }
 
     &-2 {
@@ -725,10 +820,12 @@
 
     &-4 {
       order: 3;
+      width: 48%;
     }
 
     &-5 {
       order: 5;
+      width: 48%;
     }
 
     &-6 {
@@ -741,6 +838,7 @@
 
     &-8 {
       order: 7;
+      width: 48%;
     }
 
     &-9 {
@@ -751,27 +849,26 @@
 
   &-3 {
     @include screen("lg", max) {
-      margin-bottom: 104px;
+      margin-bottom: 82px;
     }
   }
 
   &-6 {
-    margin-bottom: 104px;
+    margin-bottom: 130px;
 
     @include screen("lg", max) {
-      margin-bottom: 108px;
+      margin-bottom: 0;
     }
   }
 
   &-3,
-  &-6,
+  &-4,
   &-9 {
-    width: 273px;
+    @include screen("lg") {
+      width: 273px;
+    }
   }
 
-  @include screen("lg", max) {
-    width: 50%;
-  }
 
   @include screen("md", max) {
     width: 100%;
@@ -784,8 +881,9 @@
 
   &_last {
     @include screen("lg", max) {
-      margin-left: 36.5%;
-      margin-top: 47px;
+      margin-left: 35%;
+      margin-top: 0;
+      margin-bottom: 60px;
 
     }
     @include screen("md", max) {
@@ -806,6 +904,7 @@
     border-radius: 50%;
     position: relative;
     margin-bottom: 42px;
+    transition: all $ease-main;
 
     @include screen("md", max) {
       margin-bottom: 36px;
@@ -828,16 +927,16 @@
       height: 36px;
     }
     &-code {
-      width: 36px;
-      height: 36px;
+      width: 34px;
+      height: 30px;
     }
     &-control {
       width: 36px;
       height: 36px;
     }
     &-code-2 {
-      width: 34px;
-      height: 30px;
+      width: 36px;
+      height: 36px;
     }
     &-picture {
       width: 36px;
@@ -854,6 +953,7 @@
 
     svg {
       fill: $color-main;
+      transition: all $ease-main;
     }
 
 
@@ -880,9 +980,26 @@
     line-height: 24px;
     letter-spacing: 0.4px;
 
+    @include screen("lg", max) {
+      width: 80%;
+    }
+
     @include screen("md", max) {
       width: 40%;
     }
   }
+
+  &_active {
+    .step__icon {
+
+      background-color: $color-main;
+      svg {
+        fill: #fff;
+      }
+    }
+  }
 }
 
+.hide {
+  display: none!important;
+}
