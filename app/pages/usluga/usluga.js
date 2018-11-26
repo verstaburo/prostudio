@@ -1,5 +1,6 @@
 /* eslint-disable */
 
+import * as Snap from 'snapsvg';
 
 const $ = window.$;
 
@@ -58,12 +59,12 @@ $(document).ready(function () {
                     strokeWidth: 2,
                     stroke: '#0081cb'
                   });
-  initArrow();
+  initArrow(path);
   animateSVG();
   
   // рисуем стрелку
-  function initArrow(){
-    var arrowGroup = svg.g( arrow ); // Group polyline 
+  function initArrow(path){
+    var arrowGroup = svg.g( arrow ), // Group polyline 
     movePoint = path.getPointAtLength(length);
     arrowGroup.transform( 't' + parseInt(movePoint.x - 6) + ',' + parseInt( movePoint.y - 11) + 'r' + (movePoint.alpha - 90));
   };
@@ -109,9 +110,9 @@ $(document).ready(function () {
         beginAnime = contTop -750;
       }    
 
-    var  scrollTop = $(window).scrollTop();
-      persent = (scrollTop - beginAnime)/( endAnime);
-      move = parseInt(len - (len*persent));
+    var  scrollTop = $(window).scrollTop(),
+      persent = (scrollTop - beginAnime)/( endAnime),
+      move = parseInt(len - (len*persent)),
       moveArrow = parseInt(len*persent);
 
         
@@ -206,7 +207,7 @@ $(document).ready(function () {
         zIndex: -1,
       });
 
-      initArrow();
+      
       animateSVG();
     };
   })
