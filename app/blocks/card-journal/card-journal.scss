@@ -35,7 +35,7 @@
     font-size: 25px;
     font-weight: 700;
     line-height: 32px;
-    letter-spacing: 0.63px;
+    letter-spacing: .63px;
   }
 
   &_popular {
@@ -45,3 +45,24 @@
   }
 }
 
+@include screen('lg', max) {
+
+  .card-journal {
+    padding-right: 19px;
+
+    &_popular {
+      margin-right: 0;
+      padding: 33px 45px;
+    }
+  }
+
+  .grid-list {
+
+    &__item {
+
+      &:nth-child(2) {
+        padding-left: 15px;
+      }
+    }
+  }
+}

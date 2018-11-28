@@ -32,3 +32,10 @@
     }
   }
 }
+
+@include screen('lg', max) {
+
+  .article-popular {
+    margin-top: 38px;
+  }
+}

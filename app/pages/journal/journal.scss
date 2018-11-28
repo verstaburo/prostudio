@@ -36,4 +36,12 @@
 
 }
 
+@include screen('lg', max) {
 
+  .journal {
+
+    &__list {
+      margin-top: 55px;
+    }
+  }
+}
