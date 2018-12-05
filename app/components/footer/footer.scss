@@ -166,9 +166,10 @@
 @include screen('lg-r', max) {
 
   .footer {
+    padding: 35px 0 27px;
 
     &__container {
-      height: 167px;
+      height: 171px;
     }
 
     &__left {
@@ -191,6 +192,7 @@
 
     &__contacts {
       flex-direction: column;
+      margin-top: 8px;
 
       .link {
         margin-bottom: 10px;
@@ -202,7 +204,7 @@
     }
 
     &__second {
-      margin-top: 0;
+      margin-top: 17px;
 
       .langs {
         display: none;
@@ -222,7 +224,15 @@
           display: flex;
           align-items: flex-end;
         }
+
+        .link__text {
+          line-height: 1;
+        }
       }
+    }
+
+    &__copyright {
+      margin-top: 49px !important;
     }
   }
 }
