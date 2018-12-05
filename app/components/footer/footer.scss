@@ -1,7 +1,7 @@
 .footer {
   //display: none;
   margin-top: 125px;
-  padding: 58px 0 47px;
+  padding: 56px 0 47px;
   background: $color-bg;
   width: 100%;
   color: $color-placeholder2;
@@ -12,13 +12,13 @@
     border-top: 1px solid rgba(#fff, .1);
     margin-top: 247px;
 
-    @include screen("lg", max) {
-      margin-top: 63px!important;
+    @include screen('lg', max) {
+      margin-top: 63px !important;
       padding-top: 0;
     }
 
-    @include screen("md", max) {
-      margin-top: 26px!important;
+    @include screen('md', max) {
+      margin-top: 26px !important;
       padding-top: 0;
     }
   }
@@ -30,16 +30,22 @@
   }
 
   &__left {
-    width: 45%;
+    width: 37.7%;
+    max-width: 382px;
   }
 
   &__right {
-    width: 45%;
+    width: 40%;
     flex-wrap: wrap;
   }
 
   &__center {
-    margin: 0 100px;
+    margin: 0 53px 0 100px;
+    width: 26%;
+
+    .link__text {
+      letter-spacing: .4px;
+    }
   }
 
   &__mobil {
@@ -50,10 +56,14 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    .link__text {
+      letter-spacing: .4px;
+    }
   }
 
   &__second {
-    margin-top: 78px;
+    margin-top: 71px;
     display: flex;
     justify-content: space-between;
   }
@@ -61,7 +71,8 @@
   &__copyright {
     @include text;
 
-    line-height: normal;
+    height: 40px;
+    line-height: 40px;
 
     &_mobil {
       margin-top: 50px;
@@ -105,7 +116,7 @@
     }
 
     &__link {
-      margin-right: 25px;
+      margin-right: 22px;
     }
 
     &_mobil {
@@ -123,6 +134,11 @@
         margin-right: 0;
       }
     }
+  }
+
+  &__langs {
+    display: flex;
+    align-items: center;
   }
 
   .langs {

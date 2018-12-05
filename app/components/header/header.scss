@@ -9,17 +9,13 @@
   z-index: 6;
   transition: all .6s ease;
   position: relative;
-  //display: flex;
-  //justify-content: space-between;
 
   &_wide {
     transition: all .6s ease;
     width: 100%;
-    //margin: 0 auto;
 
     .buttons__project {
-      //display: inline-block !important;
-      margin-right: 0 !important;
+        margin-right: 0 !important;
       opacity: 1 !important;
     }
 
@@ -53,13 +49,11 @@
     &_wide {
 
       .buttons__project {
-        //display: inline-block !important;
         margin-right: 0 !important;
         opacity: 1 !important;
       }
 
       .header__menu {
-        //margin: 0 !important;
       }
     }
   }
@@ -69,10 +63,7 @@
   }
 
   &__menu {
-    //flex: 1;
     margin: 0 78px 0 143px;
-    //margin: 0 160px 0 216px;
-    //@include text-menu;
   }
 
   .buttons {
@@ -130,6 +121,7 @@
         width: 45px;
         background: $color-main;
         top: 0;
+        transition: all .3s ease;
       }
 
       &::after {
@@ -139,6 +131,7 @@
         width: 34px;
         background: $color-main;
         bottom: 0;
+        transition: all .3s ease;
       }
 
       &_active {
@@ -150,19 +143,15 @@
         }
 
         &::before {
-          transform: rotate(45deg);
-          transition: all .5s ease;
-          width: 38px;
-          top: 12px;
-          left: -4px;
+          transform: rotate(-45deg);
+          transform-origin: right bottom;
+          width: 34px;
         }
 
         &::after {
-          transform: rotate(-45deg);
-          transition: all .5s ease;
-          width: 37px;
-          bottom: 14px;
-          left: -4px;
+          transform: rotate(45deg);
+          transform-origin: right top;
+          bottom: 1px;
         }
       }
     }
@@ -221,14 +210,16 @@
       padding-top: 80px;
       //top: 50px;
       padding-bottom: 1000px;
-      width: 100%;
-      margin: 0 -31px;
+      width: 100vw;
+      //margin: 0 -31px;
+      margin: 0;
       text-align: center;
-      right: -100%;
-      transition: right .5s ease;
+      right: -100vw;
+      transition: transform .5s ease;
 
       &_active {
-        right: 31px;
+        //right: 31px;
+        transform: translate(-100vw);
       }
 
       &_dark {

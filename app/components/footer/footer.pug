@@ -31,7 +31,7 @@ mixin footer()
           +link._nounder._gray._flex
             img(src='./assets/images/pdf.png')
             | скачать презентацию<br>5МБ
-          +b.langs
+          +b.langs.footer__langs
             +link._nounder._gray.langs__lang_active RU
             +link._nounder._gray.langs__lang EN
         +e.third
@@ -83,7 +83,7 @@ mixin footer_dark()
         +b.apps.footer__second
           +e.title.text_opacity cкачать приложение:
           +link._nounder._dark._gray._flex.apps__link
-            img(src='/assets/images/apple.png')
+            img(src='./assets/images/apple.png')
             |iPhone
           +link._nounder._dark._gray._flex.apps__link
             img(src='./assets/images/android.png')
