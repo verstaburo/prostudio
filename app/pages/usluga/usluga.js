@@ -158,58 +158,60 @@ $(document).ready(function () {
   });
 
   $(window).on("resize", function(){
-    var windowWidth = $(window).width();
-    var svgWidth = $('.usluga-steps__svg-wrap').width() + 60;
-    if (windowWidth > 1292) {
-      var pathAdaptive = 'm 11 11 h 1104 c 195,0, 195,284, 0,284 l -960 0 c -195,0, -195,284, 0,284 h 1060';
+    if (svg) {
+      var windowWidth = $(window).width();
+      var svgWidth = $('.usluga-steps__svg-wrap').width() + 60;
+      if (windowWidth > 1292) {
+        var pathAdaptive = 'm 11 11 h 1104 c 195,0, 195,284, 0,284 l -960 0 c -195,0, -195,284, 0,284 h 1060';
 
-      path.animate({
-        'd': pathAdaptive,
-      }, 500)
+        path.animate({
+          'd': pathAdaptive,
+        }, 500)
 
-      pathBg.animate({
-        'd': pathAdaptive,
-      }, 500)
+        pathBg.animate({
+          'd': pathAdaptive,
+        }, 500)
 
-      svg.attr({
-        width: svgWidth,
-        height: svgHeight,
-        fill: 'none',
-        zIndex: -1,
-      });
+        svg.attr({
+          width: svgWidth,
+          height: svgHeight,
+          fill: 'none',
+          zIndex: -1,
+        });
 
-      initArrow();
-      animateSVG();
+        //initArrow();
+        animateSVG();
 
-    } else if (windowWidth >=768) {
-  
-      // Считаем длину линий
-      var pathWidth = svgWidth - 66;
-      var cercleWidht = 148.5;
-      var lineWidht = pathWidth - cercleWidht*2;
-      var firstLine = pathWidth - cercleWidht;
-      var lastLine = pathWidth - cercleWidht - 40;
-  
-      var pathAdaptive = 'm 11 11 h ' + firstLine + 'c 195,0, 195,284, 0,284 l ' + -lineWidht + ' 0 c -195,0, -195,284, 0,284 h ' + lineWidht;
-      pathAdaptive += ' c 195,0, 195,284, 0,284 l ' + -lineWidht + ' 0 c -195,0, -195,284, 0,284 h' + lastLine;
+      } else if (windowWidth >=768) {
+    
+        // Считаем длину линий
+        var pathWidth = svgWidth - 66;
+        var cercleWidht = 148.5;
+        var lineWidht = pathWidth - cercleWidht*2;
+        var firstLine = pathWidth - cercleWidht;
+        var lastLine = pathWidth - cercleWidht - 40;
+    
+        var pathAdaptive = 'm 11 11 h ' + firstLine + 'c 195,0, 195,284, 0,284 l ' + -lineWidht + ' 0 c -195,0, -195,284, 0,284 h ' + lineWidht;
+        pathAdaptive += ' c 195,0, 195,284, 0,284 l ' + -lineWidht + ' 0 c -195,0, -195,284, 0,284 h' + lastLine;
 
-      path.animate({
-        'd': pathAdaptive,
-      }, 500)
+        path.animate({
+          'd': pathAdaptive,
+        }, 500)
 
-      pathBg.animate({
-        'd': pathAdaptive,
-      }, 500)
+        pathBg.animate({
+          'd': pathAdaptive,
+        }, 500)
 
-      svg.attr({
-        width: svgWidth,
-        height: 1400,
-        fill: 'none',
-        zIndex: -1,
-      });
+        svg.attr({
+          width: svgWidth,
+          height: 1400,
+          fill: 'none',
+          zIndex: -1,
+        });
 
-      
-      animateSVG();
+        
+        animateSVG();
+      };
     };
   })
 

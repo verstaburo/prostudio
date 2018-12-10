@@ -38,6 +38,14 @@
     border-bottom: none;
   }
 
+  &_full-width {
+    width: 100%;
+
+    .container {
+      width: 100%;
+    }
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;

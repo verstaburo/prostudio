@@ -179,7 +179,9 @@
       }
 
       @include screen("md", max) {
-        margin-bottom: 69px;
+        margin: 0 auto 69px auto;
+        justify-content: space-between;
+        max-width: 339px;
       }
     }
 
@@ -190,6 +192,10 @@
       background-color: $color-main;
       margin-right: 42px;
       padding-left: 0;
+
+      @include screen("md", max) {
+        margin-right: 0;
+      }
 
       svg {
         fill: #fff;
@@ -204,6 +210,12 @@
       justify-content: space-between;
       align-items: center;
       width: 155px;
+
+      @include screen("md", max) {
+        width: 148px;
+        position: relative;
+        right: 4px;
+      }
       
     }
 
@@ -236,6 +248,10 @@
       margin-left: 56px;
       border: 3px solid $color-main;
       border-radius: 50%;
+
+      @include screen("md", max) {
+        margin-left: 0;
+      }
     }
     
   }
@@ -280,7 +296,7 @@
         margin: 0 auto;
         width: 225px;
         padding-top: 33px;
-        padding-bottom: 135px;
+        padding-bottom: 110px;
       }
 
       @include screen("md-r", max) {
@@ -427,7 +443,7 @@
         line-height: 28px;
         letter-spacing: 1px;
         left: 5px;
-        bottom: 25px;
+        bottom: 61px;
       }
 
       @include screen("md-r", max) {
@@ -437,6 +453,9 @@
 
       @include screen("md", max) {
         bottom: 37px;
+        width: 100%;
+        max-width: 335px;
+        justify-content: space-between;
       }
 
       &__proc {
@@ -449,7 +468,11 @@
         @include screen("md", max) {
           font-size: 18px;
           letter-spacing: 0.9px;
-          padding-right: 30px;
+          padding-right: 0;
+        }
+
+        @include screen("xs", max) {
+          font-size: 16px;
         }
       }
 
@@ -463,8 +486,11 @@
         @include screen("md", max) {
           font-size: 18px;
           letter-spacing: 0.9px;
-          padding-left: 30px;
-          
+          padding-left: 0;
+        }
+
+        @include screen("xs", max) {
+          font-size: 16px;
         }
       }
 
@@ -474,6 +500,7 @@
         position: relative;
         border-radius: 50%;
         background-color: rgba(#fff, .07);
+        flex-shrink: 0;
 
         &-text {
           @include center-image;
@@ -523,11 +550,11 @@
       }
 
       @include screen("md", max) {
-        width: 75%;
         font-size: 18px;
         letter-spacing: 0.9px;
         line-height: 36px;
-        min-width: 320px;
+        width: auto;
+        max-width: 320px;
       }
     }
 
@@ -601,18 +628,16 @@
         background-color: $color-green;
         padding: 37px 80px 40px 36px;
         width: 548px;
-        height: 354px;
+        min-height: 354px;
 
         @include screen("lg", max) {
           padding: 18px 180px 24px 24px;
           width: 100%;
-          height: 227px;
+          min-height: auto;
         }
 
         @include screen("md", max) {
-          height: auto;
           padding: 20px 80px 22px 22px;
-          min-height: 225px;
         }
 
         &-name {
@@ -651,6 +676,7 @@
 
           @include screen("lg", max) {
             justify-self: flex-end;
+            margin-top: 25px;
           }
         }
       }
@@ -658,18 +684,18 @@
       &-2 {
         background-color: $color-main;
         width: 310px;
-        height: 304px;
+        min-height: 304px;
         padding: 27px 0 0 31px;
 
         @include screen("lg", max) {
           width: 86%;
-          height: 125px;
+          min-height: 125px;
           padding: 19px 0 0 24px;
         }
 
         @include screen("md", max) {
           width: 86%;
-          height: 127px;
+          min-height: 127px;
           padding: 22px 0 0 23px;
         }
 
@@ -863,6 +889,10 @@
       width: 100%;
       height: calc(100% + 250px);
       z-index: -1;
+
+      img {
+        width: 100%;
+      }
 
       @include screen("lg", max) {
         top: -73px;
@@ -1104,15 +1134,16 @@
       left: 0;
       width: 100%;
       z-index: -3;
+      
+      img {
+        width: 100%;
+        max-height: 100%;
+      }
 
       @include screen("lg", max) {
         top: 278px;
         width: 116%;
         left: -16%;
-        img {
-          width: 100%;
-          height: auto;
-        }
       }
 
       @include screen("md", max) {
@@ -1145,7 +1176,7 @@
 
     &__bg-3 {
       position: absolute;
-      bottom: 0;
+      bottom: 4px;
       right: 0;
       height: 525px;
       width: 65%;

@@ -227,11 +227,17 @@
       @include screen("md", max) {
         font-size: 40px;
         position: absolute;
-        bottom: 37px;
+        bottom: 34px;
         left: 0;
         width: 100%;
         text-align: center;
         margin-bottom: 0;
+        padding: 0 15px;
+        box-sizing: border-box;
+      }
+
+      @include screen("sm", max) {
+        font-size: 30px;
       }
 
       &_prodv {
@@ -247,6 +253,10 @@
 
         @include screen("md", max) {
           font-size: 48px;
+        }
+
+        @include screen("sm", max) {
+          font-size: 30px;
         }
       }
 
@@ -514,5 +524,12 @@
     }
 
     
+  }
+
+  &__footer {
+
+    @include screen("md", max) {
+      margin-top: 83px;
+    }
   }
 }
