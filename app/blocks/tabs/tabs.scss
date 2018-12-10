@@ -1,5 +1,5 @@
 .tabs {
-  $tab-gap: 25px;
+  $tab-gap: 14px;
 
   display: block;
   font-size: 0;
@@ -11,9 +11,10 @@
     margin-top: $tab-gap;
     border-bottom: 2px solid transparent;
     transition: border-color $ease-main, opacity $ease-main;
-    padding-bottom: 10px;
+    padding-bottom: 21px;
     cursor: pointer;
-    opacity: .5;
+    color: #bebebe;
+    //opacity: .5;
 
     @include text;
 
@@ -68,7 +69,7 @@
         &__card {
           position: absolute;
           top: calc(50% - 395px / 2);
-          left: 10%;
+          left: 17.5%;
           z-index: 1;
 
           @include screen('lg-r', max) {
@@ -106,17 +107,17 @@
           font-size: 20px;
         }
 
-        &_blue.active {
+        &_blue.active, &_blue:hover {
           color: $color-main;
           border-color: $color-main;
         }
 
-        &_red.active {
+        &_red.active, &_red:hover {
           color: #c91516;
           border-color: #c91516;
         }
 
-        &.active {
+        &.active, &:hover {
 
           .tabs__img {
             display: none;

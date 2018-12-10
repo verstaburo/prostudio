@@ -2,7 +2,7 @@
   //display: flex;
   //justify-content: center;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 46px;
 }
 
 .mapcard {
@@ -18,13 +18,14 @@
   &__title {
     color: $color-main;
     font-size: 17px;
-    letter-spacing: 1.19px;
+    letter-spacing: 1.26px;
     margin-top: 40px;
   }
 
   &__value {
     font-size: 18px;
-    line-height: 23px;
+    line-height: 27px;
+    letter-spacing: 1.26px;
   }
 
   &__links {

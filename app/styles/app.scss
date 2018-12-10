@@ -62,6 +62,13 @@
   visibility: hidden;
 }
 
+.body {
+
+  &_overflow {
+    overflow-y: hidden;
+  }
+}
+
 @include screen('lg', max) {
 
   .container {

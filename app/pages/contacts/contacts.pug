@@ -1,4 +1,4 @@
-extends ../../layouts/default
+extends ../../layouts/default_overflow
 
 block head
   - var pageTitle = 'Prostudio'
@@ -25,9 +25,9 @@ block content
               +e.title Адрес:
               +e.value Ленинский 151
               +e.title Телефон:
-              +e.value +7 (812) 645-65-96
+              +e.A.value(href='tel:+7 (812) 645-65-96').link +7 (812) 645-65-96
               +e.title Почта:
-              +e.value info@prostudio.ru
+              +e.A.value(href='mailto:info@prostudio.ru').link info@prostudio.ru
             +e.links
               +link-img('./assets/images/vk_color.svg')
               +link-img('./assets/images/behance_color.svg')
@@ -45,9 +45,9 @@ block content
               +e.title Адрес:
               +e.value Проспект вернадского, дом 43
               +e.title Телефон:
-              +e.value +7 (495) 645-65-96
+              +e.A.value(href='tel:+7 (495) 645-65-96').link +7 (495) 645-65-96
               +e.title Почта:
-              +e.value info@prostudio.ru
+              +e.A.value(href='mailto:info@prostudio.ru').link info@prostudio.ru
             +e.links
               +link-img('./assets/images/vk_color.svg')
               +link-img('./assets/images/behance_color.svg')
