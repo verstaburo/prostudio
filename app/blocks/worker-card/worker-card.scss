@@ -2,6 +2,18 @@
   display: block;
   width: 354px;
   margin: 50px 15px 0;
+  max-width: 22%;
+
+  @include screen('lg-r', max) {
+      width: 45%;
+      max-width: 45%;
+  }
+
+  @include screen('md', max) {
+    width: 350px;
+    max-width: 100%;
+    margin: 36px 15px 0;
+  }
 
   &__position {
     color: $color-main;
@@ -11,12 +23,26 @@
     //font-weight: 700;
     letter-spacing: 1.05px;
     margin-top: 30px;
+
+    @include screen('md', max) {
+      margin-top: 35px;
+    }
   }
 
   &__name {
     font-size: 21px;
     line-height: 33px;
-    margin-top: 5px;
+    margin-top: 7px;
+    letter-spacing: .6px;
+
+    @include screen('lg-r', max) {
+      margin-top: 4px;
+    }
+
+    @include screen('md', max) {
+      margin-top: 6px;
+    }
+
   }
 
   &__desc {
@@ -24,7 +50,15 @@
     font-size: 18px;
     line-height: 26px;
     letter-spacing: 1.35px;
-    margin-top: 30px;
+    margin-top: 21px;
+
+    @include screen('lg-r', max) {
+      margin-top: 15px;
+    }
+
+    @include screen('md', max) {
+      margin-top: 13px;
+    }
   }
 
   &__img {
@@ -51,12 +85,17 @@
     &:hover {
       opacity: 1;
     }
+
+    &-wrap {
+      display: flex;
+      justify-content: space-between;
+      width: 64%;
+      position: relative;
+      top: 5px;
+    }
   }
 }
 
-@include screen('lg-r', max) {
 
-  .worker-card {
-    width: 338px;
-  }
-}
+
+

@@ -23,6 +23,16 @@ export function selects() {
   /* eslint-enable no-unused-vars */
 }
 
+$('.inputbox .input').focusout(function () {
+  console.log($(this).val());
+  const placeHolder = $(this).next('.inputbox__placeholder');
+  if ($(this).val().length >= 1) {
+    placeHolder.addClass('inputbox__placeholder_active');
+  } else {
+    placeHolder.removeClass('inputbox__placeholder_active');
+  }
+});
+
 export function sliders() {
   // Параметры берутся из дата-атрибутов
   $('.js-range').each(function () {

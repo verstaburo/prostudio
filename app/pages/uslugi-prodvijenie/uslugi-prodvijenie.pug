@@ -1,0 +1,26 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Versta Project Template'
+
+block content
+  +header._wide._inner
+
+  +b.uslugi-spisok
+    .container.container_inner.container_xl
+      +e.title   Продвижение
+        +e.UL.aside-menu
+          +e.LI.aside-menu__item
+            +e.A.aside-menu__link Услуги
+          +e.LI.aside-menu__item
+            +e.A.aside-menu__link Компания
+          +e.LI.aside-menu__item
+            +e.A.aside-menu__link Главная
+      +e.box
+        +usluga-item("./assets/images/prodv__seo.png", "SEO", "Cайт визитка  это ваш виртуальный офис, в котором работают лучшие сотрудники. Они всегда расскажут посетителям обо всех достижениях и преимуществах вашей компании.")
+        +usluga-item("./assets/images/prodv__target.png", "Таргетированная реклама", "Интернет-магазин  это ваш виртуальный офис, в котором работают лучшие сотрудники. Они всегда расскажут посетителям обо всех достижениях и преимуществах вашей компании.")
+        +usluga-item("./assets/images/prodv__smm.png", "SMM", "Landing page  это ваш виртуальный офис, в котором работают лучшие сотрудники. Они всегда расскажут посетителям обо всех достижениях и преимуществах вашей компании.")
+        +usluga-item("./assets/images/prodv__media.png", "Медийная реклама", "Сложные проекты  это ваш виртуальный офис, в котором работают лучшие сотрудники. Они всегда расскажут посетителям обо всех достижениях и преимуществах вашей компании.")
+        +usluga-item("./assets/images/prodv__context.png", "Контекстная реклама", "Корпоративный сайт  это ваш виртуальный офис, в котором работают лучшие сотрудники. Они всегда расскажут посетителям обо всех достижениях и преимуществах вашей компании.")
+
+  +footer.uslugi-spisok__footer

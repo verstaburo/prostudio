@@ -23,9 +23,9 @@ block content
             img(src='./assets/images/about.jpg').about__slide-img
         +e.nav
           +e.prev
-            //img(src='./assets/images/prev.svg')
-          //+e.IMG(src='./assets/images/next.svg').next
+            +icon("arrow-prev")
           +e.next
+            +icon("arrow-next")
         +e.pag
   section
     +b.team
@@ -129,7 +129,7 @@ block content
         //+e.wrapper
           //+e.step1
         +e.title Хотите заказать проект?
-        +e.FORM.form
+        +e.FORM.form(method="post" action)
           +e.box
             +inputbox.contact__inputbox.contact__inputbox_third.contact__inputbox_mr Выберите проект:
               +select
@@ -147,7 +147,7 @@ block content
             +inputbox('Имя').contact__inputbox.contact__inputbox_third.contact__inputbox_mr
               +input()
             +inputbox("Телефон").contact__inputbox.contact__inputbox_third.contact__inputbox_mr
-              +input()
+              +input()(data-type="tel")
             +inputbox("Email").contact__inputbox.contact__inputbox_third
               +input
             +inputbox("Сообщение").contact__inputbox.contact__inputbox_twothird.contact__inputbox_mr

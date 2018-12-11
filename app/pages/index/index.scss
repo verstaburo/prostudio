@@ -625,7 +625,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    //margin-top: 50px;
+    margin-top: 111px;
   }
 
   &__inputbox {
@@ -633,12 +633,13 @@
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 50px;
     font-size: 18px;
+    letter-spacing: 1.35px;
     width: 100%;
     border-bottom: 2px solid #e3e3e3;
-    padding-bottom: 10px;
+    padding-bottom: 17px;
     height: 40px;
+    margin-bottom: 60px;
 
     &_half {
       width: 400px;
@@ -712,6 +713,7 @@
 
   &_about {
     width: unset;
+    margin-top: 96px;
 
     .contact {
 
@@ -727,7 +729,8 @@
       }
 
       &__btn {
-        margin-top: 50px;
+        margin-top: 4px;
+        padding: 20px 28px;
       }
     }
 
@@ -740,7 +743,7 @@
 
     .checkradio {
       margin-right: 0;
-      margin-left: 50px;
+      margin-left: 54px;
     }
   }
 }
@@ -805,6 +808,23 @@
 
     &__title {
       font-size: 41px;
+    }
+  }
+
+  .contact {
+
+    &__inputbox {
+
+      &_budget {
+        justify-content: space-between;
+
+        .checkradio {
+          margin-left: 0;
+          width: 100%;
+          text-align: center;
+          margin: 16px 0 0;
+        }
+      }
     }
   }
 }

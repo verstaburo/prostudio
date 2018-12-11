@@ -6,20 +6,22 @@
   position: relative;
 
   &__title {
-    margin-top: 46px;
+    margin-top: 34px;
 
     @include heading-10;
+    letter-spacing: 0.9px;
   }
 
   &__text {
-    margin-top: 80px;
+    margin-top: 70px;
     width: 440px;
     font-size: 18px;
     line-height: 31px;
+    letter-spacing: 0.18px;
   }
 
   &__text2 {
-    margin-top: 40px;
+    margin-top: 31px;
     width: 440px;
     font-size: 18px;
     line-height: 31px;
@@ -37,21 +39,27 @@
   &__slider {
     position: absolute;
     width: 55vw;
-    max-width: 1036px;
+    max-width: 1028px;
+    height: 693px;
     right: 0;
     top: 0;
 
     .about__pag {
       display: none;
     }
+
+    .swiper-container {
+      height: 100%;
+    }
   }
 
   &__slide-img {
     width: 100%;
+    @include fill-img;
   }
 
   &__pag {
-    margin-top: 150px;
+    margin-top: 147px;
     display: flex;
     align-items: flex-start;
     position: relative;
@@ -99,32 +107,26 @@
     cursor: pointer;
     position: relative;
     margin-right: 18px;
-    background: url(../images/prev.svg);
     width: 55px;
     height: 55px;
-    background-size: contain;
+    border-radius: 50%;
+    background: #fff;
     transition: all .5s ease;
 
-    &::before {
-      position: absolute;
-      background: url(../images/prev_active.svg) no-repeat;
-      background-size: contain;
-      //height: 55px;
-      transition: transform .5s ease;
-      //width: 55px;
-
-      z-index: -1;
-
-      @include pseudo;
+    svg {
+      width: 19px;
+      height: 17px;
+      @include center-image;
+      fill: #cccaca;
+      transition: all .5s ease;
     }
 
     &:hover {
       transform: scale(1.1);
+      background: $color-main;
 
-      &::before {
-        width: 100%;
-        height: 100%;
-        transform: scale(1.1);
+      svg {
+        fill: #fff;
       }
     }
   }
@@ -136,44 +138,41 @@
     background-size: contain;
     width: 55px;
     height: 55px;
+    border-radius: 50%;
+    background: #fff;
     transition: all .5s ease;
 
-    &::before {
-      position: absolute;
-      background: url(../images/next_active.svg) no-repeat;
-      background-size: contain;
-      //height: 55px;
-      transition: transform .5s ease;
-      //width: 55px;
-      z-index: -1;
-
-      @include pseudo;
+    svg {
+      width: 19px;
+      height: 17px;
+      @include center-image;
+      fill: #cccaca;
+      transition: all .5s ease;
     }
 
     &:hover {
       transform: scale(1.1);
+      background: $color-main;
 
-      &::before {
-        width: 100%;
-        height: 100%;
-        transform: scale(1.1);
+      svg {
+        fill: #fff;
       }
     }
   }
 }
 
 .team {
-  margin-top: 116px;
+  margin-top: 144px;
 
   &__title {
-    //margin-top: 46px;
 
     @include heading-10;
+    letter-spacing: 0.9px;
   }
 
   &__box {
-    max-width: 1664px;
-    margin: 80px auto;
+    max-width: 1708px;
+    margin: 22px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -246,7 +245,7 @@
 
       &__dots {
         position: static;
-        margin-top: 70px;
+        margin-top: 65px;
       }
     }
 
@@ -262,12 +261,16 @@
     font-size: 28px;
     line-height: 52px;
     letter-spacing: .56px;
-    margin-top: 130px;
+    margin-top: 115px;
+
+    @include screen('md', max) {
+      margin-top: 44px;
+    }
   }
 }
 
 .principles {
-  margin-top: 135px;
+  margin-top: 113px;
   position: relative;
 
   &__box {
@@ -295,7 +298,7 @@
 
   &__item {
     width: 50%;
-    height: 466px;
+    height: 474px;
     position: relative;
 
     &:hover {
@@ -505,10 +508,12 @@
 }
 
 .care {
-  margin-top: 190px;
+  margin-top: 187px;
 
   &__box {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__title {
@@ -520,14 +525,23 @@
   }
 
   &__text {
-    margin-top: 35px;
+    margin-top: 22px;
     font-size: 16px;
     line-height: 23px;
     letter-spacing: .4px;
+    padding-bottom: 18px;
     border-bottom: 1px solid #d9dee2;
 
     p {
-      margin-bottom: 35px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__apptext {
+    letter-spacing: 0.35px;
+
+    @include screen("sm", max) {
+      width: 100%;
     }
   }
 
@@ -546,22 +560,41 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     font-size: 14px;
+
+    @include screen("sm", max) {
+      justify-content: space-around;
+    }
   }
 
   &__img {
     display: none;
+    margin-top: 51px;
 
     img {
-      width: 100%;
+      width: 92%;
+
+      @include screen("md", max) {
+        width: 100%;
+      }
     }
   }
 
   &__btn {
-    margin-left: 12px;
+    margin-left: 10px;
   }
 
   &__left {
-    width: 100%;
+    width: 37%;
+
+    @include screen("lg", max) {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    position: relative;
+    top: -21px;
+    right: 39px;
   }
 }
 
@@ -583,7 +616,7 @@
 @include screen('lg-r', max) {
 
   .about {
-    margin-top: 54px;
+    margin-top: 42px;
 
     &__title {
       margin-top: 0;
@@ -598,12 +631,12 @@
 
     &__text {
       width: unset;
-      margin-top: 50px;
+      margin-top: 31px;
     }
 
     &__text2 {
       width: unset;
-      margin-top: 45px;
+      margin-top: 32px;
     }
 
     &__pag {
@@ -618,17 +651,22 @@
     }
 
     &__slider {
-      margin-top: 62px;
+      margin-top: 57px;
+      height: 523px;
 
       .about__pag {
         display: flex;
         position: absolute;
         z-index: 1;
-        left: 40px;
-        bottom: 47px;
+        left: 37px;
+        bottom: 40px;
 
         &::before {
           display: none;
+        }
+
+        .swiper-pagination-current {
+          color: #fff;
         }
       }
     }
@@ -636,8 +674,10 @@
 
   .team {
 
+    margin-top: 76px;
+
     &__box {
-      margin: 12px 15px 0;
+      margin: 3px 15px 0;
     }
 
     &__item {
@@ -798,24 +838,45 @@
 
   .about {
 
+    margin-top: 44px;
+
+    &__title {
+      font-size: 30px;
+    }
+
     &__text, &__text2 {
       display: none;
     }
 
     &__text3 {
       display: block;
+      margin-top: 26px;
     }
 
     &__slider {
       width: 100%;
+      margin-top: 56px;
+      height: 342px;
 
       .about__pag {
         display: none;
       }
     }
+
+    &__nav {
+      left: 14px;
+      width: calc(100% - 28px);
+    }
   }
 
   .team {
+
+    margin-top: 45px;
+
+    &__title {
+      font-size: 30px;
+      letter-spacing: 0.75px;
+    }
 
     &__box {
       display: none;
@@ -834,7 +895,7 @@
   }
 
   .principles {
-    margin-top: 100px;
+    margin-top: 75px;
 
     &__box {
       display: none;
@@ -849,8 +910,13 @@
       margin-top: 35px;
     }
 
+    &__caption {
+      font-size: 30px;
+      letter-spacing: .75px;
+    }
+
     &__slide {
-      height: 400px;
+      min-height: 400px;
       width: 100%;
       text-align: center;
       background: url(../images/principle_bg.jpg) no-repeat;
@@ -859,11 +925,16 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-      justify-content: center;
+      box-sizing: border-box;
+      padding: 82px 0 40px;
+    }
+
+    &__desc {
+      margin-top: 26px;
     }
 
     &__pag {
-      margin-top: 28px;
+      margin-top: 25px;
       display: flex;
       justify-content: center;
     }
@@ -873,6 +944,7 @@
       font-size: 18px;
       font-weight: 700;
       letter-spacing: .23px;
+      transition: all $ease-main;
       color: #d1cfcf;
 
       &_active {
