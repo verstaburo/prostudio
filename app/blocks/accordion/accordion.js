@@ -15,7 +15,7 @@ $(document).on('click', '.js-accordion-button', function (e) {
   const isActive = Number(block.hasClass('is-active'));
   const isMultiple = block.parents('.accordions').data('accordion-multiple');
   // const header = button.parent();
-  button.parent().toggleClass('is-active');
+
   if (block.hasClass('is-active')) {
     button.find('.button').html('подробнее');
   } else {

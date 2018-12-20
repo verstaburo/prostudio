@@ -26,6 +26,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 
     &__right {
       margin-left: 48px;
@@ -202,7 +204,7 @@
             background: url('../images/arrow_down.svg') no-repeat;
             width: 18px;
             height: 19px;
-            transform: unset;
+            transform: translateY(-50%);
             border: none;
             fill: $color-gray;
           }

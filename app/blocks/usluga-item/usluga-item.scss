@@ -47,9 +47,11 @@
 
     &-wrap {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: flex-start;
       padding-right: 40px;
+      width: 61px;
+      flex-shrink: 0;
     }
   }
 

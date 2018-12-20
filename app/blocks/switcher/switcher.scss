@@ -21,7 +21,7 @@ $padding: $height/2;
     //height: $height;
     //display: inline-block;
     // border: 1px solid rgba(black, .15);
-    transition: border-color $ease;
+    transition: all $ease-main;
 
     input:checked + & {
       //border-color: #64DD17;
@@ -107,6 +107,8 @@ $padding: $height/2;
 
   &__value {
     @include text-button-md;
+
+    transition: color $ease-main;
 
     &_on {
       color: $color-main;
