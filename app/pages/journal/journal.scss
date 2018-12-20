@@ -3,6 +3,7 @@
 
   &__list {
     margin-top: 60px;
+    justify-content: space-between;
   }
 
   &__allcards {
@@ -17,7 +18,7 @@
   }
 
   .card-journal {
-    margin-bottom: 40px;
+    margin-bottom: 34px;
   }
 
   &__bottom {
@@ -34,6 +35,10 @@
     letter-spacing: .75px;
   }
 
+  &__column {
+    width: 387px;
+    box-sizing: content-box;
+  }
 }
 
 @include screen('lg', max) {
@@ -42,6 +47,20 @@
 
     &__list {
       margin-top: 55px;
+    }
+
+    &__column {
+      width: 339px;
+    }
+  }
+}
+
+@include screen('md', max) {
+
+  .journal {
+
+    &__list {
+      justify-content: center;
     }
   }
 }

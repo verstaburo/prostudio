@@ -22,6 +22,14 @@
     }
   }
 
+  &_nomargin {
+    margin-top: 0;
+  }
+
+  &_journal {
+    margin-top: 69px;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;

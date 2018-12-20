@@ -22,18 +22,20 @@ export default function maps() {
     zoomControl: false,
   }).setView([55.673813, 37.505184], 15);
 
-  // console.log($window.width);
-  if ($(window).width() < 768) {
-    map.setView([59.856, 30.300], 15);
-    mapMoscow.setView([55.678577, 37.505184], 15);
-    // 59.856662, 30.301026
-    // 55.678007, 37.505208
+  if ($(window).width() < 1600) {
+    map.setView([59.852, 30.293], 15);
+    mapMoscow.setView([55.674, 37.500], 15);
   }
 
-  // map.setStyle('mapbox://styles/mapbox/light-v9');
-  // const map = L.map('map_piter').setView([59.851, 30.300], 15).setStyle('mapbox://styles/mapbox/light-v9');
-  // const map = L.map('map_piter', { style: 'mapbox://styles/mapbox/light-v9' }).setView([59.851, 30.300], 15);
-  // 59.851422, 30.300983
+  if ($(window).width() < 768) {
+    map.setView([59.8557, 30.2997], 15);
+    mapMoscow.setView([55.678577, 37.505184], 15);
+  }
+
+  if ($(window).width() < 480) {
+    map.setView([59.8557, 30.301], 15);
+    mapMoscow.setView([55.678577, 37.505184], 15);
+  }
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     maxZoom: 18,
@@ -54,25 +56,13 @@ export default function maps() {
     iconUrl: './assets/images/marker.png',
     iconSize: [62, 53],
     iconAnchor: [60, 26],
-    // popupAnchor: [-3, -76],
-    // shadowUrl: 'my-icon-shadow.png',
-    // shadowSize: [68, 95],
-    // shadowAnchor: [22, 94]
   });
 
   const metroIcon = L.icon({
     iconUrl: './assets/images/metro.png',
     iconSize: [166, 34],
     iconAnchor: [0, 26],
-    // popupAnchor: [-3, -76],
-    // shadowUrl: 'my-icon-shadow.png',
-    // shadowSize: [68, 95],
-    // shadowAnchor: [22, 94]
   });
-
-  // const marker = L.marker([59.851, 30.300]).addTo(map);
-  // 59.851422, 30.300983
-  // 59.851319, 30.322130
 
   const marker = L.marker([55.673813, 37.505184], {
     icon: officeIcon,

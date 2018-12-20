@@ -65,6 +65,12 @@ export default function mixContent() {
 
     self.setOrderId(blocks);
 
+    if ($(window).width() < 1310) {
+      $('.card-journal_popular').attr(this.orderId, 2);
+    } else {
+      $('.card-journal_popular').attr(this.orderId, 3);
+    }
+
     const sortedBlocks = self.sortBlocks(blocks);
 
     sortedBlocks
@@ -74,11 +80,11 @@ export default function mixContent() {
   };
 
   const news = new NewsCards();
-  if ($(window).width() < 1310) {
-    $('.card-journal_popular').attr(news.orderId, 2);
-  } else {
-    $('.card-journal_popular').attr(news.orderId, 3);
-  }
+  // if ($(window).width() < 1310) {
+  //   $('.card-journal_popular').attr(news.orderId, 2);
+  // } else {
+  //   $('.card-journal_popular').attr(news.orderId, 3);
+  // }
   news.sort();
   window.news = news;
 

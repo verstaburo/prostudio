@@ -2,7 +2,7 @@
   display: block;
   //width: 357px;
   position: relative;
-  padding-right: 42px;
+  padding-right: 29px;
 
   &__img {
     position: relative;
@@ -15,7 +15,7 @@
   }
 
   &__text {
-    margin-top: 27px;
+    margin-top: 21px;
 
     @include text-foto;
   }
@@ -28,6 +28,8 @@
     right: -37px;
 
     @include text-date;
+
+    //font-size: 24px;
   }
 
   &__title {
@@ -41,18 +43,27 @@
   &_popular {
     padding: 40px 50px;
     background: $color-main;
-    margin-right: 42px;
+    margin-right: 27px;
   }
 }
 
 @include screen('lg', max) {
 
   .card-journal {
-    padding-right: 19px;
+    padding-right: 25px;
 
     &_popular {
       margin-right: 0;
       padding: 33px 45px;
+    }
+
+    &__text {
+      font-size: 19px;
+      margin-top: 16px;
+    }
+
+    &__title {
+      font-size: 24px;
     }
   }
 

@@ -8,16 +8,16 @@ block content
   +b.SECTION.journal
     .container.container_inner
       +grid-list.js-mix.journal__list
-        +e.LI.item
-        +e.LI.item
-        +e.LI.item
+        +e.LI.item.journal__column
+        +e.LI.item.journal__column
+        +e.LI.item.journal__column
         //+e.LI.item
       +e.allcards.js-storage
         +card-journal('./assets/images/slide21.jpg','Мы запустили новый сайт для компании.','20  10  17')
         +card-journal('./assets/images/slide22.jpg','Как эффективно настроитьконтекстную рекламу и увеличить продажи?','20  10  17')
         +b.card-journal_popular
           +e.title Самые популярные статьи.
-          +article-popular('Запустили новое приложение для компании.', '01')
+          +article-popular('Запустили новое приложение для компании.', '01')._first
           +article-popular('Использование SVG в качестве Placeholder’a', '02')
           +article-popular('Мы запустили новый сайт для компании.', '03')
         +card-journal('./assets/images/journal3.jpg','Мы запустили новый сайт для компании.','20  10  17')
@@ -37,4 +37,4 @@ block content
           |Подписаться
           img(src='./assets/images/icon_subscribe.svg')
 
-  +footer
+  +footer._journal
