@@ -9,6 +9,7 @@
   z-index: 6;
   transition: all .6s ease;
   position: relative;
+  border-bottom: 1px solid #dcdcdc;
 
   &_wide {
     transition: all .6s ease;
@@ -31,7 +32,7 @@
 
   &_inner {
     padding-top: 34px;
-    border-bottom: 1px solid $color-border-2;
+    // border-bottom: 1px solid $color-border-2;
   }
 
   &_no-border {

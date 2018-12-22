@@ -27,10 +27,10 @@ export default function Article() {
       if ($(this).siblings().length === 0) {
         // console.log('piu')
         // $(this).css('margin-top', '24px');
-        $(this).parent().css('margin-top', '24px');
+        $(this).parent().css('margin-top', '7px');
 
         if (index === 0) {
-          $(this).parent().css('margin-top', '50px');
+          $(this).parent().css('margin-top', '35px');
         }
 
       }
@@ -46,12 +46,18 @@ export default function Article() {
 
     $(window).scroll(function () {
       const scroll_offset = ($(window).scrollTop()) / ($(document).height() - $(window).height());
-      // console.log(scroll_offset);
       $('.progress').show();
       $('.js-progress').css('transform', 'scaleX(' + scroll_offset + ')');
+      console.log(scroll_offset);
 
-      if (scroll_offset === 0) {
-        $('.progress').hide();
+      if (window.pageYOffset < $('.head').height()) {
+        $('.progress').css('height', '0');
+        $('.header').css('border-bottom-color', '#dcdcdc');
+      } 
+      
+      if (window.pageYOffset >= $('.head').height()) {
+        $('.progress').css('height', '8px');
+        $('.header').css('border-bottom-color', 'transparent');
       }
     });
     // $(window).scrollTop()

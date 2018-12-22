@@ -15,7 +15,8 @@
     line-height: 46px;
     letter-spacing: .9px;
     color: $color-main;
-    margin-top: 40px;
+    margin-top: 36px;
+    margin-bottom: -11px;
 
     //&:not(:last-child) {
     //  margin-bottom: 10px;
@@ -65,11 +66,11 @@
     font-weight: 300;
     line-height: 36px;
     letter-spacing: .5px;
-    margin-top: 50px;
+    margin-top: 36px;
 
-    //&:not(:last-child) {
-    //  margin-bottom: 60px;
-    //}
+    &:first-child {
+     margin-top: 0;
+    }
 
     small {
       display: block;
@@ -94,15 +95,15 @@
     text-align: center;
     line-height: 36px;
     letter-spacing: .6px;
-    margin: 100px auto 0;
+    margin: 87px auto 0;
     width: 90%;
-    padding-bottom: 60px;
+    padding-bottom: 81px;
     position: relative;
 
     &::before {
       @include pseudo;
 
-      bottom: 0;
+      bottom: 28px;
       width: 120px;
       height: 1px;
       background: $color-main;
@@ -132,7 +133,7 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
   }
 
@@ -145,26 +146,40 @@
 
   ul, ol { @include list; }
 
-  ul { @include ullist; }
+  ul {
+    @include ullist;
+    margin-top: 43px;
+    li {
+      padding-left: 69px;
+      margin-top: 36px;
+
+      &::before {
+        width: 9px;
+        height: 9px;
+        background-color: transparent;
+        border: 2px solid $color-main;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
 
   ol { @include ollist; }
 
   a {
-    //display: inline-block;
     font-size: 18px;
-    //line-height: 43px;
     font-weight: 400;
     letter-spacing: .45px;
     color: $color-main;
     padding-bottom: 1px;
-    //text-decoration: dotted;
     border-bottom: 1px dashed $color-main;
-    //margin-top: 24px;
-    //@include link;
 
-    //&:first-of-type {
-    //  margin-top: 50px;
-    //}
+    &:hover {
+      color: mix($white, $color-main, 30%);
+      border-color: mix($white, $color-main, 30%);
+    }
   }
 }
 
@@ -176,6 +191,7 @@
       font-size: 18px;
       line-height: 30px;
       letter-spacing: .45px;
+      margin-top: 30px;
     }
 
     h2 {
@@ -183,16 +199,28 @@
       font-weight: 700;
       line-height: 46px;
       letter-spacing: .75px;
+      margin-top: -4px;
     }
 
     ul {
+      margin-top: 33px;
       font-size: 18px;
       font-weight: 300;
       line-height: 30px;
       letter-spacing: .45px;
+      
+      li {
+        padding-left: 48px;
+        margin-top: 30px;
+        
+        &::before {
+          top: 7px;
+        }
+      }
     }
 
     blockquote {
+      margin-top: 74px auto 0;
       font-size: 24px;
       line-height: 36px;
       letter-spacing: 0.6px;

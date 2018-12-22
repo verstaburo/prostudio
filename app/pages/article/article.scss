@@ -18,7 +18,10 @@
   }
 
   &__title {
-    margin-top: 258px;
+    @include center-block-r;
+     
+    padding-left: 30px;
+    padding-right: 30px;
     text-align: center;
     z-index: 1;
     color: white;
@@ -32,13 +35,14 @@
     z-index: 1;
     color: white;
     border-top: 1px solid rgba(255, 255, 255, .19);
-    padding: 32px 0;
+    padding-top: 24px;
+    padding-bottom: 33px;
   }
 
   &__subtitle {
     font-size: 14px;
     opacity: .34;
-    //line-height: 26px;
+    line-height: 25px;
     letter-spacing: .7px;
   }
 
@@ -49,7 +53,7 @@
   }
 
   &__category {
-    margin-left: 112px;
+    margin-left: 109px;
   }
 
   &__left {
@@ -58,6 +62,9 @@
   }
 
   &__right {
+    position: relative;
+    top: 5px;
+    left: 0;
     display: flex;
     align-items: center;
   }
@@ -78,11 +85,11 @@
   &__view {
     display: flex;
     align-items: center;
-    margin-left: 56px;
+    margin-left: 54px;
     margin-right: 70px;
 
     svg {
-      margin-right: 20px;
+      margin-right: 13px;
       width: 24px;
       height: 22px;
       fill: white;
@@ -96,19 +103,19 @@
   //margin-top: 66px;
 
   &__main {
-    margin-right: 100px;
-    margin-top: 10px;
+    margin-right: 90px;
+    margin-top: 57px;
   }
 
   &__sidebar {
-    margin-top: 60px;
-    min-width: 210px;
+    margin-top: 67px;
+    min-width: 278px;
   }
 
   &__bottom {
     display: flex;
     justify-content: space-around;
-    margin-top: 80px;
+    margin-top: 57px;
   }
 }
 
@@ -119,7 +126,7 @@
     font-weight: 700;
     line-height: 26px;
     letter-spacing: .8px;
-    margin-top: 10px;
+    margin-top: 8px;
   }
 
   &__text {
@@ -137,17 +144,19 @@
 }
 
 .disqus {
-  max-width: 924px;
+  max-width: 750px;
   margin-top: 50px;
+  margin-left: 68px;
 }
 
 .progress {
   position: fixed;
-  height: 8px;
+  height: 0;
   margin-top: 112px;
   width: 100%;
   z-index: 1;
-  display: none;
+  display: block;
+  transition: height .4s ease;
 
   &__fill {
     width: 100%;
@@ -180,7 +189,7 @@
     height: 553px;
 
     &__title {
-      margin-top: 165px;
+      // margin-top: 165px;
       font-size: 36px;
       font-weight: 700;
       line-height: 57px;
@@ -197,12 +206,13 @@
     flex-direction: column-reverse;
 
     &__main {
+      margin-top: 43px;
       margin-right: 0;
     }
 
     &__sidebar {
       width: 100%;
-      margin-top: 27px;
+      margin-top: 38px;
     }
   }
 
@@ -214,6 +224,15 @@
       margin-left: 30px;
       width: 210px;
     }
+    
+    &__name {
+      margin-top: -1px;
+    }
+  }
+
+  .disqus {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -223,7 +242,7 @@
     height: 392px;
 
     &__title {
-      margin-top: 105px;
+      // margin-top: 105px;
       font-size: 24px;
       font-weight: 700;
       line-height: 42px;

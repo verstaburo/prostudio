@@ -2,7 +2,7 @@
   display: block;
 
   &__list {
-    margin-top: 60px;
+    margin-top: 51px;
     justify-content: space-between;
   }
 
@@ -28,7 +28,7 @@
   }
 
   &__title {
-    margin-top: 70px;
+    margin-top: 94px;
     font-size: 30px;
     font-weight: 700;
     line-height: 46px;
@@ -44,10 +44,6 @@
 @include screen('lg', max) {
 
   .journal {
-
-    &__list {
-      margin-top: 55px;
-    }
 
     &__column {
       width: 339px;

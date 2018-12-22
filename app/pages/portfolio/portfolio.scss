@@ -2,7 +2,7 @@
 
 .portfolio {
   display: block;
-  margin-top: 60px;
+  margin-top: 53px;
 
   &__title {
     font-size: 25px;
@@ -11,15 +11,19 @@
   }
 
   &__filters {
-    margin-top: 65px;
+    margin-top: 58px;
     border-bottom: 1px solid #e0e0e0;
     display: flex;
   }
 
   &__filter {
     margin-right: 100px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     border-bottom: 3px solid transparent;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &:hover {
       cursor: pointer;

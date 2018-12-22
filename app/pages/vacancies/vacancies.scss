@@ -30,7 +30,8 @@
     box-sizing: border-box;
 
     &__right {
-      margin-left: 48px;
+      margin-top: -7px;
+      margin-left: 47px;
     }
 
     &__title {
@@ -45,9 +46,10 @@
     }
 
     &__text {
-      @include heading-6;
-
+      font-size: 18px;
       font-weight: 300;
+      line-height: 1.6;
+      letter-spacing: .45px;
     }
   }
 }
@@ -76,15 +78,15 @@
         height: 11px;
         border-radius: 50%;
         background: $color-orange;
-        right: -19px;
+        right: -30px;
         top: 12px;
       }
     }
   }
 
   &__description {
-    margin-top: 19px;
-    margin-left: 3px;
+    margin-top: 9px;
+    margin-left: 4px;
 
     @include text-16-300;
   }
@@ -100,7 +102,7 @@
     margin-top: 24px;
 
     &:nth-child(n+3) {
-      margin-top: 48px;
+      margin-top: 36px;
     }
 
     ul {
@@ -109,6 +111,10 @@
 
     li {
       @include text-16-300;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
 
@@ -132,6 +138,14 @@
 
     :first-child {
       margin-right: 30px;
+    }
+
+    .button {
+
+      padding: 15px 30px;
+      height: auto;
+      font-size: 13.5px;
+      text-align: center;
     }
   }
 

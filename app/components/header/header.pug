@@ -1,7 +1,7 @@
 mixin header(fixed)
   +b.header&attributes(attributes)
     .container.header__container
-      //+icon('logo').__logo
+      //- +icon('logo').__logo
       +e.IMG(src='./assets/images/logo.svg').logo
       +b.UL.menu.header__menu
         +e.LI.item
@@ -36,7 +36,7 @@ mixin header(fixed)
 mixin header_dark(fixed)
   +b.header&attributes(attributes)
     .container.header__container
-      //+icon('logo').__logo
+      //- +icon('logo').__logo
       +e.IMG(src='./assets/images/logo_dark.png').logo
       +b.UL.menu.header__menu._dark
         +e.LI.item

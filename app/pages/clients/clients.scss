@@ -2,13 +2,13 @@
   display: block;
 
   &__title {
-    margin-top: 54px;
+    margin-top: 52px;
 
     @include inner-title;
   }
 
   &__box {
-    margin: 10px -25px 0 -25px;
+    margin: 4px -25px 0 -25px;
     display: flex;
     flex-wrap: wrap;
     //width: 100%;
@@ -31,7 +31,8 @@
       cursor: pointer;
 
       .hover {
-        display: flex;
+        background-color: rgba($black, .76);
+        opacity: 1;
       }
     }
 
@@ -58,7 +59,8 @@
   }
 
   .hover {
-    display: none;
+    opacity: 0;
+    display: flex;
     position: absolute;
     flex-direction: column;
     width: 100%;
@@ -66,9 +68,10 @@
     box-sizing: border-box;
     top: 0;
     left: 0;
-    background: #000;
+    background-color: $black;
     color: white;
-    padding: 40px 35px;
+    padding: 38px 35px;
+    transition: opacity .3s ease, background-color .3s ease;;
 
     &__title {
       font-size: 18px;
@@ -77,9 +80,11 @@
     }
 
     &__text {
-      margin-top: 10px;
+      margin-top: 7px;
+      font-size: 14px;
       font-weight: 300;
-      letter-spacing: 1.05px;
+      line-height: 1.4;
+      letter-spacing: 1.03px;
     }
 
     &__date {
