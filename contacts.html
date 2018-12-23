@@ -15,73 +15,32 @@
 
 <body class="body_overflow">
     <div class="header header_wide header_inner">
-        <div class="container header__container">
-            <!--+icon('logo').__logo-->
-            <img class="header__logo" src="./assets/images/logo.svg" alt="" role="presentation" />
+        <div class="container header__container"><img class="header__logo" src="./assets/images/logo.svg" alt="" role="presentation" />
             <ul class="menu header__menu">
-                <li class="menu__item">
-                    <a class="link link_nounder link_medium" href="#">
-                        <span class="link__text">Компания</span>
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="link link_nounder link_medium" href="#">
-                        <span class="link__text">Услуги</span>
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="link link_nounder link_medium" href="#">
-                        <span class="link__text">Кейсы</span>
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="link link_nounder link_medium" href="#">
-                        <span class="link__text">Журнал</span>
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="link link_nounder link_medium" href="#">
-                        <span class="link__text">Клиенты</span>
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="link link_nounder link_medium" href="./vacancies.html">
-                        <span class="link__text">Вакансии</span>
-                    </a>
-                </li>
-                <li class="menu__item menu__item_last">
-                    <a class="link link_nounder link_medium" href="#">
-                        <span class="link__text">Контакты</span>
-                    </a>
-                </li>
-                <li class="menu__item menu__item_btn">
-                    <a class="button button_blue button_big-big menu__btn">Оформить заказ</a>
-                </li>
-                <li class="menu__item menu__item_present">
-                    <a class="link link_nounder link_gray link_flex">
-                        <span class="link__text">
-                            <img src="./assets/images/pdf.png" />скачать презентацию
-                            <br>5МБ</span>
-                    </a>
-                </li>
+                <li class="menu__item"><a class="link link_nounder link_medium" href="#"><span class="link__text">Компания</span></a></li>
+                <li class="menu__item"><a class="link link_nounder link_medium" href="#"><span class="link__text">Услуги</span></a></li>
+                <li class="menu__item"><a class="link link_nounder link_medium" href="#"><span class="link__text">Кейсы</span></a></li>
+                <li class="menu__item"><a class="link link_nounder link_medium" href="#"><span class="link__text">Журнал</span></a></li>
+                <li class="menu__item"><a class="link link_nounder link_medium" href="#"><span class="link__text">Клиенты</span></a></li>
+                <li class="menu__item"><a class="link link_nounder link_medium" href="./vacancies.html"><span class="link__text">Вакансии</span></a></li>
+                <li class="menu__item menu__item_last"><a class="link link_nounder link_medium" href="#"><span class="link__text">Контакты</span></a></li>
+                <li class="menu__item menu__item_btn"><a class="button button_blue button_big-big menu__btn">Оформить заказ</a></li>
+                <li class="menu__item menu__item_present"><a class="link link_nounder link_gray link_flex"><span class="link__text"><img src="./assets/images/pdf.png" />скачать презентацию<br>5МБ</span></a></li>
             </ul>
             <div class="buttons">
-                <a class="button buttons__ico">ico</a>
-                <a class="button button_blue buttons__project js-fancybox" href="#contact">обсудить проект</a>
-                <div class="buttons__burger js-padmenu">
-                    <span></span>
-                </div>
+                <div class="buttons__wrap"><a class="button buttons__ico">ico</a><a class="button button_blue buttons__project js-fancybox" href="#contact">обсудить проект</a></div>
+                <div class="buttons__burger js-padmenu"><span></span></div>
             </div>
         </div>
     </div>
     <div class="contacts">
         <ul class="tabs tabs_contacts">
             <li class="tabs__tab tabs__tab_blue active" data-tab-target="tab1">
-                <img class="tabs__img tabs__img_active" src="./assets/images/piter.png">
-                <img class="tabs__img" src="./assets/images/piter_gray.png">Петербург</li>
+                <div class="tabs__images"><img class="tabs__img" src="./assets/images/piter_gray.png"><img class="tabs__img tabs__img_active" src="./assets/images/piter.png"></div>Петербург
+            </li>
             <li class="tabs__tab tabs__tab_red" data-tab-target="tab2">
-                <img class="tabs__img tabs__img_active" src="./assets/images/moscow.png">
-                <img class="tabs__img" src="./assets/images/moscow_gray.png">Москва</li>
+                <div class="tabs__images"><img class="tabs__img tabs__img_active" src="./assets/images/moscow.png"><img class="tabs__img" src="./assets/images/moscow_gray.png"></div>Москва
+            </li>
         </ul>
         <div class="tabs-content tabs-content_contacts">
             <div class="tabs-content__wrapper active" data-tab="tab1" data-tab-group="contacts">
@@ -92,31 +51,10 @@
                         <div class="mapcard__box">
                             <div class="mapcard__title">Адрес:</div>
                             <div class="mapcard__value">Ленинский 151</div>
-                            <div class="mapcard__title">Телефон:</div>
-                            <a class="mapcard__value link" href="tel:+7 (812) 645-65-96">+7 (812) 645-65-96</a>
-                            <div class="mapcard__title">Почта:</div>
-                            <a class="mapcard__value link" href="mailto:info@prostudio.ru">info@prostudio.ru</a>
+                            <div class="mapcard__title">Телефон:</div><a class="mapcard__value link" href="tel:+7 (812) 645-65-96">+7 (812) 645-65-96</a>
+                            <div class="mapcard__title">Почта:</div><a class="mapcard__value link" href="mailto:info@prostudio.ru">info@prostudio.ru</a>
                         </div>
-                        <div class="mapcard__links">
-                            <a class="link">
-                                <img src="./assets/images/vk_color.svg" />
-                            </a>
-                            <a class="link">
-                                <img src="./assets/images/behance_color.svg" />
-                            </a>
-                            <a class="link">
-                                <img src="./assets/images/youtube_color.svg" />
-                            </a>
-                            <a class="link">
-                                <img src="./assets/images/insta_color.svg" />
-                            </a>
-                            <a class="link">
-                                <img src="./assets/images/fb_color.svg" />
-                            </a>
-                            <a class="link">
-                                <img src="./assets/images/tg_color.svg" />
-                            </a>
-                        </div>
+                        <div class="mapcard__links"><a class="link"><img src="./assets/images/vk_color.svg" /></a><a class="link"><img src="./assets/images/behance_color.svg" /></a><a class="link"><img src="./assets/images/youtube_color.svg" /></a><a class="link"><img src="./assets/images/insta_color.svg" /></a><a class="link"><img src="./assets/images/fb_color.svg" /></a><a class="link"><img src="./assets/images/tg_color.svg" /></a></div>
                     </div>
                 </div>
             </div>
@@ -128,31 +66,10 @@
                         <div class="mapcard__box">
                             <div class="mapcard__title">Адрес:</div>
                             <div class="mapcard__value">Проспект вернадского, дом 43</div>
-                            <div class="mapcard__title">Телефон:</div>
-                            <a class="mapcard__value link" href="tel:+7 (495) 645-65-96">+7 (495) 645-65-96</a>
-                            <div class="mapcard__title">Почта:</div>
-                            <a class="mapcard__value link" href="mailto:info@prostudio.ru">info@prostudio.ru</a>
+                            <div class="mapcard__title">Телефон:</div><a class="mapcard__value link" href="tel:+7 (495) 645-65-96">+7 (495) 645-65-96</a>
+                            <div class="mapcard__title">Почта:</div><a class="mapcard__value link" href="mailto:info@prostudio.ru">info@prostudio.ru</a>
                         </div>
-                        <div class="mapcard__links">
-                            <a class="link">
-                                <img src="./assets/images/vk_color.svg" />
-                            </a>
-                            <a class="link">
-                                <img src="./assets/images/behance_color.svg" />
-                            </a>
-                            <a class="link">
-                                <img src="./assets/images/youtube_color.svg" />
-                            </a>
-                            <a class="link">
-                                <img src="./assets/images/insta_color.svg" />
-                            </a>
-                            <a class="link">
-                                <img src="./assets/images/fb_color.svg" />
-                            </a>
-                            <a class="link">
-                                <img src="./assets/images/tg_color.svg" />
-                            </a>
-                        </div>
+                        <div class="mapcard__links"><a class="link"><img src="./assets/images/vk_color.svg" /></a><a class="link"><img src="./assets/images/behance_color.svg" /></a><a class="link"><img src="./assets/images/youtube_color.svg" /></a><a class="link"><img src="./assets/images/insta_color.svg" /></a><a class="link"><img src="./assets/images/fb_color.svg" /></a><a class="link"><img src="./assets/images/tg_color.svg" /></a></div>
                     </div>
                 </div>
             </div>
@@ -161,140 +78,37 @@
     <div class="footer footer_nomargin">
         <div class="container container_inner footer__container">
             <div class="footer__left">
-                <div class="footer__contacts">
-                    <a class="link link_nounder link_gray link_lg" href="tel:+78126456596">
-                        <span class="link__text">+7 (812) 645-65-96</span>
-                    </a>
-                    <a class="link link_nounder link_gray link_lg" href="tel:+74956456596">
-                        <span class="link__text">+7 (495) 645-65-96</span>
-                    </a>
-                    <a class="link link_nounder link_gray link_lg footer__mail" href="mailto:mail@prostudio.ru">
-                        <span class="link__text">mail@prostudio.ru</span>
-                    </a>
-                </div>
+                <div class="footer__contacts"><a class="link link_nounder link_gray link_lg" href="tel:+78126456596"><span class="link__text">+7 (812) 645-65-96</span></a><a class="link link_nounder link_gray link_lg" href="tel:+74956456596"><span class="link__text">+7 (495) 645-65-96</span></a><a class="link link_nounder link_gray link_lg footer__mail" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a></div>
                 <div class="footer__copyright footer__second">© 2009-2017 ООО «Цифровая империя»</div>
             </div>
-            <div class="footer__center">
-                <a class="link link_nounder link_gray link_lg" href="mailto:mail@prostudio.ru">
-                    <span class="link__text">mail@prostudio.ru</span>
-                </a>
+            <div class="footer__center"><a class="link link_nounder link_gray link_lg" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a>
                 <div class="apps footer__second">
-                    <div class="apps__title">cкачать приложение:</div>
-                    <a class="link link_nounder link_gray link_flex apps__link">
-                        <span class="link__text">
-                            <img src="/assets/images/apple.png" />iPhone</span>
-                    </a>
-                    <a class="link link_nounder link_gray link_flex apps__link">
-                        <span class="link__text">
-                            <img src="./assets/images/android.png" />Android</span>
-                    </a>
+                    <div class="apps__title">cкачать приложение:</div><a class="link link_nounder link_gray link_flex apps__link"><span class="link__text"><img src="/assets/images/apple.png" />iPhone</span></a><a class="link link_nounder link_gray link_flex apps__link"><span class="link__text"><img src="./assets/images/android.png" />Android</span></a>
                 </div>
             </div>
             <div class="footer__right">
-                <div class="icons">
-                    <a class="link link_icon link_gray">
-                        <svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg>
-                        <span class="link__text"></span>
-                    </a>
-                    <a class="link link_icon link_gray">
-                        <svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_behance"></use></svg>
-                        <span class="link__text"></span>
-                    </a>
-                    <a class="link link_icon link_gray">
-                        <svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_youtube"></use></svg>
-                        <span class="link__text"></span>
-                    </a>
-                    <a class="link link_nounder">
-                        <span class="link__text">
-                            <img src="./assets/images/instagram.png" />
-                        </span>
-                    </a>
-                    <!--+link-icon('instagram')._gray-->
-                    <a class="link link_icon link_gray">
-                        <svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_facebook"></use></svg>
-                        <span class="link__text"></span>
-                    </a>
-                    <a class="link link_icon link_gray">
-                        <svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_telegram"></use></svg>
-                        <span class="link__text"></span>
-                    </a>
-                </div>
-                <div class="footer__second">
-                    <a class="link link_nounder link_gray link_flex">
-                        <span class="link__text">
-                            <img src="./assets/images/pdf.png" />скачать презентацию
-                            <br>5МБ</span>
-                    </a>
-                    <div class="langs footer__langs">
-                        <a class="link link_nounder link_gray langs__lang langs__lang_active">
-                            <span class="link__text">RU</span>
-                        </a>
-                        <a class="link link_nounder link_gray langs__lang">
-                            <span class="link__text">EN</span>
-                        </a>
-                    </div>
+                <div class="icons"><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg><span class="link__text"></span></a><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_behance"></use></svg><span class="link__text"></span></a><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_youtube"></use></svg><span class="link__text"></span></a><a class="link link_nounder"><span class="link__text"><img src="./assets/images/instagram.png" /></span></a>
+                    <!--+link-icon('instagram')._gray--><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_facebook"></use></svg><span class="link__text"></span></a><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_telegram"></use></svg><span class="link__text"></span></a></div>
+                <div class="footer__second"><a class="link link_nounder link_gray link_flex footer__doc"><span class="link__text"><img src="./assets/images/pdf.png" /><span>скачать презентацию<br>5 MB</span></span></a>
+                    <div class="langs footer__langs"><a class="link link_nounder link_gray langs__lang langs__lang_active"><span class="link__text">RU</span></a><a class="link link_nounder link_gray langs__lang"><span class="link__text">EN</span></a></div>
                 </div>
                 <div class="footer__third">
                     <div class="apps">
-                        <div class="apps__title">cкачать приложение:</div>
-                        <a class="link link_nounder link_gray link_flex apps__link">
-                            <span class="link__text">
-                                <img src="./assets/images/apple.png" />iPhone</span>
-                        </a>
-                        <a class="link link_nounder link_gray link_flex apps__link">
-                            <span class="link__text">
-                                <img src="./assets/images/android.png" />Android</span>
-                        </a>
+                        <div class="apps__title">cкачать приложение:</div><a class="link link_nounder link_gray link_flex apps__link"><span class="link__text"><img src="./assets/images/apple.png" />iPhone</span></a><a class="link link_nounder link_gray link_flex apps__link"><span class="link__text"><img src="./assets/images/android.png" />Android</span></a>
                     </div>
-                    <div class="langs">
-                        <a class="link link_nounder link_gray langs__lang langs__lang_active">
-                            <span class="link__text">RU</span>
-                        </a>
-                        <a class="link link_nounder link_gray langs__lang">
-                            <span class="link__text">EN</span>
-                        </a>
-                    </div>
+                    <div class="langs"><a class="link link_nounder link_gray langs__lang langs__lang_active"><span class="link__text">RU</span></a><a class="link link_nounder link_gray langs__lang"><span class="link__text">EN</span></a></div>
                 </div>
             </div>
             <div class="footer__mobil">
                 <div class="city">
-                    <div class="city__name">Петербург</div>
-                    <a class="link link_nounder link_xl link_img city__address">
-                        <span class="link__text">
-                            <img src="./assets/images/ext_link.png" />Ленинский проспект, 151</span>
-                    </a>
-                    <a class="link link_dashed link_xl city__tel">
-                        <span class="link__text">+7(812) 645-65-96</span>
-                    </a>
+                    <div class="city__name">Петербург</div><a class="link link_nounder link_xl link_img city__address"><span class="link__text"><img src="./assets/images/ext_link.png" />Ленинский проспект, 151</span></a><a class="link link_dashed link_xl city__tel"><span class="link__text">+7(812) 645-65-96</span></a>
                 </div>
                 <div class="city">
-                    <div class="city__name">Москва</div>
-                    <a class="link link_nounder link_xl link_img city__address">
-                        <span class="link__text">
-                            <img src="./assets/images/ext_link.png" />Проспект вернадского, 43</span>
-                    </a>
-                    <a class="link link_dashed link_xl city__tel">
-                        <span class="link__text">+7(495) 645-65-96</span>
-                    </a>
-                </div>
-                <a class="link link_nounder link_xl link_blue footer__mail footer__mail_mobil" href="mailto:mail@prostudio.ru">
-                    <span class="link__text">mail@prostudio.ru</span>
-                </a>
+                    <div class="city__name">Москва</div><a class="link link_nounder link_xl link_img city__address"><span class="link__text"><img src="./assets/images/ext_link.png" />Проспект вернадского, 43</span></a><a class="link link_dashed link_xl city__tel"><span class="link__text">+7(495) 645-65-96</span></a>
+                </div><a class="link link_nounder link_xl link_blue footer__mail footer__mail_mobil" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a>
                 <div class="apps apps_mobil">
-                    <div class="apps__title">Cкачать приложение:</div>
-                    <a class="link link_nounder link_gray link_flex apps__link">
-                        <span class="link__text">
-                            <img src="./assets/images/apple.png" />
-                        </span>
-                    </a>
-                    <a class="link link_nounder link_gray link_flex apps__link">
-                        <span class="link__text">
-                            <img src="./assets/images/android.png" />
-                        </span>
-                    </a>
-                </div>
-                <label class="switcher footer__switcher">
-                    <input type="checkbox" />
+                    <div class="apps__title">Cкачать приложение:</div><a class="link link_nounder link_gray link_flex apps__link"><span class="link__text"><img src="./assets/images/apple.png" /></span></a><a class="link link_nounder link_gray link_flex apps__link"><span class="link__text"><img src="./assets/images/android.png" /></span></a>
+                </div><label class="switcher footer__switcher"><input type="checkbox" />
                     <div class="switcher__value switcher__value_on">RU</div>
                     <div class="switcher__box">
                         <div class="switcher__mover">

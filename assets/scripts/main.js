@@ -18,7 +18,7 @@ $(document).ready(() => {
 
   $('.js-vacancy-hot .switcher__box').click(() => {
     $('.vacancy__title').not('.vacancy__title_hot').each(function () {
-      $(this).parents('.accordion').toggle(300);
+      $(this).parents('.accordion').slideToggle(300);
     })
   });
 
