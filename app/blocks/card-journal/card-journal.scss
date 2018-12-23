@@ -2,7 +2,7 @@
   display: block;
   //width: 357px;
   position: relative;
-  padding-right: 29px;
+  padding-right: 30px;
 
   &__img {
     position: relative;
@@ -18,18 +18,21 @@
     margin-top: 17px;
 
     @include text-foto;
+
+    line-height: 35px;
   }
 
   &__date {
     position: absolute;
     color: $color-date;
+    transform-origin: left bottom;
     transform: rotate(90deg);
-    top: 30px;
-    right: -37px;
-
-    @include text-date;
-
-    //font-size: 24px;
+    top: -20px;
+    right: -75px;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 2px;
   }
 
   &__title {
@@ -41,7 +44,7 @@
   }
 
   &_popular {
-    padding: 40px 50px;
+    padding: 33px 50px 49px;
     background: $color-main;
     margin-right: 27px;
   }

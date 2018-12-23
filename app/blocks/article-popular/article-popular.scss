@@ -1,14 +1,14 @@
 .article-popular {
   background: white;
   position: relative;
-  padding: 0 33px;
-  margin-top: 60px;
-  height: 144px;
+  padding: 31px 33px 32px;
+  margin-top: 61px;
+  min-height: 80px;
   display: flex;
   align-items: center;
 
   &_first {
-    margin-top: 41px;
+    margin-top: 46px;
   }
 
   &__text {
@@ -27,7 +27,7 @@
     letter-spacing: .75px;
     color: $color-bg-button;
     position: absolute;
-    top: -15px;
+    top: -16px;
     left: 33px;
   }
 
