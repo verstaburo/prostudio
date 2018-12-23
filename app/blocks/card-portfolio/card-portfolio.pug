@@ -1,5 +1,5 @@
-mixin card-portfolio(img, title, tags)
-  +b.card-portfolio&attributes(attributes)
+mixin card-portfolio(img, url, title, tags)
+  +b.A(href= url).card-portfolio&attributes(attributes)
     +e.IMG(src= img).bg
     +e.title !{title}
     +e.tags= tags
