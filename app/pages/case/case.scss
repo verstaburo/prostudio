@@ -47,7 +47,7 @@
   }
 
   &__title {
-    margin-top: 97px;
+    margin-top: 84px;
     text-transform: uppercase;
     color: white;
     font-size: 72px;
@@ -57,19 +57,19 @@
 
   &__subtitle {
     color: white;
-    margin-top: 36px;
+    margin-top: 12px;
     font-size: 36px;
     font-weight: 300;
     //line-height: 26px;
-    letter-spacing: .9px;
+    letter-spacing: .92px;
     text-align: center;
   }
 
   &__buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 85px;
-    width: 750px;
+    margin-top: 80px;
+    width: 734px;
   }
 
   &__link {
@@ -207,7 +207,11 @@
 
       th {
         font-weight: 400;
-        letter-spacing: .7px;
+        letter-spacing: 1.4px;
+        
+        &:nth-child(2) {
+          // padding-right: 20px;
+        }
       }
     }
 
@@ -219,7 +223,7 @@
 
         &:first-child {
           text-align: left;
-          padding-left: 40px;
+          padding-left: 39px;
         }
 
         &:last-child {
@@ -233,15 +237,28 @@
 
       td {
         font-weight: 700;
-        letter-spacing: .35px;
+        letter-spacing: 1.09px;
       }
     }
   }
 
   &__bottom {
-    margin-top: 100px;
+    margin-top: 105px;
     display: flex;
     justify-content: space-between;
+    
+    .button {
+      letter-spacing: 1.1px;
+    }
+    
+    .button_big {
+      padding: 20px 28px;
+    }
+    
+    .link_center img {
+      margin: 0 19px;
+      letter-spacing: .3px;
+    }
   }
 
   &__empty {
@@ -251,7 +268,7 @@
 
 .staff {
   display: block;
-  margin-top: 100px;
+  margin-top: 101px;
   border-top: 1px solid #f2f2f2;
   //padding-top: 50px;
 
@@ -268,7 +285,7 @@
     letter-spacing: .75px;
     width: 170px;
     margin-right: 100px;
-    margin-top: 60px;
+    margin-top: 48px;
   }
 
   &__position {
@@ -292,11 +309,19 @@
     }
 
     &__title {
-      margin-top: 140px;
+      margin-top: 127px;
+    }
+    
+    &__subtitle {
+      margin-top: 13px;
+      width: 75%;
+      font-size: 31px;
+      line-height: 1.4;
+      letter-spacing: .3px;
     }
 
     &__buttons {
-      margin-top: 122px;
+      margin-top: 114px;
     }
   }
 

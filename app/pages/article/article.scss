@@ -24,7 +24,7 @@
     padding-right: 30px;
     text-align: center;
     z-index: 1;
-    color: white;
+    color: $white;
     font-size: 43px;
     font-weight: 700;
     line-height: 57px;
@@ -49,6 +49,7 @@
   &__text {
     font-size: 14px;
     //line-height: 26px;
+    color: $white;
     letter-spacing: .7px;
   }
 
@@ -72,6 +73,12 @@
   &__comment {
     display: flex;
     align-items: center;
+    cursor: pointer;
+    transition: opacity .25s ease;
+    
+    &:hover {
+      opacity: .75;
+    }
 
     svg {
       margin-right: 20px;
