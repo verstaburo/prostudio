@@ -8,12 +8,14 @@ block content
   +b.contacts
     +tabs._contacts
       +tab()(data-tab-target="tab1")._blue.active
-        img(src='./assets/images/piter.png').tabs__img.tabs__img_active
-        img(src='./assets/images/piter_gray.png').tabs__img
+        .tabs__images
+          img(src='./assets/images/piter_gray.png').tabs__img
+          img(src='./assets/images/piter.png').tabs__img.tabs__img_active
         | Петербург
       +tab()(data-tab-target="tab2")._red
-        img(src='./assets/images/moscow.png').tabs__img.tabs__img_active
-        img(src='./assets/images/moscow_gray.png').tabs__img
+        .tabs__images
+          img(src='./assets/images/moscow.png').tabs__img.tabs__img_active
+          img(src='./assets/images/moscow_gray.png').tabs__img
         | Москва
     +tabs-content._contacts
       +tab-wrapper()(data-tab="tab1" data-tab-group="contacts").active

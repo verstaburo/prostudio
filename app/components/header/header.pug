@@ -25,8 +25,9 @@ mixin header(fixed)
             img(src='./assets/images/pdf.png')
             | скачать презентацию<br>5МБ
       +b.buttons
-        +button.buttons__ico ico
-        +button(href='#contact')._blue.buttons__project.js-fancybox обсудить проект
+        +e.wrap
+          +button.buttons__ico ico
+          +button(href='#contact')._blue.buttons__project.js-fancybox обсудить проект
         +e.burger.js-padmenu
           span
 
@@ -60,8 +61,9 @@ mixin header_dark(fixed)
             img(src='./assets/images/pdf.png')
             | скачать презентацию<br>5МБ
       +b.buttons
-        +button.buttons__ico ico
-        +button(href='#contact')._blue.buttons__project.js-fancybox обсудить проект
+        +e.wrap
+          +button.buttons__ico ico
+          +button(href='#contact')._blue.buttons__project.js-fancybox обсудить проект
         +e.burger_white.js-padmenu
           span
 

@@ -28,9 +28,9 @@ mixin footer()
           +link-icon('facebook')._gray
           +link-icon('telegram')._gray
         +e.second
-          +link._nounder._gray._flex
+          +link._nounder._gray._flex.__doc
             img(src='./assets/images/pdf.png')
-            | скачать презентацию<br>5МБ
+            span скачать презентацию<br>5 MB
           +b.langs.footer__langs
             +link._nounder._gray.langs__lang_active RU
             +link._nounder._gray.langs__lang EN
@@ -99,9 +99,9 @@ mixin footer_dark()
           +link-icon('facebook')._gray._dark
           +link-icon('telegram')._gray._dark
         +e.second
-          +link._nounder._gray._flex._dark
+          +link._nounder._gray._flex._dark.__doc
             img(src='./assets/images/pdf.png')
-            | скачать презентацию<br>5 МБ
+            span скачать презентацию<br>5 MB
           +b.langs
             +link._nounder._dark._gray.langs__lang_active RU
             +link._nounder._dark._gray.langs__lang EN

@@ -11,7 +11,7 @@
   width: 312px;
 
   &__box {
-    padding: 48px 42px 50px;
+    padding: 44px 42px 55px;
     border-bottom: 1px solid #d9dee2;
   }
 
@@ -32,9 +32,13 @@
   }
 
   &__links {
-    padding: 26px 18px;
+    padding: 25px 18px;
     display: flex;
     justify-content: space-between;
+
+    .link {
+      line-height: 1;
+    }
   }
 }
 

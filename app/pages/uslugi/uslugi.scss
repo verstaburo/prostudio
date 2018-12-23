@@ -170,6 +170,10 @@
       &_left {
         margin-left: 47px;
 
+        @include screen("md") {
+          padding-right: 40px;
+        }
+
         @include screen("lg", max) {
           margin-left: 0;
         }
@@ -234,6 +238,9 @@
         margin-bottom: 0;
         padding: 0 15px;
         box-sizing: border-box;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
       }
 
       @include screen("sm", max) {
@@ -272,6 +279,10 @@
     &__list {
       display: flex;
       flex-direction: column;
+
+      @include screen("lg") {
+        padding-bottom: 80px;
+      }
 
       @include screen("md", max) {
         display: none;
@@ -318,6 +329,9 @@
     }
 
     &__img-wrap {
+      @include screen("lg") {
+        flex-shrink: 0;
+      }
 
       @include screen("lg", max) {
         max-width: 55%;
@@ -403,13 +417,13 @@
 
       &_left {
         @include screen("lg", max) {
-          margin-left: 30px;
+          margin-left: 40px;
         }
       }
 
       &_right {
         @include screen("lg", max) {
-          margin-right: 30px;
+          margin-right: 40px;
         }
       }
 

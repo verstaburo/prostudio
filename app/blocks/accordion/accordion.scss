@@ -17,6 +17,17 @@
     box-sizing: border-box;
     line-height: 38px;
 
+    @include screen('lg-r', max) {
+      display: flex;
+      align-items: center;
+      padding: 42px 40px 40px 40px;
+      min-height: 135px;
+    }
+
+    @include screen('md', max) {
+      padding: 29px 80px 29px 34px;
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -60,6 +71,11 @@
     box-sizing: border-box;
     display: none;
 
+    @include screen('md', max) {
+      margin-top: -19px;
+      padding: 0 34px 48px;
+    }
+
     #{$b}.is-active & {
       display: block;
     }
@@ -68,21 +84,4 @@
 
 .accordions {
   padding-top: 1px;
-}
-
-@include screen('lg-r', max) {
-
-  .accordion {
-
-    &__header {
-      display: flex;
-      align-items: center;
-      padding: 29px 45px 29px 34px;
-      min-height: 135px;
-    }
-  }
-}
-
-@include screen('md', max) {
-
 }

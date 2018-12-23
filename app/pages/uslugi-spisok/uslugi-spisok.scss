@@ -4,9 +4,17 @@
   position: relative;
   left: -30px;
 
+  @include screen("xl-t", max) {
+    left: 0;
+    margin-left: -70px;
+    margin-right: -70px;
+  }
+
   @include screen("lg-r", max) {
     margin-top: 53px;
     left: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   @include screen("md", max) {

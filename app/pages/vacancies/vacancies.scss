@@ -20,6 +20,10 @@
     padding: 42px;
     border: 1px solid $color-border;
     border-top: none;
+
+    @include screen('lg-r', max) {
+      padding: 39px 42px 32px;
+    }
   }
 
   .contact {
@@ -80,13 +84,17 @@
         background: $color-orange;
         right: -30px;
         top: 12px;
+
+        @include screen('lg-r', max) {
+          right: -25px;
+          top: 11px;
+        }
       }
     }
   }
 
   &__description {
     margin-top: 9px;
-    margin-left: 4px;
 
     @include text-16-300;
   }
@@ -98,19 +106,43 @@
 
 .requirements {
 
-  &__block {
+  &__title + &__block {
     margin-top: 24px;
 
-    &:nth-child(n+3) {
-      margin-top: 36px;
+    @include screen('lg-r', max) {
+      margin-top: 17px;
+    }
+
+    @include screen('md', max) {
+      margin-top: 33px;
+    }
+  }
+
+  &__block {
+    margin-top: 36px;
+
+    @include screen('lg-r', max) {
+      margin-top: 42px;
+    }
+
+    @include screen('md', max) {
+      margin-top: 40px;
     }
 
     ul {
       margin-top: 19px;
+
+      @include screen('lg-r', max) {
+        margin-top: 10px;
+      }
     }
 
     li {
       @include text-16-300;
+
+      @include screen('lg-r', max) {
+        line-height: 26px;
+      }
 
       &:first-child {
         margin-top: 0;
@@ -136,8 +168,24 @@
     display: flex;
     justify-content: center;
 
-    :first-child {
+    @include screen('lg-r', max) {
+      margin-top: 55px;
+    }
+
+    @include screen('md', max) {
+      flex-wrap: wrap;
+    }
+
+    .button:not(:last-child) {
       margin-right: 30px;
+
+      @include screen('md', max) {
+        margin-right: 15px;
+      }
+
+      @include screen('md', max) {
+        margin-right: 7px;
+      }
     }
 
     .button {
@@ -146,6 +194,14 @@
       height: auto;
       font-size: 13.5px;
       text-align: center;
+
+      @include screen('md', max) {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 7px;
+        margin-right: 7px;
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -177,7 +233,7 @@
     align-items: flex-start;
 
     &__button {
-      margin-top: 40px;
+      margin-top: 37px;
     }
   }
 }
@@ -187,7 +243,7 @@
   .vacancy {
 
     &__description {
-      margin-top: 6px;
+      margin-top: 9px;
     }
 
     &__left {
@@ -222,8 +278,11 @@
             border: none;
             fill: $color-gray;
           }
+        }
 
-          &.is-active {
+        &.is-active {
+
+          .accordion__header {
 
             &::after {
               background: url('../images/close.svg') no-repeat;
@@ -263,6 +322,10 @@
 
     &__title {
       margin-top: 45px;
+
+      @include screen('md', max) {
+        margin-top: 32px;
+      }
     }
   }
 }

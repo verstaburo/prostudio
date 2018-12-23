@@ -213,7 +213,7 @@
 @mixin footer-city {
   font-size: 18px;
   font-weight: 700;
-  line-height: (36/18);
+  line-height: 1;
 }
 
 @mixin inner-title {

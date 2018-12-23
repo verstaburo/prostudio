@@ -7,6 +7,13 @@
   color: $color-placeholder2;
   fill: $color-placeholder2;
 
+  &__doc {
+    span span {
+      position: relative;
+      top: -4px;
+    }
+  }
+
   &_dark {
     background: transparent;
     border-top: 1px solid rgba(#fff, .1);
@@ -42,7 +49,7 @@
   }
 
   &__right {
-    width: 40%;
+    width: 39.5%;
     flex-wrap: wrap;
   }
 
@@ -82,7 +89,7 @@
     line-height: 40px;
 
     &_mobil {
-      margin-top: 50px;
+      margin-top: 51px;
       text-align: center;
     }
   }
@@ -124,6 +131,20 @@
 
     &__link {
       margin-right: 22px;
+
+      @include screen('md', max) {
+        img {
+          margin-right: 0;
+          height: 34px;
+        }
+
+        margin-right: 0;
+
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+
     }
 
     &_mobil {
@@ -134,11 +155,7 @@
 
       .apps__title {
         font-size: 18px;
-        margin-bottom: 20px;
-      }
-
-      .apps__link {
-        margin-right: 0;
+        margin-bottom: 29px;
       }
     }
   }
@@ -146,6 +163,10 @@
   &__langs {
     display: flex;
     align-items: center;
+
+    @include screen('lg-r') {
+      margin-top: -5px;
+    }
   }
 
   .langs {
@@ -184,6 +205,8 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      padding-right: 25px;
+      box-sizing: border-box;
     }
 
     &__right {
@@ -239,7 +262,9 @@
     }
 
     &__copyright {
-      margin-top: 49px !important;
+      margin-top: 51px !important;
+      height: auto;
+      line-height: 1;
     }
   }
 }
@@ -247,7 +272,8 @@
 @include screen('md', max) {
 
   .footer {
-    padding-top: 10px;
+    padding-top: 44px;
+    padding-bottom: 55px;
 
     &__container {
       height: unset;
@@ -271,14 +297,26 @@
       width: 100%;
       flex-direction: column;
       align-items: center;
-      padding-top: 36px;
+      padding-top: 26px;
 
       @include footer-city;
 
       letter-spacing: .45px;
 
+      &:first-child {
+        padding-top: 0;
+      }
+
       &__name {
         color: $color-main;
+      }
+
+      &__address {
+        margin-top: 7px;
+      }
+
+      &__tel {
+        margin-top: -4px;
       }
 
       &__address, &__tel {
@@ -290,13 +328,13 @@
     &__mail {
 
       &_mobil {
-        margin-top: 45px;
-        font-weight: 300;
+        margin-top: 28px;
+        font-weight: 400;
       }
     }
 
     &__switcher {
-      margin-top: 50px;
+      margin-top: 52px;
 
       &_opacity {
         opacity: .2;
