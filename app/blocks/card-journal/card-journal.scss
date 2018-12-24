@@ -4,13 +4,24 @@
   position: relative;
   padding-right: 30px;
 
+  $b: &;
+
   &__img {
     position: relative;
-    //height: 243px;
+    overflow: hidden;
+    display: block;
+
+    @include performance;
 
     img {
-      //@include fill-img;
       width: 100%;
+      transition: transform $ease-main;
+
+      @include performance;
+
+      #{$b}:hover & {
+        transform: scale(1.05);
+      }
     }
   }
 
@@ -20,20 +31,36 @@
     @include text-foto;
 
     line-height: 35px;
+    transition: color $ease-main;
+
+    #{$b}:hover & {
+      color: $color-main;
+    }
   }
 
   &__date {
     position: absolute;
     color: $color-date;
-    transform-origin: left bottom;
+    transform-origin: left top;
     transform: rotate(90deg);
-    top: -20px;
-    right: -75px;
+    top: 0;
+    display: block;
+    left: 100%;
+    margin-left: 3px;
+    white-space: nowrap;
     font-size: 20px;
     font-weight: 900;
     line-height: 1;
-    letter-spacing: 2px;
-  }
+    letter-spacing: 2.2px;
+
+    @include screen('lg', max) {
+      font-size: 19px;
+      letter-spacing: 1.5px;
+    }
+}
+
+
+  
 
   &__title {
     color: white;
@@ -57,12 +84,13 @@
 
     &_popular {
       margin-right: 0;
-      padding: 33px 45px;
+      padding: 33px 45px 46px;
     }
 
     &__text {
-      font-size: 19px;
-      margin-top: 16px;
+          font-size: 19px;
+    line-height: 30px;
+    margin-top: 15px;
     }
 
     &__title {
@@ -77,6 +105,31 @@
       &:nth-child(2) {
         padding-left: 15px;
       }
+    }
+  }
+}
+
+@include screen('md', max) {
+  .card-journal {
+    padding-right: 31px;
+
+    &__text {
+      font-size: 24px;
+      line-height: 33px;
+      margin-top: 18px;
+    }
+
+    &_popular {
+      @include screen('md', max) {
+        margin-right: 28px;
+        padding: 31px 48px 47px 49px;
+      }
+    }
+
+    &__title {
+      font-size: 27px;
+      line-height: 32px;
+      margin-right: -15px;
     }
   }
 }

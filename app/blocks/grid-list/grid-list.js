@@ -88,7 +88,7 @@ export default function mixContent() {
   news.sort();
   window.news = news;
 
-  $(window).on('resize', () => {
+  $(window).on('load resize', () => {
     news.sort();
   });
 }

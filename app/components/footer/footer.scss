@@ -35,6 +35,10 @@
 
   &_journal {
     margin-top: 105px;
+
+    @include screen('md', max) {
+      margin-top: 52px;      
+    }
   }
 
   &__container {
