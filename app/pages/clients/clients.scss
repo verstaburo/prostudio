@@ -133,7 +133,7 @@
   .clients {
 
     &__title {
-      margin-top: 46px;
+      margin-top: 45px;
 
       @include text-address;
 
@@ -143,11 +143,13 @@
 
     &__box {
       justify-content: space-around;
+      margin-top: -9px;
     }
 
     &__item {
       width: 304px;
       height: 304px;
+      margin: 53px 25px 0;
     }
   }
 }
@@ -164,6 +166,7 @@
     &__box {
       margin-left: -12px;
       margin-right: -12px;
+      margin-top: 4px;
       justify-content: space-between;
     }
 
@@ -172,6 +175,7 @@
       height: 213px;
       margin-left: 12px;
       margin-right: 12px;
+      margin-top: 24px;
 
       &_more {
         padding: 55px 37px;
