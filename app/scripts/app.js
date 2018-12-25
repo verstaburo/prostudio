@@ -46,5 +46,4 @@ $(() => {
   scrollanimation();
   PorftolioFilter();
   Article();
-  Index();
 });
