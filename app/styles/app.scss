@@ -30,6 +30,13 @@
     box-sizing: content-box;
   }
 
+  &_clients {
+    @include screen('lg-r', max) {
+      padding-left: 53px;
+      padding-right: 53px;
+    }
+  }
+
   &_flex {
     display: flex;
     justify-content: space-between;
