@@ -261,7 +261,7 @@
     font-size: 28px;
     line-height: 52px;
     letter-spacing: .56px;
-    margin-top: 115px;
+    margin-top: 89px;
 
     @include screen('md', max) {
       margin-top: 44px;
@@ -270,7 +270,7 @@
 }
 
 .principles {
-  margin-top: 113px;
+  margin-top: 102px;
   position: relative;
 
   &__box {
@@ -293,6 +293,7 @@
     justify-content: center;
     align-items: center;
     opacity: 0;
+    pointer-events: none;
     transition: all .25s ease;
   }
 
@@ -306,6 +307,16 @@
       .principles__round {
         opacity: 1;
       }
+
+      .principles__arc {
+        &::before {
+          border-color: $color-main;
+        }
+
+        .principles__num {
+          color: $color-main;
+        }
+      }
     }
 
     &:first-child {
@@ -314,22 +325,22 @@
 
         &__round {
           right: -308px;
-          bottom: -308px;
+          bottom: -319px;
         }
 
         &__arc {
-          bottom: 40px;
-          right: 40px;
+          bottom: 48px;
+          right: 46px;
 
           &::before {
-            right: -380px;
-            bottom: -380px;
+            right: -392px;
+            bottom: -404px;
           }
         }
 
         &__num {
-          right: 250px;
-          bottom: 250px;
+          right: 243px;
+          bottom: 182px;
         }
       }
     }
@@ -339,7 +350,7 @@
       .principles {
 
         &__round {
-          bottom: -308px;
+          bottom: -319px;
           left: -308px;
         }
 
@@ -348,14 +359,14 @@
           bottom: 40px;
 
           &::before {
-            left: -380px;
-            bottom: -380px;
+            left: -384px;
+            bottom: -396px;
           }
         }
 
         &__num {
-          left: 250px;
-          bottom: 250px;
+          left: 248px;
+          bottom: 190px;
         }
       }
     }
@@ -365,7 +376,7 @@
       .principles {
 
         &__round {
-          top: -308px;
+          top: -297px;
           right: -308px;
         }
 
@@ -374,14 +385,14 @@
           right: 40px;
 
           &::before {
-            top: -380px;
-            right: -380px;
+            top: -375px;
+            right: -385px;
           }
         }
 
         &__num {
-          right: 250px;
-          top: 250px;
+          right: 245px;
+          top: 213px;
         }
       }
     }
@@ -391,7 +402,7 @@
       .principles {
 
         &__round {
-          top: -308px;
+          top: -297px;
           left: -308px;
         }
 
@@ -400,14 +411,14 @@
           left: 40px;
 
           &::before {
-            top: -380px;
-            left: -380px;
+            top: -374px;
+            left: -385px;
           }
         }
 
         &__num {
-          left: 250px;
-          top: 250px;
+          left: 248px;
+          top: 213px;
         }
       }
     }
@@ -430,41 +441,36 @@
     height: 100%;
     overflow: hidden;
     z-index: 1;
+    pointer-events: none;
 
     &::before {
       @include pseudo;
 
       position: absolute;
-      border: 7px solid #f4f4f4;
+      border: 6px solid #f4f4f4;
       width: 680px;
       height: 680px;
       border-radius: 50%;
       transition: all .25s ease;
     }
+  }
 
-    &:hover {
-
-      &::before {
-        border-color: $color-main;
-      }
-
-      .principles__num {
-        color: $color-main;
-      }
-    }
+  &__text {
+    position: relative;
+    top: -4px;
   }
 
   &__title {
     font-family: 'Intro Bold Caps';
     font-size: 26px;
     line-height: 46px;
-    letter-spacing: 1.95px;
+    letter-spacing: 2px;
     //margin-top: 200px;
     text-transform: uppercase;
   }
 
   &__desc {
-    margin-top: 46px;
+    margin-top: 28px;
     padding: 0 50px;
     font-size: 17px;
     font-weight: 300;
@@ -474,8 +480,9 @@
 
   &__legend {
     position: absolute;
-    top: 50px;
+    top: 44px;
     width: 100%;
+    pointer-events: none;
   }
 
   &__caption {
@@ -486,15 +493,19 @@
   }
 
   &__tip {
+    position: relative;
+    top: 4px;
+    left: 5px;
     color: #bababa;
     font-size: 18px;
     line-height: 26px;
-    width: 270px;
+    width: 275px;
+    letter-spacing: 1.4px;
   }
 
   &__num {
     color: #d1cfcf;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 700;
     line-height: 43px;
     letter-spacing: .22px;
@@ -699,24 +710,25 @@
       &::before {
         width: 542px;
         height: 542px;
+        border-width: 5px;
       }
     }
 
     &__item {
-      height: 367px;
+      height: 381px;
 
       &:first-child {
 
         .principles {
 
           &__round {
-            right: -$principle-round/2;
-            bottom: -$principle-round/2;
+            right: -243px;
+            bottom: -243px;
           }
 
           &__arc {
-            bottom: 33px;
-            right: 33px;
+            bottom: 26px;
+            right: 25px;
 
             &::before {
               right: -304px;
@@ -725,8 +737,8 @@
           }
 
           &__num {
-            right: 180px;
-            bottom: 180px;
+            right: 201px;
+            bottom: 159px;
           }
         }
       }
@@ -736,13 +748,13 @@
         .principles {
 
           &__round {
-            left: -$principle-round/2;
-            bottom: -$principle-round/2;
+            left: -243px;
+            bottom: -243px;
           }
 
           &__arc {
-            bottom: 33px;
-            left: 33px;
+            bottom: 27px;
+            left: 25px;
 
             &::before {
               left: -304px;
@@ -751,8 +763,8 @@
           }
 
           &__num {
-            left: 180px;
-            bottom: 180px;
+            left: 202px;
+            bottom: 158px;
           }
         }
       }
@@ -762,13 +774,13 @@
         .principles {
 
           &__round {
-            right: -$principle-round/2;
-            top: -$principle-round/2;
+            right: -243px;
+            top: -243px;
           }
 
           &__arc {
-            right: 33px;
-            top: 33px;
+            right: 26px;
+            top: 25px;
 
             &::before {
               right: -304px;
@@ -777,8 +789,8 @@
           }
 
           &__num {
-            right: 180px;
-            top: 180px;
+            right: 198px;
+            top: 161px;
           }
         }
       }
@@ -788,13 +800,13 @@
         .principles {
 
           &__round {
-            left: -$principle-round/2;
-            top: -$principle-round/2;
+            left: -243px;
+            top: -243px;
           }
 
           &__arc {
-            left: 33px;
-            top: 33px;
+            left: 26px;
+            top: 25px;
 
             &::before {
               left: -304px;
@@ -803,21 +815,29 @@
           }
 
           &__num {
-            left: 180px;
-            top: 180px;
+            left: 201px;
+            top: 161px;
           }
         }
       }
     }
 
+    &__num {
+      font-size: 18px;
+    }
+
+    &__text {
+      top: -10px;
+    }
+
     &__title {
       font-size: 22px;
       line-height: 36.19px;
-      letter-spacing: 2.1px;
+      letter-spacing: 1.6px;
     }
 
     &__desc {
-      margin-top: 42px;
+      margin-top: 28px;
       font-size: 15px;
       font-weight: 300;
       line-height: 20.45px;
@@ -825,7 +845,7 @@
     }
 
     &__legend {
-      top: 37px;
+      top: 27px;
     }
 
     &__tip {

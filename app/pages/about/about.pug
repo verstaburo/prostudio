@@ -46,7 +46,7 @@ block content
         +slide
           +worker-card('./assets/images/worker4.jpg', 'Руководитель проектов', 'Петр Симоненко', '«Здесь будет написана цитата»')
       +e.question Хочешь работать вместе с нами?
-        +link._nounder._blue._inherit Присоединяйся!
+        +link._nounder._blue._inherit  Присоединяйся!
   section
     +b.principles
       +e.box
@@ -64,13 +64,6 @@ block content
               +e.desc Мы уважительно относимся к Вам и требуем того же от Вас.Создаем возможности для любых, даже самых немыслимых проектов.Мы делаем, а не говорим. Аргументация и оперирование фактами. Без лирики.Достижение вашей цели - это результат нашей совместной работы.
           +e.arc
             +e.num 02
-        +e.item._gray
-          +e.round
-            +e.text
-              +e.title Принцип — это НЕ принцип
-              +e.desc Мы уважительно относимся к Вам и требуем того же от Вас.Создаем возможности для любых, даже самых немыслимых проектов.Мы делаем, а не говорим. Аргументация и оперирование фактами. Без лирики.Достижение вашей цели - это результат нашей совместной работы.
-          +e.arc
-            +e.num 03
         +e.item
           +e.round
             +e.text
@@ -78,10 +71,17 @@ block content
               +e.desc Мы уважительно относимся к Вам и требуем того же от Вас.Создаем возможности для любых, даже самых немыслимых проектов.Мы делаем, а не говорим. Аргументация и оперирование фактами. Без лирики.Достижение вашей цели - это результат нашей совместной работы.
           +e.arc
             +e.num 04
+        +e.item._gray
+          +e.round
+            +e.text
+              +e.title Принцип — это НЕ принцип
+              +e.desc Мы уважительно относимся к Вам и требуем того же от Вас.Создаем возможности для любых, даже самых немыслимых проектов.Мы делаем, а не говорим. Аргументация и оперирование фактами. Без лирики.Достижение вашей цели - это результат нашей совместной работы.
+          +e.arc
+            +e.num 03
       +e.legend
         .container.container_inner.container_flex
           +e.caption Принципы
-          +e.tip Наведите на цифру, чтобы узнать все принципы компании.
+          +e.tip Наведите на цифру,<br> чтобы узнать все принципы компании.
       +e.slider
         +slider(false, false)
           +slide
@@ -145,13 +145,13 @@ block content
               +radio('budget', 'test', 'true') 100-200 тыс. руб
               +radio('budget', 'test-2') от 500 тыс. руб
             +inputbox('Имя').contact__inputbox.contact__inputbox_third.contact__inputbox_mr
-              +input()
+              +input(type='text')
             +inputbox("Телефон").contact__inputbox.contact__inputbox_third.contact__inputbox_mr
-              +input()(data-type="tel")
+              +input(type='tel' data-type='tel')
             +inputbox("Email").contact__inputbox.contact__inputbox_third
-              +input
+              +input(type='email' data-type='email')
             +inputbox("Сообщение").contact__inputbox.contact__inputbox_twothird.contact__inputbox_mr
-              +input
+              +input(type='text')
             +inputbox()._file.contact__inputbox.contact__inputbox_third
               label
                 +input(type='file')
