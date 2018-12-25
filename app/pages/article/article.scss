@@ -1,15 +1,22 @@
 .head {
   margin-top: 112px;
-  height: 671px;
-  // background: url('../images/article_bg.jpg') no-repeat 50%;
-  // background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  overflow: hidden;
   
   &__img {
     @include fill-img;
+  }
+
+  &__container {
+    display: flex;
+    min-height: 572px;
+    padding-top: 162px;
+    padding-bottom: 70px;
+    align-items: center;
+    box-sizing: border-box !important;
   }
 
   &::before {
@@ -24,13 +31,10 @@
   }
 
   &__title {
-    @include center-block-r;
-     
-    padding-left: 30px;
-    padding-right: 30px;
+    position: relative;
     text-align: center;
-    top: 49.4%;
     z-index: 1;
+    width: 100%;
     color: $white;
     font-size: 43px;
     font-weight: 700;
@@ -75,6 +79,7 @@
     left: 0;
     display: flex;
     align-items: center;
+    margin-right: 137px;
   }
 
   &__comment {
@@ -100,7 +105,6 @@
     display: flex;
     align-items: center;
     margin-left: 54px;
-    margin-right: 70px;
 
     svg {
       margin-right: 13px;
@@ -160,7 +164,6 @@
 .disqus {
   max-width: 750px;
   margin-top: 50px;
-  margin-left: 68px;
 }
 
 .progress {
@@ -203,8 +206,6 @@
     height: 553px;
 
     &__title {
-      // margin-top: 165px;
-      top: 45.4%;
       font-size: 36px;
       font-weight: 700;
       line-height: 57px;
@@ -257,10 +258,6 @@
     height: 392px;
 
     &__title {
-      // margin-top: 105px;
-      padding-left: 15px;
-      padding-right: 15px;
-      top: 39.8%;
       font-size: 24px;
       font-weight: 700;
       line-height: 42px;
