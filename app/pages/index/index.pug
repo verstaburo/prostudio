@@ -187,7 +187,7 @@ block content
               +e.IMG(src='./assets/images/next.svg').next
             +e.line
             +e.news все новости
-            +b.FORM.subscribe
+            +b.FORM(action='#' method='POST').subscribe
               +inputbox
                 +input(placeholder="Email").subscribe__email
               +button('button')(type='submit')._img
