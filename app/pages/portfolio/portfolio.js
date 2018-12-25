@@ -5,15 +5,21 @@ export default function portfolioFilter() {
     const self = e.target;
     $(self).addClass('portfolio__filter_active').siblings().removeClass('portfolio__filter_active');
     const filterTag = $(self).html();
-    $('.card-portfolio').hide();
+    $('.card-portfolio').removeClass('is-active').hide();
 
     if (filterTag !== 'Все') {
       $('.card-portfolio').filter((index, element) => {
         const tag = $(element).find('.card-portfolio__tags').html();
         return (tag.indexOf(filterTag) >= 0);
-      }).fadeIn(300);
+      }).show(0, function () {
+        $(this).css('display', 'flex');
+        $(this).addClass('is-active');
+      });
     } else {
-      $('.card-portfolio').fadeIn(300);
+      $('.card-portfolio').show(0, function () {
+        $(this).css('display', 'flex');
+        $(this).addClass('is-active');
+      });
     }
   });
 }

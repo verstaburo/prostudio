@@ -1,5 +1,7 @@
-mixin card-portfolio(img, url, title, tags)
+mixin card-portfolio(img, url, title, tags, imgtwo)
   +b.A(href= url).card-portfolio&attributes(attributes)
+    if imgtwo
+      +e.IMG(src= imgtwo).bg._mobile
     +e.IMG(src= img).bg
     +e.title !{title}
     +e.tags= tags

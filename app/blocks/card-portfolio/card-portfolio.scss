@@ -8,12 +8,20 @@ $card-gap: 12px;
   overflow: hidden;
   width: calc(50% - #{$card-gap} * 2);
   margin: 24px $card-gap 0;
-  padding: 55px 58px;
+  padding: 49px 59px 57px;
   position: relative;
   height: 590px;
   box-sizing: border-box;
   color: white;
   cursor: pointer;
+  transition: opacity $ease-main, transform $ease-main;
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+
+  &.is-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 
   &_wide {
     width: 100%;
@@ -24,25 +32,23 @@ $card-gap: 12px;
   }
 
   &__bg {
-    //@include fill-img;
-    //left: 50%;
-    //    //min-height: 43.75%;
-    //    //padding-top: 56.25%;
-    //    //position:absolute;
-    //    //top: 50%;
-    //    //transform: translate(-50%, -50%);
-    //    //width: 100%;
-
-    position: absolute;
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    transition: transform .4s ease;
+    @include fill-img;
+    transition: transform $ease-main;
     
     &:hover {
       transform: scale(1.05);
+    }
+
+    &_mobile {
+      display: none;
+
+      @include screen('md', max) {
+        display: block;
+
+        & + img {
+          display: none;
+        }
+      }
     }
 
   }
@@ -58,6 +64,7 @@ $card-gap: 12px;
     z-index: 1;
     cursor: pointer;
     transition: opacity .3s ease;
+    letter-spacing: 0.5px;
     
     &:hover {
       opacity: .75;
@@ -85,7 +92,7 @@ $card-gap: 12px;
 
   .card-portfolio {
     height: 334px;
-    padding: 30px 33px;
+    padding: 27px 30px;
     width: calc(50% - #{$card-gap} * 2);
     margin: 14px $card-gap 0;
 
@@ -120,6 +127,13 @@ $card-gap: 12px;
 
     &__title {
       font-size: 18px;
+      line-height: 24px;
+      letter-spacing: .5px;
+    }
+
+    &__tags {
+      font-size: 14px;
+      font-weight: 400;
       line-height: 24px;
       letter-spacing: .5px;
     }
