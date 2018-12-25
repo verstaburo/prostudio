@@ -171,6 +171,7 @@
   &__table {
     margin-top: 100px;
     width: 100%;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .promo {
@@ -207,8 +208,8 @@
 
       th {
         font-weight: 400;
-        letter-spacing: 1.4px;
-        
+        letter-spacing: .65px;
+
         &:nth-child(2) {
           // padding-right: 20px;
         }
@@ -226,8 +227,12 @@
           padding-left: 39px;
         }
 
+        &:nth-child(2) {
+          padding-right: 23px;
+        }
+
         &:last-child {
-          padding-right: 200px;
+          padding-right: 212px;
         }
 
         &:nth-child(n+2) {
@@ -236,8 +241,9 @@
       }
 
       td {
-        font-weight: 700;
-        letter-spacing: 1.09px;
+        font-weight: 400;
+        letter-spacing: .3px;
+        text-shadow: 0 0 0;
       }
     }
   }
@@ -246,15 +252,15 @@
     margin-top: 105px;
     display: flex;
     justify-content: space-between;
-    
+
     .button {
       letter-spacing: 1.1px;
     }
-    
+
     .button_big {
       padding: 20px 28px;
     }
-    
+
     .link_center img {
       margin: 0 19px;
       letter-spacing: .3px;
@@ -269,13 +275,14 @@
 .staff {
   display: block;
   margin-top: 101px;
+  margin-bottom: -50px;
   border-top: 1px solid #f2f2f2;
-  //padding-top: 50px;
 
   &__box {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    padding-top: 48px;
   }
 
   &__person {
@@ -285,7 +292,11 @@
     letter-spacing: .75px;
     width: 170px;
     margin-right: 100px;
-    margin-top: 48px;
+    margin-bottom: 55px;
+
+    // &:not(:nth-child(4)) {
+    //   margin-right: 190px;
+    // }
   }
 
   &__position {
@@ -299,10 +310,6 @@
 
     &__img {
 
-      &_lg {
-        display: none;
-      }
-
       &_md {
         display: block;
       }
@@ -311,7 +318,7 @@
     &__title {
       margin-top: 127px;
     }
-    
+
     &__subtitle {
       margin-top: 13px;
       width: 75%;
@@ -371,11 +378,11 @@
       display: none;
     }
 
-    &__img {
+    &__title {
+      margin-top: 148px;
+    }
 
-      &_lg {
-        display: none;
-      }
+    &__img {
 
       &_md {
         display: none;
@@ -387,6 +394,8 @@
     }
 
     &__subtitle {
+      margin-top: 36px;
+      width: 100%;
       font-size: 24px;
       font-weight: 300;
       letter-spacing: .6px;

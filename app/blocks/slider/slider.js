@@ -201,6 +201,7 @@ export default function slider() {
     loop: true,
     // loopedSlides: 4,
     speed: 700,
+    simulateTouch: false,
     // autoplay: {
     //   delay: 2000,
     // },
