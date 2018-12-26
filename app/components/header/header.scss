@@ -72,7 +72,7 @@
   }
 
   &__menu {
-    margin: 0 78px 0 143px;
+    margin: 0 auto;
   }
 
   .buttons {
@@ -197,6 +197,18 @@
 }
 
 @include screen('xl-r', max) {
+  .menu__item:not(:last-child) {
+    margin-right: 70px;
+  }
+}
+
+@include screen('xl-b', max) {
+  .menu__item:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+@include screen('xl-t', max) {
 
   .header {
     width: 100%;

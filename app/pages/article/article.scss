@@ -34,12 +34,14 @@
     position: relative;
     text-align: center;
     z-index: 1;
-    width: 100%;
     color: $white;
     font-size: 43px;
     font-weight: 700;
     line-height: 57px;
     letter-spacing: 1.07px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__bottom {
@@ -153,6 +155,17 @@
     letter-spacing: .7px;
     color: #b3b3b3;
     margin-top: 10px;
+  }
+
+  &__photo {
+    width: 99px;
+    height: 99px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      @include fill-img;
+    }
   }
 }
 
