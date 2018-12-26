@@ -75,6 +75,10 @@
     font-weight: 700;
     line-height: 46px;
     letter-spacing: .75px;
+
+    @include screen('lg-r', max) {
+      margin-top: 46px;
+    }
   }
 
 }

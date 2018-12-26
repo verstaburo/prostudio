@@ -147,6 +147,10 @@
     line-height: 26px;
     letter-spacing: .8px;
     margin-top: 8px;
+
+    @include screen('md', max) {
+      font-size: 18px;
+    }
   }
 
   &__text {
@@ -155,6 +159,10 @@
     letter-spacing: .7px;
     color: #b3b3b3;
     margin-top: 10px;
+
+    @include screen('md', max) {
+      font-size: 16px;
+    }
   }
 
   &__photo {
@@ -162,6 +170,12 @@
     height: 99px;
     position: relative;
     overflow: hidden;
+    border-radius: 100%;
+
+    @include screen('md', max) {
+      width: 71px;
+      height: 71px;
+    }
 
     img {
       @include fill-img;
@@ -177,6 +191,10 @@
 .disqus {
   max-width: 750px;
   margin-top: 50px;
+
+  @include screen('lg-r', max) {
+    max-width: none;
+  }
 }
 
 .progress {
@@ -206,7 +224,7 @@
   }
 }
 
-@include screen('xl-r', max) {
+@include screen('xl-t', max) {
 
   .head, .progress {
     margin-top: 80px;
@@ -216,13 +234,20 @@
 @include screen('lg-r', max) {
 
   .head {
-    height: 553px;
-
     &__title {
       font-size: 36px;
       font-weight: 700;
       line-height: 57px;
       letter-spacing: .9px;
+    }
+
+    &__container {
+      min-height: 449px;
+      padding-top: 113px;
+    }
+
+    &__right {
+      margin-right: 0;
     }
 
     &__view {
@@ -267,14 +292,37 @@
 
 @include screen('md', max) {
 
+  .article {
+    &__sidebar {
+      margin-top: 30px;
+    }
+
+    &__main {
+      margin-top: 31px;
+    }
+
+    &__bottom {
+      margin-top: 66px;
+
+      .link {
+        line-height: 3.4;
+      }
+    }
+  }
+
   .head {
-    height: 392px;
 
     &__title {
       font-size: 24px;
       font-weight: 700;
       line-height: 42px;
       letter-spacing: .6px;
+    }
+
+    &__container {
+      min-height: 293px;
+      padding-top: 58px;
+      padding-bottom: 40px;
     }
 
     &__subtitle {
@@ -291,11 +339,20 @@
     }
     
     &__view {
-      margin-left: 31px;
+      margin-left: 36px;
     }
 
     &__bottom {
       padding: 17px 0;
+    }
+  }
+
+  .author {
+
+    &__desc {
+      margin-left: 27px;
+      width: auto;
+      flex-grow: 1;
     }
   }
 }

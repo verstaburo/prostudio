@@ -27,10 +27,10 @@ export default function Article() {
       if ($(this).siblings().length === 0) {
         // console.log('piu')
         // $(this).css('margin-top', '24px');
-        $(this).parent().css('margin-top', '7px');
+        $(this).parent().addClass('content-zone__linkblock');
 
         if (index === 0) {
-          $(this).parent().css('margin-top', '35px');
+          $(this).parent().addClass('content-zone__linkblock');
         }
 
       }
