@@ -13,11 +13,26 @@
   &-slide {
     text-align: left;
     padding-top: 0;
+    padding-left: 0;
   }
 
   &-content {
     margin-bottom: 0 !important;
-    padding: 70px;
+    padding: 73px 74px 70px 70px;
+  }
+
+  &-slide--html {
+
+    .fancybox-close-small {
+      padding: 5px;
+      top: 14px;
+      right: 10px;
+      transition: color $ease-main;
+
+      &:hover {
+        color: $color-main;
+      }
+    }
   }
 
   &-container {

@@ -60,22 +60,27 @@ block content
     +pagepiling-slide
       +b.slide2.slide
         +e.box
-          +b.advantage
-            +icon('plus').__plus
-            +e.num 7
-            +e.text 7 лет успешной<br> работы
-          +b.advantage
-            +icon('plus').__plus
-            +e.num 200
-            +e.text Выполнено более <br>200 проектов
-          +b.advantage
-            +icon('plus').__plus
-            +e.num 2
-            +e.text 2 офиса  Москва<br> и Санкт-Петербург
-          +b.advantage
-            +icon('plus').__plus
-            +e.num 30
-            +e.text Более 30<br> профессионалов
+          +b.advantage-wrap
+            +b.advantage
+              +b.advantage-inner
+                +icon('plus').__plus
+                +e.num 7
+              +e.text 7 лет успешной<br> работы
+            +b.advantage
+              +b.advantage-inner
+                +icon('plus').__plus
+                +e.num 200
+              +e.text Выполнено более <br>200 проектов
+            +b.advantage
+              +b.advantage-inner
+                +icon('plus').__plus
+                +e.num 2
+              +e.text 2 офиса  Москва<br> и Санкт-Петербург
+            +b.advantage
+              +b.advantage-inner
+                +icon('plus').__plus
+                +e.num 30
+              +e.text Более 30<br> профессионалов
           +e.text Мы не только разрабатвыем превосходные digital проекты.<br>
             | Мы искренне пытаемся поточь в достижении вашей цели и это не просто слова.<br>
             | <b>Свяжитесь с нами и вы убедитесь в этом сами.</b>
@@ -195,22 +200,23 @@ block content
     +pagepiling-slide
       +b.slide5.slide
         +e.box
-          +b.city_piter
-            +e.title
-              +e.IMG(src='./assets/images/piter.png').nohover
-              +e.IMG(src='./assets/images/piter_white.png').hover
-              +e.name_piter Петербург
-            +e.address 196247,<br>Ленинский проспект, дом 151<br>офис 315
-            +link(href='#')._white._xl.city__map Как проехать
-            +e.tel  +7 (812) 645-65-96
-          +b.city_moscow
-            +e.title
-              +e.IMG(src='./assets/images/moscow.png').nohover
-              +e.IMG(src='./assets/images/moscow_white.png').hover
-              +e.name_moscow Москва
-            +e.address 196247,<br>Проспект вернадского, дом 43<br>офис 49
-            +link(href='#')._white._xl.city__map Как проехать
-            +e.tel  +7 (495) 645-65-96
+          +b.city-wrap
+            +b.city_piter
+              +e.title
+                +e.IMG(src='./assets/images/piter.png').nohover
+                +e.IMG(src='./assets/images/piter_white.png').hover
+                +e.name_piter Петербург
+              +e.address 196247,<br>Ленинский проспект, дом 151<br>офис 315
+              +link(href='#')._white._xl.city__map Как проехать
+              +e.tel  +7 (812) 645-65-96
+            +b.city_moscow
+              +e.title
+                +e.IMG(src='./assets/images/moscow.png').nohover
+                +e.IMG(src='./assets/images/moscow_white.png').hover
+                +e.name_moscow Москва
+              +e.address 196247,<br>Проспект вернадского, дом 43<br>офис 49
+              +link(href='#')._white._xl.city__map Как проехать
+              +e.tel  +7 (495) 645-65-96
           +e.title Хотите проект от Prostudio?
           +e.subtitle Заполните форму на сайте или напишите нам на почту #[+link(href='mailto:mail@prostudio.ru')._blue._nounder.slide5__link mail@prostudio.ru]
           +button(href="#contact")._white._big.__btn.js-fancybox Обсудить проект

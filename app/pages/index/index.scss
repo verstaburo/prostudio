@@ -10,6 +10,7 @@
   }
 }
 
+
 .slide1 {
   height: 100vh;
   //position: relative;
@@ -61,15 +62,22 @@
   &__box {
     padding-top: 316px;
     padding-left: 233px;
+    padding-right: 100px;
     display: flex;
     flex-wrap: wrap;
   }
 
-  .advantage {
-
-    &:not(:last-child) {
-      margin-right: 143px;
+  .advantage-wrap {
+    display: flex;
+    // flex-wrap: wrap;
+    @include screen('xl-r', max) {
+      flex-wrap: wrap;
     }
+  }
+
+  .advantage-inner {
+    display: flex;
+    align-items: center;
 
     &__plus {
       fill: $color-svg-gray;
@@ -85,16 +93,36 @@
 
       @include heading-bignum;
     }
+  }
+
+  .advantage {
+    display: flex;
+    flex-direction: column;
+
+    @include screen('xl-r', max) {
+      flex-basis: 25%;
+    }
+
+    @include screen('lg-2', max) {
+      flex-basis: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 143px;
+      margin-bottom: 30px;
+    }
 
     &__text {
+      width: 100%;
       margin-top: 47px;
+      word-break: break-all;
 
       @include heading-4;
     }
   }
 
   &__text {
-    margin-top: 113px;
+    margin-top: 83px;
 
     @include heading-5;
   }
@@ -214,8 +242,23 @@
     margin-top: 30px;
   }
 
+  .city-wrap {
+    display: flex;
+    width: 950px;
+
+    @include screen('lg-r', max) {
+      width: 70%;
+      flex-direction: column;
+    }
+
+    @include screen('md-r', max) {
+      width: 60%;
+    }
+  }
+
   .city {
-    padding: 36px 74px 41px 36px;
+    flex-basis: 50%;
+    padding: 36px 41px 41px 36px;
     text-align: left;
     position: relative;
     transition: color .3s ease;
@@ -228,7 +271,6 @@
       height: 100%;
       top: 0;
       left: 0;
-      background-color: $color-bg;
       z-index: -1;
       transition: all .5s ease;
     }
@@ -269,6 +311,11 @@
 
     &:first-child {
       margin-right: 35px;
+
+      @include screen('lg-r', max) {
+        margin-right: 0;
+        margin-bottom: 35px;
+      }
     }
 
     &__title {
@@ -292,6 +339,7 @@
 
     &__address {
       margin-top: 41px;
+      word-break: break-all;
 
       @include text-address;
     }
@@ -312,6 +360,8 @@
 
       &::before {
         opacity: 0;
+        background-position: 100% 0;
+        // background-size: cover;
       }
 
       &:hover {
@@ -322,14 +372,20 @@
     }
 
     &_piter {
+      // width: 349px;
+
       &::before {
+        background-color: $color-main;
         background-image: url('../images/city_piter_bg.jpg');
         background-repeat: no-repeat;
       }
     }
 
     &_moscow {
+      // width: 367px;
+
       &::before {
+        background-color: $color-red;
         background-image: url('../images/city_moscow_bg.jpg');
         background-repeat: no-repeat;
       }
@@ -640,6 +696,70 @@
     align-items: flex-start;
   }
 
+  &__step1 {
+
+    .contact {
+
+      &__box {
+        margin-top: 39px;
+
+        .inputbox {
+
+          &__placeholder {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          &_noborder {
+            border-bottom: none;
+          }
+
+          &_file {
+
+            label {
+              top: auto;
+              padding-bottom: 0;
+            }
+          }
+
+          .input {
+            &:focus + {
+              .inputbox__placeholder {
+                top: 6px;
+              }
+            }
+          }
+        }
+      }
+
+      &__inputbox {
+        height: 74px;
+        padding-bottom: 0;
+        margin-bottom: 45px;
+
+        .choices {
+          width: 48.5%;
+
+          &__item {
+            padding-top: 0!important;
+            padding-bottom: 0!important;
+          }
+        }
+      }
+
+      &__text {
+        font-size: 16px;
+        letter-spacing: .6px;
+        line-height: 1.4;
+      }
+    }
+
+    .button {
+      padding: 20px 30px;
+      letter-spacing: 1.15px;
+    }
+  }
+
   &__box {
     display: flex;
     flex-wrap: wrap;
@@ -767,6 +887,34 @@
   }
 }
 
+#pp-nav {
+  a {
+    span {
+      &::before {
+        @include pseudo;
+        top: 4px;
+        left: 4px;
+        background-color: $color-main;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: transform $ease-main;
+        @include size(7px);
+      }
+    }
+  }
+
+  .active {
+    span {
+      &::before {
+        transform: scale(1);
+      }
+    }
+    &::before {
+      display: none;
+    }
+  }
+}
+
 // MEDIA START
 
 @include screen('lg', max) {
@@ -774,7 +922,7 @@
   .contact {
 
     &_about {
-      margin-top: 85px;
+      margin-top: 66px;
 
       .contact {
 
@@ -806,8 +954,20 @@
 
     &__inputbox {
 
+      &_third,
+      &_mr {
+        margin-bottom: 44px;
+      }
+
+      &_third {
+        &:last-child {
+          margin-bottom: 59px;
+        }
+      }
+
       &_budget {
         justify-content: space-between;
+        margin-bottom: 13px;
 
         .checkradio {
           margin-left: 0;
@@ -817,6 +977,11 @@
 
     &__title {
       font-size: 30px;
+      letter-spacing: .8px;
+    }
+
+    &__box {
+      margin-top: 45px;
     }
   }
 }

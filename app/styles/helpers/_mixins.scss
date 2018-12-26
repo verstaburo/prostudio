@@ -19,6 +19,18 @@ div {
 
   @else { padding-top: $padding; }
 }
+/*
+Миксин для определения размеров содержимого.
+Пример использования:
+
+div {
+  @include size(5px, 5px);
+}
+*/
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
 
 /*
 Миксин для базовых параметров псевдоэлементов.

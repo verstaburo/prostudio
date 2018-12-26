@@ -245,7 +245,7 @@
 
       &__dots {
         position: static;
-        margin-top: 65px;
+        margin-top: 63px;
       }
     }
 
@@ -264,7 +264,8 @@
     margin-top: 89px;
 
     @include screen('md', max) {
-      margin-top: 44px;
+      margin-top: 47px;
+      line-height: 44px;
     }
   }
 }
@@ -592,6 +593,10 @@
 
   &__btn {
     margin-left: 10px;
+
+    @include screen("md", max) {
+      margin-left: 14px;
+    }
   }
 
   &__left {
@@ -861,6 +866,7 @@
     margin-top: 44px;
 
     &__title {
+      margin-left: -3px;
       font-size: 30px;
     }
 
@@ -894,6 +900,7 @@
     margin-top: 45px;
 
     &__title {
+      margin-left: -3px;
       font-size: 30px;
       letter-spacing: 0.75px;
     }
@@ -909,13 +916,12 @@
 
     &__question {
       font-size: 22px;
-      line-height: 46px;
       letter-spacing: .44px;
     }
   }
 
   .principles {
-    margin-top: 75px;
+    margin-top: 76px;
 
     &__box {
       display: none;
@@ -927,16 +933,17 @@
 
     &__slider {
       display: block;
-      margin-top: 35px;
+      margin-top: 30px;
     }
 
     &__caption {
+      margin-left: -3px;
       font-size: 30px;
       letter-spacing: .75px;
     }
 
     &__slide {
-      min-height: 400px;
+      min-height: 403px;
       width: 100%;
       text-align: center;
       background: url(../images/principle_bg.jpg) no-repeat;
@@ -946,7 +953,7 @@
       align-items: center;
       flex-direction: column;
       box-sizing: border-box;
-      padding: 82px 0 40px;
+      padding: 84px 0 40px;
     }
 
     &__desc {
@@ -960,7 +967,7 @@
     }
 
     &__slidenum {
-      margin: 0 35px;
+      margin: 0 34px;
       font-size: 18px;
       font-weight: 700;
       letter-spacing: .23px;
@@ -972,6 +979,18 @@
       }
     }
 
+  }
+
+  .care {
+    margin-top: 102px;
+
+    &__apptitle {
+      margin-top: 34px;
+    }
+
+    &__apptext {
+      letter-spacing: .3px;
+    }
   }
 }
 

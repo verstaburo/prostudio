@@ -48,7 +48,7 @@
 
             &_offset {
               height: 50vh;
-              right: 385px;
+              right: 370px;
             }
 
             &_offset2 {
@@ -65,12 +65,22 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            .button {
+
+              &_huge {
+                padding: 10px 24px;
+                font-size: 22px;
+                letter-spacing: .35px;
+                line-height: 1.05;
+              }
+            }
           }
 
           &__title {
             text-align: center;
             color: white;
-            margin-bottom: 20px;
+            margin-bottom: 17px;
 
             @include text-tel;
           }
@@ -165,18 +175,36 @@
   &-pag {
     position: absolute;
     z-index: 6;
-    top: 54px;
-    right: 79px;
+    top: 53px;
+    right: 122px;
     display: flex;
     align-items: flex-start;
 
     &__item {
-      color: white;
-      margin: 0 21px;
-      position: relative;
-      opacity: .7;
-
       @include text-pag;
+
+      color: white;
+      position: relative;
+      // margin: 0 19px;
+      opacity: .7;
+      letter-spacing: 1px;
+
+      &:not(:last-child) {
+        margin-right: 37px;
+      }
+
+      // &:first-child {
+      //   margin-right: 51px;
+      // }
+
+      // &:nth-child(3) {
+      //   margin: 0 29px;
+      // }
+
+      // &:last-child {
+      //   margin-left: 40px;
+      // }
+
 
       &:hover {
         cursor: pointer;

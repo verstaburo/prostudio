@@ -10,7 +10,7 @@
   }
 
   @include screen('md', max) {
-    width: 350px;
+    width: 353px;
     max-width: 100%;
     margin: 36px 15px 0;
   }
@@ -25,7 +25,7 @@
     margin-top: 30px;
 
     @include screen('md', max) {
-      margin-top: 35px;
+      margin-top: 31px;
     }
   }
 
@@ -41,6 +41,7 @@
 
     @include screen('md', max) {
       margin-top: 6px;
+      letter-spacing: .45px;
     }
 
   }
