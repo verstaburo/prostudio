@@ -5,11 +5,11 @@
     position: relative;
 
     @include screen('xl', max) {
-      margin-top: 42px;
+      margin-top: 44px;
     }
 
     @include screen('md', max) {
-      margin-top: 40px;
+      margin-top: 42px;
     }
 
     &__title {
@@ -100,7 +100,7 @@
       @include screen('lg', max) {
         width: 100%;
         max-width: calc(100% - 30px);
-        margin-top: 86px;
+        margin-top: 83px;
         margin-left: auto;
         position: relative;
       }
@@ -137,7 +137,7 @@
 
       &-box {
         position: absolute;
-        left: 68px;
+        left: 72px;
         bottom: 200px;
         padding-bottom: 30px;
         display: flex;
@@ -278,7 +278,7 @@
     margin-top: 164px;
 
     @include screen('lg', max) {
-      margin-top: 75px;
+      margin-top: 78px;
     }
 
     @include screen('md', max) {
@@ -325,7 +325,7 @@
     &__slider {
       .slider__dots {
         position: relative;
-        bottom: 20px;
+        bottom: 22px;
       }
       .swiper-pagination-bullet {
         margin: 0 15.5px!important;
@@ -351,7 +351,7 @@
 
     @include screen('md', max) {
       padding: 44px 39px 0 35px;
-      min-height: 409px;
+      min-height: 403px;
       margin-bottom: 45px;
     }
 
@@ -436,7 +436,7 @@
       }
 
       @include screen('md', max) {
-        top: -11px;
+        top: -8px;
         right: 1px;
       }
 
@@ -481,7 +481,7 @@
     position: relative;
     @include screen("lg", max) {
       padding-top: 0;
-      margin: 38px 0 0;
+      margin: 42px 0 0;
     }
 
     @include screen("md", max) {
@@ -519,11 +519,11 @@
       display: flex;
       justify-content: flex-start;
       flex-wrap: wrap;
-      margin-top: 22px;
+      margin-top: 24px;
       padding-left: 10px;
 
       @include screen("lg", max) {
-        margin-top: 49px;
+        margin-top: 44px;
         padding-left: 0;
       }
 
@@ -541,8 +541,8 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.4px;
-      margin-bottom: 52px;
-      margin-left: 326px;
+      margin-bottom: 55px;
+      margin-left: 322px;
 
       @include screen("lg-r", max) {
         margin-bottom: 61px;
@@ -591,11 +591,11 @@
       color :#010101;
       line-height: 46px;
       font-weight: 700;
-      margin: 137px 0 96px;
+      margin: 119px 0 96px;
       letter-spacing: 0.9px;
 
       @include screen('lg', max) {
-        margin: 54px 0 39px;
+        margin: 78px 0 39px;
       }
 
       @include screen('md', max) {
@@ -615,14 +615,14 @@
   }
 
   &__care {
-    margin-top: 120px;
+    margin-top: 143px;
 
     @include screen("lg", max) {
       margin-top: 35px;
     }
 
     @include screen("md", max) {
-      margin-top: 0;
+      margin-top: -4px;
     }
   }
 
@@ -632,7 +632,7 @@
       color: #010101;
       font-weight: 700;
       letter-spacing: 0.9px;
-      margin: 128px 0 58px;
+      margin: 122px 0 58px;
 
       @include screen("lg", max) {
         margin: 11px 0 36px;
@@ -916,7 +916,7 @@
     @include screen("lg", max) {
       margin-left: 35%;
       margin-top: 0;
-      margin-bottom: 60px;
+      margin-bottom: -41px;
 
     }
     @include screen("md", max) {
