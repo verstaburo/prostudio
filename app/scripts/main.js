@@ -23,6 +23,10 @@ $(document).ready(() => {
     })
   });
 
+  $('.js-city').hover(() => {
+    $('.city__map').toggleClass('active');
+  });
+
   $('.js-submit').click((e) => {
     e.preventDefault();
     $('.contact__step1').fadeOut();

@@ -335,10 +335,6 @@
         &__nohover {
           display: none;
         }
-
-        &__map {
-          display: block;
-        }
       }
     }
 
@@ -388,8 +384,14 @@
     }
 
     &__map {
-      display: none;
-      transition: transform .3s ease;
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height $ease-main;
+
+      &.active {
+        max-height: 40px;
+      }
     }
 
     &_piter,
@@ -398,7 +400,6 @@
       &::before {
         opacity: 0;
         background-position: 100% 0;
-        // background-size: cover;
       }
 
       &:hover {
