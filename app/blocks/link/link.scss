@@ -193,12 +193,18 @@
   }
 
   &_hover-btn {
-    padding: 13px 28px;
+    padding: 9px 26px 8px;
     border-radius: 50px;
     border: 2px solid transparent;
 
+    @include screen('lg-r', max) {
+      padding-left: 23px;
+      padding-right: 23px;
+    }
+
     &:hover {
       border: 2px solid;
+      opacity: 1;
     }
   }
 

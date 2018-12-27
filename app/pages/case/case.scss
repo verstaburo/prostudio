@@ -68,13 +68,21 @@
   &__buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
-    width: 734px;
+    margin-top: 84px;
+    width: auto;
+
+    .link {
+
+    }
   }
 
   &__link {
-    margin-bottom: 85px;
+    margin-bottom: 108px;
     margin-top: auto;
+
+    @include screen('md', max) {
+      margin-bottom: 93px;
+    }
   }
 
   &__arrow {
@@ -88,6 +96,11 @@
     align-items: center;
     background: rgba(42, 32, 32, .16);
     cursor: pointer;
+    transition: all $ease-main;
+
+    &:hover {
+      opacity: .7;
+    }
 
     svg {
       width: 19px;
@@ -272,17 +285,29 @@
   }
 }
 
+.case_process {
+  .link:hover {
+    color: $color-main;
+    border-color: $color-main;
+  }
+}
+
 .staff {
   display: block;
   margin-top: 101px;
   margin-bottom: -50px;
   border-top: 1px solid #f2f2f2;
 
+  @include screen('lg-r', max) {
+    margin-top: 54px;
+  }
+
   &__box {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     padding-top: 48px;
+    margin-right: -30px;
   }
 
   &__person {
@@ -290,9 +315,11 @@
     font-weight: 400;
     line-height: 27px;
     letter-spacing: .75px;
-    width: 170px;
-    margin-right: 100px;
     margin-bottom: 55px;
+    width: 25%;
+    margin-right: 0;
+    box-sizing: border-box;
+    padding-right: 30px;
 
     // &:not(:nth-child(4)) {
     //   margin-right: 190px;
@@ -313,6 +340,10 @@
       &_md {
         display: block;
       }
+
+      &_lg {
+        display: none;
+      }
     }
 
     &__title {
@@ -328,7 +359,7 @@
     }
 
     &__buttons {
-      margin-top: 114px;
+      margin-top: 118px;
     }
   }
 
@@ -351,26 +382,41 @@
       }
     }
 
+    &__bottom {
+      margin-top: 52px;
+    }
+
     &__empty {
       display: none;
     }
   }
 
   .staff {
-
     &__box {
-      justify-content: space-between;
-      margin: 0 -20px;
     }
 
     &__person {
-      margin-right: 20px;
-      margin-left: 20px;
+      width: 33.333%;
+      margin-bottom: 42px;
     }
   }
 }
 
 @include screen('md', max) {
+
+  .staff {
+    margin-bottom: 0;
+  }
+
+  .staff__person {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .staff__box {
+    padding-left: 32px;
+    padding-top: 36px;
+  }
 
   .case {
 
