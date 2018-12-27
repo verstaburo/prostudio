@@ -86,7 +86,7 @@ export default function slider() {
       slideShadows: false,
     },
     navigation: {
-      nextEl: '.padportfolio__next',
+      nextEl: '.padportfolio__next, .pad__more',
       // prevEl: '.journal-pag__prev',
     },
     pagination: {
@@ -113,14 +113,14 @@ export default function slider() {
         slidesPerView: 1,
       },
     },
-    on: {
-      slideChange(index) {
-        // $('.swiper-slide-active').fadeOut();
-        // console.log(index);
-        $('.swiper-slide').css('opacity', 1);
-        $('.swiper-slide-active').css('opacity', 0);
-      },
-    },
+    // on: {
+    //   slideChange(index) {
+    //     // $('.swiper-slide-active').fadeOut();
+    //     // console.log(index);
+    //     $('.swiper-slide').css('opacity', 1);
+    //     $('.swiper-slide-active').css('opacity', 0);
+    //   },
+    // },
   });
 
   const advantagelSlider = new Swiper('.js-slider.slider_advantage', {

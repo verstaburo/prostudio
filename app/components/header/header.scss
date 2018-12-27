@@ -1,10 +1,10 @@
 .header {
-  // display: none;
+  display: none;
   height: 112px;
   padding: 45px 0 0;
   box-sizing: border-box;
   padding-left: 20px;
-  width: 1386px;
+  width: 1398px;
   left: 0;
   right: 0;
   z-index: 6;
@@ -23,6 +23,15 @@
 
     .header__container {
       padding-right: 30px !important;
+    }
+
+    .menu {
+
+      &__item {
+        &:not(:last-child) {
+          margin-right: 61px;
+        }
+      }
     }
   }
 
@@ -91,7 +100,7 @@
     &__project {
       display: inline-block;
       margin-right: -100%;
-      opacity: 0;
+      opacity: 1;
       transition: margin .3s ease .3s;
       transition: opacity .3s ease;
       //display: none;
@@ -180,7 +189,7 @@
   &__item {
 
     &:not(:last-child) {
-      margin-right: 61px;
+      margin-right: 51px;
     }
 
     &_last {

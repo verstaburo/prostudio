@@ -10,6 +10,18 @@
   }
 }
 
+.slider {
+
+  &_padportfolio {
+
+    .slide {
+
+      &__title {
+        margin-top: 0;
+      }
+    }
+  }
+}
 
 .slide1 {
   height: 100vh;
@@ -560,6 +572,40 @@
     letter-spacing: 1px;
   }
 
+  &__portfolio {
+
+    .swiper-container {
+      overflow: visible;
+    }
+
+    .swiper-container-3d {
+      perspective: 1700px;
+    }
+
+    .slide {
+
+      &__tag {
+        position: absolute;
+        z-index: 1;
+        top: 28px;
+        left: 28px;
+        color: $white;
+
+        @include text-tag;
+      }
+
+      &__text-wrap {
+        position: absolute;
+        bottom: -108px;
+        left: 4px;
+      }
+
+      &__title {
+        line-height: 1.5;
+      }
+    }
+  }
+
   .padportfolio {
     text-align: center;
     margin-top: 7px;
@@ -569,6 +615,10 @@
       display: inline-flex;
       align-items: center;
       max-width: 380px;
+    }
+
+    &__next {
+      cursor: pointer;
     }
 
     &__img-round {
@@ -595,10 +645,6 @@
       //margin: 0 25px;
       flex-shrink: 0;
 
-      &:first-child {
-        display: none;
-      }
-
       &.active-main {
         width: 14px;
         height: 14px;
@@ -612,7 +658,8 @@
   }
 
   &__more {
-    margin-top: 50px;
+    margin-top: 160px;
+    padding: 16px 34px;
     display: inline-flex;
     align-items: center;
     font-family: 'Intro Book';
@@ -630,6 +677,21 @@
 
   &__advantage {
     margin-top: 100px;
+
+    .swiper-container {
+      overflow: visible;
+    }
+
+    .swiper-slide-active {
+      opacity: 1!important;
+    }
+  }
+
+  &__journal {
+
+    .swiper-container {
+      overflow: visible;
+    }
   }
 
   .pad-advantage {

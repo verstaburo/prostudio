@@ -150,6 +150,13 @@
   letter-spacing: 1.17px;
 }
 
+@mixin text-tag {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: .55px;
+}
+
 @mixin text-foto {
   font-size: 21px;
   font-weight: 400;
