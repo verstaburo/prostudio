@@ -48,21 +48,20 @@ export default function Article() {
       const scroll_offset = ($(window).scrollTop() - $('.head').height()) / ($('.section-article').height());
       $('.progress').show();
       $('.js-progress').css('transform', 'scaleX(' + scroll_offset + ')');
-      console.log(scroll_offset);
 
       if (window.pageYOffset < $('.head').height() || scroll_offset >= 1) {
         hideProgressBar();
       }
-      
+
       if (window.pageYOffset >= $('.head').height() && scroll_offset < 1) {
         showProgressBar();
       }
-      
+
       function hideProgressBar() {
         $('.progress').css('height', '0');
         $('.header').css('border-bottom-color', '#dcdcdc');
       }
-      
+
       function showProgressBar() {
         $('.progress').css('height', '8px');
         $('.header').css('border-bottom-color', 'transparent');

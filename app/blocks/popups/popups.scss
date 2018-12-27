@@ -12,20 +12,23 @@
 
   &-slide {
     text-align: left;
-    padding-top: 0;
-    padding-left: 0;
+    padding: 0;
   }
 
   &-content {
     margin-bottom: 0 !important;
-    padding: 73px 74px 70px 70px;
+    padding: 65px 74px 70px 70px;
+
+    @include screen('md', max) {
+      padding: 65px 30px 70px 30px;
+    }
   }
 
   &-slide--html {
 
     .fancybox-close-small {
       padding: 5px;
-      top: 14px;
+      top: 6px;
       right: 10px;
       transition: color $ease-main;
 

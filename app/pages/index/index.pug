@@ -145,45 +145,53 @@ block content
         +e.box
           +slider(false, false).slider_journal
             +slide
-              .slide__img
-                img(src='./assets/images/slide21.jpg')
-              .slide__text Мы запустили новый сайт<br> для компании.
-              .slide__date 20  10  17
+              a(href='#').slide__link
+                .slide__img
+                  img(src='./assets/images/slide21.jpg')
+                .slide__text Мы запустили новый сайт<br> для компании.
+                .slide__date 20  10  17
             +slide
-              .slide__img
-                img(src='./assets/images/slide22.jpg')
-              .slide__text Как эффективно настроить контекстную рекламу и увеличить продажи?
-              .slide__date 14  10  17
+              a(href='#').slide__link
+                .slide__img
+                  img(src='./assets/images/slide22.jpg')
+                .slide__text Как эффективно настроить контекстную рекламу и увеличить продажи?
+                .slide__date 14  10  17
             +slide
-              .slide__img
-                img(src='./assets/images/slide23.jpg')
-              .slide__text Запустили новое приложение для компании.
-              .slide__date 08  10  17
+              a(href='#').slide__link
+                .slide__img
+                  img(src='./assets/images/slide23.jpg')
+                .slide__text Запустили новое приложение для компании.
+                .slide__date 08  10  17
             +slide
-              .slide__img
-                img(src='./assets/images/slide24.jpg')
-              .slide__text Выступление нашего маркетолога на DIGTALE
-              .slide__date 20  10  17
+              a(href='#').slide__link
+                .slide__img
+                  img(src='./assets/images/slide24.jpg')
+                .slide__text Выступление нашего маркетолога на DIGTALE
+                .slide__date 20  10  17
             +slide
-              .slide__img
-                img(src='./assets/images/slide21.jpg')
-              .slide__text Мы запустили новый сайт<br> для компании.
-              .slide__date 14  10  17
+              a(href='#').slide__link
+                .slide__img
+                  img(src='./assets/images/slide21.jpg')
+                .slide__text Мы запустили новый сайт<br> для компании.
+                .slide__date 14  10  17
             +slide
-              .slide__img
-                img(src='./assets/images/slide22.jpg')
-              .slide__text Как эффективно настроить контекстную рекламу и увеличить продажи?
-              .slide__date 08  10  17
+              a(href='#').slide__link
+                .slide__img
+                  img(src='./assets/images/slide22.jpg')
+                .slide__text Как эффективно настроить контекстную рекламу и увеличить продажи?
+                .slide__date 08  10  17
             +slide
-              .slide__img
-                img(src='./assets/images/slide23.jpg')
-              .slide__text Запустили новое приложение для компании.
-              .slide__date 20  10  17
+              a(href='#').slide__link
+                .slide__img
+                  img(src='./assets/images/slide23.jpg')
+                .slide__text Запустили новое приложение для компании.
+                .slide__date 20  10  17
             +slide
-              .slide__img
-                img(src='./assets/images/slide24.jpg')
-              .slide__text Выступление нашего маркетолога на DIGTALE
-              .slide__date 14  10  17
+              a(href='#').slide__link
+                .slide__img
+                  img(src='./assets/images/slide24.jpg')
+                .slide__text Выступление нашего маркетолога на DIGTALE
+                .slide__date 14  10  17
         +b.slide-footer.slide__footer
           .container.slide-footer__container
             +e.IMG(src='./assets/images/play.svg').play
@@ -250,7 +258,7 @@ block content
           +e.next
             img(src='./assets/images/next_blue.svg')
           +e.pag
-          img(src='./assets/images/blue_round.png')
+          +e.IMG(src='./assets/images/blue_round.png').img-round
         +slider(false, false).slider_padportfolio
           +slide
             img(src='./assets/images/pad_portfolio1.jpg')
@@ -347,7 +355,7 @@ block content
             +inputbox("Сообщение").contact__inputbox
               +input
           +e.text Нажимая на кнопку  «Отправить», вы соглашаетесь на обработку персональных данных<br>в соответсвии с
-            +link._blue Политикой конфиденциальности.
+            +link._blue  Политикой конфиденциальности.
           +button('input')(type='submit', value='отправить заявку')._blue._big.contact__btn.js-submit
       +e.step2
         img(src='./assets/images/msg_send.jpg')

@@ -130,10 +130,14 @@
 
 .slide3 {
 
+  .container {
+    width: 100%;
+  }
+
   &__box {
     padding: 84px 168px 0 112px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
 
@@ -199,6 +203,27 @@
   &__box {
     margin-left: 226px;
     padding-top: 150px;
+  }
+
+  .slide {
+
+    &__link {
+      color: inherit;
+
+      &:hover {
+        .slide__img img {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    &__img {
+      overflow: hidden;
+      img {
+        display: block;
+        transition: transform $ease-main;
+      }
+    }
   }
 }
 
@@ -537,21 +562,28 @@
 
   .padportfolio {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 7px;
 
     &__nav {
+      margin-left: -19px;
       display: inline-flex;
       align-items: center;
       max-width: 380px;
+    }
+
+    &__img-round {
+      position: relative;
+      top: -2px;
+      left: 14px;
     }
 
     &__pag {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 152px !important;
+      width: 162px !important;
       //width: 300px !important;
-      margin: 0 45px;
+      margin: 0 38px;
     }
 
     .slider__dot {
@@ -562,6 +594,10 @@
       height: 5px;
       //margin: 0 25px;
       flex-shrink: 0;
+
+      &:first-child {
+        display: none;
+      }
 
       &.active-main {
         width: 14px;
@@ -689,11 +725,12 @@
   }
 
   &__form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
+    // flex: 1;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-start;
+    // align-items: flex-start;
+    margin-bottom: 30px;
   }
 
   &__step1 {
@@ -701,7 +738,7 @@
     .contact {
 
       &__box {
-        margin-top: 39px;
+        margin-top: 73px;
 
         .inputbox {
 
@@ -737,6 +774,12 @@
         padding-bottom: 0;
         margin-bottom: 45px;
 
+        &_half {
+          @include screen('md-r2', max) {
+            width: 100%;
+          }
+        }
+
         .choices {
           width: 48.5%;
 
@@ -748,6 +791,7 @@
       }
 
       &__text {
+        margin-top: 23px;
         font-size: 16px;
         letter-spacing: .6px;
         line-height: 1.4;
@@ -755,6 +799,7 @@
     }
 
     .button {
+      margin-top: 73px;
       padding: 20px 30px;
       letter-spacing: 1.15px;
     }
@@ -888,6 +933,8 @@
 }
 
 #pp-nav {
+  transition: visibility $ease-main, opacity $ease-main;
+
   a {
     span {
       &::before {
@@ -903,7 +950,13 @@
     }
   }
 
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+
   .active {
+
     span {
       &::before {
         transform: scale(1);

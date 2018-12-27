@@ -14,6 +14,7 @@ $(document).ready(() => {
   $('.js-padmenu').click(() => {
     $('.buttons__burger').toggleClass('buttons__burger_active');
     $('.header__menu').toggleClass('header__menu_active');
+    $('#pp-nav').toggleClass('hidden');
   });
 
   $('.js-vacancy-hot .switcher__box').click(() => {
