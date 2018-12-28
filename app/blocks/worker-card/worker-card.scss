@@ -65,9 +65,19 @@
   &__img {
     position: relative;
     font-size: 0;
+    padding-bottom: 115.5%;
+    overflow: hidden;
 
-    img {
-      width: 100%;
+    @include screen('lg-r', max) {
+      padding-bottom: 117.5%;
+    }
+
+    @include screen('md', max) {
+      padding-bottom: 115.5%;
+    }
+
+    >img {
+      @include fill-img;
     }
   }
 

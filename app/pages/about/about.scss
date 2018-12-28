@@ -59,7 +59,7 @@
   }
 
   &__pag {
-    margin-top: 147px;
+    margin-top: 146px;
     display: flex;
     align-items: flex-start;
     position: relative;
@@ -68,8 +68,8 @@
       width: 371px;
       height: 1px;
       background-color: #d9dee2;
-      left: 107px;
-      top: 15px;
+      left: 113px;
+      top: 13px;
 
       @include pseudo;
     }
@@ -80,7 +80,7 @@
       font-weight: 700;
       color: $color-main;
       letter-spacing: .45px;
-      margin-right: 10px;
+      margin-right: 6px;
       width: 60px;
     }
 
@@ -261,7 +261,19 @@
     font-size: 28px;
     line-height: 52px;
     letter-spacing: .56px;
-    margin-top: 89px;
+    margin-top: 91px;
+
+    .link {
+      line-height: inherit;
+    }
+
+    @include screen('lg-r', max) {
+      margin-top: 85px;
+
+      .link {
+        display: block;
+      }
+    }
 
     @include screen('md', max) {
       margin-top: 47px;
@@ -271,8 +283,12 @@
 }
 
 .principles {
-  margin-top: 102px;
+  margin-top: 119px;
   position: relative;
+
+  @include screen('lg-r', max) {
+    margin-top: 77px;
+  }
 
   &__box {
     display: flex;
@@ -921,7 +937,7 @@
   }
 
   .principles {
-    margin-top: 76px;
+    margin-top: 82px;
 
     &__box {
       display: none;
