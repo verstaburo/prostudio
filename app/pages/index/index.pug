@@ -7,6 +7,7 @@ block content
   +header(true)._fixed
 
   +pagepiling
+    +b.IMG(src='./assets/images/play.svg').slide-play
     +pagepiling-slide
       +b.slide1.slide
         +e.box
@@ -51,7 +52,7 @@ block content
                 +button._fullwhite._huge WEB
         +b.slide-footer.slide__footer
           .container.slide-footer__container
-            +e.IMG(src='./assets/images/play.svg').play
+            //- +e.IMG(src='./assets/images/play.svg').play
             +e.scroll
               +e.IMG(src='./assets/images/mouse.png').mouse
               +e.text листайте вниз
@@ -86,7 +87,7 @@ block content
             | <b>Свяжитесь с нами и вы убедитесь в этом сами.</b>
         +b.slide-footer.slide__footer
           .container.slide-footer__container
-            +e.IMG(src='./assets/images/play.svg').play
+            //- +e.IMG(src='./assets/images/play.svg').play
     +pagepiling-slide
       +b.slide3.slide
         .container
@@ -139,7 +140,7 @@ block content
                 +link()(href="#").linkbox__link Администрирование сложных проектов
         +b.slide-footer.slide__footer
           .container.slide-footer__container
-            +e.IMG(src='./assets/images/play.svg').play
+            //- +e.IMG(src='./assets/images/play.svg').play
     +pagepiling-slide
       +b.slide4.slide
         +e.box
@@ -194,7 +195,7 @@ block content
                 .slide__date 14  10  17
         +b.slide-footer.slide__footer
           .container.slide-footer__container
-            +e.IMG(src='./assets/images/play.svg').play
+            //- +e.IMG(src='./assets/images/play.svg').play
             +b.journal-pag
               +e.IMG(src='./assets/images/prev.svg').prev
               +e.IMG(src='./assets/images/next.svg').next
@@ -231,7 +232,7 @@ block content
 
         +b.slide-footer.slide__footer._end
           .container.slide-footer__container
-            +e.IMG(src='./assets/images/play.svg').play
+            //- +e.IMG(src='./assets/images/play.svg').play
             +b.menu
               ul
                 li.menu__item
@@ -323,7 +324,6 @@ block content
               img(src='./assets/images/padjournal3.jpg')
             .pad-journal__title Создание сайта
             .pad-journal__date 14 октября
-          +slide
       +e.question Хотите проект от Prostudio?
       +button(href='#contact').pad__btn.button_blue.button_big.js-fancybox Обсудить проект
   +footer

@@ -1,10 +1,12 @@
 .header {
   // display: none;
   height: 112px;
-  padding: 45px 0 0;
+  padding: 24px 0 0;
   box-sizing: border-box;
   padding-left: 20px;
-  width: 1398px;
+  // width: 1398px;
+  width: 72.8%;
+  height: 80px;
   left: 0;
   right: 0;
   z-index: 6;
@@ -37,7 +39,7 @@
 
   &_fixed {
     position: fixed;
-    background: white;
+    background-color: white;
   }
 
   &_inner {
@@ -206,19 +208,13 @@
   }
 }
 
-@include screen('xl-r', max) {
-  .menu__item:not(:last-child) {
-    margin-right: 70px;
-  }
-}
-
 @include screen('xl-b', max) {
   .menu__item:not(:last-child) {
     margin-right: 40px;
   }
 }
 
-@include screen('xl-t', max) {
+@include screen('xl-r', max) {
 
   .header {
     width: 100%;
@@ -227,9 +223,9 @@
     //background: white;
 
     &__container {
-      //width: calc(100vw - 505px) !important;
+      // width: calc(100vw - 505px) !important;
       width: unset !important;
-      padding-right: 535px !important;
+      // padding-right: 535px !important;
     }
 
     &__logo {

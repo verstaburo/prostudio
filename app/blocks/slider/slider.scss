@@ -180,6 +180,14 @@
     display: flex;
     align-items: flex-start;
 
+    @include screen('xl-r', max) {
+      top: 88px;
+    }
+
+    @include screen('lg', max) {
+      display: none;
+    }
+
     &__item {
       @include text-pag;
 

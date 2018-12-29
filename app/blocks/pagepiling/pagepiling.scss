@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.pp-scrollable {
+  overflow-x: hidden;
+}
+
 #pp-nav {
 
   li {
@@ -47,5 +51,39 @@
 
   &.left {
     left: 48px;
+  }
+}
+
+@media screen and (max-height: 800px) {
+
+  #pp-nav {
+
+    li {
+
+      &:not(:last-child) {
+        margin-bottom: 70px;
+
+        &::after {
+          height: 67px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 560px) {
+
+  #pp-nav {
+
+    li {
+
+      &:not(:last-child) {
+        margin-bottom: 60px;
+
+        &::after {
+          height: 57px;
+        }
+      }
+    }
   }
 }

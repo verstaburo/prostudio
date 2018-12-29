@@ -86,7 +86,7 @@ export default function slider() {
       slideShadows: false,
     },
     navigation: {
-      nextEl: '.padportfolio__next, .pad__more',
+      nextEl: '.padportfolio__next',
       // prevEl: '.journal-pag__prev',
     },
     pagination: {

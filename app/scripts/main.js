@@ -24,7 +24,7 @@ $(document).ready(() => {
   });
 
   $('.js-city').hover(() => {
-    $('.city__map').toggleClass('active');
+    $('.city__map').toggleClass('is-active');
   });
 
   $('.js-submit').click((e) => {

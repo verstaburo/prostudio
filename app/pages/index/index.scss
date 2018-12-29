@@ -1,10 +1,12 @@
 .slide {
 
   &__footer {
-    position: absolute;
-    bottom: 79px;
+    position: relative;
+    // bottom: 79px;
+    bottom: -79px;
+    padding-bottom: 30px;
     //margin: 0 auto;
-    width: 100vw;
+    width: 100%;
     left: 0;
     right: 0;
   }
@@ -14,10 +16,41 @@
 
   &_padportfolio {
 
+    .slider {
+
+      &__slide {
+
+        @include screen('sm', max) {
+          width: 100%;
+        }
+      }
+    }
+
     .slide {
 
       &__title {
         margin-top: 0;
+      }
+    }
+  }
+
+  &_advantage,
+  &_padjournal {
+
+    .swiper-slide {
+
+      @include screen('md2', max) {
+        width: 100%!important;
+      }
+    }
+
+    .slider {
+
+      &__slide {
+
+        @include screen('md2', max) {
+          width: 100%;
+        }
       }
     }
   }
@@ -30,6 +63,16 @@
   &__box {
     padding-top: 198px;
     padding-left: 274px;
+
+    @include screen('xl-t', max) {
+      padding-left: 210px;
+    }
+
+    @include screen('lg', max) {
+      padding-top: 140px;
+      padding-left: 0;
+      text-align: center;
+    }
   }
 
   &__title {
@@ -43,12 +86,19 @@
     margin-top: 53px;
 
     @include heading-3;
+
+    @include screen('lg', max) {
+      margin-top: 35px;
+    }
   }
 
   &__btn {
     margin-top: 107px;
 
     //@include text-button-big;
+    @include screen('lg', max) {
+      margin-top: 60px;
+    }
   }
 
   &__slider {
@@ -58,6 +108,10 @@
     right: 0;
     top: 0;
     z-index: -1;
+
+    @include screen('lg', max) {
+      display: none;
+    }
   }
 
   //&__footer {
@@ -77,6 +131,10 @@
     padding-right: 100px;
     display: flex;
     flex-wrap: wrap;
+
+    @include screen('xl-t', max) {
+      padding-top: 190px;
+    }
   }
 
   .advantage-wrap {
@@ -151,6 +209,10 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
+    @include screen('xl-t', max) {
+      padding: 0 168px 0 112px;
+    }
   }
 
   .usluga {
@@ -215,6 +277,10 @@
   &__box {
     margin-left: 226px;
     padding-top: 150px;
+
+    @include screen ('xl-t', max) {
+      padding-top: 90px;
+    }
   }
 
   .slide {
@@ -251,6 +317,10 @@
     align-items: flex-start;
     //height: 100%;
     padding-top: 160px;
+
+    @include screen ('xl-t', max) {
+      padding-top: 140px;
+    }
   }
 
   &__title {
@@ -389,7 +459,7 @@
       overflow: hidden;
       transition: max-height $ease-main;
 
-      &.active {
+      &.is-active {
         max-height: 40px;
       }
     }
@@ -431,6 +501,14 @@
   }
 }
 
+.slide-play {
+  position: absolute;
+  z-index: 100;
+  bottom: 30px;
+  left: 25px;
+  cursor: pointer;
+}
+
 .slide-footer {
   //position: absolute;
   //bottom: 79px;
@@ -443,22 +521,35 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: 100%!important;
+
+    @include screen('lg', max) {
+      justify-content: center;
+    }
   }
 
   &__play {
-    cursor: pointer;
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    // cursor: pointer;
   }
 
   &__scroll {
     display: flex;
     align-items: center;
     margin-left: 183px;
+
+    @include screen('lg', max) {
+      margin-left: -60px;
+    }
   }
 
   &__text {
     text-transform: uppercase;
     color: $color-gray;
     margin-left: 26px;
+    white-space: nowrap;
 
     @include text-bold;
   }
@@ -467,6 +558,10 @@
     text-transform: uppercase;
     margin-left: 380px;
     position: relative;
+
+    @include screen('lg', max) {
+      margin-left: 180px;
+    }
 
     @include text-bold;
 
@@ -709,10 +804,18 @@
 
     &__num {
       @include heading-9;
+
+      @include screen('md2', max) {
+        font-size: 160px;
+      }
     }
 
     &__text {
       @include text34;
+
+      @include screen('md2', max) {
+        font-size: 28px;
+      }
     }
   }
 
@@ -728,6 +831,12 @@
       height: 520px;
       display: inline-block;
       position: relative;
+
+      @include screen('md2', max) {
+        display: block;
+        width: 100%;
+        // height: auto;
+      }
 
       img {
         @include fill-img;
