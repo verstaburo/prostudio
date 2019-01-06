@@ -5,12 +5,8 @@
   //height: 400px;
   position: relative;
   z-index: 1;
-  height: 612px;
+  height: 100%;
   width: 100vw;
-
-  @include screen('md', max) {
-    height: 674px;
-  }
 }
 
 .leaflet-control-layers-toggle {

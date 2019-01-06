@@ -329,6 +329,13 @@
     }
 
     &__img-wrap {
+      display: block;
+      transition: opacity $ease-main;
+
+      &:hover {
+        opacity: .5;
+      }
+
       @include screen("lg") {
         flex-shrink: 0;
       }

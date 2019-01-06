@@ -60,8 +60,14 @@
           &.active {
             height: 612px;
 
+            @include screen('md') {
+              height: 61vh;
+              min-height: 612px;
+            }
+
             @include screen('md', max) {
               height: 674px;
+              min-height: 0;
             }
           }
         }
