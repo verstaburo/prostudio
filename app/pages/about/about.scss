@@ -319,7 +319,7 @@
     height: 474px;
     position: relative;
 
-    &:hover {
+    &:hover, &.active {
 
       .principles__round {
         opacity: 1;

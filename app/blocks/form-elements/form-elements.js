@@ -23,8 +23,12 @@ export function selects() {
   /* eslint-enable no-unused-vars */
 }
 
+$('.inputbox .input').focus(function () {
+  const placeHolder = $(this).next('.inputbox__placeholder');
+  placeHolder.addClass('inputbox__placeholder_active');
+});
+
 $('.inputbox .input').focusout(function () {
-  console.log($(this).val());
   const placeHolder = $(this).next('.inputbox__placeholder');
   if ($(this).val().length >= 1) {
     placeHolder.addClass('inputbox__placeholder_active');

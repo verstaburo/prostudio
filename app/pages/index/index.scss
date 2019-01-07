@@ -930,6 +930,10 @@
           &__placeholder {
             top: 50%;
             transform: translateY(-50%);
+
+            &_active {
+              top: 3px !important;
+            }
           }
 
           &_noborder {
@@ -1100,6 +1104,12 @@
       &__btn {
         margin-top: 4px;
         padding: 20px 28px;
+
+        @include screen('md', max) {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
     }
 

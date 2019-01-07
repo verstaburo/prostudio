@@ -297,6 +297,10 @@ export default function slider() {
       nextEl: '.usluga-steps__next',
       prevEl: '.usluga-steps__prev',
     },
+    pagination: {
+      el: '.usluga-steps__dots',
+      clickable: true,
+    },
   });
 
   const icoUslugiSlider = new Swiper('.js-slider.ico-uslugi-slider', {

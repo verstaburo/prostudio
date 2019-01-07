@@ -151,7 +151,9 @@
       left: unset;
       width: 18px;
       height: 18px;
-      top: 5px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
     }
   }
 
@@ -202,7 +204,7 @@
       padding-right: 23px;
     }
 
-    &:hover {
+    &:hover, &.active {
       border: 2px solid;
       opacity: 1;
     }

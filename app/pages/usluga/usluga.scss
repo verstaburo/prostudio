@@ -461,6 +461,12 @@
       letter-spacing: 1.43px;
       position: absolute;
       left: 127px;
+      transform: translate3d(0, -15px, 0);
+      transition: transform $ease-main;
+
+      .usluga-card:hover & {
+        transform: translate3d(0, 0, 0);
+      }
 
       @include screen('lg', max) {
         left: auto;
@@ -623,6 +629,9 @@
   }
 
   &-steps {
+
+
+
     &__title {
       font-size: 36px;
       color: #010101;
@@ -723,11 +732,21 @@
       height: 55px;
       z-index: 2;
       display: none;
+    }
 
-      @include screen("md", max) {
-        display: block;
+    &__dots {
+      position: relative;
+      margin-top: 25px;
+      text-align: center;
+
+      @include screen('md') {
+        display: none;
       }
-
+      
+      .swiper-pagination-bullet {
+        margin: 0 15.5px!important;
+        transition: all $ease-main;
+      }
     }
 
     &__prev {

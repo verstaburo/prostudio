@@ -9,6 +9,11 @@ export default function Article() {
   let path = window.location.pathname;
   let page = path.split("/").pop();
 
+  $('.principles__item').hover(function(){
+    $(this).removeClass('active');
+    $(this).siblings().removeClass('active');
+  });
+
   if (page === 'article.html') {
 
     var disqus_config = function () {
@@ -58,12 +63,12 @@ export default function Article() {
       }
 
       function hideProgressBar() {
-        $('.progress').css('height', '0');
+        $('.progress').removeClass('active');
         $('.header').css('border-bottom-color', '#dcdcdc');
       }
 
       function showProgressBar() {
-        $('.progress').css('height', '8px');
+        $('.progress').addClass('active');
         $('.header').css('border-bottom-color', 'transparent');
       }
     });

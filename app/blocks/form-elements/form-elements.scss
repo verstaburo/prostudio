@@ -11,15 +11,6 @@
   min-height: 0;
   background-color: white;
   letter-spacing: 1.35px;
-
-  &:focus {
-
-    & + .inputbox__placeholder {
-      color: $color-main;
-      font-size: 14px;
-      top: -14px;
-    }
-  }
 }
 
 .inputbox__placeholder_active {

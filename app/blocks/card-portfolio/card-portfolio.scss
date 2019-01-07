@@ -18,6 +18,8 @@ $card-gap: 12px;
   opacity: 0;
   transform: translate3d(0, 10px, 0);
 
+  $b: &;
+
   &.is-active {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -49,7 +51,7 @@ $card-gap: 12px;
     left: 0;
     transition: transform $ease-main;
 
-    &:hover {
+    #{$b}:hover & {
       transform: scale(1.05);
     }
 

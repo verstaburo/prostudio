@@ -65,10 +65,12 @@ export default function mixContent() {
 
     self.setOrderId(blocks);
 
-    if ($(window).width() < 1310) {
-      $('.card-journal_popular').attr(this.orderId, 2);
+    if ($(window).width() < 768) {
+      $('.card-journal_popular').attr(this.orderId, 1);
+    } else if ($(window).width() < 1310) {
+      $('.card-journal_popular').attr(this.orderId, 1);
     } else {
-      $('.card-journal_popular').attr(this.orderId, 3);
+      $('.card-journal_popular').attr(this.orderId, 2);
     }
 
     const sortedBlocks = self.sortBlocks(blocks);

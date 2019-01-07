@@ -32,6 +32,8 @@
 
     line-height: 35px;
     transition: color $ease-main;
+    width: 100%;
+    white-space: normal;
 
     #{$b}:hover & {
       color: $color-main;
