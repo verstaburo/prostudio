@@ -1,11 +1,12 @@
 .head {
-  margin-top: 112px;
+  // margin-top: 112px;
+  margin-top: 96px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   overflow: hidden;
-  
+
   &__img {
     @include fill-img;
   }
@@ -89,7 +90,7 @@
     align-items: center;
     cursor: pointer;
     transition: opacity .25s ease;
-    
+
     &:hover {
       opacity: .75;
     }
@@ -200,7 +201,8 @@
 .progress {
   position: fixed;
   height: 0;
-  margin-top: 112px;
+  // margin-top: 112px;
+  margin-top: 96px;
   width: 100%;
   z-index: 1;
   display: block;
@@ -229,13 +231,6 @@
     width: 100%;
     background-color: #ececec;
     z-index: -1;
-  }
-}
-
-@include screen('xl-r', max) {
-
-  .head, .progress {
-    margin-top: 80px;
   }
 }
 
@@ -286,7 +281,7 @@
       margin-left: 30px;
       width: 210px;
     }
-    
+
     &__name {
       margin-top: -1px;
     }
@@ -345,7 +340,7 @@
     &__category {
       margin-left: 0;
     }
-    
+
     &__view {
       margin-left: 36px;
     }

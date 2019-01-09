@@ -319,23 +319,6 @@
     height: 474px;
     position: relative;
 
-    &:hover, &.active {
-
-      .principles__round {
-        opacity: 1;
-      }
-
-      .principles__arc {
-        &::before {
-          border-color: $color-main;
-        }
-
-        .principles__num {
-          color: $color-main;
-        }
-      }
-    }
-
     &:first-child {
 
       .principles {
@@ -447,6 +430,23 @@
 
         &::before {
           border-color: white;
+        }
+      }
+    }
+
+    &:hover, &_active {
+
+      .principles__round {
+        opacity: 1;
+      }
+
+      .principles__arc {
+        &::before {
+          border-color: $color-main;
+        }
+
+        .principles__num {
+          color: $color-main;
         }
       }
     }

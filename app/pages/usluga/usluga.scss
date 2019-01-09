@@ -1,5 +1,5 @@
 .usluga {
-  
+
   &-header {
     margin-top: 90px;
     position: relative;
@@ -235,7 +235,7 @@
         &:hover {
           opacity: 0.5;
         }
-        
+
       }
 
       &-look {
@@ -257,7 +257,7 @@
         }
 
         &__title {
-          
+
           font-size: 21px;
           margin-bottom: 26px;
         }
@@ -318,7 +318,7 @@
 
       @include screen('md', max) {
         display: block;
-        
+
       }
     }
 
@@ -393,7 +393,7 @@
         padding-bottom: 120px;
         padding-right: 0;
       }
-      
+
       p:not(:last-child) {
         padding-bottom: 20px;
       }
@@ -497,7 +497,7 @@
     &__title {
       font-size: 110px;
       width: 100%;
-      text-align: right;
+      text-align: center;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 13.85px;
@@ -613,7 +613,7 @@
       flex-wrap: wrap;
     }
 
-    
+
   }
 
   &__care {
@@ -742,7 +742,7 @@
       @include screen('md') {
         display: none;
       }
-      
+
       .swiper-pagination-bullet {
         margin: 0 15.5px!important;
         transition: all $ease-main;
@@ -1021,7 +1021,7 @@
       top: -20px;
       right: -59px;
     }
-    
+
   }
 
   &__text {

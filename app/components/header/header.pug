@@ -2,28 +2,29 @@ mixin header(fixed)
   +b.header&attributes(attributes)
     .container.header__container
       //- +icon('logo').__logo
-      +e.IMG(src='./assets/images/logo.svg').logo
+      +e.A(href='./').logo-link
+        +e.IMG(src='./assets/images/logo.svg').logo
       +b.UL.menu.header__menu
         +e.LI.item
-          +link(href='#')._nounder._medium Компания
+          +link(href='./about.html')._nounder._medium Компания
         +e.LI.item
-          +link(href='#')._nounder._medium Услуги
+          +link(href='./uslugi.html')._nounder._medium Услуги
         +e.LI.item
-          +link(href='#')._nounder._medium Кейсы
+          +link(href='./case.html')._nounder._medium Кейсы
         +e.LI.item
-          +link(href='#')._nounder._medium Журнал
+          +link(href='./journal.html')._nounder._medium Журнал
         +e.LI.item
-          +link(href='#')._nounder._medium Клиенты
+          +link(href='./clients.html')._nounder._medium Клиенты
         +e.LI.item
           +link(href='./vacancies.html')._nounder._medium Вакансии
         +e.LI.item._last
-          +link(href='#')._nounder._medium Контакты
+          +link(href='./contacts.html')._nounder._medium Контакты
         +e.LI.item._btn
           +button._blue._big-big.menu__btn Оформить заказ
         +e.LI.item._present
           +link._nounder._gray._flex
             img(src='./assets/images/pdf.png')
-            | скачать презентацию<br>5МБ
+            | скачать презентацию<br>5 MB
       +b.buttons
         +e.wrap
           +button.buttons__ico ico

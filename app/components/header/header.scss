@@ -1,6 +1,7 @@
 .header {
   // display: none;
-  height: 112px;
+  // height: 112px;
+  height: 96px;
   padding: 24px 0 0;
   box-sizing: border-box;
   padding-left: 20px;
@@ -9,12 +10,12 @@
   left: 0;
   right: 0;
   z-index: 6;
-  transition: all .6s ease;
+  transition: width .6s ease;
   position: relative;
   border-bottom: 1px solid #dcdcdc;
 
   &_wide {
-    transition: all .6s ease;
+    transition: width .6s ease;
     width: 100%;
 
     .buttons__project {
@@ -36,13 +37,25 @@
     }
   }
 
-  &_fixed {
+  &_fixed,
+  &_fixed-light,
+  &_fixed-dark {
     position: fixed;
-    background-color: white;
+    padding-top: 29px;
+  }
+
+  &_fixed,
+  &_fixed-light {
+    background-color: $white;
+  }
+
+  &_fixed-dark {
+    background-color: $color-bg-dark;
   }
 
   &_inner {
-    padding-top: 34px;
+    // padding-top: 34px;
+    padding-top: 29px;
     // border-bottom: 1px solid $color-border-2;
   }
 
@@ -72,13 +85,20 @@
         margin-right: 0 !important;
         opacity: 1 !important;
       }
+    }
+  }
 
-      .header__menu {
-      }
+  &__logo-link {
+    cursor: pointer;
+    transition: opacity $ease-main;
+
+    &:hover {
+      opacity: .7;
     }
   }
 
   &__logo {
+    display: block;
     height: 32px;
   }
 
@@ -193,6 +213,13 @@
       margin-right: 51px;
     }
 
+    .link {
+
+      &.is-active {
+        color: $color-main;
+      }
+    }
+
     &_last {
       margin-right: 0 !important;
     }
@@ -207,18 +234,12 @@
   }
 }
 
-@include screen('xl-b', max) {
-  .menu__item:not(:last-child) {
-    margin-right: 40px;
-  }
-}
-
 @include screen('xl-r', max) {
 
   .header {
     width: 100%;
     margin-left: 0;
-    padding-top: 24px;
+    padding-top: 29px;
     //background: white;
 
     &__container {
@@ -233,17 +254,17 @@
 
     &__menu {
       //display: none;
-      background: white;
+      background-color: white;
       position: fixed;
       display: flex;
       flex-direction: column;
-      top: 0;
-      padding-top: 80px;
-      //top: 50px;
-      padding-bottom: 50px;
+      // top: 0;
+      top: 96px;
+      // padding-top: 80px;
+      padding-bottom: 30px;
       width: 100%;
       box-sizing: border-box;
-      height: 100%;
+      height: calc(100% - 96px);
       overflow: auto;
       //margin: 0 -31px;
       margin: 0;
@@ -262,14 +283,14 @@
     }
 
     &_inner {
-      height: 80px;
+      // height: 80px;
       padding-left: 0;
     }
 
     .menu {
 
       &__item {
-        margin-right: 0;
+        margin-right: 0!important;
         padding-left: 30px;
         padding-right: 30px;
 
@@ -293,11 +314,13 @@
         &_present {
           display: flex;
           justify-content: center;
-          margin-top: 50px;
+          margin-top: 41px;
           flex-shrink: 0;
 
           .link__text {
-            font-size: 14px;
+            font-size: 13px;
+            letter-spacing: .9px;
+            line-height: 1.7;
             text-align: left;
             text-transform: initial;
           }
