@@ -8,6 +8,7 @@
     <title>Prostudio</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
     <link href="favicon.ico" rel="shortcut icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;subset=cyrillic" rel="stylesheet">
     <link href="assets/styles/app.min.css" rel="stylesheet">
@@ -31,6 +32,54 @@
             <div class="buttons">
                 <div class="buttons__wrap"><a class="button buttons__ico">ico</a><a class="button button_blue buttons__project js-fancybox" href="#contact">обсудить проект</a></div>
                 <div class="buttons__burger js-padmenu"><span></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="contact popup-contact" id="contact">
+        <div class="contact__wrapper">
+            <div class="contact__step1">
+                <div class="contact__title">Заполните заявку на проект?</div>
+                <form class="contact__form">
+                    <div class="contact__box">
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half">Выберите проект:<select class="select js-select">
+                                <option value="Веб-сайт">Веб-сайт</option>
+                                <option value="Продвижение">Продвижение</option>
+                                <option value="Брендинг">Брендинг</option>
+                                <option value="Приложение">Приложение</option>
+                                <option value="Аналитика">Аналитика</option>
+                                <option value="Поддержка">Поддержка</option>
+                            </select>
+                            <div class="inputbox__placeholder"></div>
+                        </div>
+                        <div class="inputbox inputbox inputbox_noborder contact__inputbox contact__inputbox contact__inputbox_half contact__inputbox contact__inputbox_flexstart">
+                            <!--+input(placeholder="Плейсхолдер")-->
+                            <div class="inputbox__title">Бюджет:</div><label class="checkradio"><input class="checkradio__input" name="budget" value="test" checked="true" type="radio" />
+                                <!--+e.SPAN.box--><span class="checkradio__content">100-200 тыс. руб</span></label><label class="checkradio"><input class="checkradio__input" name="budget" value="test-2" type="radio" />
+                                <!--+e.SPAN.box--><span class="checkradio__content">от 500 тыс. руб</span></label>
+                            <div class="inputbox__placeholder"></div>
+                        </div>
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
+                            <div class="inputbox__placeholder">Имя</div>
+                        </div>
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
+                            <div class="inputbox__placeholder">Телефон</div>
+                        </div>
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
+                            <div class="inputbox__placeholder">Email</div>
+                        </div>
+                        <div class="inputbox inputbox_file contact__inputbox contact__inputbox contact__inputbox_half"><label><input class="input" type="file" /><span class="filename">Добавить файл</span><img class="addfile" src="./assets/images/addfile.svg" /></label>
+                            <div class="inputbox__placeholder"></div>
+                        </div>
+                        <div class="textareabox contact__textarea"><textarea class="textarea"></textarea>
+                            <div class="textareabox__placeholder">Сообщение</div>
+                        </div>
+                    </div>
+                    <div class="contact__text">Нажимая на кнопку «Отправить», вы соглашаетесь на обработку персональных данных<br>в соответсвии с<a class="link link_blue"><span class="link__text"> Политикой конфиденциальности.</span></a></div><input class="button button_blue button_big contact__btn js-submit" type="submit" value="отправить заявку" />
+                </form>
+            </div>
+            <div class="contact__step2"><img src="./assets/images/msg_send.jpg" />
+                <div class="contact__title">Отправлено!</div>
+                <div class="contact__subtitle">Спасибо за обращение в нашу студию.</div><a class="button button_blue button_big contact__btn contact__btn_mt js-popup-close">на главную</a>
             </div>
         </div>
     </div>
@@ -102,10 +151,10 @@
             </div>
             <div class="footer__mobil">
                 <div class="city">
-                    <div class="city__name">Петербург</div><a class="link link_nounder link_xl link_img city__address"><span class="link__text"><img src="./assets/images/ext_link.png" />Ленинский проспект, 151</span></a><a class="link link_dashed link_xl city__tel"><span class="link__text">+7(812) 645-65-96</span></a>
+                    <div class="city__name">Петербург</div><a class="link link_nounder link_xl link_img city__address"><span class="link__text"><img src="./assets/images/ext_link.png" />Ленинский проспект, 151</span></a><a class="link link_dashed link_xl city__tel" href="tel:+78126456596"><span class="link__text">+7(812) 645-65-96</span></a>
                 </div>
                 <div class="city">
-                    <div class="city__name">Москва</div><a class="link link_nounder link_xl link_img city__address"><span class="link__text"><img src="./assets/images/ext_link.png" />Проспект вернадского, 43</span></a><a class="link link_dashed link_xl city__tel"><span class="link__text">+7(495) 645-65-96</span></a>
+                    <div class="city__name">Москва</div><a class="link link_nounder link_xl link_img city__address"><span class="link__text"><img src="./assets/images/ext_link.png" />Проспект вернадского, 43</span></a><a class="link link_dashed link_xl city__tel" href="tel:+74956456596"><span class="link__text">+7(495) 645-65-96</span></a>
                 </div><a class="link link_nounder link_xl link_blue footer__mail footer__mail_mobil" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a>
                 <div class="apps apps_mobil">
                     <div class="apps__title">Cкачать приложение:</div><a class="link link_nounder link_gray link_flex apps__link"><span class="link__text"><img src="./assets/images/apple.png" /></span></a><a class="link link_nounder link_gray link_flex apps__link"><span class="link__text"><img src="./assets/images/android.png" /></span></a>
