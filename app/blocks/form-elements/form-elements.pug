@@ -12,6 +12,11 @@ mixin input-number()
     input.input.input-numberbox__input.js-numberbox-input&attributes(attributes)
     span.input-numberbox__button.js-numberbox-plus
 
+mixin textareabox(placeholder)
+  +b.textareabox&attributes(attributes)
+    block
+    +e.placeholder= placeholder
+
 mixin textarea()
   textarea.textarea&attributes(attributes)
     block

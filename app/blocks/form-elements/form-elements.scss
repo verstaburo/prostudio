@@ -13,26 +13,38 @@
   letter-spacing: 1.35px;
 }
 
-.inputbox__placeholder_active {
-  color: $color-main;
-  font-size: 14px;
-  top: -14px!important;
-}
-
-.inputbox {
+.inputbox,
+.textareabox {
   display: block;
   position: relative;
-
-  .input {
-    z-index: 1;
-    background: transparent;
-  }
 
   &__placeholder {
     position: absolute;
     left: 0;
     top: 10px;
     transition: all .5s ease;
+
+    &_active {
+      color: $color-main;
+      font-size: 14px;
+      top: -14px!important;
+    }
+  }
+}
+
+.textareabox {
+
+  .textarea {
+    z-index: 1;
+    background: transparent;
+  }
+}
+
+.inputbox {
+
+  .input {
+    z-index: 1;
+    background: transparent;
   }
 
   &__title {

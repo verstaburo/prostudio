@@ -12,6 +12,18 @@ import Inputmask from 'inputmask';
 
 const $ = window.$;
 
+export function textareabox() {
+  const textarea = document.querySelector('.textareabox .textarea');
+  textarea.setAttribute('style', `height: ${textarea.scrollHeight}px;`);
+
+  function OnInput() {
+    this.style.height = '20px';
+    this.style.height = `${this.scrollHeight}px`;
+  }
+
+  textarea.addEventListener('input', OnInput, false);
+}
+
 export function selects() {
   /* eslint-disable no-unused-vars */
   if ($('.js-select').length) {
@@ -34,6 +46,20 @@ $('.inputbox .input').focusout(function () {
     placeHolder.addClass('inputbox__placeholder_active');
   } else {
     placeHolder.removeClass('inputbox__placeholder_active');
+  }
+});
+
+$('.textareabox .textarea').focus(function () {
+  const placeHolder = $(this).next('.textareabox__placeholder');
+  placeHolder.addClass('textareabox__placeholder_active');
+});
+
+$('.textareabox .textarea').focusout(function () {
+  const placeHolder = $(this).next('.textareabox__placeholder');
+  if ($(this).val().length >= 1) {
+    placeHolder.addClass('textareabox__placeholder_active');
+  } else {
+    placeHolder.removeClass('textareabox__placeholder_active');
   }
 });
 
