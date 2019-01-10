@@ -5,6 +5,25 @@
   margin-top: 53px;
 
   &__title {
+    margin-top: 70px;
+    margin-bottom: 45px;
+    color: $color-main;
+    text-align: center;
+
+    @include section-title;
+
+    @include screen('md', max) {
+      font-size: 46px;
+    }
+
+    @include screen('sm', max) {
+      margin-top: 60px;
+      margin-bottom: 35px;
+      font-size: 42px;
+    }
+  }
+
+  &__subtitle {
     font-size: 25px;
     line-height: 36px;
     letter-spacing: .25px;
@@ -53,10 +72,10 @@
 @include screen('lg-r', max) {
 
   .portfolio {
-    
+
     margin-top: 45px;
 
-    &__title {
+    &__subtitle {
       font-size: 22px;
       line-height: 36px;
       letter-spacing: .22px;
@@ -78,7 +97,7 @@
       -webkit-overflow-scrolling: touch;
       overflow-y: hidden;
     }
-    
+
     &__filter {
       &:not(:last-child) {
         margin-right: 95px;
@@ -94,10 +113,10 @@
 @include screen('md', max) {
 
   .portfolio {
-    
+
     margin-top: 34px;
 
-    &__title {
+    &__subtitle {
       font-size: 20px;
       line-height: 36px;
       letter-spacing: 0.2px;
@@ -114,7 +133,7 @@
         padding-right: 15px;
       }
     }
-    
+
     &__filters {
       padding-left: 15px;
       padding-right: 15px;

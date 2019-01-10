@@ -2,6 +2,23 @@
   display: block;
 
   &__title {
+    margin-top: 70px;
+    color: $color-main;
+    text-align: center;
+
+    @include section-title;
+
+    @include screen('md', max) {
+      font-size: 46px;
+    }
+
+    @include screen('sm', max) {
+      margin-top: 60px;
+      font-size: 42px;
+    }
+  }
+
+  &__subtitle {
     margin-top: 52px;
 
     @include inner-title;
@@ -27,39 +44,39 @@
       max-width: 66%;
       max-height: 66%;
     }
-    
+
     &:not(&_more) {
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    
+
     &:nth-child(2n + 1) {
       background-color: $color-bg-card;
     }
-    
+
     &:nth-child(2),
     &:nth-child(12),
     &_more {
       background-color: $color-main;
     }
-    
+
     &:nth-child(4) {
       background-color: #ff0000;
     }
-    
+
     &:nth-child(6) {
       background-color: #23a8e0;
     }
-    
+
     &:nth-child(8) {
       background-color: #a89979;
     }
-    
+
     &:nth-child(10) {
       background-color: $black;
     }
-    
+
     &:nth-child(14) {
       background-color: #323232;
     }
@@ -118,7 +135,7 @@
     padding: 38px 35px;
     transition: opacity .3s ease, background-color .3s ease;;
 
-    &__title {
+    &__subtitle {
       font-size: 18px;
       font-weight: 700;
       letter-spacing: .9px;
@@ -145,7 +162,7 @@
 
   .clients {
 
-    &__title {
+    &__subtitle {
       margin-top: 45px;
 
       @include text-address;
@@ -174,7 +191,7 @@
 
   .clients {
 
-    &__title {
+    &__subtitle {
       font-size: 20px;
       margin-top: 34px;
     }

@@ -29,6 +29,10 @@
       padding: 0 46px;
     }
 
+    @include screen('sm', max) {
+      padding: 0 0;
+    }
+
     //@include screen('desktop') {
     //  width: 25%;
     //}

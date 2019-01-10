@@ -135,11 +135,22 @@
     }
 
     &__mouse {
+      position: relative;
       margin: 105px auto 0;
       display: table;
 
       @include screen("lg", max) {
         display: none;
+      }
+
+      &::before {
+        @include pseudo;
+        top: 73px;
+        left: 50%;
+        margin-left: -2px;
+        width: 1px;
+        height: 267px;
+        background-color: rgba($white, .1);
       }
     }
 
@@ -289,7 +300,18 @@
     }
 
     &__title {
+      position: relative;
       padding-top: 93px;
+
+      &::before {
+        @include pseudo;
+        top: 186px;
+        left: 50%;
+        margin-left: -2px;
+        width: 1px;
+        height: 104px;
+        background-color: rgba($white, .1);
+      }
 
       @include screen("lg", max) {
         font-size: 22px;
@@ -297,6 +319,11 @@
         width: 225px;
         padding-top: 33px;
         padding-bottom: 110px;
+
+        &::before {
+          top: 114px;
+          height: 84px;
+        }
       }
 
       @include screen("md-r", max) {
@@ -305,6 +332,10 @@
         width: 225px;
         padding-top: 0;
         padding-bottom: 136px;
+
+        &::before {
+          display: none;
+        }
       }
 
       @include screen("md", max) {
@@ -382,11 +413,35 @@
         width: 633px;
         height: 630px;
 
+        &::before,
+        &::after {
+          @include pseudo;
+          top: 96px;
+          width: 1px;
+          height: 1004px;
+          background-color: rgba($white, .1);
+        }
+
+        &::before {
+          left: -50%;
+          margin-left: 9px;
+        }
+
+        &::after {
+          right: -50%;
+          margin-right: 9px;
+        }
+
         @include screen("lg", max) {
           position: relative;
           width: 62.5%;
           height: auto;
           margin: 0 auto;
+
+          &::before,
+          &::after {
+            display: none;
+          }
         }
 
         @include screen("md", max) {
@@ -502,6 +557,25 @@
         background-color: rgba(#fff, .07);
         flex-shrink: 0;
 
+        &::before,
+        &::after {
+          @include pseudo;
+          left: 50%;
+          margin-left: -1px;
+          width: 1px;
+          background-color: rgba($white, .1);
+        }
+
+        &::before {
+          bottom: -83px;
+          height: 108px;
+        }
+
+        &::after {
+          top: -131px;
+          height: 157px;
+        }
+
         &-text {
           @include center-image;
           width: 50px;
@@ -511,9 +585,15 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          cursor: pointer;
 
-          @include screen("lg", max) {
-            font-size: 36px;
+          &::before {
+            @include pseudo($display: block, $pos: absolute, $content: '<');
+            @include center-block;
+
+            @include screen("lg", max) {
+              font-size: 30px;
+            }
           }
         }
       }

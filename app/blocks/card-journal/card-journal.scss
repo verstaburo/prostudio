@@ -62,7 +62,7 @@
 }
 
 
-  
+
 
   &__title {
     color: white;
@@ -125,6 +125,9 @@
       @include screen('md', max) {
         margin-right: 28px;
         padding: 31px 48px 47px 49px;
+      }
+      @include screen('md2', max) {
+        padding: 31px 32px 38px 32px;
       }
     }
 

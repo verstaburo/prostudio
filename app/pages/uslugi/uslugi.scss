@@ -2,6 +2,23 @@
   display: flex;
   flex-direction: column;
 
+  &__title {
+    margin-top: 70px;
+    color: $color-main;
+    text-align: center;
+
+    @include section-title;
+
+    @include screen('md', max) {
+      font-size: 46px;
+    }
+
+    @include screen('sm', max) {
+      margin-top: 60px;
+      font-size: 42px;
+    }
+  }
+
   &-item {
     display: flex;
     align-items: flex-start;
@@ -26,7 +43,7 @@
         margin-top: 110px!important;
       }
     }
-    
+
     &_left {
       justify-content: space-between;
 
@@ -254,7 +271,7 @@
       &_brend {
         margin-top: 0;
       }
-      
+
       &_soft {
         margin-top: 55px;
 
@@ -293,7 +310,7 @@
         line-height: 1;
         letter-spacing: 0.5px;
         list-style: none;
-        
+
 
         &:not(:last-child) {
           padding-bottom: 33px;
@@ -308,7 +325,7 @@
           font-size: 20px;
           &:not(:last-child) {
             padding-bottom: 52px;
-  
+
             @include screen("lg", max) {
               padding-bottom: 40px;
             }
@@ -324,7 +341,7 @@
         &:hover {
           opacity: .5;
         }
-        
+
       }
     }
 
@@ -355,7 +372,7 @@
       }
 
       &_sites {
-        
+
         @include screen("md", max) {
           margin-top: 42px;
         }
@@ -472,7 +489,7 @@
           height: 17px;
           @include center-image;
         }
-        
+
       }
     }
 
@@ -490,7 +507,7 @@
       @include screen("md", max) {
         display: none;
       }
-      
+
 
       &_sites {
         bottom: -24px;
@@ -544,7 +561,7 @@
       }
     }
 
-    
+
   }
 
   &__footer {

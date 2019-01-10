@@ -14,9 +14,9 @@ mixin footer()
           +link._nounder._gray._flex.apps__link
             img(src='/assets/images/apple.png')
             |iPhone
-          +link._nounder._gray._flex.apps__link
-            img(src='./assets/images/android.png')
-            | Android
+          //- +link._nounder._gray._flex.apps__link
+          //-   img(src='./assets/images/android.png')
+          //-   | Android
       +e.right
         +b.icons
           +link-icon('vk')._gray
@@ -40,9 +40,9 @@ mixin footer()
             +link._nounder._gray._flex.apps__link
               img(src='./assets/images/apple.png')
               | iPhone
-            +link._nounder._gray._flex.apps__link
-              img(src='./assets/images/android.png')
-              | Android
+            //- +link._nounder._gray._flex.apps__link
+            //-   img(src='./assets/images/android.png')
+            //-   | Android
           +b.langs
             +link._nounder._gray.langs__lang_active RU
             +link._nounder._gray.langs__lang EN
@@ -64,9 +64,9 @@ mixin footer()
           +e.title Cкачать приложение:
           +link._nounder._gray._flex.apps__link
             img(src='./assets/images/apple.png')
-          +link._nounder._gray._flex.apps__link
-            img(src='./assets/images/android.png')
-        +switcher('RU', 'EN').footer__switcher
+          //- +link._nounder._gray._flex.apps__link
+          //-   img(src='./assets/images/android.png')
+        +switcher('RU', 'EN').js-switcher-lang.footer__switcher
         +e.copyright_mobil © 2009-2017  ООО «Цифровая империя»
 
 mixin footer_dark()
@@ -85,9 +85,9 @@ mixin footer_dark()
           +link._nounder._dark._gray._flex.apps__link
             img(src='./assets/images/apple.png')
             |iPhone
-          +link._nounder._dark._gray._flex.apps__link
-            img(src='./assets/images/android.png')
-            | Android
+          //- +link._nounder._dark._gray._flex.apps__link
+          //-   img(src='./assets/images/android.png')
+          //-   | Android
       +e.right
         +b.icons
           +link-icon('vk')._gray._dark
@@ -111,9 +111,9 @@ mixin footer_dark()
             +link._nounder._dark._gray._flex.apps__link
               img(src='./assets/images/apple.png')
               | iPhone
-            +link._nounder._dark._gray._flex.apps__link
-              img(src='./assets/images/android.png')
-              | Android
+            //- +link._nounder._dark._gray._flex.apps__link
+            //-   img(src='./assets/images/android.png')
+            //-   | Android
           +b.langs
             +link._nounder._dark._gray.langs__lang_active RU
             +link._nounder._dark._gray.langs__lang EN
@@ -135,9 +135,9 @@ mixin footer_dark()
           +e.title.text_opacity Cкачать приложение:
           +link._nounder._dark._gray._flex.apps__link
             img(src='./assets/images/apple.png')
-          +link._nounder._dark._gray._flex.apps__link
-            img(src='./assets/images/android.png')
-        +switcher('RU', 'EN').footer__switcher._opacity
+          //- +link._nounder._dark._gray._flex.apps__link
+          //-   img(src='./assets/images/android.png')
+        +switcher('RU', 'EN').js-switcher-lang.footer__switcher._opacity
         +e.copyright_mobil.text_opacity © 2009-2017  ООО «Цифровая империя»
 
 

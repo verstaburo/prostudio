@@ -223,6 +223,13 @@
   line-height: 1;
 }
 
+@mixin section-title {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 2px;
+}
+
 @mixin inner-title {
   font-size: 25px;
   font-weight: 400;
