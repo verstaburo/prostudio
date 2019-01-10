@@ -2,7 +2,7 @@
   //display: none;
   margin-top: 101px;
   padding: 56px 0 47px;
-  background: $color-bg;
+  background-color: $color-bg;
   width: 100%;
   color: $color-placeholder2;
   fill: $color-placeholder2;
@@ -15,9 +15,10 @@
   }
 
   &_dark {
-    background: transparent;
+    background-color: transparent;
     border-top: 1px solid rgba(#fff, .1);
     margin-top: 247px;
+    color: $white;
 
     @include screen('lg', max) {
       margin-top: 84px !important;
@@ -26,6 +27,22 @@
     @include screen('md', max) {
       margin-top: 26px !important;
       padding-top: 0;
+    }
+
+    .link {
+
+      &_dark {
+        color: $white!important;
+        opacity: .5;
+      }
+    }
+
+    .text {
+
+      &_opacity {
+        color: $white!important;
+        opacity: .5;
+      }
     }
   }
 

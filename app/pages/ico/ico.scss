@@ -127,7 +127,7 @@
     &__button {
       margin-top: 86px;
       letter-spacing: 1.12px;
-      padding: 20px 34px;
+      padding: 19px 34px;
 
       @include screen("lg", max) {
         display: none;
@@ -293,6 +293,7 @@
       background-color: #141414;
       border-radius: 50%;
       z-index: -1;
+      opacity: .2;
 
       @include screen("md-r", max) {
         display: none;
@@ -564,6 +565,10 @@
           margin-left: -1px;
           width: 1px;
           background-color: rgba($white, .1);
+
+          @include screen('lg', max) {
+            display: none;
+          }
         }
 
         &::before {
@@ -590,6 +595,8 @@
           &::before {
             @include pseudo($display: block, $pos: absolute, $content: '<');
             @include center-block;
+            font-size: 34px;
+            top: 52%;
 
             @include screen("lg", max) {
               font-size: 30px;
@@ -957,8 +964,13 @@
       @include screen("md", max) {
         margin-top: 43px;
       }
+
       a {
         color: $color-main;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
 

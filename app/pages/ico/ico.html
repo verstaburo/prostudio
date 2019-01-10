@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=490px, initial-scale=1, maximum-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Versta Project Template</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <link href="favicon.ico" rel="shortcut icon"><link href="https://fonts.googleapis.com/css?family=Montserrat&amp;subset=cyrillic" rel="stylesheet">
+    <link href="assets/styles/app.min.css" rel="stylesheet">
+    <script src="assets/scripts/libs/jquery.min.js"></script>
+  </head>
+  <body class="body_dark">
+    <div class="header header_wide header_inner header_no-border header_full-width">
+      <div class="container header__container"><img class="header__logo" src="./assets/images/logo_dark.png" alt="" role="presentation"/>
+        <ul class="menu header__menu header__menu_dark">
+          <li class="menu__item"><a class="link link_nounder link_medium link_white" href="#"><span class="link__text">Компания</span></a>
+          </li>
+          <li class="menu__item"><a class="link link_nounder link_medium link_white" href="#"><span class="link__text">Услуги</span></a>
+          </li>
+          <li class="menu__item"><a class="link link_nounder link_medium link_white" href="#"><span class="link__text">Кейсы</span></a>
+          </li>
+          <li class="menu__item"><a class="link link_nounder link_medium link_white" href="#"><span class="link__text">Журнал</span></a>
+          </li>
+          <li class="menu__item"><a class="link link_nounder link_medium link_white" href="#"><span class="link__text">Клиенты</span></a>
+          </li>
+          <li class="menu__item"><a class="link link_nounder link_medium link_white" href="./vacancies.html"><span class="link__text">Вакансии</span></a>
+          </li>
+          <li class="menu__item menu__item_last"><a class="link link_nounder link_medium link_white" href="#"><span class="link__text">Контакты</span></a>
+          </li>
+          <li class="menu__item menu__item_btn"><a class="button button_blue button_big-big menu__btn">Оформить заказ</a>
+          </li>
+          <li class="menu__item menu__item_present"><a class="link link_nounder link_gray link_flex"><span class="link__text"><img src="./assets/images/pdf.png"/>скачать презентацию<br>5МБ</span></a>
+          </li>
+        </ul>
+        <div class="buttons">
+          <div class="buttons__wrap"><a class="button buttons__ico">ico</a><a class="button button_blue buttons__project js-fancybox" href="#contact">обсудить проект</a>
+          </div>
+          <div class="buttons__burger buttons__burger_white js-padmenu"><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact popup-contact" id="contact">
+      <div class="contact__wrapper">
+        <div class="contact__step1">
+          <div class="contact__title">Заполните заявку на проект?
+          </div>
+          <form class="contact__form">
+            <div class="contact__box">
+              <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half">Выберите проект:
+                <select class="select js-select">
+                  <option value="Веб-сайт">Веб-сайт</option>
+                  <option value="Продвижение">Продвижение</option>
+                  <option value="Брендинг">Брендинг</option>
+                  <option value="Приложение">Приложение</option>
+                  <option value="Аналитика">Аналитика</option>
+                  <option value="Поддержка">Поддержка</option>
+                </select>
+                <div class="inputbox__placeholder">
+                </div>
+              </div>
+              <div class="inputbox inputbox inputbox_noborder contact__inputbox contact__inputbox contact__inputbox_half contact__inputbox contact__inputbox_flexstart">
+                <!--+input(placeholder="Плейсхолдер")-->
+                <div class="inputbox__title">Бюджет:</div>
+                <label class="checkradio"><input class="checkradio__input" name="budget" value="test" checked="true" type="radio"/>
+                  <!--+e.SPAN.box--><span class="checkradio__content">100-200 тыс. руб</span>
+                </label>
+                <label class="checkradio"><input class="checkradio__input" name="budget" value="test-2" type="radio"/>
+                  <!--+e.SPAN.box--><span class="checkradio__content">от 500 тыс. руб</span>
+                </label>
+                <div class="inputbox__placeholder">
+                </div>
+              </div>
+              <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half">
+                <input class="input"/>
+                <div class="inputbox__placeholder">Имя
+                </div>
+              </div>
+              <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half">
+                <input class="input"/>
+                <div class="inputbox__placeholder">Телефон
+                </div>
+              </div>
+              <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half">
+                <input class="input"/>
+                <div class="inputbox__placeholder">Email
+                </div>
+              </div>
+              <div class="inputbox inputbox_file contact__inputbox contact__inputbox contact__inputbox_half">
+                <label>
+                  <input class="input" type="file"/><span class="filename">Добавить файл</span><img class="addfile" src="./assets/images/addfile.svg"/>
+                </label>
+                <div class="inputbox__placeholder">
+                </div>
+              </div>
+              <div class="textareabox contact__textarea">
+                <textarea class="textarea"></textarea>
+                <div class="textareabox__placeholder">Сообщение
+                </div>
+              </div>
+            </div>
+            <div class="contact__text">Нажимая на кнопку  «Отправить», вы соглашаетесь на обработку персональных данных<br>в соответсвии с<a class="link link_blue"><span class="link__text"> Политикой конфиденциальности.</span></a>
+            </div><input class="button button_blue button_big contact__btn js-submit" type="submit" value="отправить заявку"/>
+          </form>
+        </div>
+        <div class="contact__step2"><img src="./assets/images/msg_send.jpg"/>
+          <div class="contact__title">Отправлено!
+          </div>
+          <div class="contact__subtitle">Спасибо за обращение в нашу студию.
+          </div><a class="button button_blue button_big contact__btn contact__btn_mt js-popup-close">на главную</a>
+        </div>
+      </div>
+    </div>
+    <div class="ico">
+      <section>
+        <div class="ico-project">
+          <div class="container container_inner">
+            <div class="ico-project__wrap">
+              <h1 class="ico-project__title">Подготовка проектов к <span class="ico-project__title_big">ICO</span>
+              </h1>
+              <p class="ico-project__text">Юридическое сопровождение, технологическая  разработка, маркетинговые стратегии.
+              </p><a class="button button_big button_fullwhite button_border-size-2 ico-project__button">обсудить проект</a>
+            </div>
+            <div class="ico-project__mouse"><a class="js-anchor" href=".ico-recomend"><img src="assets/images/mouse_white.png"></a>
+            </div>
+            <div class="ico-project__pad">
+              <div class="ico-project__pad-text">Обсудить проект
+              </div>
+              <div class="ico-project__box"><a class="link link_icon ico-project__icon">
+                <svg class="link__icon">
+                  <use xlink:href="assets/images/icon.svg#icon_arrow_right"></use>
+                </svg><span class="link__text"></span></a>
+                <div class="ico-project__circles">
+                  <div class="ico-project__circle">
+                  </div>
+                  <div class="ico-project__circle">
+                  </div>
+                  <div class="ico-project__circle">
+                  </div>
+                  <div class="ico-project__circle">
+                  </div>
+                  <div class="ico-project__circle">
+                  </div>
+                </div>
+                <div class="ico-project__ball">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container container_inner">
+          <div class="ico-recomend">
+            <div class="ico-recomend__box">
+              <h2 class="ico-recomend__title ico-title">Рекомендации по проведению ICO
+              </h2>
+              <div class="ico-recomend__img-wrap"><img class="ico-recomend__img" src="assets/images/ico-recomend.png" alt="" role="presentation"/>
+                <div class="ico-recomend__text-number-1">109
+                </div>
+                <div class="ico-recomend__text-number-2">412
+                </div>
+                <div class="ico-recomend__text">
+                  <p>109 из 412</p>
+                  <p>проектов нет юр.лица</p>
+                </div>
+              </div>
+              <div class="ico-recomend__footer">
+                <div class="ico-recomend__footer__proc">50% ICO
+                </div>
+                <div class="ico-recomend__footer__btn">
+                  <div class="ico-recomend__footer__btn-text">
+                  </div>
+                </div>
+                <div class="ico-recomend__footer__summ">$ 100 000
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="ico-stat">
+          <div class="container container_inner">
+            <p class="ico-stat__title">Только половина проектов ICO удалось собрать более 100 000 долларов США.*
+            </p>
+            <div class="ico-stat__box">
+              <div class="ico-stat__item ico-stat__item-1">
+                <div class="ico-stat__item-header ico-stat__item-1-header">
+                  <div class="ico-stat__item-title ico-stat__item-1-title">46.6%
+                  </div>
+                  <div class="ico-stat__item-name ico-stat__item-1-name">Idea
+                  </div>
+                </div>
+                <div class="ico-stat__item-text ico-stat__item-1-text">46.6% ICO началось с идеи и лишь 0,5% с готовым продуктом. Что говорит о непривлекательности ICO проектов, для привлечения инвестиций.*
+                </div>
+              </div>
+              <div class="ico-stat__item ico-stat__item-2">
+                <div class="ico-stat__item-header ico-stat__item-2-header">
+                  <div class="ico-stat__item-title ico-stat__item-2-title">26.2%
+                  </div>
+                  <div class="ico-stat__item-name ico-stat__item-2-name">MVP
+                  </div>
+                </div>
+              </div>
+              <div class="ico-stat__item ico-stat__item-3">
+                <div class="ico-stat__item-header ico-stat__item-3-header">
+                  <div class="ico-stat__item-title ico-stat__item-3-title">15.5%
+                  </div>
+                  <div class="ico-stat__item-name ico-stat__item-3-name">Alpha
+                  </div>
+                </div>
+              </div>
+              <div class="ico-stat__item ico-stat__item-4">
+                <div class="ico-stat__item-header ico-stat__item-4-header">
+                  <div class="ico-stat__item-title ico-stat__item-4-title">11.2%
+                  </div>
+                  <div class="ico-stat__item-name ico-stat__item-4-name">Beta
+                  </div>
+                </div>
+              </div>
+              <div class="ico-stat__item ico-stat__item-5">
+                <div class="ico-stat__item-header ico-stat__iitem-5-header">
+                  <div class="ico-stat__item-title ico-stat__item-5-title">0.5%
+                  </div>
+                  <div class="ico-stat__item-name ico-stat__item-5-name">Code
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ico-stat__info">*согласно данным <a href="https://icorating.com" target="_blank">icorating.com</a>
+            </div>
+          </div>
+          <div class="ico-stat__bg"><img src="assets/images/ico-stat_bg.png">
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="ico-uslugi">
+          <div class="container container_inner">
+            <h2 class="ico-uslugi__title ico-title">Наши услуги
+            </h2>
+            <div class="ico-uslugi__box">
+              <div class="ico-uslugi__box-bg"><img src="assets/images/ico-uslugi_bg.png">
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">01</span>
+                </div>
+                <p class="ico-uslugi-item__text">Формулирование<br> идеи.
+                </p>
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">02</span>
+                </div>
+                <p class="ico-uslugi-item__text">Анализ рынка<br> и конкурентов.
+                </p>
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">03</span>
+                </div>
+                <p class="ico-uslugi-item__text">Обоснование внедрения технологии блокчейн для компании.
+                </p>
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">04</span>
+                </div>
+                <p class="ico-uslugi-item__text">Формирование профессиональной команды<br> исполнителей.
+                </p>
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">05</span>
+                </div>
+                <p class="ico-uslugi-item__text">Написание смарт-контрактов.
+                </p>
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number">10
+                </div>
+                <p class="ico-uslugi-item__text ico-uslugi-item__text_grey">Создание защиты для бесперебойной работы системы.
+                </p>
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number">09
+                </div>
+                <p class="ico-uslugi-item__text ico-uslugi-item__text_grey">Разработка White Paper.
+                </p>
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">08</span>
+                </div>
+                <p class="ico-uslugi-item__text">Составление структуры ICO.
+                </p>
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">07</span>
+                </div>
+                <p class="ico-uslugi-item__text">Разработка дорожной карты.
+                </p>
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">06</span>
+                </div>
+                <p class="ico-uslugi-item__text">Разработка рекламной компании для привлечения инвесторов.
+                </p>
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number">11
+                </div>
+                <p class="ico-uslugi-item__text ico-uslugi-item__text_grey">Разработка сайта с личным кабинетом для инвестора и мобильных приложений.
+                </p>
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number">12
+                </div>
+                <p class="ico-uslugi-item__text ico-uslugi-item__text_grey">Регистрация предприятия в наиболее подходящей для этого юрисдикции.
+                </p>
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number">13
+                </div>
+                <p class="ico-uslugi-item__text ico-uslugi-item__text_grey">Выпуск токенов.
+                </p>
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number">14
+                </div>
+                <p class="ico-uslugi-item__text ico-uslugi-item__text_grey">Выпуск токенов.
+                </p>
+              </div>
+              <div class="ico-uslugi-item">
+                <div class="ico-uslugi-item__number">15
+                </div>
+                <p class="ico-uslugi-item__text ico-uslugi-item__text_grey">Старт ICO.
+                </p>
+              </div>
+            </div>
+            <div class="ico-uslugi__box-pad">
+              <div class="slider swiper-container js-slider ico-uslugi-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                          <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">01</span>
+                          </div>
+                          <p class="ico-uslugi-item__text">Формулирование идеи.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                        </div>
+                        <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">02</span>
+                        </div>
+                        <p class="ico-uslugi-item__text">Анализ рынка и конкурентов.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                        </div>
+                        <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">03</span>
+                        </div>
+                        <p class="ico-uslugi-item__text">Обоснование внедрения технологии блокчейн для компании.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                        </div>
+                        <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">04</span>
+                        </div>
+                        <p class="ico-uslugi-item__text">Формирование профессиональной команды исполнителей.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                        </div>
+                        <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">05</span>
+                        </div>
+                        <p class="ico-uslugi-item__text">Написание смарт-контрактов.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                        </div>
+                        <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">06</span>
+                        </div>
+                        <p class="ico-uslugi-item__text">Разработка рекламной компании для привлечения инвесторов.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                        </div>
+                        <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">07</span>
+                        </div>
+                        <p class="ico-uslugi-item__text">Разработка дорожной карты.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                        </div>
+                        <div class="ico-uslugi-item__number ico-uslugi-item__number_gradient"><span class="ico-uslugi-item__number-inner">08</span>
+                        </div>
+                        <p class="ico-uslugi-item__text">Составление структуры ICO.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                        </div>
+                        <div class="ico-uslugi-item__number">09
+                        </div>
+                        <p class="ico-uslugi-item__text ico-uslugi-item__text_grey">Разработка White Paper.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                        </div>
+                        <div class="ico-uslugi-item__number">10
+                        </div>
+                        <p class="ico-uslugi-item__text ico-uslugi-item__text_grey">Создание защиты для бесперебойной работы системы.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                        </div>
+                        <div class="ico-uslugi-item__number">11
+                        </div>
+                        <p class="ico-uslugi-item__text ico-uslugi-item__text_grey">Разработка сайта с личным кабинетом для инвестора и мобильных приложений.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                        </div>
+                        <div class="ico-uslugi-item__number">12
+                        </div>
+                        <p class="ico-uslugi-item__text ico-uslugi-item__text_grey">Регистрация предприятия в наиболее подходящей для этого юрисдикции.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                        </div>
+                        <div class="ico-uslugi-item__number">13
+                        </div>
+                        <p class="ico-uslugi-item__text ico-uslugi-item__text_grey">Выпуск токенов.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                        </div>
+                        <div class="ico-uslugi-item__number">14
+                        </div>
+                        <p class="ico-uslugi-item__text ico-uslugi-item__text_grey">Выпуск токенов.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slider__slide">
+                      <div class="ico-uslugi-item">
+                        <div class="ico-uslugi-item__item">
+                        </div>
+                        <div class="ico-uslugi-item__number">15
+                        </div>
+                        <p class="ico-uslugi-item__text ico-uslugi-item__text_grey">Старт ICO.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><a class="link link_icon ico__button ico-uslugi__button ico-uslugi__button_left">
+              <svg class="link__icon">
+                <use xlink:href="assets/images/icon.svg#icon_arrow_left"></use>
+              </svg><span class="link__text"></span></a><a class="link link_icon ico__button ico-uslugi__button ico-uslugi__button_right">
+              <svg class="link__icon">
+                <use xlink:href="assets/images/icon.svg#icon_arrow_right"></use>
+              </svg><span class="link__text"></span></a>
+            </div>
+          </div>
+          <div class="ico-uslugi__bg">
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="ico-works">
+          <div class="container container_inner">
+            <h2 class="ico-works__title ico-title">Проекты
+            </h2>
+            <div class="ico-works__box">
+              <div class="ico-works__stat">
+                <div class="ico-works__stat-title">За 2018 год
+                </div>
+                <div class="ico-works__stat-text">нами привлечено более 3 миллионов долларов, это 0,5% от рынка РФ
+                </div>
+              </div>
+              <div class="ico-works__slider-box">
+                <div class="ico-works__project">
+                  <div class="ico-works__project-title">Проекты Velvet
+                  </div>
+                  <ul class="ico-works__project-list">
+                    <li class="ico-works__project-item">Брэндинг
+                    </li>
+                    <li class="ico-works__project-item">Мобильное приложение
+                    </li>
+                    <li class="ico-works__project-item">Веб-сайт
+                    </li>
+                    <li class="ico-works__project-item">Маркетинг
+                    </li>
+                  </ul>
+                </div>
+                <div class="slider swiper-container js-slider ico-works__slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="slider__slide"><img src="assets/images/ico-works-slide.png">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slider__slide"><img src="assets/images/ico-works-slide.png">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slider__slide"><img src="assets/images/ico-works-slide.png">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ico-works__slider-nav"><a class="link link_icon ico__button ico-works__button ico-works__button_left">
+                  <svg class="link__icon">
+                    <use xlink:href="assets/images/icon.svg#icon_arrow_left"></use>
+                  </svg><span class="link__text"></span></a><a class="link link_icon ico__button ico-works__button ico-works__button_right">
+                  <svg class="link__icon">
+                    <use xlink:href="assets/images/icon.svg#icon_arrow_right"></use>
+                  </svg><span class="link__text"></span></a>
+                </div>
+                <div class="ico-works__slider-num">
+                </div>
+                <div class="ico-works__copyright"> velvet.money
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ico-works__bg-1"><img src="assets/images/ico-works-bg1.png">
+          </div>
+          <div class="ico-works__bg-2"><img src="assets/images/ico-works-bg2.png">
+          </div>
+          <div class="ico-works__bg-3">
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="ico-partners">
+          <div class="container container_inner">
+            <h2 class="ico-partners__title ico-title">Партнеры
+            </h2>
+            <p class="ico-partners__text">Мы работаем с командами профессионалов из различных областей.
+            </p>
+            <div class="ico-partners__box">
+              <div class="partners">
+                <div class="partners__img-wrap"><img src="assets/images/partner-1.png"/>
+                </div>
+                <div class="partners__text">Платежная система
+                </div>
+              </div>
+              <div class="partners">
+                <div class="partners__img-wrap"><img src="assets/images/partner-2.png"/>
+                </div>
+                <div class="partners__text">Концертный оператор
+                </div>
+              </div>
+              <div class="partners">
+                <div class="partners__img-wrap"><img src="assets/images/partner-3.png"/>
+                </div>
+                <div class="partners__text">Университет ИТМО
+                </div>
+              </div>
+            </div>
+            <div class="slider swiper-container js-slider ico-partners__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="slider__slide">
+                    <div class="partners">
+                      <div class="partners__img-wrap"><img src="assets/images/partner-1.png"/>
+                      </div>
+                      <div class="partners__text">Платежная система
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider__slide">
+                    <div class="partners">
+                      <div class="partners__img-wrap"><img src="assets/images/partner-2.png"/>
+                      </div>
+                      <div class="partners__text">Концертный оператор
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider__slide">
+                    <div class="partners">
+                      <div class="partners__img-wrap"><img src="assets/images/partner-3.png"/>
+                      </div>
+                      <div class="partners__text">Университет ИТМО
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ico-partners__slider-pag">
+            </div>
+          </div>
+          <div class="ico-partners__bg"><img src="assets/images/ico-partners-bg.png">
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="ico-info">
+          <div class="container container_inner">
+            <div class="ico-info__box">
+              <h2 class="ico-info__title">ico
+              </h2>
+              <p class="ico-info__text">Подготовка проекта к ICO - это не просто разработка сайта, маркетингового плана или логотипа. Это полномасштабный процесс построения коммуникаций и связи аналитической, технической и юридической составляющих в единую экосистему. Мы с радостью пообщаемся с вами о подготовке вашего проекта к проведению ICO, однако, будьте готовы ответить на наши вопросы(ссылка на вопросы) максимально подробно и объективно.
+              </p><a class="button button_blue button_big ico-info__button">связаться c нами</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="footer footer_dark">
+      <div class="container container_inner footer__container">
+        <div class="footer__left">
+          <div class="footer__contacts"><a class="link link_nounder link_gray link_lg link_dark" href="tel:+78126456596"><span class="link__text">+7 (812) 645-65-96</span></a><a class="link link_nounder link_gray link_lg link_dark" href="tel:+74956456596"><span class="link__text">+7 (495) 645-65-96</span></a><a class="link link_nounder link_dark link_gray link_lg footer__mail" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a>
+          </div>
+          <div class="footer__copyright footer__second text text_opacity">© 2009-2017  ООО «Цифровая империя»
+          </div>
+        </div>
+        <div class="footer__center"><a class="link link_nounder link_gray link_lg link_dark" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a>
+          <div class="apps footer__second">
+            <div class="apps__title text text_opacity">cкачать приложение:
+            </div><a class="link link_nounder link_dark link_gray link_flex apps__link"><span class="link__text"><img src="./assets/images/apple.png"/>iPhone</span></a>
+          </div>
+        </div>
+        <div class="footer__right">
+          <div class="icons"><a class="link link_icon link_gray link_dark">
+            <svg class="link__icon">
+              <use xlink:href="assets/images/icon.svg#icon_vk"></use>
+            </svg><span class="link__text"></span></a><a class="link link_icon link_gray link_dark">
+            <svg class="link__icon">
+              <use xlink:href="assets/images/icon.svg#icon_behance"></use>
+            </svg><span class="link__text"></span></a><a class="link link_icon link_gray link_dark">
+            <svg class="link__icon">
+              <use xlink:href="assets/images/icon.svg#icon_youtube"></use>
+            </svg><span class="link__text"></span></a><a class="link link_nounder link_dark"><span class="link__text"><img src="./assets/images/instagram.png"/></span></a>
+            <!--+link-icon('instagram')._gray--><a class="link link_icon link_gray link_dark">
+            <svg class="link__icon">
+              <use xlink:href="assets/images/icon.svg#icon_facebook"></use>
+            </svg><span class="link__text"></span></a><a class="link link_icon link_gray link_dark">
+            <svg class="link__icon">
+              <use xlink:href="assets/images/icon.svg#icon_telegram"></use>
+            </svg><span class="link__text"></span></a>
+          </div>
+          <div class="footer__second"><a class="link link_nounder link_gray link_flex link_dark footer__doc"><span class="link__text"><img src="./assets/images/pdf.png"/><span>скачать презентацию<br>5 MB</span></span></a>
+            <div class="langs"><a class="link link_nounder link_dark link_gray langs__lang langs__lang_active"><span class="link__text">RU</span></a><a class="link link_nounder link_dark link_gray langs__lang"><span class="link__text">EN</span></a>
+            </div>
+          </div>
+          <div class="footer__third">
+            <div class="apps">
+              <div class="apps__title text text_opacity">cкачать приложение:
+              </div><a class="link link_nounder link_dark link_gray link_flex apps__link"><span class="link__text"><img src="./assets/images/apple.png"/>iPhone</span></a>
+            </div>
+            <div class="langs"><a class="link link_nounder link_dark link_gray langs__lang langs__lang_active"><span class="link__text">RU</span></a><a class="link link_nounder link_dark link_gray langs__lang"><span class="link__text">EN</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__mobil">
+          <div class="city">
+            <div class="city__name text text_opacity text text_dark">Петербург
+            </div><a class="link link_nounder link_dark link_xl link_img city__address"><span class="link__text"><img src="./assets/images/ext_link.png"/>Ленинский проспект, 151</span></a><a class="link link_dashed link_dark link_xl city__tel"><span class="link__text">+7(812) 645-65-96</span></a>
+          </div>
+          <div class="city">
+            <div class="city__name text text_opacity">Москва
+            </div><a class="link link_nounder link_dark link_xl link_img city__address"><span class="link__text"><img src="./assets/images/ext_link.png"/>Проспект вернадского, 43</span></a><a class="link link_dashed link_dark link_xl city__tel"><span class="link__text">+7(495) 645-65-96</span></a>
+          </div><a class="link link_nounder link_xl link_dark footer__mail footer__mail_mobil" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a>
+          <div class="apps apps_mobil">
+            <div class="apps__title text text_opacity">Cкачать приложение:
+            </div><a class="link link_nounder link_dark link_gray link_flex apps__link"><span class="link__text"><img src="./assets/images/apple.png"/></span></a>
+          </div>
+          <label class="switcher js-switcher-lang footer__switcher footer__switcher_opacity">
+            <input type="checkbox"/>
+            <div class="switcher__value switcher__value_on">RU</div>
+            <div class="switcher__box">
+              <div class="switcher__mover">
+                <div class="switcher__circle">
+                </div>
+              </div>
+            </div>
+            <div class="switcher__value switcher__value_off">EN</div>
+          </label>
+          <div class="footer__copyright footer__copyright_mobil text text_opacity">© 2009-2017  ООО «Цифровая империя»
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/scripts/app.min.js"></script>
+    <script src="assets/scripts/main.js"></script>
+  </body>
+</html>

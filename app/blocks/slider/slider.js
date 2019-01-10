@@ -319,6 +319,7 @@ export default function slider() {
   const icoworksSlider = new Swiper('.js-slider.ico-works__slider', {
     slidesPerView: 1,
     centeredSlides: true,
+    effect: 'fade',
     pagination: {
       el: '.ico-works__slider-num',
       type: 'custom',
