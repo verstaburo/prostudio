@@ -1113,7 +1113,16 @@
     &-item {
       width: 200px;
       padding-right: 33px;
-      margin-bottom: 133px;
+      // margin-bottom: 133px;
+
+      &:nth-child(-n+5),
+      &:nth-last-child(-n+5) {
+        margin-bottom: 133px;
+      }
+
+      &:nth-child(n+6):nth-child(-n+10) {
+        margin-bottom: 158px;
+      }
 
       &:nth-of-type(5n+6) {
         width: 190px;
