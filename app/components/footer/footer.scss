@@ -71,6 +71,9 @@
 
   &__right {
     width: 39.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 
@@ -143,7 +146,7 @@
     &__title {
       //white-space: nowrap;
       width: 100%;
-      margin-bottom: 3px;
+      margin-bottom: 5px;
 
       @include text;
 
@@ -153,10 +156,25 @@
     &__link {
       margin-right: 22px;
 
+      .link {
+
+        &__text {
+          align-items: center;
+        }
+      }
+
+      svg {
+        @include size(34px);
+
+        margin-right: 5px;
+        margin-top: -2px;
+      }
+
       @include screen('md', max) {
-        img {
+
+        svg {
           margin-right: 0;
-          height: 34px;
+          fill: $color-soc;
         }
 
         margin-right: 0;

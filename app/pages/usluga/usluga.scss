@@ -148,6 +148,11 @@
           left: 53px;
         }
 
+        @include screen('lg', max) {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
         @include screen('md', max) {
           position: relative;
           margin: 122px auto 0;
@@ -155,6 +160,7 @@
           align-items: center;
           top: 0;
           left: 0;
+          transform: none;
         }
       }
 

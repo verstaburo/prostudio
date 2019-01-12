@@ -12,7 +12,7 @@ mixin footer()
         +b.apps.footer__second
           +e.title cкачать приложение:
           +link._nounder._gray._flex.apps__link
-            img(src='/assets/images/apple.png')
+            +icon('apple')
             |iPhone
           //- +link._nounder._gray._flex.apps__link
           //-   img(src='./assets/images/android.png')
@@ -38,7 +38,7 @@ mixin footer()
           +b.apps
             +e.title cкачать приложение:
             +link._nounder._gray._flex.apps__link
-              img(src='./assets/images/apple.png')
+              +icon('apple')
               | iPhone
             //- +link._nounder._gray._flex.apps__link
             //-   img(src='./assets/images/android.png')
@@ -63,7 +63,7 @@ mixin footer()
         +b.apps_mobil
           +e.title Cкачать приложение:
           +link._nounder._gray._flex.apps__link
-            img(src='./assets/images/apple.png')
+            +icon('apple')
           //- +link._nounder._gray._flex.apps__link
           //-   img(src='./assets/images/android.png')
         +switcher('RU', 'EN').js-switcher-lang.footer__switcher
@@ -83,7 +83,7 @@ mixin footer_dark()
         +b.apps.footer__second
           +e.title.text_opacity cкачать приложение:
           +link._nounder._dark._gray._flex.apps__link
-            img(src='./assets/images/apple.png')
+            +icon('apple')
             |iPhone
           //- +link._nounder._dark._gray._flex.apps__link
           //-   img(src='./assets/images/android.png')
@@ -109,7 +109,7 @@ mixin footer_dark()
           +b.apps
             +e.title.text_opacity cкачать приложение:
             +link._nounder._dark._gray._flex.apps__link
-              img(src='./assets/images/apple.png')
+              +icon('apple')
               | iPhone
             //- +link._nounder._dark._gray._flex.apps__link
             //-   img(src='./assets/images/android.png')
@@ -134,7 +134,7 @@ mixin footer_dark()
         +b.apps_mobil
           +e.title.text_opacity Cкачать приложение:
           +link._nounder._dark._gray._flex.apps__link
-            img(src='./assets/images/apple.png')
+            +icon('apple')
           //- +link._nounder._dark._gray._flex.apps__link
           //-   img(src='./assets/images/android.png')
         +switcher('RU', 'EN').js-switcher-lang.footer__switcher._opacity

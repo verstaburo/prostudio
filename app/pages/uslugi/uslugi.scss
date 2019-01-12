@@ -30,6 +30,10 @@
       margin-top: 75px!important;
     }
 
+    @include screen("md-r", max) {
+      align-items: flex-start;
+    }
+
     @include screen("md", max) {
       background-color: $color-gray-2;
       min-height: 422px;
@@ -47,7 +51,12 @@
     &_left {
       justify-content: space-between;
 
+      @include screen("md-r", max) {
+        margin-top: 36px;
+      }
+
       @include screen("md", max) {
+        margin-top: 0;
         justify-content: flex-start;
       }
     }
@@ -245,8 +254,12 @@
       margin-bottom: 88px;
       margin-top: 38px;
 
-      @include screen("md", max) {
+      @include screen('md-r', max) {
         font-size: 40px;
+        margin-bottom: 83px;
+      }
+
+      @include screen("md", max) {
         position: absolute;
         bottom: 34px;
         left: 0;
@@ -323,11 +336,16 @@
         &_sites {
           letter-spacing: 0.5px;
           font-size: 20px;
+
           &:not(:last-child) {
             padding-bottom: 52px;
 
             @include screen("lg", max) {
               padding-bottom: 40px;
+            }
+
+            @include screen("md-r", max) {
+              padding-bottom: 53px;
             }
           }
         }
@@ -359,6 +377,10 @@
 
       @include screen("lg", max) {
         max-width: 55%;
+      }
+
+      @include screen("md-r", max) {
+        margin-top: 36px;
       }
 
       @include screen("md", max) {
@@ -501,7 +523,8 @@
 
       @include screen("lg", max) {
         position: static;
-        margin-top: 40px;
+        // margin-top: 40px;
+        margin-top: 109px;
       }
 
       @include screen("md", max) {
@@ -521,7 +544,7 @@
 
       &_reverse {
         flex-direction: row-reverse;
-        justify-content: flex-end;
+        justify-content: flex-start;
       }
 
       &_brending {
@@ -552,12 +575,23 @@
       margin-left: 47px;
 
       @include screen("lg", max) {
-        width: calc(100% - 120px);;
+        width: calc(100% - 120px);
+      }
+
+      @include screen("md-r", max) {
+        position: absolute;
+        width: 85%;
+        margin-left: 118px;
       }
 
       &_right {
         margin-left: 0;
         margin-right: 47px;
+
+        @include screen("md-r", max) {
+          margin-right: auto;
+          left: 0;
+        }
       }
     }
 
