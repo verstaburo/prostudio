@@ -4,7 +4,7 @@ block head
   - var pageTitle = 'Versta Project Template'
 
 block content
-  +header(true)._fixed
+  +header(true)._fixed._index
 
   +pagepiling
     +b.IMG(src='./assets/images/play.svg').slide-play
@@ -197,8 +197,11 @@ block content
           .container.slide-footer__container
             //- +e.IMG(src='./assets/images/play.svg').play
             +b.journal-pag
-              +e.IMG(src='./assets/images/prev.svg').prev
-              +e.IMG(src='./assets/images/next.svg').next
+              //- +e.IMG(src='./assets/images/prev.svg').prev
+              +e.prev
+                +icon('arrow_left').prev-arrow
+              +e.next
+                +icon('arrow_right').next-arrow
             +e.line
             +e.news все новости
             +b.FORM(action='#' method='POST').subscribe
@@ -226,9 +229,10 @@ block content
               +e.address 196247,<br>Проспект вернадского, дом 43<br>офис 49
               +link(href='#')._white._xl.city__map Как проехать
               +e.tel  +7 (495) 645-65-96
-          +e.H2.title Хотите проект от Prostudio?
-          +e.P.subtitle Заполните форму на сайте или напишите нам на почту #[+link(href='mailto:mail@prostudio.ru')._blue._nounder.slide5__link mail@prostudio.ru]
-          +button(href="#contact")._white._big.__btn.js-fancybox Обсудить проект
+          +e.offer-content
+            +e.H2.title Хотите проект от Prostudio?
+            +e.P.subtitle Заполните форму на сайте или напишите нам на почту #[+link(href='mailto:mail@prostudio.ru')._blue._nounder.slide5__link mail@prostudio.ru]
+            +button(href="#contact")._white._big.__btn.js-fancybox Обсудить проект
 
         +b.slide-footer.slide__footer._end
           .container.slide-footer__container

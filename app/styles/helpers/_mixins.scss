@@ -242,8 +242,8 @@ div {
   @include fill-img;
 }
 */
-@mixin fill-img {
-  position: absolute;
+@mixin fill-img($position: absolute) {
+  position: $position;
   top: 0;
   left: 0;
   right: 0;

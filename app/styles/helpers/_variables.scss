@@ -5,6 +5,7 @@
 // ##########
 $container-width: 1880px; // Максимальная ширина контейнера контента
 $container-padding: 30px; // Отступы слева и справа у контейнера
+$container-padding-sm: 20px; // Отступы слева и справа у контейнера
 $grid-container-width: 100%; // Ширина контейнера сетки
 $grid-cols: 12; // Количество колонок в сетке
 $grid-gap: 20px; // Расстояние между колонками
@@ -42,6 +43,7 @@ $color-border-2: #d4d4d4;
 $color-bg: #f6f6f6;
 $color-bg-dark: #0a0a0a;
 $color-bg-button: #ededed;
+$color-bg-button2: #ececec;
 $color-bg-card: #f4f4f4;
 $color-dark: #b9b9b9;
 $color-gray: #c9c9c9;
@@ -52,6 +54,7 @@ $color-svg-gray: #e1e1e1;
 $color-date: #d9d9d9;
 $color-red: #c91516;
 $color-soc: #ccc;
+$color-arrow: #cccaca;
 $color-orange: #ff5252;
 $color-green: #1bb05a;
 $color-blue: #31a5e7;

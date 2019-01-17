@@ -180,6 +180,10 @@
     &:not(:last-child) {
       margin-right: 143px;
       margin-bottom: 30px;
+
+      @include screen('xl-r', max) {
+        margin-bottom: 50px;
+      }
     }
 
     &__text {
@@ -237,9 +241,9 @@
       top: 40px;
       left: calc(50% + 40px);
 
-      &__link {
-        //display: block;
-      }
+      // &__link {
+      //   //display: block;
+      // }
     }
 
     &:first-child {
@@ -323,6 +327,10 @@
     }
   }
 
+  &__offer-content {
+    padding: 0 125px;
+  }
+
   &__title {
     margin-top: 51px;
     width: 100%;
@@ -351,7 +359,7 @@
 
   .city-wrap {
     display: flex;
-    width: 950px;
+    width: 985px;
 
     @include screen('lg-r', max) {
       width: 70%;
@@ -368,7 +376,8 @@
     padding: 36px 41px 41px 36px;
     text-align: left;
     position: relative;
-    transition: color .3s ease;
+    background-color: $color-bg;
+    transition: color $ease-main, background-color $ease-main;
 
     &::before {
       @include pseudo;
@@ -385,6 +394,7 @@
     &:hover {
       color: white;
       padding-bottom: 0;
+      background-color: transparent;
 
       &::before {
         padding: 35px;
@@ -399,17 +409,25 @@
         }
 
         &__hover {
-          display: block;
+          opacity: 1;
         }
 
         &__nohover {
-          display: none;
+          opacity: 0;
         }
       }
     }
 
+    &__hover,
+    &__nohover {
+      transition: opacity $ease-main;
+    }
+
     &__hover {
-      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
     }
 
     &:first-child {
@@ -422,12 +440,14 @@
     }
 
     &__title {
+      position: relative;
       display: flex;
       align-items: center;
     }
 
     &__name {
       margin-left: 28px;
+      transition: color $ease-main;
 
       @include text-city;
 
@@ -441,19 +461,20 @@
     }
 
     &__address {
-      margin-top: 41px;
+      margin-top: 43px;
       word-break: break-all;
 
       @include text-address;
     }
 
     &__tel {
-      margin-top: 18px;
+      margin-top: 26px;
 
       @include text-tel;
     }
 
     &__map {
+      margin-top: 14px;
       display: block;
       max-height: 0;
       overflow: hidden;
@@ -480,7 +501,6 @@
     }
 
     &_piter {
-      // width: 349px;
 
       &::before {
         background-color: $color-main;
@@ -490,7 +510,6 @@
     }
 
     &_moscow {
-      // width: 367px;
 
       &::before {
         background-color: $color-red;
@@ -528,12 +547,12 @@
     }
   }
 
-  &__play {
-    // position: absolute;
-    // bottom: 0;
-    // left: 0;
-    // cursor: pointer;
-  }
+  // &__play {
+  //   // position: absolute;
+  //   // bottom: 0;
+  //   // left: 0;
+  //   // cursor: pointer;
+  // }
 
   &__scroll {
     display: flex;
@@ -582,14 +601,46 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    margin-left: 183px;
+    margin-left: 264px;
+
+    @include screen('xl-t', max) {
+      margin-left: 183px;
+    }
 
     @include screen('lg-r', max) {
       margin-left: 90px;
     }
 
-    &__prev {
+    &__prev,
+    &__next {
+      @include size(55px);
+
+      position: relative;
+      background-color: $color-bg-button2;
+      border-radius: 50%;
+      transition: background-color $ease-main;
       cursor: pointer;
+
+      &:hover {
+        background-color: $color-main;
+
+        .journal-pag {
+
+          &__prev-arrow,
+          &__next-arrow {
+            fill: $white;
+          }
+        }
+      }
+    }
+
+    &__prev-arrow,
+    &__next-arrow {
+      @include center-block;
+      @include size(19px);
+
+      fill: $color-arrow;
+      transition: fill $ease-main;
     }
 
     &__next {
@@ -634,10 +685,16 @@
 
     &__email {
       border: none;
+      padding-left: 24px;
 
       &::placeholder {
         color: $color-placeholder2;
       }
+    }
+
+    .button__img {
+      position: relative;
+      left: 2px;
     }
   }
 
@@ -661,12 +718,20 @@
   display: block;
   text-align: center;
 
+  .container {
+    padding-left: $container-padding-sm;
+    padding-right: $container-padding-sm;
+  }
+
   &__title {
+    @include heading-8;
+
     color: $color-main;
     text-align: center;
     margin-top: 148px;
-
-    @include heading-8;
+    font-size: 47px;
+    line-height: 1.4;
+    letter-spacing: 2.8px;
   }
 
   &__discuss {
@@ -675,7 +740,12 @@
     display: block;
     margin: 73px auto 0;
     letter-spacing: 1px;
+
+    @include screen('sm', max) {
+      margin-top: 63px;
+    }
   }
+
 
   &__portfolio {
 
@@ -781,10 +851,14 @@
   }
 
   &__advantage {
-    margin-top: 100px;
+    margin-top: 102px;
 
     .swiper-container {
       overflow: visible;
+    }
+
+    .swiper-container-3d {
+      perspective: 1010px;
     }
 
     .swiper-slide-active {
@@ -802,8 +876,15 @@
   .pad-advantage {
     color: white;
 
+    &__num,
+    &__text {
+      position: relative;
+    }
+
     &__num {
       @include heading-9;
+
+      top: -30px;
 
       @include screen('md2', max) {
         font-size: 160px;
@@ -812,6 +893,9 @@
 
     &__text {
       @include text34;
+
+      top: -13px;
+      left: 2px;
 
       @include screen('md2', max) {
         font-size: 28px;
@@ -846,14 +930,16 @@
     }
 
     &__title {
-      margin-top: 50px;
+      margin-top: 41px;
       visibility: hidden;
 
       @include text-tel;
+
+      line-height: 1.4;
     }
 
     &__date {
-      margin-top: 40px;
+      margin-top: 31px;
       visibility: hidden;
       color: $color-date;
       text-transform: uppercase;
@@ -874,14 +960,16 @@
   }
 
   &__question {
-    margin-top: 114px;
-    color: $color-main;
-
     @include heading-10;
+
+    margin-top: 99px;
+    color: $color-main;
+    letter-spacing: .45px;
   }
 
   &__btn {
-    margin-top: 56px;
+    margin-top: 53px;
+    letter-spacing: 1.1px;
   }
 }
 
@@ -1210,14 +1298,14 @@
   }
 }
 
-@include screen('md') {
+@include screen('lg-r') {
 
   .pad {
     display: none;
   }
 }
 
-@include screen('md', max) {
+@include screen('lg-r', max) {
 
   #pagepiling, #pp-nav {
     display: none;
@@ -1264,7 +1352,10 @@
   .pad {
 
     &__title {
-      font-size: 41px;
+      margin-top: 142px;
+      font-size: 42px;
+      line-height: 1.6;
+      letter-spacing: 2.4px;
     }
   }
 

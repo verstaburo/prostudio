@@ -14,8 +14,26 @@
   position: relative;
   border-bottom: 1px solid #dcdcdc;
 
-  &_freeze {
+  &_index {
+    border-bottom: none;
 
+    .container {
+
+      @include screen('lg-r', max) {
+        padding-left: $container-padding-sm;
+        padding-right: $container-padding-sm;
+      }
+    }
+
+    .buttons {
+
+      &__wrap {
+
+        .buttons__project {
+          display: none;
+        }
+      }
+    }
   }
 
   &_wide {
@@ -28,7 +46,7 @@
     }
 
     .header__container {
-      padding-right: 30px !important;
+      padding-right: 30px;
     }
 
     .menu {
@@ -108,6 +126,22 @@
 
   &__menu {
     margin: 0 auto;
+
+    .menu__item {
+
+      @include screen('xl-r', max) {
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: opacity .5s ease,
+          transform .5s ease;
+
+        @for $i from 1 through 9 {
+          &:nth-child(#{$i}) {
+            transition-delay: $i * 0.045s;
+          }
+        }
+      }
+    }
   }
 
   .buttons {
@@ -123,7 +157,7 @@
     }
 
     &__project {
-      display: none;
+      display: inline-block;
       margin-right: -100%;
       opacity: 1;
       transition: margin .3s ease .3s;
@@ -212,19 +246,6 @@
   justify-content: space-between;
 
   &__item {
-
-    @include screen('xl-r', max) {
-      transform: translateY(-100%);
-      opacity: 0;
-      transition: opacity .5s ease,
-      transform .5s ease;
-
-      @for $i from 1 through 9 {
-        &:nth-child(#{$i}) {
-          transition-delay: $i * 0.045s;
-        }
-      }
-    }
 
     &:not(:last-child) {
       margin-right: 62px;

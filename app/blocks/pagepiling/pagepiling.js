@@ -33,7 +33,7 @@ export default function mainSlider() {
         if (index === 1) {
           $('.header__container').removeClass('header__container_wide');
           if (matchMedia('(min-width: 1880px)').matches) {
-            $('.buttons__wrap .buttons__project').css('display', 'none');
+            $('.header_index .buttons__project').css('display', 'none');
           }
           $('.header').removeClass('header_wide');
           $('.slider-pag').show();
@@ -42,7 +42,7 @@ export default function mainSlider() {
         if (index === 2) {
           $('.header__container').addClass('header__container_wide');
           if (matchMedia('(min-width: 1880px)').matches) {
-            $('.buttons__wrap .buttons__project').css('display', 'inline-block');
+            $('.header_index .buttons__project').css('display', 'inline-block');
           }
           $('.header').addClass('header_wide');
           $('.slider-pag').hide();
