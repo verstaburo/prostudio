@@ -10,25 +10,20 @@
     padding-left: 0;
     z-index: 10;
 
-    &.swiper-button-disabled {
-      pointer-events: none;
-      opacity: .8;
+
+
+    &:hover {
+      opacity: 1;
 
       svg {
-        fill: $color-tundora;
+        fill: #fff;
       }
     }
 
-    &:hover {
-      opacity: .8;
-    }
-
     svg {
-      fill: white;
+      fill: $color-tundora;
       width: 19px;
       height: 19px;
-      transition: fill $ease-main;
-
       @include center-image;
     }
   }

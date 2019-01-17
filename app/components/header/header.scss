@@ -6,13 +6,17 @@
   box-sizing: border-box;
   padding-left: 20px;
   // width: 1398px;
-  width: 72.8%;
+  width: 71.9%;
   left: 0;
   right: 0;
   z-index: 6;
   transition: width .6s ease;
   position: relative;
   border-bottom: 1px solid #dcdcdc;
+
+  &_freeze {
+
+  }
 
   &_wide {
     transition: width .6s ease;
@@ -119,7 +123,7 @@
     }
 
     &__project {
-      display: inline-block;
+      display: none;
       margin-right: -100%;
       opacity: 1;
       transition: margin .3s ease .3s;
@@ -208,18 +212,22 @@
   justify-content: space-between;
 
   &__item {
-    transform: translateY(-100%);
-    opacity: 0;
-    transition: opacity .5s ease, transform .5s ease;
 
-    @for $i from 1 through 9 {
-      &:nth-child(#{$i}) {
-        transition-delay: $i * 0.045s;
+    @include screen('xl-r', max) {
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: opacity .5s ease,
+      transform .5s ease;
+
+      @for $i from 1 through 9 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i * 0.045s;
+        }
       }
     }
 
     &:not(:last-child) {
-      margin-right: 51px;
+      margin-right: 62px;
     }
 
     .link {
@@ -275,7 +283,7 @@
       position: fixed;
       display: flex;
       flex-direction: column;
-      top: 95px;
+      top: 96px;
       left: 0;
       padding-bottom: 30px;
       width: 100%;

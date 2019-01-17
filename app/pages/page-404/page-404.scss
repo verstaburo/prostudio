@@ -22,18 +22,13 @@
     margin: 0 auto;
     padding-bottom: 61px;
     display: block;
-    max-height: calc(100vh - 480px);
 
     @include screen("lg", max) {
       max-width: 99%;
-
-      max-height: calc(100vh - 493px);
     }
 
     @include screen("lg-r", max) {
       padding-bottom: 109px;
-
-      max-height: none;
     }
 
     @include screen("md", max) {
