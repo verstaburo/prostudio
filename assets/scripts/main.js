@@ -9,6 +9,16 @@
  * Так же доступа к блокам, которые собираются с помощью вебпака не будет.
  */
 
+// $(window).on('scroll', () => {
+//   if ($('.header').hasClass('header_wide')) {
+//     $('.buttons__wrap .buttons__project').css('display', 'block');
+//     alert(true);
+//   } else {
+//     $('.buttons__wrap .buttons__project').css('display', 'none');
+//     alert(false);
+//   }
+// });
+
 $(document).ready(() => {
 
   function checkMenuLinks() {
@@ -55,10 +65,14 @@ $(document).ready(() => {
     var header = document.querySelector('.header'),
         headerFixed = header.querySelector('.header_fixed'),
         bodyDark = document.querySelector('.body_dark');
+
+    document.documentElement.classList.toggle('html_freeze');
+
     if (!header.contains(headerFixed)) {
       $('.header').toggleClass('header_fixed-light');
       $('.header').toggleClass('header_no-border');
     }
+
     if (document.body.contains(bodyDark)) {
       $('.header').toggleClass('header_fixed-dark');
       $('.header').toggleClass('header_no-border');
