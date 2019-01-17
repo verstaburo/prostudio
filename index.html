@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="header header_fixed">
+    <div class="header header_fixed header_index">
         <div class="container header__container"><a class="header__logo-link" href="./"><img class="header__logo" src="./assets/images/logo.svg" alt="" role="presentation" /></a>
             <ul class="menu header__menu">
                 <li class="menu__item"><a class="link link_nounder link_medium" href="./about.html"><span class="link__text">Компания</span></a></li>
@@ -279,7 +279,10 @@
                 </div>
                 <div class="slide-footer slide__footer">
                     <div class="container slide-footer__container">
-                        <div class="journal-pag"><img class="journal-pag__prev" src="./assets/images/prev.svg" alt="" role="presentation" /><img class="journal-pag__next" src="./assets/images/next.svg" alt="" role="presentation" /></div>
+                        <div class="journal-pag">
+                            <div class="journal-pag__prev"><svg class="journal-pag__prev-arrow"><use xlink:href="assets/images/icon.svg#icon_arrow_left"></use></svg></div>
+                            <div class="journal-pag__next"><svg class="journal-pag__next-arrow"><use xlink:href="assets/images/icon.svg#icon_arrow_right"></use></svg></div>
+                        </div>
                         <div class="slide-footer__line"></div>
                         <div class="slide-footer__news">все новости</div>
                         <form class="subscribe" action="#" method="POST">
@@ -306,8 +309,10 @@
                             <div class="city__tel"> +7 (495) 645-65-96</div>
                         </div>
                     </div>
-                    <h2 class="slide5__title">Хотите проект от Prostudio?</h2>
-                    <p class="slide5__subtitle">Заполните форму на сайте или напишите нам на почту <a class="link link_blue link_nounder slide5__link" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a></p><a class="button button_white button_big slide5__btn js-fancybox" href="#contact">Обсудить проект</a>
+                    <div class="slide5__offer-content">
+                        <h2 class="slide5__title">Хотите проект от Prostudio?</h2>
+                        <p class="slide5__subtitle">Заполните форму на сайте или напишите нам на почту <a class="link link_blue link_nounder slide5__link" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a></p><a class="button button_white button_big slide5__btn js-fancybox" href="#contact">Обсудить проект</a>
+                    </div>
                 </div>
                 <div class="slide-footer slide__footer slide__footer_end">
                     <div class="container slide-footer__container">
