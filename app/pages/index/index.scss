@@ -2,13 +2,12 @@
 
   &__footer {
     position: relative;
-    // bottom: 79px;
-    bottom: -79px;
+    // bottom: -79px;
+
     padding-bottom: 30px;
     //margin: 0 auto;
     width: 100%;
-    left: 0;
-    right: 0;
+    left: 62px;
   }
 }
 
@@ -50,6 +49,11 @@
 
         @include screen('md2', max) {
           width: 100%;
+        }
+
+        @include screen('sm', max) {
+          max-width: 329px;
+          height: 327px;
         }
       }
     }
@@ -773,6 +777,10 @@
         position: absolute;
         bottom: -108px;
         left: 4px;
+
+        @include screen('sm', max) {
+          bottom: -92px;
+        }
       }
 
       &__title {
@@ -842,6 +850,10 @@
 
     @include text-tel;
 
+    @include screen('sm', max) {
+      margin-top: 146px;
+    }
+
     svg {
       margin-left: 18px;
       width: 20px;
@@ -852,6 +864,10 @@
 
   &__advantage {
     margin-top: 102px;
+
+    @include screen('sm', max) {
+      margin-top: 91px;
+    }
 
     .swiper-container {
       overflow: visible;
@@ -889,6 +905,12 @@
       @include screen('md2', max) {
         font-size: 160px;
       }
+
+      @include screen('sm', max) {
+        top: -15px;
+        left: 5px;
+        font-size: 144px;
+      }
     }
 
     &__text {
@@ -900,11 +922,21 @@
       @include screen('md2', max) {
         font-size: 28px;
       }
+
+      @include screen('sm', max) {
+        top: 0;
+        font-size: 23px;
+        line-height: 1.75;
+      }
     }
   }
 
   &__journal {
     margin-top: 100px;
+
+    @include screen('sm', max) {
+      margin-top: 89px;
+    }
   }
 
   .pad-journal {
@@ -919,7 +951,10 @@
       @include screen('md2', max) {
         display: block;
         width: 100%;
-        // height: auto;
+      }
+
+      @include screen('sm', max) {
+        height: 328px;
       }
 
       img {
@@ -936,6 +971,11 @@
       @include text-tel;
 
       line-height: 1.4;
+
+      @include screen('sm', max) {
+        margin-top: 32px;
+        margin-left: 5px;
+      }
     }
 
     &__date {
@@ -965,11 +1005,19 @@
     margin-top: 99px;
     color: $color-main;
     letter-spacing: .45px;
+
+    @include screen('sm', max) {
+      margin-top: 308px;
+    }
   }
 
   &__btn {
     margin-top: 53px;
     letter-spacing: 1.1px;
+
+    @include screen('sm', max) {
+      margin-top: 47px;
+    }
   }
 }
 
@@ -1352,7 +1400,7 @@
   .pad {
 
     &__title {
-      margin-top: 142px;
+      margin-top: 130px;
       font-size: 42px;
       line-height: 1.6;
       letter-spacing: 2.4px;
