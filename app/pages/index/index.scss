@@ -3,11 +3,9 @@
   &__footer {
     position: relative;
     // bottom: -79px;
-
     padding-bottom: 30px;
     //margin: 0 auto;
     width: 100%;
-    left: 62px;
   }
 }
 
@@ -349,6 +347,10 @@
     @include text-address;
 
     letter-spacing: .55px;
+  }
+
+  .slide__footer {
+    margin-top: 30px;
   }
 
   &__link {
