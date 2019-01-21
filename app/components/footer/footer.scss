@@ -7,6 +7,14 @@
   color: $color-placeholder2;
   fill: $color-placeholder2;
 
+  &_index {
+    display: none;
+
+    @include screen('md', max) {
+      display: block;
+    }
+  }
+
   &__doc {
     span span {
       position: relative;

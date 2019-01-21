@@ -9,7 +9,42 @@ mixin slider(pagination, buttons)
       +e.button._prev
       +e.button._next
 
-mixin slide()
+mixin slide-bg(leftimage, rightimage)
+  .slide__bg
+    .slide__left
+      img(src=leftimage).slide__left__img
+    .slide__right
+      img(src=rightimage).slide__right__img
+      block
+
+mixin plate(title, button)
+  .slide__plate
+    h2.slide__title!= title
+    +button._fullwhite._huge!= button
+
+mixin slide(leftimage, rightimage, centerimage, title, button)
   .swiper-slide
     +e.slide&attributes(attributes)
-      block
+      +slide-bg(leftimage, rightimage)
+        .slide__center__cont
+          img(src=centerimage).slide__center
+      if title
+        +plate(title, button)
+
+mixin slide-two(leftimage, rightimage, centerimage, title, button)
+  .swiper-slide
+    +e.slide&attributes(attributes)
+      +slide-bg(leftimage, rightimage)
+        .slide__center__cont.slide__center__cont_offset
+          img(src=centerimage).slide__center
+      if title
+        +plate(title, button)
+
+mixin slide-three(leftimage, rightimage, centerimage, title, button)
+  .swiper-slide
+    +e.slide&attributes(attributes)
+      +slide-bg(leftimage, rightimage)
+        .slide__center__cont.slide__center__cont_offset2
+          img(src=centerimage).slide__center
+      if title
+        +plate(title, button)

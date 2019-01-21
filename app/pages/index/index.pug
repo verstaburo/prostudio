@@ -11,53 +11,25 @@ block content
     +pagepiling-slide
       +b.slide1.slide
         +e.box
-          +e.H1.title Создание <br>и продвижение<br> сайтов
-          +e.P.subtitle Развитие вашего бизнеса<br> в Digital и не только ...
-          +button(href="#contact")._blue._big.slide1__btn.js-fancybox Обсудить проект
+          +e.texts
+            +e.H1.title Создание <br>и продвижение<br> сайтов
+            +e.P.subtitle Развитие вашего бизнеса<br> в Digital и не только ...
+            +button(href="#contact")._blue._big.slide1__btn.js-fancybox Обсудить проект
+          +b.slide-footer.slide__footer
+            .slide-footer__container
+              +e.scroll
+                +e.IMG(src='./assets/images/mouse.png').mouse
+                +e.text листайте вниз
+              +e.portfolio портфолио
         +e.slider.slider_portfolio
           +slider(false, false)
-            +slide
-              .slide__bg
-                img(src='./assets/images/slide1l.jpg').slide__left
-                img(src='./assets/images/slide1r.jpg').slide__right
-              img(src='./assets/images/slide1c.png').slide__center
-            +slide
-              .slide__bg
-                img(src='./assets/images/slide2l.jpg').slide__left
-                img(src='./assets/images/slide2r.jpg').slide__right
-              img(src='./assets/images/slide2c.png').slide__center
-              .slide__plate
-                h2.slide__title Разработка интернет-магазина<br>«Ангел и демон»
-                +button._fullwhite._huge WEB
-            +slide
-              .slide__bg
-                img(src='./assets/images/slide3l.jpg').slide__left
-                img(src='./assets/images/slide3r.jpg').slide__right
-              img(src='./assets/images/slide3c.png').slide__center.slide__center_offset
-              .slide__plate
-                h2.slide__title Разработка приложения<br>«VELVET»
-                +button._fullwhite._huge APP
-            +slide
-              .slide__bg
-                img(src='./assets/images/slide4l.jpg').slide__left
-                img(src='./assets/images/slide4r.jpg').slide__right
-              img(src='./assets/images/slide4c.png').slide__center.slide__center_offset2
-            +slide
-              .slide__bg
-                img(src='./assets/images/slide5l.jpg').slide__left
-                img(src='./assets/images/slide5r.jpg').slide__right
-              img(src='./assets/images/slide5c.png').slide__center
-              .slide__plate
-                h2.slide__title Разработка сайта<br>«titus.ru»
-                +button._fullwhite._huge WEB
-        +b.slide-footer.slide__footer
-          .container.slide-footer__container
-            //- +e.IMG(src='./assets/images/play.svg').play
-            +e.scroll
-              +e.IMG(src='./assets/images/mouse.png').mouse
-              +e.text листайте вниз
-            +e.portfolio портфолио
+            +slide('./assets/images/slide1l.jpg', './assets/images/slide1r.jpg', './assets/images/slide1c.png')
+            +slide('./assets/images/slide2l.jpg', './assets/images/slide2r.jpg', './assets/images/slide2c.png', 'Разработка интернет-магазина<br>«Ангел и демон»', 'WEB')
+            +slide-two('./assets/images/slide3l.jpg', './assets/images/slide3r.jpg', './assets/images/slide3c.png', 'Разработка приложения<br>«VELVET»', 'APP')
+            +slide-three('./assets/images/slide4l.jpg', './assets/images/slide4r.jpg', './assets/images/slide4c.png')
+            +slide('./assets/images/slide5l.jpg', './assets/images/slide5r.jpg', './assets/images/slide5c.png', 'Разработка сайта<br>«titus.ru»', 'WEB')
         +b.slider-pag
+
     +pagepiling-slide
       +b.slide2.slide
         +e.box
@@ -85,62 +57,57 @@ block content
           +e.text Мы не только разрабатвыем превосходные digital проекты.<br>
             | Мы искренне пытаемся поточь в достижении вашей цели и это не просто слова.<br>
             | <b>Свяжитесь с нами и вы убедитесь в этом сами.</b>
-        +b.slide-footer.slide__footer
-          .container.slide-footer__container
-            //- +e.IMG(src='./assets/images/play.svg').play
     +pagepiling-slide
       +b.slide3.slide
         .container
           +e.box
-            +b.usluga
-              +e.H3.title Сайты
-              +b.linkbox
-                +link()(href="#").linkbox__link Сайт визитка
-                +link()(href="#").linkbox__link Landing Page
-                +link()(href="#").linkbox__link Корпоративный сайт
-                +link()(href="#").linkbox__link Интернет-магазин
-                +link()(href="#").linkbox__link Сложные проекты
-            +b.usluga
-              +e.H3.title Продвижение
-              +b.linkbox
-                +link()(href="#").linkbox__link SEO
-                +link()(href="#").linkbox__link SMM
-                +link()(href="#").linkbox__link Контекстная реклама
-                +link()(href="#").linkbox__link Таргетированная реклама
-                +link()(href="#").linkbox__link Медийная реклама
-            +b.usluga
-              +e.H3.title Брендинг
-              +b.linkbox
-                +link()(href="#").linkbox__link Логотип
-                +link()(href="#").linkbox__link Фирменный стиль
-                +link()(href="#").linkbox__link Нейминг/Слоган
-                +link()(href="#").linkbox__link Фото/Видео
-            +b.usluga
-              +e.H3.title Приложения
-              +b.linkbox
-                +link()(href="#").linkbox__link OS
-                +link()(href="#").linkbox__link Adndroid
-                +link()(href="#").linkbox__link Native Web
-                +link()(href="#").linkbox__link Адаптивный дизайн
-                +link()(href="#").linkbox__link Мобильная версия сайта
-            +b.usluga
-              +e.H3.title Аналитика
-              +b.linkbox
-                +link()(href="#").linkbox__link Техническое задание
-                +link()(href="#").linkbox__link Аудит проекта
-                +link()(href="#").linkbox__link Прототипирование
-                +link()(href="#").linkbox__link Digital-стратегия
-                +link()(href="#").linkbox__link CRM и ERP системы
-            +b.usluga
-              +e.H3.title Поддержка
-              +b.linkbox
-                +link()(href="#").linkbox__link Техническая поддержка
-                +link()(href="#").linkbox__link Хостинг
-                +link()(href="#").linkbox__link Тестирование
-                +link()(href="#").linkbox__link Администрирование сложных проектов
-        +b.slide-footer.slide__footer
-          .container.slide-footer__container
-            //- +e.IMG(src='./assets/images/play.svg').play
+            +e.uslugi
+              +b.usluga
+                +e.H3.title Сайты
+                +b.linkbox
+                  +link()(href="#").linkbox__link Сайт визитка
+                  +link()(href="#").linkbox__link Landing Page
+                  +link()(href="#").linkbox__link Корпоративный сайт
+                  +link()(href="#").linkbox__link Интернет-магазин
+                  +link()(href="#").linkbox__link Сложные проекты
+              +b.usluga
+                +e.H3.title Продвижение
+                +b.linkbox
+                  +link()(href="#").linkbox__link SEO
+                  +link()(href="#").linkbox__link SMM
+                  +link()(href="#").linkbox__link Контекстная реклама
+                  +link()(href="#").linkbox__link Таргетированная реклама
+                  +link()(href="#").linkbox__link Медийная реклама
+              +b.usluga
+                +e.H3.title Брендинг
+                +b.linkbox
+                  +link()(href="#").linkbox__link Логотип
+                  +link()(href="#").linkbox__link Фирменный стиль
+                  +link()(href="#").linkbox__link Нейминг/Слоган
+                  +link()(href="#").linkbox__link Фото/Видео
+              +b.usluga
+                +e.H3.title Приложения
+                +b.linkbox
+                  +link()(href="#").linkbox__link OS
+                  +link()(href="#").linkbox__link Adndroid
+                  +link()(href="#").linkbox__link Native Web
+                  +link()(href="#").linkbox__link Адаптивный дизайн
+                  +link()(href="#").linkbox__link Мобильная версия сайта
+              +b.usluga
+                +e.H3.title Аналитика
+                +b.linkbox
+                  +link()(href="#").linkbox__link Техническое задание
+                  +link()(href="#").linkbox__link Аудит проекта
+                  +link()(href="#").linkbox__link Прототипирование
+                  +link()(href="#").linkbox__link Digital-стратегия
+                  +link()(href="#").linkbox__link CRM и ERP системы
+              +b.usluga
+                +e.H3.title Поддержка
+                +b.linkbox
+                  +link()(href="#").linkbox__link Техническая поддержка
+                  +link()(href="#").linkbox__link Хостинг
+                  +link()(href="#").linkbox__link Тестирование
+                  +link()(href="#").linkbox__link Администрирование сложных проектов
     +pagepiling-slide
       +b.slide4.slide
         +e.box
@@ -331,7 +298,7 @@ block content
       +e.question Хотите проект от Prostudio?
       +button(href='#contact').pad__btn.button_blue.button_big.js-fancybox Обсудить проект
 
-  +footer
+  +footer._index
 
 
 

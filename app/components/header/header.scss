@@ -1,12 +1,9 @@
 .header {
-  // display: none;
-  // height: 112px;
   height: 96px;
   padding: 24px 0 0;
   box-sizing: border-box;
   padding-left: 20px;
-  // width: 1398px;
-  width: 71.9%;
+  width: 73%;
   left: 0;
   right: 0;
   z-index: 6;
@@ -80,6 +77,7 @@
     align-items: center;
     transition: all .6s ease;
     position: relative;
+    width: 100% !important;
 
     &_wide {
 
@@ -223,6 +221,7 @@
   &_index {
     border-bottom: none;
     padding-top: 46px;
+    background-color: transparent;
 
     #{$b}__menu {
       margin-left: 21px;

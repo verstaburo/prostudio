@@ -3,17 +3,12 @@
 .slide {
   height: 100%;
   position: relative;
+  background-color: white;
 }
 
 .pp-section {
 
   .slide1 {
-
-    .slide__footer {
-      bottom: -199px;
-      left: 62px;
-    }
-
     @include screen('xl-t', max) {
       .swiper-container {
         overflow: visible;
@@ -23,7 +18,7 @@
 }
 
 .pp-scrollable {
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -81,38 +76,4 @@
   &.left {
     left: 62px;
   }
-}
-
-@media screen and (max-height: 800px) {
-
-  // #pp-nav {
-
-  //   li {
-
-  //     &:not(:last-child) {
-  //       margin-bottom: 70px;
-
-  //       &::after {
-  //         height: 67px;
-  //       }
-  //     }
-  //   }
-  // }
-}
-
-@media screen and (max-height: 560px) {
-
-  // #pp-nav {
-
-  //   li {
-
-  //     &:not(:last-child) {
-  //       margin-bottom: 60px;
-
-  //       &::after {
-  //         height: 57px;
-  //       }
-  //     }
-  //   }
-  // }
 }

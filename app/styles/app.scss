@@ -69,6 +69,24 @@
   visibility: hidden;
 }
 
+html {
+  overlfow-x: hidden;
+  overflow-y: auto;
+}
+
+.html_index {
+  overflow: hidden;
+
+  @include screen('md', max) {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+body {
+  overflow: hidden;
+}
+
 .body {
 
   &_overflow {

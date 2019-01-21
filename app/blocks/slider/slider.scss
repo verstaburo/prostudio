@@ -27,6 +27,7 @@
         //width: 100vw;
         height: 100%;
         position: relative;
+        background-color: white;
 
         .slide {
 
@@ -34,51 +35,72 @@
             position: absolute;
             right: 0;
             top: 0;
-            width: 100%;
+            bottom: 0;
+            left: 0;
             display: flex;
             justify-content: flex-end;
           }
 
           &__right {
-            float: right;
-            //position: absolute;
-            //right: 0;
-            //top: 0;
-            //height: 100%;
+            width: 26.3%;
+            position: relative;
+
+            &__img {
+              height: 100%;
+              min-width: 100%;
+            }
           }
 
           &__left {
-            float: right;
+            flex: 1;
+
+            &__img {
+              height: 100%;
+              float: right;
+            }
           }
 
           &__center {
-            position: absolute;
-            top: 201px;
-            bottom: 0;
-            right: 200px;
-            height: 100vh;
             transform: translate3d(50px, 0, 0);
             transition: transform .6s ease;
+            height: 100%;
+            width: auto;
 
-            &_offset {
-              height: 50vh;
-              right: 370px;
-            }
+            &__cont {
+              right: 100%;
+              bottom: 0;
+              top: 178px;
+              position: absolute;
+              text-align: center;
+              transform: translateX(50%);
 
-            &_offset2 {
-              height: unset;
-              right: 185px;
+              &_offset {
+                right: 100%;
+                bottom: 243px;
+                top: 244px;
+                display: block;
+                transform: translateX(50%);
+              }
+
+              &_offset2 {
+                top: 280px;
+                bottom: 280px;
+                right: 40%;
+                transform: translateX(0);
+              }
             }
           }
 
           &__plate {
             position: absolute;
-            width: 505px;
+            width: 26.3%;
             bottom: 86px;
             right: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+            box-sizing: border-box;
+            padding: 0 40px;
 
             .button {
 
@@ -189,12 +211,14 @@
   &-pag {
     position: absolute;
     overflow: hidden;
-    height: 100px;
+    height: 96px;
     z-index: 6;
-    top: 53px;
-    right: 122px;
+    top: 59px;
+    right: 0;
+    width: 26.3%;
+    box-sizing: border-box;
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
 
     @include screen('xl-r', max) {
       top: 98px;
@@ -205,31 +229,28 @@
     }
 
     &__item {
-      @include text-pag;
-
       color: white;
       position: relative;
-      // margin: 0 19px;
+      width: 65px;
       opacity: .7;
       letter-spacing: 1px;
       transition: all $ease-main;
+      text-align: center;
 
-      &:not(:last-child) {
-        margin-right: 41px;
+      span {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.17px;
+        line-height: 1;
+        display: block;
+        transition: all $ease-main;
+        transform-origin: center top;
       }
 
-      // &:first-child {
-      //   margin-right: 51px;
-      // }
-
-      // &:nth-child(3) {
-      //   margin: 0 29px;
-      // }
-
-      // &:last-child {
-      //   margin-left: 40px;
-      // }
-
+      &:hover {
+        opacity: 1;
+      }
 
       &:hover {
         cursor: pointer;
@@ -238,23 +259,26 @@
       &::before {
         @include pseudo;
 
-        height: 69px;
+        height: 1px;
         width: 1px;
         background: white;
-        bottom: -75px;
-        left: 11px;
+        bottom: 0;
+        left: 50%;
         transition: all $ease-main;
+        transform-origin: left bottom;
+        transform: scale3d(1, 69, 1);
       }
 
       &.active {
-        font-size: 36px;
-        margin-top: -9px;
         opacity: 1;
+        pointer-events: none;
+
+        span {
+          transform: scale(2.2) translateY(-1px);
+        }
 
         &::before {
-          bottom: -52px;
-          left: 22px;
-          height: 54px;
+          transform: scale3d(1, 54, 1);
         }
       }
     }

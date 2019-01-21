@@ -27,7 +27,7 @@ export default function slider() {
       bulletActiveClass: 'active',
       renderBullet(index, className) {
         // return '<span class="' + className + '">' + (index + 1) + '</span>';
-        return `<span class="${className}">0${index + 1}</span>`;
+        return `<span class="${className}"><span>0${index + 1}</span></span>`;
       },
     },
     roundLengths: true,
