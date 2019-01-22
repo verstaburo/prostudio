@@ -70,12 +70,10 @@ $(document).ready(() => {
 
     if (!header.contains(headerFixed)) {
       $('.header').toggleClass('header_fixed-light');
-      $('.header').toggleClass('header_no-border');
     }
 
     if (document.body.contains(bodyDark)) {
       $('.header').toggleClass('header_fixed-dark');
-      $('.header').toggleClass('header_no-border');
     }
   });
 
@@ -89,10 +87,6 @@ $(document).ready(() => {
     $('.vacancy__title').not('.vacancy__title_hot').each(function () {
       $(this).parents('.accordion').slideToggle(300);
     })
-  });
-
-  $('.js-city').hover(() => {
-    $('.city__map').toggleClass('is-active');
   });
 
   $('.js-submit').click((e) => {
