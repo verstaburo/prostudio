@@ -10,7 +10,7 @@
   &_index {
     display: none;
 
-    @include screen('md', max) {
+    @include screen('lg', max) {
       display: block;
     }
   }
@@ -344,14 +344,19 @@
       width: 100%;
       flex-direction: column;
       align-items: center;
-      padding-top: 26px;
+      padding-top: 0;
 
       @include footer-city;
 
       letter-spacing: .45px;
+      flex-basis: unset;
 
-      &:first-child {
-        padding-top: 0;
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      &:not(:first-child) {
+        margin-top: 36px;
       }
 
       &__name {
@@ -359,11 +364,13 @@
       }
 
       &__address {
-        margin-top: 7px;
+        margin-top: 11px;
+        font-size: 18px;
       }
 
       &__tel {
-        margin-top: -4px;
+        font-size: 18px;
+        margin-top: 10px;
       }
 
       &__address, &__tel {
@@ -375,7 +382,7 @@
     &__mail {
 
       &_mobil {
-        margin-top: 28px;
+        margin-top: 38px;
         font-weight: 400;
       }
     }

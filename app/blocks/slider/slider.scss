@@ -119,6 +119,10 @@
             margin-bottom: 17px;
 
             @include text-tel;
+
+            @include screen('xl-b', max) {
+              font-size: 20px;
+            }
           }
         }
       }
@@ -220,10 +224,6 @@
     display: flex;
     justify-content: center;
 
-    @include screen('xl-r', max) {
-      top: 98px;
-    }
-
     @include screen('lg', max) {
       display: none;
     }
@@ -236,6 +236,10 @@
       letter-spacing: 1px;
       transition: all $ease-main;
       text-align: center;
+
+      @include screen('xl-b', max) {
+        width: 55px;
+      }
 
       span {
         font-size: 16px;
@@ -290,15 +294,22 @@
 
   &_journal {
 
+    .swiper-slide {
+      &:not(:last-child) {
+        margin-right: 97px;
+      }
+
+      &:last-child {
+        margin-right: 30px;
+      }
+    }
+
     .slider {
       position: relative;
       border: 1px solid $color-border;
 
       &__slide {
-        padding: 50px;
-        //text-align: center;
-        //width: 350px;
-        width: 357px;
+        width: 387px;
         position: relative;
       }
     }
@@ -308,7 +319,7 @@
     text-align: left;
     margin-top: 105px;
 
-    @include screen('sm', max) {
+    @include screen('md', max) {
       margin-top: 80px;
     }
 
@@ -316,19 +327,16 @@
       width: 424px;
       height: 563px;
       position: relative;
-      opacity: .9;
+      opacity: .8;
+      transition: opacity .7s ease;
 
-      @include screen('sm', max) {
-        width: 100%;
-        height: 100%;
+      @include screen('md', max) {
+        width: 329px;
+        height: 425px;
       }
 
       img {
-        @include fill-img(relative);
-
-        @include screen('sm', max) {
-          min-width: 77.5%;
-        }
+        width: 100%;
       }
     }
 
@@ -336,7 +344,8 @@
 
       &__title {
         margin-top: 45px;
-        visibility: hidden;
+        opacity: 0;
+        transition: opacity .7s ease;
 
         @include heading-5;
 
@@ -346,7 +355,8 @@
       }
 
       &__link {
-        visibility: hidden;
+        opacity: 0;
+        transition: opacity .7s ease;
 
         @include text-tel;
       }
@@ -358,14 +368,20 @@
         opacity: 1;
       }
 
+      & + .swiper-slide + .swiper-slide ~ .swiper-slide {
+        .slider__slide {
+          opacity: 0;
+        }
+      }
+
       .slide {
 
         &__title {
-          visibility: visible;
+          opacity: 1;
         }
 
         &__link {
-          visibility: visible;
+          opacity: 1;
         }
       }
     }
@@ -378,14 +394,30 @@
       height: 520px;
       background: $color-main;
       border-radius: 10px;
-      opacity: .6;
+      opacity: .4;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      transition: opacity .7s ease;
+
+      * {
+        opacity: 0;
+        transition: opacity .7s ease;
+      }
     }
 
     .swiper-slide-active {
+
+      * {
+        opacity: 1;
+      }
+
+      & + .swiper-slide + .swiper-slide ~ .swiper-slide {
+        .slider__slide {
+          opacity: 0;
+        }
+      }
 
       .slider__slide {
         opacity: 1;
@@ -396,25 +428,18 @@
   &_padjournal {
 
     .slider__slide {
-      //width: 520px;
-      //height: 520px;
-      //background: $color-main;
       border-radius: 10px;
-      opacity: .6;
-      //display: flex;
-      //justify-content: center;
-      //align-items: center;
-      //flex-direction: column;
-      //position: relative;
-
-      //img {
-      //  @include fill-img;
-      //
-      //  border-radius: 10px;
-      //}
+      opacity: .7;
+      transition: opacity .7s ease;
     }
 
     .swiper-slide-active {
+
+      & + .swiper-slide + .swiper-slide ~ .swiper-slide {
+        .slider__slide {
+          opacity: 0;
+        }
+      }
 
       .slider__slide {
         opacity: 1;

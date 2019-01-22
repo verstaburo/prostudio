@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable */
 // http://leafletjs.com
 // Для кластеров использовать: https://github.com/Leaflet/Leaflet.markercluster
 import L from 'leaflet';
@@ -78,4 +78,4 @@ export default function maps() {
 
   // marker.bindPopup('Кастомный HTML-попап');
 }
-/* eslint-enable no-unused-vars */
+/* eslint-enable */

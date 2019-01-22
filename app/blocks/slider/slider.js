@@ -38,34 +38,38 @@ export default function slider() {
     },
   });
 
-  const journalSlider = new Swiper('.js-slider.slider_journal', {
-    loop: true,
-    loopedSlides: 4,
-    speed: 700,
-    // autoplay: {
-    //   delay: 2000,
-    // },
-    // slidesPerView: 1,
-    slidesPerView: 'auto',
-    spaceBetween: 27,
-    navigation: {
-      nextEl: '.journal-pag__next',
-      prevEl: '.journal-pag__prev',
-    },
-    pagination: {
-      el: '.slider__dots',
-      clickable: true,
-      paginationClickableClass: 'slider__dots_clickable',
-      bulletClass: 'slider__dot',
-      bulletActiveClass: 'active',
-    },
-    roundLengths: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
+  if ($('.js-slider.slider_journal').length > 0) {
+    const journalSlider = new Swiper('.js-slider.slider_journal', {
+      loop: false,
+      loopedSlides: 4,
+      speed: 700,
+      // autoplay: {
+      //   delay: 2000,
+      // },
+      // slidesPerView: 1,
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      navigation: {
+        nextEl: '.journal-pag__next',
+        prevEl: '.journal-pag__prev',
       },
-    },
-  });
+      pagination: {
+        el: '.slider__dots',
+        clickable: true,
+        paginationClickableClass: 'slider__dots_clickable',
+        bulletClass: 'slider__dot',
+        bulletActiveClass: 'active',
+      },
+      roundLengths: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+      },
+    });
+
+    journalSlider.update();
+  }
 
   const padPortfolio = new Swiper('.js-slider.slider_padportfolio', {
     // loop: true,
@@ -80,7 +84,7 @@ export default function slider() {
     effect: 'coverflow',
     coverflowEffect: {
       rotate: 0,
-      stretch: 173.6,
+      stretch: 180,
       depth: 50,
       modifier: 3,
       slideShadows: false,
@@ -98,19 +102,19 @@ export default function slider() {
       paginationClickableClass: 'slider__dots_clickable',
       bulletClass: 'slider__dot',
       bulletActiveClass: 'active',
-      // renderBullet(index, className) {
-      //   let bullet = '';
-      //   for (let i = 0; i < 4; i += 1) {
-      //     bullet = bullet + `<span class="${className}">0${index + 1}</span>`;
-      //     // return `<span class="${className}">0${index + 1}</span>`;
-      //   }
-      //   return `<span class="${className}">0${index + 1}</span>`;
-      // },
+
     },
     roundLengths: true,
     breakpoints: {
-      320: {
+      768: {
         slidesPerView: 1,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 118.6,
+          depth: 50,
+          modifier: 3,
+          slideShadows: false,
+        },
       },
     },
     // on: {
@@ -134,7 +138,7 @@ export default function slider() {
     effect: 'coverflow',
     coverflowEffect: {
       rotate: 0,
-      stretch: 190,
+      stretch: 188,
       depth: 50,
       modifier: 3,
       slideShadows: false,
@@ -154,8 +158,14 @@ export default function slider() {
     },
     roundLengths: true,
     breakpoints: {
-      320: {
-        slidesPerView: 1,
+      768: {
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 115,
+          depth: 50,
+          modifier: 3,
+          slideShadows: false,
+        },
       },
     },
   });
@@ -191,8 +201,14 @@ export default function slider() {
     },
     roundLengths: true,
     breakpoints: {
-      320: {
-        slidesPerView: 1,
+      768: {
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 116,
+          depth: 50,
+          modifier: 3,
+          slideShadows: false,
+        },
       },
     },
   });

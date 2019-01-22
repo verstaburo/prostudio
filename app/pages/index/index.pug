@@ -20,14 +20,15 @@ block content
               +e.scroll
                 +e.IMG(src='./assets/images/mouse.png').mouse
                 +e.text листайте вниз
-              +e.portfolio портфолио
+              +e.portfolio
+                a(href="portfolio.html").index-link портфолио
         +e.slider.slider_portfolio
           +slider(false, false)
-            +slide('./assets/images/slide1l.jpg', './assets/images/slide1r.jpg', './assets/images/slide1c.png')
-            +slide('./assets/images/slide2l.jpg', './assets/images/slide2r.jpg', './assets/images/slide2c.png', 'Разработка интернет-магазина<br>«Ангел и демон»', 'WEB')
-            +slide-two('./assets/images/slide3l.jpg', './assets/images/slide3r.jpg', './assets/images/slide3c.png', 'Разработка приложения<br>«VELVET»', 'APP')
-            +slide-three('./assets/images/slide4l.jpg', './assets/images/slide4r.jpg', './assets/images/slide4c.png')
-            +slide('./assets/images/slide5l.jpg', './assets/images/slide5r.jpg', './assets/images/slide5c.png', 'Разработка сайта<br>«titus.ru»', 'WEB')
+            +slide-project('./assets/images/slide1l.jpg', './assets/images/slide1r.jpg', './assets/images/slide1c.png')
+            +slide-project('./assets/images/slide2l.jpg', './assets/images/slide2r.jpg', './assets/images/slide2c.png', 'Разработка интернет-магазина<br>«Ангел и демон»', 'WEB')
+            +slide-project-two('./assets/images/slide3l.jpg', './assets/images/slide3r.jpg', './assets/images/slide3c.png', 'Разработка приложения<br>«VELVET»', 'APP')
+            +slide-project-three('./assets/images/slide4l.jpg', './assets/images/slide4r.jpg', './assets/images/slide4c.png')
+            +slide-project('./assets/images/slide5l.jpg', './assets/images/slide5r.jpg', './assets/images/slide5c.png', 'Разработка сайта<br>«titus.ru»', 'WEB')
         +b.slider-pag
 
     +pagepiling-slide
@@ -113,113 +114,86 @@ block content
         +e.box
           +slider(false, false).slider_journal
             +slide
-              a(href='#').slide__link
-                .slide__img
-                  img(src='./assets/images/slide21.jpg')
-                .slide__text Мы запустили новый сайт<br> для компании.
-                .slide__date 20  10  17
+              +card-journal('./assets/images/slide21.jpg','Мы запустили новый сайт для компании.','20  10  17')
             +slide
-              a(href='#').slide__link
-                .slide__img
-                  img(src='./assets/images/slide22.jpg')
-                .slide__text Как эффективно настроить контекстную рекламу и увеличить продажи?
-                .slide__date 14  10  17
+              +card-journal('./assets/images/slide22.jpg','Как эффективно настроить контекстную рекламу и увеличить продажи?','14  10  17')
             +slide
-              a(href='#').slide__link
-                .slide__img
-                  img(src='./assets/images/slide23.jpg')
-                .slide__text Запустили новое приложение для компании.
-                .slide__date 08  10  17
+              +card-journal('./assets/images/slide23.jpg','Запустили новое приложение для компании.','08  10  17')
             +slide
-              a(href='#').slide__link
-                .slide__img
-                  img(src='./assets/images/slide24.jpg')
-                .slide__text Выступление нашего маркетолога на DIGTALE
-                .slide__date 20  10  17
+              +card-journal('./assets/images/slide24.jpg','Выступление нашего маркетолога на DIGTALE','20  10  17')
             +slide
-              a(href='#').slide__link
-                .slide__img
-                  img(src='./assets/images/slide21.jpg')
-                .slide__text Мы запустили новый сайт<br> для компании.
-                .slide__date 14  10  17
+              +card-journal('./assets/images/slide24.jpg','Выступление нашего маркетолога на DIGTALE','20  10  17')
             +slide
-              a(href='#').slide__link
-                .slide__img
-                  img(src='./assets/images/slide22.jpg')
-                .slide__text Как эффективно настроить контекстную рекламу и увеличить продажи?
-                .slide__date 08  10  17
+              +card-journal('./assets/images/slide21.jpg','Мы запустили новый сайт для компании.','20  10  17')
             +slide
-              a(href='#').slide__link
-                .slide__img
-                  img(src='./assets/images/slide23.jpg')
-                .slide__text Запустили новое приложение для компании.
-                .slide__date 20  10  17
+              +card-journal('./assets/images/slide22.jpg','Как эффективно настроить контекстную рекламу и увеличить продажи?','14  10  17')
             +slide
-              a(href='#').slide__link
-                .slide__img
-                  img(src='./assets/images/slide24.jpg')
-                .slide__text Выступление нашего маркетолога на DIGTALE
-                .slide__date 14  10  17
-        +b.slide-footer.slide__footer
-          .container.slide-footer__container
-            //- +e.IMG(src='./assets/images/play.svg').play
-            +b.journal-pag
-              //- +e.IMG(src='./assets/images/prev.svg').prev
-              +e.prev
-                +icon('arrow_left').prev-arrow
-              +e.next
-                +icon('arrow_right').next-arrow
-            +e.line
-            +e.news все новости
-            +b.FORM(action='#' method='POST').subscribe
-              +inputbox
-                +input(placeholder="Email").subscribe__email
-              +button('button')(type='submit')._img
-                +e.IMG(src='./assets/images/send.svg').send
+              +card-journal('./assets/images/slide23.jpg','Запустили новое приложение для компании.','08  10  17')
+            +slide
+              +card-journal('./assets/images/slide24.jpg','Выступление нашего маркетолога на DIGTALE','20  10  17')
+            +slide
+              +card-journal('./assets/images/slide24.jpg','Выступление нашего маркетолога на DIGTALE','20  10  17')
+
+          +b.slide-footer.slide__footer
+            +e.container
+              +b.journal-pag
+                +e.prev
+                  +icon('arrow_left').prev-arrow
+                +e.next
+                  +icon('arrow_right').next-arrow
+              +e.line
+              +e.news
+                a(href="news.html").index-link все новости
+              +b.FORM(action='#' method='POST').subscribe
+                +inputbox
+                  +input(placeholder="Email").subscribe__email
+                +button('button')(type='submit')._img
+                  +e.IMG(src='./assets/images/send.svg').send
     +pagepiling-slide
       +b.slide5.slide
         +e.box
-          +b.city-wrap
-            +b.city_piter.js-city
-              +e.H3.title
-                +e.IMG(src='./assets/images/piter.png').nohover
-                +e.IMG(src='./assets/images/piter_white.png').hover
-                +e.name_piter Петербург
-              +e.address 196247,<br>Ленинский проспект, дом 151<br>офис 315
-              +link(href='#')._white._xl.city__map Как проехать
-              +e.tel  +7 (812) 645-65-96
-            +b.city_moscow.js-city
-              +e.H3.title
-                +e.IMG(src='./assets/images/moscow.png').nohover
-                +e.IMG(src='./assets/images/moscow_white.png').hover
-                +e.name_moscow Москва
-              +e.address 196247,<br>Проспект вернадского, дом 43<br>офис 49
-              +link(href='#')._white._xl.city__map Как проехать
-              +e.tel  +7 (495) 645-65-96
-          +e.offer-content
-            +e.H2.title Хотите проект от Prostudio?
-            +e.P.subtitle Заполните форму на сайте или напишите нам на почту #[+link(href='mailto:mail@prostudio.ru')._blue._nounder.slide5__link mail@prostudio.ru]
-            +button(href="#contact")._white._big.__btn.js-fancybox Обсудить проект
+          +e.container
+            +b.city-wrap
+              +b.city_piter.js-city
+                +e.H3.title
+                  +e.IMG(src='./assets/images/piter.png').nohover
+                  +e.IMG(src='./assets/images/piter_white.png').hover
+                  +e.name_piter Петербург
+                +e.address 196247,<br>Ленинский проспект, дом 151<br>офис 315
+                +link(href='#')._white._xl.city__map Как проехать
+                +e.tel  +7 (812) 645-65-96
+              +b.city_moscow.js-city
+                +e.H3.title
+                  +e.IMG(src='./assets/images/moscow.png').nohover
+                  +e.IMG(src='./assets/images/moscow_white.png').hover
+                  +e.name_moscow Москва
+                +e.address 196247,<br>Проспект вернадского, дом 43<br>офис 49
+                +link(href='#')._white._xl.city__map Как проехать
+                +e.tel  +7 (495) 645-65-96
+            +e.offer-content
+              +e.H2.title Хотите проект от Prostudio?
+              +e.P.subtitle Заполните форму на сайте или напишите нам на почту #[+link(href='mailto:mail@prostudio.ru')._blue._nounder.slide5__link mail@prostudio.ru]
+              +button(href="#contact")._white._big.__btn.js-fancybox Обсудить проект
 
-        +b.slide-footer.slide__footer._end
-          .container.slide-footer__container
-            //- +e.IMG(src='./assets/images/play.svg').play
-            +b.menu
-              ul
-                li.menu__item
-                  +link(href='#')._nounder._gray Vkontake
-                li.menu__item
-                  +link(href='#')._nounder._gray behance
-                li.menu__item
-                  +link(href='#')._nounder._gray youtube
-                li.menu__item
-                  +link(href='#')._nounder._gray instagram
-                li.menu__item
-                  +link(href='#')._nounder._gray facebook
-                li.menu__item
-                  +link(href='#')._nounder._gray telegram
-            //+e.lang RU EN
-            +switcher('RU', 'EN').js-switcher-lang
+          +b.slide-footer.slide__footer._end
+            .container.slide-footer__container
+              //- +e.IMG(src='./assets/images/play.svg').play
+              +b.menu
+                ul
+                  li.menu__item
+                    +link(href='google.com')._nounder._gray Vkontake
+                  li.menu__item
+                    +link(href='google.com')._nounder._gray behance
+                  li.menu__item
+                    +link(href='google.com')._nounder._gray youtube
+                  li.menu__item
+                    +link(href='google.com')._nounder._gray instagram
+                  li.menu__item
+                    +link(href='google.com')._nounder._gray facebook
+                  li.menu__item
+                    +link(href='google.com')._nounder._gray telegram
+              //+e.lang RU EN
+              +switcher('RU', 'EN').js-switcher-lang
 
   +b.pad
     .container

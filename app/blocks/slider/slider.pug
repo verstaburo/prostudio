@@ -22,7 +22,12 @@ mixin plate(title, button)
     h2.slide__title!= title
     +button._fullwhite._huge!= button
 
-mixin slide(leftimage, rightimage, centerimage, title, button)
+mixin slide()
+  .swiper-slide
+    +e.slide&attributes(attributes)
+      block
+
+mixin slide-project(leftimage, rightimage, centerimage, title, button)
   .swiper-slide
     +e.slide&attributes(attributes)
       +slide-bg(leftimage, rightimage)
@@ -31,7 +36,7 @@ mixin slide(leftimage, rightimage, centerimage, title, button)
       if title
         +plate(title, button)
 
-mixin slide-two(leftimage, rightimage, centerimage, title, button)
+mixin slide-project-two(leftimage, rightimage, centerimage, title, button)
   .swiper-slide
     +e.slide&attributes(attributes)
       +slide-bg(leftimage, rightimage)
@@ -40,7 +45,7 @@ mixin slide-two(leftimage, rightimage, centerimage, title, button)
       if title
         +plate(title, button)
 
-mixin slide-three(leftimage, rightimage, centerimage, title, button)
+mixin slide-project-three(leftimage, rightimage, centerimage, title, button)
   .swiper-slide
     +e.slide&attributes(attributes)
       +slide-bg(leftimage, rightimage)

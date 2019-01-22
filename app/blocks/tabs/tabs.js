@@ -22,7 +22,8 @@ export default function tabs() {
     //   $(this).addClass('active');
     // });
 
-    tab.addClass('active')
+    tab.addClass('active');
+    window.dispatchEvent(new Event('resize'));
   });
 }
 /* eslint-enable */

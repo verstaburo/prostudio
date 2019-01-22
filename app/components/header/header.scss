@@ -24,14 +24,10 @@
 
     .header__container {
       padding-right: 30px;
-    }
 
-    .menu {
-
-      &__item {
-        &:not(:last-child) {
-          margin-right: 61px;
-        }
+      @include screen('md', max) {
+        padding-right: 15px !important;
+        padding-left: 15px !important;
       }
     }
   }
@@ -48,14 +44,23 @@
     background-color: $white;
   }
 
+  &_fixed-light {
+    background-color: $white !important;
+    width: 100% !important;
+  }
+
   &_fixed-dark {
     background-color: $color-bg-dark;
   }
 
   &_inner {
-    // padding-top: 34px;
-    padding-top: 29px;
-    // border-bottom: 1px solid $color-border-2;
+    padding-top: 34px;
+    height: 113px;
+
+    @include screen('lg', max) {
+      height: 80px;
+      padding-top: 24px;
+    }
   }
 
   &_no-border {
@@ -79,6 +84,10 @@
     position: relative;
     width: 100% !important;
 
+    @include screen('lg', max) {
+      width: unset !important;
+    }
+
     &_wide {
 
       .buttons__project {
@@ -100,26 +109,118 @@
   &__logo {
     display: block;
     height: 32px;
+
+    @include screen('lg', max) {
+      z-index: 1;
+    }
+  }
+
+
+  @mixin responsiveMenuOne() {
+    background-color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 79px;
+    left: 0;
+    padding-bottom: 30px !important;
+    width: 100%;
+    box-sizing: border-box;
+    height: calc(100% - 79px);
+    overflow: auto;
+    margin: 0;
+    text-align: center;
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .5s ease;
+    transition-delay: .5s;
+  }
+
+  @mixin responsiveMenu() {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: opacity .5s ease,
+    transform .5s ease, background-color $ease-main;
+
+    @for $i from 1 through 9 {
+      &:nth-child(#{$i}) {
+        transition-delay: $i * 0.045s;
+      }
+    }
+  }
+
+  @mixin responsiveActive() {
+    transform: scaleY(1);
+    transition-delay: 0s;
+
+    .menu__item {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  @mixin responsiveDark() {
+    background-color: $color-bg-dark;
   }
 
   &__menu {
     margin: 0 auto;
 
-    .menu__item {
+    @include screen('lg', max) {
+      .header_inner & {
+        @include responsiveMenuOne;
+      }
+    }
+
+    @include screen('xl-r', max) {
+      .header_index & {
+        @include responsiveMenuOne;
+      }
+    }
+
+    &_dark {
+      @include screen('lg', max) {
+        .header_inner & {
+          @include responsiveDark;
+        }
+      }
 
       @include screen('xl-r', max) {
-        transform: translateY(-100%);
-        opacity: 0;
-        transition: opacity .5s ease,
-          transform .5s ease;
-
-        @for $i from 1 through 9 {
-          &:nth-child(#{$i}) {
-            transition-delay: $i * 0.045s;
-          }
+        .header_index & {
+          @include responsiveDark;
         }
       }
     }
+
+    .menu__item {
+      @include screen('lg', max) {
+        .header_inner & {
+          @include responsiveMenu;
+        }
+      }
+
+      @include screen('xl-r', max) {
+        .header_index & {
+          @include responsiveMenu;
+        }
+      }
+    }
+
+    &_active {
+      @include screen('lg', max) {
+        .header_inner & {
+          @include responsiveActive;
+        }
+      }
+
+      @include screen('xl-r', max) {
+        .header_index & {
+          @include responsiveActive;
+        }
+      }
+    }
+
   }
 
   .buttons {
@@ -140,14 +241,12 @@
       opacity: 1;
       transition: margin .3s ease .3s;
       transition: opacity .3s ease;
-      //display: none;
     }
 
     &__burger {
       display: none;
       width: 45px;
       height: 25px;
-      //padding-right: 15px;
       flex-direction: column;
       justify-content: center;
       align-items: flex-end;
@@ -219,35 +318,152 @@
   }
 
   &_index {
-    border-bottom: none;
     padding-top: 46px;
-    background-color: transparent;
+    border-bottom: none;
 
-    #{$b}__menu {
-      margin-left: 21px;
-      margin-right: 0;
+    @include screen('lg') {
+      background-color: transparent;
+    }
+  }
+
+  &_index {
+    @include screen('xl-r', max) {
+      padding-left: 0;
+      padding-top: 29px;
     }
 
-    .container {
-
-      @include screen('lg-r', max) {
-        padding-left: $container-padding-sm;
-        padding-right: $container-padding-sm;
-      }
+    @include screen('lg', max) {
+      width: 100%;
     }
 
-    .buttons {
+  }
 
-      &__wrap {
+  &_inner {
+    @include screen('lg', max) {
+      padding-left: 0;
+    }
+  }
 
-        .buttons__project {
-          display: none;
-          margin-left: 27px;
+  &_inner .buttons__ico, &_inner .buttons__project {
+    @include screen('lg', max) {
+      display: none;
+    }
+  }
+
+  &_index .buttons__ico, &_index .buttons__project {
+    @include screen('xl-r', max) {
+      display: none;
+    }
+  }
+
+  &_inner .buttons__burger {
+    @include screen('lg', max) {
+      display: flex;
+    }
+  }
+
+  &_index .buttons__burger {
+    @include screen('xl-r', max) {
+      display: flex;
+    }
+  }
+
+  &_inner .menu__item {
+    @include screen('lg', max) {
+      margin-right: 0!important;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &:hover {
+      @include screen('lg', max) {
+        background: $color-main-gray;
+
+        .link {
+          color: $color-main;
         }
       }
+    }
 
-      &__ico {
-        margin-right: 0;
+    .link {
+      @include screen('lg', max) {
+        @include text-menu-pad;
+      }
+    }
+
+    &_btn {
+      @include screen('lg', max) {
+        display: block;
+        margin-top: 50px;
+      }
+    }
+
+    &_present {
+      @include screen('lg', max) {
+        display: flex;
+        justify-content: center;
+        margin-top: 41px;
+        flex-shrink: 0;
+      }
+
+      .link__text {
+        @include screen('lg', max) {
+          font-size: 13px;
+          letter-spacing: .9px;
+          line-height: 1.7;
+          text-align: left;
+          text-transform: initial;
+        }
+      }
+    }
+  }
+
+  &_index .menu__item {
+    @include screen('xl-r', max) {
+      margin-right: 0!important;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &:hover {
+      @include screen('xl-r', max) {
+        background: $color-main-gray;
+
+        .link {
+          color: $color-main;
+        }
+      }
+    }
+
+    .link {
+      @include screen('xl-r', max) {
+        @include text-menu-pad;
+      }
+    }
+
+    &_btn {
+      @include screen('xl-r', max) {
+        display: block;
+        margin-top: 50px;
+      }
+    }
+
+    &_present {
+      @include screen('xl-r', max) {
+        display: flex;
+        justify-content: center;
+        margin-top: 41px;
+        flex-shrink: 0;
+      }
+
+      .link__text {
+        @include screen('xl-r', max) {
+          font-size: 13px;
+          letter-spacing: .9px;
+          line-height: 1.7;
+          text-align: left;
+          text-transform: initial;
+        }
       }
     }
   }
@@ -256,11 +472,43 @@
 .menu {
   display: flex;
   justify-content: space-between;
+  flex: 1;
+
+  .header_inner & {
+    padding: 0 100px;
+
+    @include screen('xl-r', max) {
+      padding: 0 70px;
+    }
+
+    @include screen('xl-b', max) {
+      padding: 0 50px;
+    }
+
+    @include screen('lg', max) {
+      padding: 0;
+    }
+  }
+
+  .header_index & {
+    @include screen('xl-r') {
+      padding: 0 50px;
+    }
+  }
 
   &__item {
+    .header_inner & {
+      padding: 0 30px;
 
-    &:not(:last-child) {
-      margin-right: 62px;
+      @include screen('xl-b', max) {
+        padding: 0 10px;
+      }
+    }
+
+    .header_index & {
+      @include screen('xl-r') {
+        padding: 0 10px;
+      }
     }
 
     .link {
@@ -291,155 +539,4 @@
       font-size: 15px;
     }
   }
-}
-
-@include screen('xl-r', max) {
-
-  .header {
-    width: 100%;
-    padding-left: 0;
-    padding-top: 29px;
-    //background: white;
-
-    &__container {
-      // width: calc(100vw - 505px) !important;
-      width: unset !important;
-      // padding-right: 535px !important;
-    }
-
-    &__logo {
-      z-index: 1;
-    }
-
-    &__menu {
-      background-color: white;
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      top: 96px;
-      left: 0;
-      padding-bottom: 30px;
-      width: 100%;
-      box-sizing: border-box;
-      height: calc(100% - 96px);
-      overflow: auto;
-      margin: 0;
-      text-align: center;
-      z-index: -1;
-      transform: scaleY(0);
-      transform-origin: top;
-      transition: transform .5s ease;
-      transition-delay: .5s;
-
-      &_active {
-        transform: scaleY(1);
-        transition-delay: 0s;
-
-        .menu {
-
-          &__item {
-            transform: translate3d(0, 0, 0);
-            opacity: 1;
-          }
-        }
-      }
-
-      &_dark {
-        background-color: $color-bg-dark;
-      }
-    }
-
-    &_inner {
-      // height: 80px;
-      padding-left: 0;
-    }
-
-    .menu {
-
-      &__item {
-        margin-right: 0!important;
-        padding-left: 30px;
-        padding-right: 30px;
-
-        &:hover {
-          background: $color-main-gray;
-
-          .link {
-            color: $color-main;
-          }
-        }
-
-        .link {
-          @include text-menu-pad;
-        }
-
-        &_btn {
-          display: block;
-          margin-top: 50px;
-        }
-
-        &_present {
-          display: flex;
-          justify-content: center;
-          margin-top: 41px;
-          flex-shrink: 0;
-
-          .link__text {
-            font-size: 13px;
-            letter-spacing: .9px;
-            line-height: 1.7;
-            text-align: left;
-            text-transform: initial;
-          }
-        }
-      }
-    }
-
-    .buttons {
-
-      &__ico, &__project {
-        display: none;
-      }
-
-      &__burger {
-        display: flex;
-      }
-    }
-  }
-}
-
-@include screen('md', max) {
-
-  //.header {
-  //  padding-left: 0;
-  //
-  //  &__container {
-  //    padding-right: 31px !important;
-  //  }
-  //}
-
-  .header {
-
-    &_wide {
-
-      .header__container {
-        padding-right: 15px !important;
-        padding-left: 15px !important;
-      }
-    }
-  }
-}
-
-@include screen('sm', max) {
-
-  //.header {
-  //
-  //  &_wide {
-  //
-  //    .header__container {
-  //      padding-right: 16px !important;
-  //      padding-left: 16px !important;
-  //    }
-  //  }
-  //}
 }

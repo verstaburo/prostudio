@@ -31,27 +31,27 @@
     }
   }
 
-  &_advantage,
-  &_padjournal {
-
-    .swiper-slide {
-
-      @include screen('md2', max) {
-        width: 100%!important;
-      }
-    }
+  &_advantage {
 
     .slider {
 
       &__slide {
 
-        @include screen('md2', max) {
-          width: 100%;
+        @include screen('md', max) {
+          width: 330px;
+          height: 328px;
         }
+      }
+    }
+  }
 
-        @include screen('sm', max) {
-          max-width: 329px;
-          height: 327px;
+  &_padjournal {
+    .slider {
+
+      &__slide {
+
+        @include screen('md', max) {
+          width: 330px;
         }
       }
     }
@@ -74,7 +74,7 @@
     min-height: 100vh;
     box-sizing: border-box;
 
-    @include screen('xl-t', max) {
+    @include screen('lg', max) {
       padding-left: 210px;
     }
 
@@ -145,7 +145,7 @@
     flex-direction: column;
     justify-content: center;
 
-    @include screen('xl-t', max) {
+    @include screen('lg', max) {
       padding-top: 190px;
     }
   }
@@ -154,7 +154,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include screen('xl-r', max) {
+    @include screen('xl-b', max) {
       flex-wrap: wrap;
     }
   }
@@ -183,11 +183,12 @@
     display: flex;
     flex-direction: column;
 
-    @include screen('xl-r', max) {
-      flex-basis: 25%;
+    @include screen('xl-b', max) {
+      width: 50%;
+      margin-bottom: 80px;
     }
 
-    @include screen('lg-2', max) {
+    @include screen('lg', max) {
       flex-basis: 100%;
     }
 
@@ -195,8 +196,9 @@
       margin-right: 80px;
       margin-bottom: 30px;
 
-      @include screen('xl-r', max) {
-        margin-bottom: 50px;
+      @include screen('xl-b', max) {
+        margin-bottom: 80px;
+        margin-right: 0;
       }
     }
 
@@ -213,6 +215,10 @@
     margin-top: 83px;
 
     @include heading-5;
+
+    @include screen('xl-b', max) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -223,13 +229,15 @@
   }
 
   &__box {
-    padding: 84px 134px 0 94px;
+    padding: 157px 134px 100px 94px;
     display: flex;
     vertical-align: middle;
-    min-height: 100%;
+    min-height: 100vh;
     box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
 
-    @include screen('xl-t', max) {
+    @include screen('lg', max) {
       padding: 0 168px 0 112px;
     }
   }
@@ -238,6 +246,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .usluga {
@@ -245,6 +254,10 @@
     min-height: 225px;
     position: relative;
     margin: 60px 0;
+
+    @include screen('xl-b', max) {
+      width: 50%;
+    }
 
     &__title {
       position: absolute;
@@ -294,18 +307,28 @@
 }
 
 .slide4 {
-  //height: unset;
-  //display: flex;
-  //align-items: center;
-  width: 100vw;
+  width: 100%;
 
   &__box {
-    margin-left: 226px;
-    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-height: 100%;
+    padding: 150px 0 0 276px;
 
-    @include screen ('xl-t', max) {
+    @include screen ('lg', max) {
       padding-top: 90px;
     }
+  }
+
+  .slider {
+    margin: auto 0;
+  }
+
+  .slide__footer {
+    margin-top: 70px;
+    padding-right: 30px;
+    box-sizing: border-box;
   }
 
   .slide {
@@ -332,20 +355,30 @@
 
 .slide5 {
 
+  .slide-footer__container {
+    height: 55px;
+  }
+
   &__box {
     text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    //align-items: center;
-    align-content: flex-start;
-    align-items: flex-start;
-    //height: 100%;
-    padding-top: 160px;
+    padding-top: 130px;
+    box-sizing: border-box;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
-    @include screen ('xl-t', max) {
+    @include screen ('lg', max) {
       padding-top: 140px;
     }
+  }
+
+  &__container {
+    padding: 0 140px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto 0;
   }
 
   &__offer-content {
@@ -353,7 +386,7 @@
   }
 
   &__title {
-    margin-top: 51px;
+    margin-top: 33px;
     width: 100%;
 
     @include heading-7;
@@ -369,7 +402,13 @@
   }
 
   .slide__footer {
-    margin-top: 30px;
+    margin-top: 70px;
+
+    .switcher {
+      position: absolute;
+      right: 30px;
+      top: 9px;
+    }
   }
 
   &__link {
@@ -379,14 +418,17 @@
   }
 
   &__btn {
-    margin-top: 30px;
+    margin-top: 40px;
   }
 
   .city-wrap {
     display: flex;
-    width: 985px;
+    align-items: center;
+    width: 986px;
+    min-height: 418px;
+    margin: 0 auto;
 
-    @include screen('lg-r', max) {
+    @include screen('lg', max) {
       width: 70%;
       flex-direction: column;
     }
@@ -395,152 +437,159 @@
       width: 60%;
     }
   }
+}
 
-  .city {
-    flex-basis: 50%;
-    padding: 36px 41px 41px 36px;
-    text-align: left;
-    position: relative;
-    background-color: $color-bg;
-    transition: color $ease-main, background-color $ease-main;
+.city {
+  flex-basis: 50%;
+  padding: 36px 41px 37px 36px;
+  text-align: left;
+  position: relative;
+  background-color: $color-bg;
+  transition: color $ease-main, background-color $ease-main;
+  z-index: 2;
+
+  $b: &;
+
+  @include screen('md', max) {
+    padding: 0 20px 0;
+  }
+
+  &::before {
+    @include pseudo;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s ease;
+    opacity: 0;
+    background-position: 100% 0;
+  }
+
+  &_piter {
 
     &::before {
-      @include pseudo;
-
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: all .5s ease;
+      background-color: $color-main;
+      background-image: url('../images/city_piter_bg.jpg');
+      background-repeat: no-repeat;
     }
+  }
 
-    &:hover {
-      color: white;
-      padding-bottom: 0;
-      background-color: transparent;
+  &_moscow {
 
-      &::before {
-        padding: 35px;
-        top: -35px;
-        left: -35px;
-      }
-
-      .city {
-
-        &__name {
-          color: white;
-        }
-
-        &__hover {
-          opacity: 1;
-        }
-
-        &__nohover {
-          opacity: 0;
-        }
-      }
+    &::before {
+      background-color: $color-red;
+      background-image: url('../images/city_moscow_bg.jpg');
+      background-repeat: no-repeat;
     }
+  }
 
-    &__hover,
-    &__nohover {
-      transition: opacity $ease-main;
+  &:hover {
+    color: white;
+    background-color: transparent;
+
+    &::before {
+      top: -22px;
+      left: -41px;
+      right: -34px;
+      bottom: -20px;
+      opacity: 1;
     }
+  }
 
-    &__hover {
-      position: absolute;
-      top: 0;
-      left: 0;
+  &__hover,
+  &__nohover {
+    transition: opacity $ease-main;
+  }
+
+  &__hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    #{$b}:hover & {
+      opacity: 1;
+    }
+  }
+
+  &__nohover {
+    #{$b}:hover & {
       opacity: 0;
     }
+  }
 
-    &:first-child {
-      margin-right: 35px;
+  &:not(:last-child) {
+    margin-right: 35px;
 
-      @include screen('lg-r', max) {
-        margin-right: 0;
-        margin-bottom: 35px;
-      }
+    @include screen('lg', max) {
+      margin-right: 0;
+      margin-bottom: 35px;
     }
+  }
 
-    &__title {
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
+  &__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
 
-    &__name {
-      margin-left: 28px;
-      transition: color $ease-main;
+  &__name {
+    margin-left: 28px;
+    transition: color $ease-main;
 
-      @include text-city;
+    @include text-city;
 
-      &_piter {
-        color: $color-main;
-      }
-
-      &_moscow {
-        color: $color-red;
-      }
-    }
-
-    &__address {
-      margin-top: 43px;
-      word-break: break-all;
-
-      @include text-address;
-    }
-
-    &__tel {
-      margin-top: 26px;
-
-      @include text-tel;
-    }
-
-    &__map {
-      margin-top: 14px;
-      display: block;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height $ease-main;
-
-      &.is-active {
-        max-height: 40px;
-      }
-    }
-
-    &_piter,
-    &_moscow {
-
-      &::before {
-        opacity: 0;
-        background-position: 100% 0;
-      }
-
-      &:hover {
-        &::before {
-          opacity: 1;
-        }
-      }
+    @include screen('md', max) {
+      font-size: 18px;
+      margin-left: 0;
     }
 
     &_piter {
-
-      &::before {
-        background-color: $color-main;
-        background-image: url('../images/city_piter_bg.jpg');
-        background-repeat: no-repeat;
-      }
+      color: $color-main;
     }
 
     &_moscow {
+      color: $color-red;
+    }
 
-      &::before {
-        background-color: $color-red;
-        background-image: url('../images/city_moscow_bg.jpg');
-        background-repeat: no-repeat;
-      }
+    #{$b}:hover & {
+      color: white;
+    }
+  }
+
+  &__address {
+    margin-top: 43px;
+    word-break: break-all;
+
+    @include text-address;
+  }
+
+  &__tel {
+    margin-top: 38px;
+
+    @include text-tel;
+
+    transition: transform $ease-main;
+
+    #{$b}:hover & {
+      transform: translate3d(0, 3px, 0);
+    }
+  }
+
+  &__map {
+    display: block;
+    height: 0;
+    transition: height $ease-main, opacity $ease-main, transform $ease-main;
+    color: inherit;
+    overflow: hidden;
+    letter-spacing: 0.08em;
+
+    #{$b}:hover & {
+      height: 40px;
+      transform: translate3d(0, 14px, 0);
     }
   }
 }
@@ -612,13 +661,12 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    margin-left: 264px;
 
-    @include screen('xl-t', max) {
+    @include screen('lg', max) {
       margin-left: 183px;
     }
 
-    @include screen('lg-r', max) {
+    @include screen('lg', max) {
       margin-left: 90px;
     }
 
@@ -632,6 +680,26 @@
       transition: background-color $ease-main;
       cursor: pointer;
 
+      &.swiper-button-disabled {
+        pointer-events: none;
+
+        .journal-pag {
+
+          &__prev-arrow,
+          &__next-arrow {
+            fill: $color-arrow;
+          }
+        }
+      }
+
+      &-arrow {
+        @include center-block;
+        @include size(19px);
+
+        fill: $color-main;
+        transition: fill $ease-main;
+      }
+
       &:hover {
         background-color: $color-main;
 
@@ -643,15 +711,6 @@
           }
         }
       }
-    }
-
-    &__prev-arrow,
-    &__next-arrow {
-      @include center-block;
-      @include size(19px);
-
-      fill: $color-arrow;
-      transition: fill $ease-main;
     }
 
     &__next {
@@ -686,17 +745,17 @@
     padding: 8px;
     box-sizing: border-box;
 
-    @include screen('lg-r', max) {
+    @include screen('lg', max) {
       margin-left: 50px;
     }
 
     .inputbox {
       flex: 1;
+      margin: 0 24px;
     }
 
     &__email {
       border: none;
-      padding-left: 24px;
 
       &::placeholder {
         color: $color-placeholder2;
@@ -716,11 +775,16 @@
   .menu {
     display: flex;
     margin: 0 auto;
+    justify-content: center;
 
     &__item {
       display: inline-block;
 
       @include text-button-big;
+
+      &:not(:last-child) {
+        margin-right: 55px;
+      }
     }
   }
 }
@@ -730,8 +794,8 @@
   text-align: center;
 
   .container {
-    padding-left: $container-padding-sm;
-    padding-right: $container-padding-sm;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   &__title {
@@ -743,6 +807,12 @@
     font-size: 47px;
     line-height: 1.4;
     letter-spacing: 2.8px;
+
+    @include screen('md', max) {
+      font-size: 41px;
+      line-height: 1.6;
+      margin-top: 124px;
+    }
   }
 
   &__discuss {
@@ -752,8 +822,8 @@
     margin: 73px auto 0;
     letter-spacing: 1px;
 
-    @include screen('sm', max) {
-      margin-top: 63px;
+    @include screen('md', max) {
+      margin-top: 66px;
     }
   }
 
@@ -832,17 +902,16 @@
       background: $color-border-2;
       width: 5px;
       height: 5px;
-      //margin: 0 25px;
       flex-shrink: 0;
+      border-radius: 100px;
+      transition: transform $ease-main;
 
       &.active-main {
-        width: 14px;
-        height: 14px;
+        transform: scale(2.4);
       }
 
       &.active-prev, &.active-next {
-        width: 8px;
-        height: 8px;
+        transform: scale(1.6);
       }
     }
   }
@@ -872,8 +941,8 @@
   &__advantage {
     margin-top: 102px;
 
-    @include screen('sm', max) {
-      margin-top: 91px;
+    @include screen('md', max) {
+      margin-top: 89px;
     }
 
     .swiper-container {
@@ -909,14 +978,9 @@
 
       top: -30px;
 
-      @include screen('md2', max) {
-        font-size: 160px;
-      }
-
-      @include screen('sm', max) {
+      @include screen('md', max) {
+        font-size: 145px;
         top: -15px;
-        left: 5px;
-        font-size: 144px;
       }
     }
 
@@ -926,14 +990,10 @@
       top: -13px;
       left: 2px;
 
-      @include screen('md2', max) {
-        font-size: 28px;
-      }
-
-      @include screen('sm', max) {
+      @include screen('md', max) {
         top: 0;
-        font-size: 23px;
-        line-height: 1.75;
+        font-size: 24px;
+        line-height: 38.95px;
       }
     }
   }
@@ -941,7 +1001,7 @@
   &__journal {
     margin-top: 100px;
 
-    @include screen('sm', max) {
+    @include screen('md', max) {
       margin-top: 89px;
     }
   }
@@ -955,12 +1015,9 @@
       display: inline-block;
       position: relative;
 
-      @include screen('md2', max) {
+      @include screen('md', max) {
         display: block;
         width: 100%;
-      }
-
-      @include screen('sm', max) {
         height: 328px;
       }
 
@@ -973,23 +1030,24 @@
 
     &__title {
       margin-top: 41px;
-      visibility: hidden;
+      opacity: 0;
+      transition: opacity .7s ease;
 
       @include text-tel;
 
       line-height: 1.4;
 
-      @include screen('sm', max) {
-        margin-top: 32px;
-        margin-left: 5px;
+      @include screen('md', max) {
+        margin-top: 31px;
       }
     }
 
     &__date {
       margin-top: 31px;
-      visibility: hidden;
+      opacity: 0;
       color: $color-date;
       text-transform: uppercase;
+      transition: opacity .7s ease;
 
       @include text-date-md;
     }
@@ -997,11 +1055,11 @@
     .swiper-slide-active {
 
       .pad-journal__title {
-        visibility: visible;
+        opacity: 1;
       }
 
       .pad-journal__date {
-        visibility: visible;
+        opacity: 1;
       }
     }
   }
@@ -1009,7 +1067,7 @@
   &__question {
     @include heading-10;
 
-    margin-top: 99px;
+    margin-top: 66px;
     color: $color-main;
     letter-spacing: .45px;
 
@@ -1353,14 +1411,14 @@
   }
 }
 
-@include screen('lg-r') {
+@include screen('lg') {
 
   .pad {
     display: none;
   }
 }
 
-@include screen('lg-r', max) {
+@include screen('lg', max) {
 
   #pagepiling, #pp-nav {
     display: none;
@@ -1402,50 +1460,12 @@
   }
 }
 
-@include screen('sm', max) {
+.index-link {
+  color: black;
+  transition: color $ease-main;
 
-  .pad {
-
-    &__title {
-      margin-top: 130px;
-      font-size: 42px;
-      line-height: 1.6;
-      letter-spacing: 2.4px;
-    }
-  }
-
-  .contact {
-
-    &__inputbox {
-
-      &_budget {
-        justify-content: space-between;
-
-        .checkradio {
-          margin-left: 0;
-          width: 100%;
-          text-align: center;
-          margin: 16px 0 0;
-        }
-      }
-    }
-  }
-}
-
-@include screen('xs', max) {
-
-  .pad {
-
-    &__title {
-      font-size: 28px;
-    }
-  }
-
-  .padportfolio {
-
-    &__nav {
-      width: 260px;
-    }
+  &:hover {
+    color: $color-main;
   }
 }
 

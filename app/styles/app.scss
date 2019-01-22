@@ -77,7 +77,7 @@ html {
 .html_index {
   overflow: hidden;
 
-  @include screen('md', max) {
+  @include screen('lg', max) {
     overflow-x: hidden;
     overflow-y: auto;
   }
