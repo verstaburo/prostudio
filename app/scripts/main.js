@@ -83,6 +83,33 @@ $(document).ready(() => {
     $('#pp-nav').toggleClass('hidden');
   });
 
+  $('.header .buttons__ico').css({
+    marginRight: - $('.header .buttons__project').outerWidth(),
+  });
+
+  $('.slideToUnlock').each(function () {
+    document.querySelector("input[type=\"range\"]").onmouseup = function() {
+      var theRange = this.value;
+      if (theRange == 100) {
+        unlock();
+      }
+
+      document.init = setInterval(function() {
+        if(document.querySelector("input[type=\"range\"]").value != 0) {
+          document.querySelector("input[type=\"range\"]").value = theRange--;
+        }
+      }, 1);
+    };
+
+    document.querySelector("input[type=\"range\"]").onmousedown = function() {
+      clearInterval(document.init);
+    };
+
+    function unlock() {
+      document.querySelector(".js-fancybox").click();
+    };
+  });
+
   $('.js-vacancy-hot .switcher__box').click(() => {
     $('.vacancy__title').not('.vacancy__title_hot').each(function () {
       $(this).parents('.accordion').slideToggle(300);

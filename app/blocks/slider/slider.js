@@ -40,13 +40,7 @@ export default function slider() {
 
   if ($('.js-slider.slider_journal').length > 0) {
     const journalSlider = new Swiper('.js-slider.slider_journal', {
-      loop: false,
-      loopedSlides: 4,
       speed: 700,
-      // autoplay: {
-      //   delay: 2000,
-      // },
-      // slidesPerView: 1,
       slidesPerView: 'auto',
       spaceBetween: 0,
       navigation: {
@@ -68,7 +62,11 @@ export default function slider() {
       },
     });
 
-    journalSlider.update();
+    journalSlider.slideNext();
+
+    setTimeout(() => {
+      journalSlider.slidePrev();
+    }, 1);
   }
 
   const padPortfolio = new Swiper('.js-slider.slider_padportfolio', {

@@ -17,8 +17,11 @@
     transition: width .6s ease;
     width: 100%;
 
+    .buttons__ico {
+      margin-right: 27px !important;
+    }
+
     .buttons__project {
-      margin-right: 0 !important;
       opacity: 1 !important;
     }
 
@@ -90,8 +93,11 @@
 
     &_wide {
 
+      .buttons__ico {
+        margin-right: 27px !important;
+      }
+
       .buttons__project {
-        margin-right: 0 !important;
         opacity: 1 !important;
       }
     }
@@ -232,15 +238,14 @@
 
     &__ico {
       display: inline-block;
-      margin-right: 27px;
+      margin-right: -180px;
+      transition: margin $ease-main, opacity $ease-main;
     }
 
     &__project {
       display: inline-block;
-      margin-right: -100%;
-      opacity: 1;
-      transition: margin .3s ease .3s;
-      transition: opacity .3s ease;
+      opacity: 0;
+      transition: opacity $ease-main;
     }
 
     &__burger {

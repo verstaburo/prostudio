@@ -24,10 +24,10 @@ block content
                 a(href="portfolio.html").index-link портфолио
         +e.slider.slider_portfolio
           +slider(false, false)
-            +slide-project('./assets/images/slide1l.jpg', './assets/images/slide1r.jpg', './assets/images/slide1c.png')
+            +slide-project('./assets/images/slide1l.jpg', './assets/images/slide1r.jpg', './assets/images/slide1c.png', 'Разработка интернет-магазина<br>«Swimchamp»', 'WEB')
             +slide-project('./assets/images/slide2l.jpg', './assets/images/slide2r.jpg', './assets/images/slide2c.png', 'Разработка интернет-магазина<br>«Ангел и демон»', 'WEB')
             +slide-project-two('./assets/images/slide3l.jpg', './assets/images/slide3r.jpg', './assets/images/slide3c.png', 'Разработка приложения<br>«VELVET»', 'APP')
-            +slide-project-three('./assets/images/slide4l.jpg', './assets/images/slide4r.jpg', './assets/images/slide4c.png')
+            +slide-project-three('./assets/images/slide4l.jpg', './assets/images/slide4r.jpg', './assets/images/slide4c.png', 'Разработка сайта<br>«titus.ru»', 'WEB')
             +slide-project('./assets/images/slide5l.jpg', './assets/images/slide5r.jpg', './assets/images/slide5c.png', 'Разработка сайта<br>«titus.ru»', 'WEB')
         +b.slider-pag
 
@@ -201,10 +201,11 @@ block content
       +link(href='#contact')._nounder.pad__discuss.js-fancybox Обсудить проект
       +b.padportfolio.pad__portfolio
         +e.nav
-          +e.next
-            img(src='./assets/images/next_blue.svg')
+          //+e.next
+          //  img(src='./assets/images/next_blue.svg')
           +e.pag
-          +e.IMG(src='./assets/images/blue_round.png').img-round
+          //+e.IMG(src='./assets/images/blue_round.png').img-round
+          <input type="range" class="slideToUnlock" value="0" max="100">
         +slider(false, false).slider_padportfolio
           +slide
             .slide__tag #Сайты

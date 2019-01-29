@@ -32,25 +32,23 @@ export default function mainSlider() {
       onLeave(index, nextIndex, direction) {
         if (nextIndex === 1) {
           $('.header__container').removeClass('header__container_wide');
-          if (matchMedia('(min-width: 1880px)').matches) {
-            $('.header_index .buttons__project').css('display', 'none');
-          }
           $('.header').removeClass('header_wide');
           $('.slider-pag').show();
         }
 
         if (index === 1) {
           $('.header__container').addClass('header__container_wide');
-          if (matchMedia('(min-width: 1880px)').matches) {
-            $('.header_index .buttons__project').css('display', 'inline-block');
-          }
           $('.header').addClass('header_wide');
           $('.slider-pag').hide();
         }
       },
     });
 
-    $.fn.pagepiling.moveTo(1);
+    $.fn.pagepiling.moveTo(2);
+
+    setTimeout(() => {
+      $.fn.pagepiling.moveTo(1);
+    }, 1);
 
     $(document).find('html').addClass('html_index');
   }
