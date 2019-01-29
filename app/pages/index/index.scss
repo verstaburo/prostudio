@@ -611,6 +611,10 @@
     right: 0;
     top: 0;
 
+  @include screen('lg') {
+    display: none;
+  }
+
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     z-index: 1;
