@@ -1,10 +1,11 @@
 const $ = window.$;
 
 export default function portfolioFilter() {
-  $('.js-portfolio-filer').click((e) => {
+  $('.js-portfolio-filer, .card-portfolio__tags span').click((e) => {
+    e.preventDefault();
     const self = e.target;
-    $(self).addClass('portfolio__filter_active').siblings().removeClass('portfolio__filter_active');
-    const filterTag = $(self).html();
+    $(self).addClass('is-active').siblings().removeClass('is-active');
+    const filterTag = $(self).text().replace('/#', '/');
     $('.card-portfolio').removeClass('is-active').hide();
 
     if (filterTag !== 'Все') {

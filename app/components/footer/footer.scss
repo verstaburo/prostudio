@@ -7,6 +7,15 @@
   color: $color-placeholder2;
   fill: $color-placeholder2;
 
+  &__appstore {
+    opacity: .2;
+    transition: opacity $ease-main;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
   &_index {
     display: none;
 
@@ -117,6 +126,7 @@
   &__copyright {
     @include text;
 
+    font-size: 16px;
     height: 40px;
     line-height: 40px;
 

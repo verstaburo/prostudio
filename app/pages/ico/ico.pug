@@ -27,6 +27,7 @@ block content
                 +e.circle
                 +e.circle
               +e.ball
+              <input type="range" class="slideToUnlock" value="0" max="100">
     section
       .container.container_inner
         +b.ico-recomend
@@ -78,145 +79,220 @@ block content
         .container.container_inner
           +e.H2.title.ico-title Наши услуги
           +e.box
-            +e.box-bg
-              img(src="assets/images/ico-uslugi_bg.png")
-            +b.ico-uslugi-item
-              +e.number_gradient
-                +e.SPAN.number-inner 01
+            +e.bg
+            +e.svg-wrap
+              svg(id = "ico-svg")
+            +b.ico-uslugi-item.ico-item-1
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 01
+                  +e.SPAN.number-inner 01
               +e.P.text Формулирование<br> идеи.
-            +b.ico-uslugi-item
-              +e.number_gradient
-                +e.SPAN.number-inner 02
+            +b.ico-uslugi-item.ico-item-2
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 02
+                  +e.SPAN.number-inner 02
               +e.P.text Анализ рынка<br> и конкурентов.
-            +b.ico-uslugi-item
-              +e.number_gradient
-                +e.SPAN.number-inner 03
+            +b.ico-uslugi-item.ico-item-3
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 03
+                  +e.SPAN.number-inner 03
               +e.P.text Обоснование внедрения технологии блокчейн для компании.
-            +b.ico-uslugi-item
-              +e.number_gradient
-                +e.SPAN.number-inner 04
+            +b.ico-uslugi-item.ico-item-4
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 04
+                  +e.SPAN.number-inner 04
               +e.P.text Формирование профессиональной команды<br> исполнителей.
-            +b.ico-uslugi-item
-              +e.number_gradient
-                +e.SPAN.number-inner 05
+            +b.ico-uslugi-item.ico-item-5
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 05
+                  +e.SPAN.number-inner 05
               +e.P.text Написание<br> смарт-контрактов.
-            +b.ico-uslugi-item
-              +e.number 10
+            +b.ico-uslugi-item.ico-item-6
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 06
+                  +e.SPAN.number-inner 06
               +e.P.text._grey Создание защиты<br> для бесперебойной<br> работы системы.
-            +b.ico-uslugi-item
-              +e.number 09
+            +b.ico-uslugi-item.ico-item-7
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 07
+                  +e.SPAN.number-inner 07
               +e.P.text._grey Разработка<br> White Paper.
-            +b.ico-uslugi-item
-              +e.number_gradient
-                +e.SPAN.number-inner 08
+            +b.ico-uslugi-item.ico-item-8
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 08
+                  +e.SPAN.number-inner 08
               +e.P.text Составление структуры ICO.
-            +b.ico-uslugi-item
-              +e.number_gradient
-                +e.SPAN.number-inner 07
+            +b.ico-uslugi-item.ico-item-9
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 09
+                  +e.SPAN.number-inner 09
               +e.P.text Разработка<br> дорожной карты.
-            +b.ico-uslugi-item
-              +e.number_gradient
-                +e.SPAN.number-inner 06
-              +e.P.text <nobr>Разработка рекламной<br> компании для привлечения</nobr><br> инвесторов.
-            +b.ico-uslugi-item
-              +e.number 11
-              +e.P.text._grey Разработка сайта<br> с личным кабинетом<br> для инвестора и<br> <nobr>мобильных приложений.</nobr>
-            +b.ico-uslugi-item
-              +e.number 12
+            +b.ico-uslugi-item.ico-item-10
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 10
+                  +e.SPAN.number-inner 10
+              +e.P.text Разработка рекламной<br> компании для привлечения<br> инвесторов.
+            +b.ico-uslugi-item.ico-item-11
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 11
+                  +e.SPAN.number-inner 11
+              +e.P.text._grey Разработка сайта<br> с личным кабинетом<br> для инвестора и<br> мобильных приложений.
+            +b.ico-uslugi-item.ico-item-12
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 12
+                  +e.SPAN.number-inner 12
               +e.P.text._grey Регистрация предприятия<br> в наиболее подходящей для этого юрисдикции.
-            +b.ico-uslugi-item
-              +e.number 13
+            +b.ico-uslugi-item.ico-item-13
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 13
+                  +e.SPAN.number-inner 13
               +e.P.text._grey Выпуск токенов.
-            +b.ico-uslugi-item
-              +e.number 14
+            +b.ico-uslugi-item.ico-item-14
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 14
+                  +e.SPAN.number-inner 14
               +e.P.text._grey Выпуск токенов.
-            +b.ico-uslugi-item
-              +e.number 15
+            +b.ico-uslugi-item.ico-item-15
+              +e.number
+                +e.number-wrap
+                  +e.SPAN.number-higher 15
+                  +e.SPAN.number-inner 15
               +e.P.text._grey Старт ICO.
           +e.box-pad
             +slider(false, false).ico-uslugi-slider
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                    +e.number_gradient
-                      +e.SPAN.number-inner 01
+                    +e.number
+                      +e.number-wrap
+                        +e.SPAN.number-higher 01
+                        +e.SPAN.number-inner 01
                     +e.P.text Формулирование идеи.
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                  +e.number_gradient
-                    +e.SPAN.number-inner 02
+                  +e.number
+                    +e.number-wrap
+                      +e.SPAN.number-higher 02
+                      +e.SPAN.number-inner 02
                   +e.P.text Анализ рынка и конкурентов.
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                  +e.number_gradient
-                    +e.SPAN.number-inner 03
+                  +e.number
+                    +e.number-wrap
+                      +e.SPAN.number-higher 03
+                      +e.SPAN.number-inner 03
                   +e.P.text Обоснование внедрения технологии блокчейн для компании.
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                  +e.number_gradient
-                    +e.SPAN.number-inner 04
+                  +e.number
+                    +e.number-wrap
+                      +e.SPAN.number-higher 04
+                      +e.SPAN.number-inner 04
                   +e.P.text Формирование профессиональной команды исполнителей.
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                  +e.number_gradient
-                    +e.SPAN.number-inner 05
+                  +e.number
+                    +e.number-wrap
+                      +e.SPAN.number-higher 05
+                      +e.SPAN.number-inner 05
                   +e.P.text Написание смарт-контрактов.
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                  +e.number_gradient
-                    +e.SPAN.number-inner 06
+                  +e.number
+                    +e.number-wrap
+                      +e.SPAN.number-higher 06
+                      +e.SPAN.number-inner 06
                   +e.P.text Разработка рекламной компании для привлечения инвесторов.
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                  +e.number_gradient
-                    +e.SPAN.number-inner 07
+                  +e.number
+                    +e.number-wrap
+                      +e.SPAN.number-higher 07
+                      +e.SPAN.number-inner 07
                   +e.P.text Разработка дорожной карты.
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                  +e.number_gradient
-                    +e.SPAN.number-inner 08
+                  +e.number
+                    +e.number-wrap
+                      +e.SPAN.number-higher 08
+                      +e.SPAN.number-inner 08
                   +e.P.text Составление структуры ICO.
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                  +e.number 09
+                  +e.number
+                    +e.number-wrap
+                      +e.SPAN.number-higher 09
+                      +e.SPAN.number-inner 09
                   +e.P.text._grey Разработка White Paper.
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                  +e.number 10
+                  +e.number
+                    +e.number-wrap
+                      +e.SPAN.number-higher 10
+                      +e.SPAN.number-inner 10
                   +e.P.text._grey Создание защиты для бесперебойной работы системы.
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                  +e.number 11
+                  +e.number
+                    +e.number-wrap
+                      +e.SPAN.number-higher 11
+                      +e.SPAN.number-inner 11
                   +e.P.text._grey Разработка сайта с личным кабинетом для инвестора и мобильных приложений.
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                  +e.number 12
+                  +e.number
+                    +e.number-wrap
+                      +e.SPAN.number-higher 12
+                      +e.SPAN.number-inner 12
                   +e.P.text._grey Регистрация предприятия в наиболее подходящей для этого юрисдикции.
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                  +e.number 13
+                  +e.number
+                    +e.number-wrap
+                      +e.SPAN.number-higher 13
+                      +e.SPAN.number-inner 13
                   +e.P.text._grey Выпуск токенов.
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                  +e.number 14
+                  +e.number
+                    +e.number-wrap
+                      +e.SPAN.number-higher 14
+                      +e.SPAN.number-inner 14
                   +e.P.text._grey Выпуск токенов.
               +slide
                 +b.ico-uslugi-item
                   +e.item
-                  +e.number 15
+                  +e.number
+                    +e.number-wrap
+                      +e.SPAN.number-higher 15
+                      +e.SPAN.number-inner 15
                   +e.P.text._grey Старт ICO.
             +link-icon("arrow_left").ico__button.__button._left
             +link-icon("arrow_right").ico__button.__button._right

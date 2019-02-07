@@ -53,6 +53,14 @@
     font-size: 72px;
     font-weight: 400;
     letter-spacing: 5.76px;
+
+    h1 {
+      color: inherit;
+      font-size: inherit;
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+    }
   }
 
   &__subtitle {

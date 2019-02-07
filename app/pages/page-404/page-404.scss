@@ -1,20 +1,32 @@
 .page-404 {
-  margin-top: 19px;
+  padding-top: 19px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-sizing: border-box;
+  height: calc(100vh - 96px);
 
   @include screen("lg", max) {
-    margin-top: 67px;
+    padding-top: 67px;
     padding-left: 0;
+    height: calc(100vh - 80px);
   }
 
   @include screen("md", max) {
-    margin-top: 77px;
+    padding-top: 77px;
+  }
+
+  @include screen('lg', max) {
+    height: auto;
   }
 
   @include screen("sm", max) {
-    margin-top: 30px;
+    padding-top: 30px;
+  }
+
+  > .container {
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   &__img {
@@ -64,7 +76,7 @@
     }
 
     @include screen("md", max) {
-      padding: 0 15px;
+      padding: 0 15px 50px;
     }
   }
 

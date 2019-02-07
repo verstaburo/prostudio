@@ -1,5 +1,14 @@
 @import '../../node_modules/pagepiling.js/dist/jquery.pagepiling.min.css';
 
+#pagepiling {
+  opacity: 0;
+  transition: opacity $ease-main;
+
+  &.is-active {
+    opacity: 1;
+  }
+}
+
 .slide {
   height: 100%;
   position: relative;

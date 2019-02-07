@@ -11,6 +11,21 @@
 @import '../components/**/*';
 @import '../pages/**/*';
 
+body {
+  min-height: 100vh;
+}
+
+.page-content {
+  transform-origin: right center;
+  width: 100%;
+  min-height: 100vh;
+
+  &.is-transformed {
+    transform: rotate3d(0, 1, 0, -20deg);
+    opacity: .5;
+  }
+}
+
 .container {
   width: $container-width;
   padding-left: $container-padding;
@@ -141,5 +156,15 @@ body {
     //  padding-right: 16px;
     //  padding-left: 16px ;
     //}
+  }
+}
+
+.fancybox-stage {
+  transform: translate3d(-100px, 0, 0);
+  transition: transform $ease-main;
+  transform-origin: left center;
+
+  .fancybox-is-open & {
+    transform: translate3d(0, 0, 0);
   }
 }

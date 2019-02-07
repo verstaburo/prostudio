@@ -10,6 +10,14 @@
 
     @include heading-10;
     letter-spacing: 0.9px;
+
+    h1 {
+      color: inherit;
+      font-size: inherit;
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+    }
   }
 
   &__text {
@@ -597,9 +605,22 @@
   &__img {
     display: none;
     margin-top: 51px;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 100%;
+      padding-top: 71%;
+      background: url('../images/iphone_shadow.png') no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+      right: 5%;
+      top: 5%;
+      z-index: -1;
+    }
 
     img {
-      width: 92%;
+      width: 100%;
 
       @include screen("md", max) {
         width: 100%;
@@ -626,7 +647,19 @@
   &__right {
     position: relative;
     top: -21px;
-    right: 39px;
+    right: -15px;
+
+    &::before {
+      content: '';
+      width: 100%;
+      padding-top: 71%;
+      background: url('../images/iphone_shadow.png') no-repeat;
+      background-size: 100% 100%;
+      position: absolute;
+      right: 5%;
+      top: 5%;
+      z-index: -1;
+    }
   }
 }
 

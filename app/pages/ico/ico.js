@@ -8,8 +8,8 @@ $(document).ready(function () {
 
 
   var windowWidth = $(window).width();
-  var svg = Snap('#steps-svg');
-  var svgWidth = $('.usluga-steps__svg-wrap').width();
+  var svg = Snap('#ico-svg');
+  var svgWidth = $('.ico-uslugi__svg-wrap').width();
   // отрисовка stroke
   if (windowWidth > 1292) {
     var pathAdaptive = 'm 11 11 h 1104 c 195,0, 195,284, 0,284 l -960 0 c -195,0, -195,284, 0,284 h 1060';
@@ -34,17 +34,17 @@ $(document).ready(function () {
   };
   if (svg) {
     var pathBg = svg.path(pathAdaptive)
-                      .attr({
-                        id: 'stroke',
-                        strokeWidth: 2,
-                        stroke: '#c6c6c6',
-                      });
+      .attr({
+        id: 'stroke',
+        strokeWidth: 2,
+        stroke: '#1c1c1c',
+      });
     var path = svg.path(pathAdaptive)
-                  .attr({
-                    id: 'stroke',
-                    strokeWidth: 2,
-                    stroke: '#0081cb',
-                  });
+      .attr({
+        id: 'stroke',
+        strokeWidth: 2,
+        stroke: '#00b294',
+      });
 
     svg.attr({
       width: svgWidth,
@@ -52,28 +52,14 @@ $(document).ready(function () {
       fill: 'none',
       zIndex: -1,
     });
-
-    var arrow = svg.polyline('0, 0, 12, 11, 0, 22')
-                    .attr({
-                      id: 'arrow',
-                      strokeWidth: 2,
-                      stroke: '#0081cb'
-                    });
-    initArrow(path);
     animateSVG();
   }
-  // рисуем стрелку
-  function initArrow(path){
-    var arrowGroup = svg.g( arrow ), // Group polyline
-    movePoint = path.getPointAtLength(length);
-    arrowGroup.transform( 't' + parseInt(movePoint.x - 6) + ',' + parseInt( movePoint.y - 11) + 'r' + (movePoint.alpha - 90));
-  };
 
   // Вычисляем нужные блоки для активации
   function stepsAdd (persent) {
 
     if ($(window).width() > 1292) {
-      var steps = [0, 3, 14, 23, 40, 52, 61, 72, 84, 93.5, 94];
+      var steps = [0, 3, 8, 13, 18, 23, 42, 47, 52, 57, 62, 74, 79, 84, 89, 94];
     } else if ($(window).width() <= 1292) {
       var steps = [0, 2, 9, 28, 36, 43, 51, 68, 77, 91, 94];
     } else if ($(window).width() <= 900) {
@@ -89,9 +75,9 @@ $(document).ready(function () {
       }
     }
     var stepActivided  = findSteps(steps, persent)
-    $(".step").removeClass("step_active");
+    $(".ico-uslugi-item").removeClass("is-active");
     for (var i = stepActivided-1; i >= 0; i--) {
-      $(".step").eq(i).addClass("step_active");
+      $(".ico-uslugi-item").eq(i).addClass("is-active");
     }
   }
 
@@ -99,19 +85,15 @@ $(document).ready(function () {
   function animateSVG() {
     if(svg) {
       var len = path.getTotalLength(),
-          movePoint = svg.getPointAtLength(length),
-          container = $(".usluga-steps__svg-wrap").height(),
-          contTop = $(".usluga-steps__svg-wrap").offset().top,
-          beginAnime = contTop - container -100,
-          endAnime = beginAnime + container - 1500,
-          windowWidth = $(window).width();
-
-        if(windowWidth <= 1292) {
-          beginAnime = contTop -750;
-        }
+        movePoint = svg.getPointAtLength(length),
+        container = $(".ico-uslugi__svg-wrap").height(),
+        contTop = $(".ico-uslugi__svg-wrap").offset().top,
+        beginAnime = contTop - $(window).height() + 100,
+        endAnime = beginAnime + container + 150,
+        windowWidth = $(window).width();
 
       var  scrollTop = $(window).scrollTop(),
-        persent = (scrollTop - beginAnime)/( endAnime),
+        persent = (scrollTop - beginAnime)/(endAnime - beginAnime),
         move = parseInt(len - (len*persent) - 4),
         moveArrow = parseInt(len*persent);
 
@@ -122,28 +104,15 @@ $(document).ready(function () {
 
       if (move >= 0 && $(window).width() > 749) {
         path.attr({
-          stroke: '#0081cb',
+          stroke: '#00b294',
           strokeWidth: 2,
           fill: 'none',
           "stroke-dasharray": len +" " + len,
           "stroke-dashoffset": move
         }).animate({"stroke-dashoffset": move}, 100, mina.bounce);
-        var arrowGroup = svg.g( arrow );
 
         Snap.animate(moveArrow, moveArrow, function( value ) {
           movePoint = path.getPointAtLength( value );
-          if (persent >= 0.95) {
-            arrow.addClass("hide");
-            $(".usluga-steps__done").addClass("usluga-steps__done_active");
-          } else {
-            arrow.removeClass("hide");
-            $(".usluga-steps__done").removeClass("usluga-steps__done_active");
-            arrow.transform( 't' + parseInt(movePoint.x - 6) + ',' + parseInt( movePoint.y - 11) + 'r' + (movePoint.alpha + 180));
-          }
-          if(persent <= 0 ) {
-            arrow.addClass("hide");
-          }
-
         }, 100, mina.bounce )
 
         stepsAdd(persent*100);
@@ -158,7 +127,7 @@ $(document).ready(function () {
   $(window).on("resize", function(){
     if (svg) {
       var windowWidth = $(window).width();
-      var svgWidth = $('.usluga-steps__svg-wrap').width() + 60;
+      var svgWidth = $('.ico-uslugi__svg-wrap').width() + 60;
       if (windowWidth > 1292) {
         var pathAdaptive = 'm 11 11 h 1104 c 195,0, 195,284, 0,284 l -960 0 c -195,0, -195,284, 0,284 h 1060';
 
@@ -214,5 +183,4 @@ $(document).ready(function () {
   })
 
 });
-
 /* eslint-enable */

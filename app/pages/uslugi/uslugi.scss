@@ -17,6 +17,14 @@
       margin-top: 60px;
       font-size: 42px;
     }
+
+    h1 {
+      color: inherit;
+      font-size: inherit;
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+    }
   }
 
   &-item {
@@ -602,6 +610,52 @@
 
     @include screen("md", max) {
       margin-top: 83px;
+    }
+  }
+}
+
+.uslugi-item_left .uslugi-item__icon-right {
+  $b: &;
+
+  svg {
+    transition: transform $ease-main;
+  }
+
+  & + .uslugi-item__line {
+    transform-origin: left center;
+    transition: transform $ease-main;
+  }
+
+  &:hover {
+    svg {
+      transform: translateX(5px);
+    }
+
+    & + .uslugi-item__line {
+      transform: scaleX(1.2);
+    }
+  }
+}
+
+.uslugi-item_right .uslugi-item__icon-right {
+  $b: &;
+
+  svg {
+    transition: transform $ease-main;
+  }
+
+  & + .uslugi-item__line {
+    transform-origin: right center;
+    transition: transform $ease-main;
+  }
+
+  &:hover {
+    svg {
+      transform: translateX(-5px);
+    }
+
+    & + .uslugi-item__line {
+      transform: scaleX(1.2);
     }
   }
 }

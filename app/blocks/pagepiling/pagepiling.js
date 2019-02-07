@@ -6,6 +6,8 @@ const $ = window.$;
 
 export default function mainSlider() {
   if ($('#pagepiling')[0]) {
+    let headerTimeout;
+
     $('#pagepiling').pagepiling({
       menu: null,
       direction: 'vertical',
@@ -31,15 +33,16 @@ export default function mainSlider() {
       animateAnchor: false,
       onLeave(index, nextIndex, direction) {
         if (nextIndex === 1) {
+          clearTimeout(headerTimeout);
           $('.header__container').removeClass('header__container_wide');
           $('.header').removeClass('header_wide');
-          $('.slider-pag').show();
         }
 
         if (index === 1) {
-          $('.header__container').addClass('header__container_wide');
-          $('.header').addClass('header_wide');
-          $('.slider-pag').hide();
+          headerTimeout = setTimeout(() => {
+            $('.header__container').addClass('header__container_wide');
+            $('.header').addClass('header_wide');
+          }, 700);
         }
       },
     });
@@ -49,6 +52,10 @@ export default function mainSlider() {
     setTimeout(() => {
       $.fn.pagepiling.moveTo(1);
     }, 1);
+
+    setTimeout(() => {
+      $('#pagepiling').addClass('is-active');
+    }, 500);
 
     $(document).find('html').addClass('html_index');
   }

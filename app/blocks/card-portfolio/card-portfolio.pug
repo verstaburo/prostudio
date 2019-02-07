@@ -4,5 +4,5 @@ mixin card-portfolio(img, url, title, tags, imgtwo)
       +e.IMG(src= imgtwo).bg._mobile
     +e.IMG(src= img).bg
     +e.title !{title}
-    +e.tags= tags
+    +e.tags!= tags
     block

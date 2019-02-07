@@ -15,6 +15,7 @@ import mainSlider from '../blocks/pagepiling/pagepiling';
 import mixContent from '../blocks/grid-list/grid-list';
 import PorftolioFilter from '../pages/portfolio/portfolio';
 import Article from '../pages/article/article';
+import ICO from '../pages/ico/ico';
 import '../pages/usluga/usluga';
 import '../blocks/rating/rating';
 import '../blocks/accordion/accordion';
@@ -47,4 +48,5 @@ $(() => {
   scrollanimation();
   PorftolioFilter();
   Article();
+  ICO();
 });

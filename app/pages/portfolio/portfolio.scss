@@ -51,11 +51,11 @@
       cursor: pointer;
     }
 
-    &:hover, &_active {
+    &:hover, &.is-active {
       color: $color-main;
     }
 
-    &_active {
+    &.is-active {
       border-color: $color-main;
     }
   }

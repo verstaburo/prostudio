@@ -20,7 +20,7 @@
   @include screen("md", max) {
     margin-top: 51px;
   }
-  
+
   &__title {
     color: $color-main;
     font-size: 40px;
@@ -52,6 +52,15 @@
       margin-bottom: 31px;
     }
 
+    h1 {
+      color: inherit;
+      font-size: inherit;
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      display: inline-block;
+    }
+
     &::before {
       content: "";
       vertical-align: middle;
@@ -67,7 +76,7 @@
       top: -4px;
       transition: all $ease-main;
 
-      @include screen("lg-r", max) {
+      @include screen("xl-b", max) {
         display: none;
       }
 

@@ -16,6 +16,14 @@
       margin-top: 60px;
       font-size: 42px;
     }
+
+    h1 {
+      color: inherit;
+      font-size: inherit;
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+    }
   }
 
   &__subtitle {

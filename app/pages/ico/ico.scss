@@ -192,6 +192,13 @@
       align-items: center;
       margin-bottom: 125px;
       width: 100%;
+      max-width: 352px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .slideToUnlock {
+        left: 8px;
+      }
 
       @include screen("lg", max) {
         position: relative;
@@ -212,6 +219,7 @@
       background-color: $color-main;
       margin-right: 42px;
       padding-left: 0;
+      opacity: 0;
 
       @include screen("md", max) {
         margin-right: 0;
@@ -268,6 +276,7 @@
       margin-left: 56px;
       border: 3px solid $color-main;
       border-radius: 50%;
+      opacity: 0;
 
       @include screen("md", max) {
         margin-left: 0;
@@ -487,7 +496,6 @@
       }
 
 
-
     }
 
     &__footer {
@@ -600,6 +608,7 @@
           justify-content: center;
           align-items: center;
           cursor: pointer;
+          line-height: 50px;
 
           &::before {
             @include pseudo($display: block, $pos: absolute, $content: '<');
@@ -1024,6 +1033,41 @@
       margin-top: 113px;
     }
 
+    &__svg-wrap {
+      position: absolute;
+      left: -10px;
+      top: 5px;
+      width: 100%;
+
+      &::before {
+        content: '';
+        position: absolute;
+        height: 80px;
+        top: 0;
+        left: 8px;
+        width: 98px;
+        background: linear-gradient(90deg, #0a0a0a 20%,transparent);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        height: 80px;
+        bottom: 0;
+        right: 33px;
+        width: 216px;
+        background: linear-gradient(-90deg,#0a0a0a 80%,transparent);
+      }
+
+      @include screen("lg", max) {
+        width: calc(100% - 60px);
+      }
+
+      @include screen("md", max) {
+        display: none;
+      }
+    }
+
     &__bg {
       position: absolute;
       top: -78px;
@@ -1031,7 +1075,7 @@
       width: 2596px;
       background-image: url("../images/ico-uslugi_bg2.png");
       z-index: -1;
-
+      display: none;
     }
 
     &__title {
@@ -1087,17 +1131,22 @@
 
     &-slider {
 
-      .swiper-slide-active {
+      .swiper-slide {
+        &::after {
+          @include pseudo;
+          background-image: linear-gradient(-243deg, #00b294 13%, #0096e8 81%, #008eff 100%);
+          top: 13px;
+          left: 100px;
+          right: -10px;
+          height: 2px;
+          opacity: 0;
+          transition: opacity $ease-main, transform $ease-main;
+          transform-origin: left center;
+          transform: scaleX(0);
 
-        @include screen ("md") {
-          width: 36.8%!important;
-        }
-      }
-
-      .swiper-slide-next {
-
-        @include screen ("md") {
-          width: 37.2%!important;
+          @include screen ("md", max) {
+            display: none;
+          }
         }
       }
 
@@ -1105,16 +1154,8 @@
       .swiper-slide-next {
 
         &::after {
-          @include pseudo;
-          background-image: linear-gradient(-243deg, #00b294 13%, #0096e8 81%, #008eff 100%);
-          top: 13px;
-          left: 113px;
-          width: calc(90% - 85px);
-          height: 2px;
-
-          @include screen ("md", max) {
-            display: none;
-          }
+          opacity: 1;
+          transform: scaleX(1);
         }
       }
     }
@@ -1122,26 +1163,15 @@
     &-item {
       width: 200px;
       padding-right: 33px;
-      // margin-bottom: 133px;
-
-      &:nth-child(-n+5),
-      &:nth-last-child(-n+5) {
-        margin-bottom: 133px;
-      }
-
-      &:nth-child(n+6):nth-child(-n+10) {
-        margin-bottom: 158px;
-      }
-
-      &:nth-of-type(5n+6) {
-        width: 190px;
-      }
+      height: 283px;
+      box-sizing: border-box;
 
       @include screen ("lg", max) {
         width: auto;
         padding-right: 10%;
         position: relative;
         margin-bottom: 68px;
+        height: auto;
       }
 
       @include screen ("md", max) {
@@ -1160,55 +1190,55 @@
         letter-spacing: 0.75px;
         color: $color-tundora;
         margin-bottom: 26px;
-        margin-left: 29px;
-
-        &_gradient {
-          .ico-uslugi-item__number-inner {
-            background-image: linear-gradient(-241deg, #1bb05a 0%, #0081cb 100%);
-            background-position: 50% 50%;
-            -moz-background-clip: text;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-          }
-        }
+        padding-left: 27px;
+        padding-right: 27px;
+        height: 30px;
+        position: relative;
+        background-color: $color-bg-dark;
+        display: inline-block;
 
         @include screen ("lg", max) {
-          margin-left: 39px;
+          padding-left: 37px;
+          padding-right: 37px;
           display: inline-block;
+          background-color: transparent;
         }
 
         @include screen ("md", max) {
-          margin-left: 0;
+          padding-left: 0;
+          padding-right: 0;
           margin-bottom: 21px;
           font-size: 47px;
           width: 50px;
+          height: auto;
 
           img {
             width: 100%;
           }
         }
       }
+
       &__text {
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.8px;
         font-weight: 300;
+        color: $color-tundora;
+        transition: color $ease-main;
 
         @include screen ("lg", max) {
           padding-right: 25px;
+          color: white;
         }
 
         @include screen ("md", max) {
           text-align: center;
           font-size: 20px;
-          padding-right: 0;
-        }
-
-        &_grey {
-          color: $color-tundora;
+          padding-left: 30px;
+          padding-right: 30px;
         }
       }
+
       &__item {
 
         @include screen("md", max) {
@@ -1437,10 +1467,10 @@
         position: absolute;
         top: 423px;
         right: -213px;
-        left: auto!important;
+        left: auto !important;
         display: flex;
         align-items: flex-start;
-        width: auto!important;
+        width: auto !important;
 
         @include screen("xl-r", max) {
           right: 0;
@@ -1621,7 +1651,6 @@
     @include screen("md", max) {
       margin-top: 103px;
     }
-
 
 
     &__text {
@@ -1815,6 +1844,77 @@
           height: calc(100% - 26px);
         }
       }
+    }
+  }
+}
+
+.ico-uslugi-item {
+  &__number-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(-241deg,#1bb05a,#0081cb);
+    background-position: 50% 50%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: opacity $ease-main;
+    opacity: 0;
+
+    @include screen('lg', max) {
+      opacity: 1;
+    }
+  }
+
+  &__number-wrap {
+    position: relative;
+  }
+
+  &__number-higher {
+    transition: opacity $ease-main;
+    opacity: 1;
+
+    @include screen('lg', max) {
+      opacity: 0;
+    }
+  }
+
+  &.is-active {
+    .ico-uslugi-item__text {
+      color: white;
+    }
+
+    .ico-uslugi-item__number-higher {
+      opacity: 0;
+    }
+
+    .ico-uslugi-item__number-inner {
+      opacity: 1;
+    }
+  }
+}
+
+.ico-uslugi-item {
+  position: relative;
+  z-index: 1;
+}
+
+.ico-item {
+  @for $i from 1 through 5 {
+    &-#{$i} {
+      order: #{$i + 2}
+    }
+  }
+
+  @for $i from 1 through 5 {
+    &-#{$i+5} {
+      order: #{13 - $i}
+    }
+  }
+
+  @for $i from 11 through 15 {
+    &-#{$i} {
+      order: #{$i + 2}
     }
   }
 }

@@ -78,12 +78,15 @@ $card-gap: 12px;
 
   &__tags {
     z-index: 1;
-    cursor: pointer;
-    transition: opacity .3s ease;
     letter-spacing: 0.5px;
 
-    &:hover {
-      opacity: .75;
+    span {
+      cursor: pointer;
+      transition: opacity .3s ease;
+
+      &:hover {
+        opacity: .75;
+      }
     }
   }
 

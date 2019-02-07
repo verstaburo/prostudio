@@ -1,4 +1,26 @@
 .usluga {
+  position: relative;
+
+  $b: &;
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transition: filter $ease-main;
+    filter: grayscale(100%);
+
+    #{$b}:hover & {
+      filter: grayscale(0);
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+  }
 
   &-header {
     margin-top: 90px;
@@ -25,6 +47,14 @@
         font-size: 30px;
         line-height: 46px;
         letter-spacing: 0.75px;
+      }
+
+      h1 {
+        color: inherit;
+        font-size: inherit;
+        margin: 0;
+        padding: 0;
+        line-height: inherit;
       }
     }
 
@@ -1057,4 +1087,8 @@
 
 .hide {
   display: none!important;
+}
+
+.choices__list--dropdown {
+  white-space: nowrap;
 }

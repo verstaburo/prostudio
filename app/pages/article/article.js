@@ -10,8 +10,8 @@ export default function Article() {
   let page = path.split("/").pop();
 
   $('.principles__item').hover(function(){
-    $(this).removeClass('active');
-    $(this).siblings().removeClass('active');
+    $(this).addClass('principles__item_active');
+    $(this).siblings().removeClass('principles__item_active');
   });
 
   if (page === 'article.html') {

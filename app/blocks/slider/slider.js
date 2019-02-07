@@ -12,6 +12,8 @@ export default function slider() {
     // autoplay: {
     //   delay: 2000,
     // },
+    simulateTouch: false,
+    allowTouchMove: false,
     slidesPerView: 1,
     navigation: {
       nextEl: '.slider__button_next',
