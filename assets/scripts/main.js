@@ -19,6 +19,21 @@
 //   }
 // });
 
+$(window).on('load', function () {
+  var
+    siteWidth,
+    screenSize = $(window).width();
+
+  if (screenSize < 768) siteWidth = 480;
+  if (screenSize >= 768) siteWidth = 768;
+  if (screenSize >= 1024) siteWidth = 1366;
+  if (screenSize >= 1366) siteWidth = 1920;
+
+  scale = screenSize / siteWidth;
+
+  document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+});
+
 $(document).ready(() => {
 
   function checkMenuLinks() {
