@@ -1,0 +1,20 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="60.49" height="60" viewBox="0 0 60.49 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0081cb;
+      }
+    </style>
+  </defs>
+  <title>brand</title>
+  <g>
+    <path class="cls-1" d="M60,28.5v-18H47V0H-.5V60H53V31H47V28.5Zm-3-3H36.34v-12H57ZM50,57H16V34H50ZM44,31H13V57H2.5V3H44v7.5H33.34v18H44Z" transform="translate(0.5)"/>
+    <path class="cls-1" d="M10.5,6.25a4.5,4.5,0,1,0,4.5,4.5A4.5,4.5,0,0,0,10.5,6.25Zm0,6a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,10.5,12.25Z" transform="translate(0.5)"/>
+    <rect class="cls-1" x="18" y="6.75" width="12.5" height="3"/>
+    <rect class="cls-1" x="18" y="11.75" width="7.5" height="3"/>
+    <path class="cls-1" d="M23.5,46.25a4.5,4.5,0,1,0-4.5-4.5A4.5,4.5,0,0,0,23.5,46.25Zm0-6a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,23.5,40.25Z" transform="translate(0.5)"/>
+    <rect class="cls-1" x="31" y="37.75" width="12.5" height="3"/>
+    <rect class="cls-1" x="31" y="42.75" width="7.5" height="3"/>
+    <path class="cls-1" d="M46.66,24a4.5,4.5,0,1,0-4.5-4.5A4.5,4.5,0,0,0,46.66,24Zm0-6a1.5,1.5,0,1,1-1.5,1.5A1.5,1.5,0,0,1,46.66,18Z" transform="translate(0.5)"/>
+  </g>
+</svg>

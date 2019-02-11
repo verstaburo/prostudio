@@ -483,6 +483,10 @@
 
   &_piter {
 
+    #{$b}__nohover {
+      fill: $color-main;
+    }
+
     &::before {
       background-color: $color-main;
       background-image: url('../images/city_piter_bg.jpg');
@@ -491,6 +495,9 @@
   }
 
   &_moscow {
+    #{$b}__nohover {
+      fill: $color-red;
+    }
 
     &::before {
       background-color: $color-red;
@@ -529,8 +536,12 @@
   }
 
   &__nohover {
+    width: 36px;
+    height: 36px;
+    transition: fill $ease-main;
+
     #{$b}:hover & {
-      opacity: 0;
+      fill: white;
     }
   }
 

@@ -115,6 +115,7 @@
         align-items: center;
         margin-right: 0;
         transition: color $ease-main, border-color $ease-main;
+        fill: #bebebe;
 
         @include screen('md', max) {
           font-size: 20px;
@@ -129,22 +130,13 @@
         &_blue.active, &_blue:hover {
           color: $color-main;
           border-color: $color-main;
+          fill: $color-main;
         }
 
         &_red.active, &_red:hover {
           color: #c91516;
           border-color: #c91516;
-        }
-
-        &.active, &:hover {
-
-          .tabs__img {
-            opacity: 0;
-
-            &_active {
-              opacity: 1;
-            }
-          }
+          fill: #c91516;
         }
       }
 
@@ -164,21 +156,19 @@
       }
 
       &__img {
-        transition: opacity $ease-main;
+        transition: opacity $ease-main, fill $ease-main;
+        fill: inherit;
+        width: 36px;
+        height: 36px;
 
         @include screen('md', max) {
           width: 33px;
+          height: 33px;
         }
 
         @include screen('sm', max) {
           width: 25px;
-        }
-
-        &_active {
-          position: absolute;
-          left: 0;
-          top: 0;
-          opacity: 0;
+          height: 25px;
         }
       }
     }

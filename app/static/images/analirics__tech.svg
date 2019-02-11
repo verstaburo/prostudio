@@ -1,0 +1,19 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="60.24" height="60" viewBox="0 0 60.24 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0081cb;
+      }
+    </style>
+  </defs>
+  <title>tz</title>
+  <g>
+    <path class="cls-1" d="M48.06,11.7V0H-.24V48.3H11.7V60H60V11.7ZM2.76,3h42.3V45.3H2.76ZM57,57H14.7V48.3H48.06V14.7H57Z" transform="translate(0.24)"/>
+    <rect class="cls-1" x="9.24" y="36" width="30" height="3"/>
+    <rect class="cls-1" x="9.24" y="29.25" width="30" height="3"/>
+    <rect class="cls-1" x="26.24" y="9" width="13" height="3"/>
+    <rect class="cls-1" x="26.24" y="15.75" width="13" height="3"/>
+    <rect class="cls-1" x="9.24" y="22.5" width="30" height="3"/>
+    <polygon class="cls-1" points="14.24 19 17.24 19 17.24 12 22.24 12 22.24 9 9.24 9 9.24 12 14.24 12 14.24 19"/>
+  </g>
+</svg>

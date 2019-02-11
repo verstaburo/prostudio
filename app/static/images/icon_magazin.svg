@@ -1,0 +1,21 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0081cb;
+      }
+    </style>
+  </defs>
+  <title>shop</title>
+  <g>
+    <circle class="cls-1" cx="8.6" cy="7.3" r="1.6"/>
+    <circle class="cls-1" cx="15" cy="7.3" r="1.6"/>
+    <circle class="cls-1" cx="21.4" cy="7.3" r="1.6"/>
+    <path class="cls-1" d="M0,0V60H60V0ZM57,57H3V3H57Z"/>
+    <path class="cls-1" d="M10.78,38.72h18V25.84h3.94V17.12H21.58l-.13,1.35a1.66,1.66,0,0,1-3.3,0L18,17.12H6.84v8.72h3.94ZM9.84,22.84V20.12h5.65a4.66,4.66,0,0,0,8.59,0h5.65v2.72H25.8V35.72h-12V22.84Z"/>
+    <rect class="cls-1" x="38.4" y="17.12" width="14.6" height="3"/>
+    <rect class="cls-1" x="38.4" y="22.7" width="14.6" height="3"/>
+    <rect class="cls-1" x="38.4" y="28.28" width="7.3" height="3"/>
+    <path class="cls-1" d="M41.83,51.3h6a4.08,4.08,0,0,0,0-8.15h-6a4.08,4.08,0,0,0,0,8.15Zm0-5.15h6a1.08,1.08,0,0,1,0,2.15h-6a1.08,1.08,0,0,1,0-2.15Z"/>
+  </g>
+</svg>

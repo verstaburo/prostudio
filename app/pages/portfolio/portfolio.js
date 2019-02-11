@@ -5,8 +5,14 @@ export default function portfolioFilter() {
     e.preventDefault();
     const self = e.target;
     $(self).addClass('is-active').siblings().removeClass('is-active');
-    const filterTag = $(self).text().replace('/#', '/');
+    const filterTag = $(self).text().replace('#', '');
     $('.card-portfolio').removeClass('is-active').hide();
+
+    $('.js-portfolio-filer').each(function () {
+      if ($(this).text() === filterTag) {
+        $(this).addClass('is-active').siblings().removeClass('is-active');
+      }
+    });
 
     if (filterTag !== 'Все') {
       $('.card-portfolio').filter((index, element) => {

@@ -1,0 +1,26 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0081cb;
+      }
+    </style>
+  </defs>
+  <title>prototip</title>
+  <g>
+    <path class="cls-1" d="M0,0V60H60V0ZM57,57H3V3H57Z"/>
+    <polygon class="cls-1" points="52 20.5 49 20.5 49 25 44.5 25 44.5 28 52 28 52 20.5"/>
+    <rect class="cls-1" x="25.83" y="25" width="9.33" height="3"/>
+    <polygon class="cls-1" points="16.5 25 12 25 12 20.5 9 20.5 9 28 16.5 28 16.5 25"/>
+    <polygon class="cls-1" points="12 12 16.5 12 16.5 9 9 9 9 16.5 12 16.5 12 12"/>
+    <rect class="cls-1" x="25.83" y="9" width="9.33" height="3"/>
+    <polygon class="cls-1" points="49 16.5 52 16.5 52 9 44.5 9 44.5 12 49 12 49 16.5"/>
+    <polygon class="cls-1" points="27 44.5 24 44.5 24 49 19.5 49 19.5 52 27 52 27 44.5"/>
+    <polygon class="cls-1" points="16.5 49 12 49 12 44.5 9 44.5 9 52 16.5 52 16.5 49"/>
+    <polygon class="cls-1" points="12 36 16.5 36 16.5 33 9 33 9 40.5 12 40.5 12 36"/>
+    <polygon class="cls-1" points="24 40.5 27 40.5 27 33 19.5 33 19.5 36 24 36 24 40.5"/>
+    <rect class="cls-1" x="32" y="33" width="20" height="3"/>
+    <rect class="cls-1" x="32" y="41" width="20" height="3"/>
+    <rect class="cls-1" x="32" y="49" width="20" height="3"/>
+  </g>
+</svg>

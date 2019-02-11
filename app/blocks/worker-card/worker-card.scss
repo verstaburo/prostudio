@@ -93,6 +93,12 @@
     top: 0;
     transition: all .5s ease;
 
+    svg {
+      fill: white;
+      width: 20px;
+      height: 20px;
+    }
+
     &:hover {
       opacity: 1;
     }

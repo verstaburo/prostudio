@@ -1,0 +1,28 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="60" height="48" viewBox="0 0 60 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0081cb;
+      }
+    </style>
+  </defs>
+  <title>media</title>
+  <g>
+    <polygon class="cls-1" points="57 31 55.5 31 55.5 34 60 34 60 29.5 57 29.5 57 31"/>
+    <rect class="cls-1" x="46.83" y="31" width="4.33" height="3"/>
+    <polygon class="cls-1" points="41 29.5 38 29.5 38 34 42.5 34 42.5 31 41 31 41 29.5"/>
+    <rect class="cls-1" x="38" y="9.5" width="3" height="5"/>
+    <rect class="cls-1" x="38" y="19.5" width="3" height="5"/>
+    <polygon class="cls-1" points="38 4.5 41 4.5 41 3 42.5 3 42.5 0 38 0 38 4.5"/>
+    <rect class="cls-1" x="46.83" width="4.33" height="3"/>
+    <polygon class="cls-1" points="55.5 0 55.5 3 57 3 57 4.5 60 4.5 60 0 55.5 0"/>
+    <rect class="cls-1" x="57" y="9.5" width="3" height="5"/>
+    <rect class="cls-1" x="57" y="19.5" width="3" height="5"/>
+    <rect class="cls-1" width="32" height="3"/>
+    <rect class="cls-1" y="9" width="21.71" height="3"/>
+    <rect class="cls-1" y="18" width="32" height="3"/>
+    <rect class="cls-1" y="27" width="21.71" height="3"/>
+    <rect class="cls-1" y="36" width="32" height="3"/>
+    <rect class="cls-1" y="45" width="21.71" height="3"/>
+  </g>
+</svg>

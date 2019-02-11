@@ -1,0 +1,15 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="59" height="60.11" viewBox="0 0 59 60.11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0081cb;
+      }
+    </style>
+  </defs>
+  <title>photo video</title>
+  <g>
+    <path class="cls-1" d="M38,22.61V0H.5V37.5H22V60.11H59.5V22.61ZM22,28H9.47l7.77-14.89,4.52,7L26,16.76l3.39,5.74H22V28ZM3.5,34.5V3H35V22.5H32.9l-6-10.2L22.5,15.71,17,7.16,4.53,31H22v3.5Zm53,22.61H25V25.61H56.5Z" transform="translate(-0.5)"/>
+    <circle class="cls-1" cx="24.75" cy="7.76" r="1.75"/>
+    <path class="cls-1" d="M37,33.56V49.17l11.19-7.8Zm3,5.75,2.95,2.05L40,43.42Z" transform="translate(-0.5)"/>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="60.33" height="60" viewBox="0 0 60.33 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0081cb;
+      }
+    </style>
+  </defs>
+  <title>service</title>
+  <g>
+    <path class="cls-1" d="M48,11.7V0H-.33V48.3h12V60H60V11.7ZM2.67,3H45V45.3H2.67ZM57,57H14.7V48.3H48V14.7h9Z" transform="translate(0.33)"/>
+    <path class="cls-1" d="M18.83,22.5a4.49,4.49,0,0,0-4.22,3H10.33v3H14.6a4.47,4.47,0,0,0,8.45,0H37.33v-3H23A4.49,4.49,0,0,0,18.83,22.5Zm0,6a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,18.83,28.5Z" transform="translate(0.33)"/>
+    <path class="cls-1" d="M28.83,32.5a4.49,4.49,0,0,0-4.22,3H10.33v3H24.6a4.47,4.47,0,0,0,8.45,0h4.28v-3H33A4.49,4.49,0,0,0,28.83,32.5Zm0,6a1.5,1.5,0,1,1,1.5-1.5A1.5,1.5,0,0,1,28.83,38.5Z" transform="translate(0.33)"/>
+    <rect class="cls-1" x="10.65" y="13.05" width="3" height="5.95"/>
+    <rect class="cls-1" x="18.65" y="6.5" width="3" height="12.5"/>
+    <rect class="cls-1" x="26.65" y="10.07" width="3" height="8.93"/>
+    <rect class="cls-1" x="34.65" y="13.05" width="3" height="5.95"/>
+  </g>
+</svg>

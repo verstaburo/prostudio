@@ -1,0 +1,29 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="34.33" height="41" viewBox="0 0 34.33 41">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ccc;
+      }
+
+      .cls-2 {
+        fill: #e2e2e2;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>file_pdf</title>
+  <g>
+    <g>
+      <polygon class="cls-1" points="24.72 0 0 0 0 41 34.33 41 34.33 9.61 24.72 0"/>
+      <polygon class="cls-2" points="34.33 9.61 24.72 0 24.67 0 24.67 9.67 34.33 9.67 34.33 9.61"/>
+    </g>
+    <g>
+      <path class="cls-3" d="M7.21,27.32v-7.7c1.14,0,2.26,0,3.4,0a2.7,2.7,0,0,1,2.76,2.89,2.69,2.69,0,0,1-2.76,2.82H9.22v2Zm3.4-3.74c.53,0,.84-.56.84-1.12s-.29-1.09-.84-1.09H9.19v2.21Z" transform="translate(-0.33)"/>
+      <path class="cls-3" d="M17.66,19.64a3.67,3.67,0,0,1,3.8,3.81,3.66,3.66,0,0,1-3.8,3.88H14.72V19.64Zm0,5.88a1.86,1.86,0,0,0,1.8-2,1.86,1.86,0,0,0-1.8-2h-.9v4.07Z" transform="translate(-0.33)"/>
+      <path class="cls-3" d="M27.46,24.85H25v2.49H23v-7.7h4.81v1.75H25v1.71h2.46Z" transform="translate(-0.33)"/>
+    </g>
+  </g>
+</svg>

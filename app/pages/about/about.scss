@@ -546,6 +546,13 @@
 .care {
   margin-top: 187px;
 
+  .link__icon {
+    position: static;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
   &__box {
     display: flex;
     justify-content: space-between;
@@ -630,6 +637,9 @@
 
   &__btn {
     margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 15px;
 
     @include screen("md", max) {
       margin-left: 14px;

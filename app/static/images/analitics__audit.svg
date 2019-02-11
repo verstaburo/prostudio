@@ -1,0 +1,17 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0081cb;
+      }
+    </style>
+  </defs>
+  <title>audit</title>
+  <g>
+    <circle class="cls-1" cx="8.6" cy="7.3" r="1.6"/>
+    <circle class="cls-1" cx="15" cy="7.3" r="1.6"/>
+    <circle class="cls-1" cx="21.4" cy="7.3" r="1.6"/>
+    <path class="cls-1" d="M0,0V60H60V0ZM57,57H3V3H57Z"/>
+    <path class="cls-1" d="M29.5,41.5a12.19,12.19,0,0,0,7.67-2.71l9,9,2.12-2.12-9.06-9.06A12.23,12.23,0,1,0,29.5,41.5Zm0-21.5a9.25,9.25,0,1,1-9.25,9.25A9.26,9.26,0,0,1,29.5,20Z"/>
+  </g>
+</svg>

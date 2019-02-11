@@ -1,0 +1,19 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="57.31" height="60" viewBox="0 0 57.31 60">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0081cb;
+      }
+    </style>
+  </defs>
+  <title>seo</title>
+  <g>
+    <circle class="cls-1" cx="8.6" cy="7.3" r="1.6"/>
+    <circle class="cls-1" cx="15" cy="7.3" r="1.6"/>
+    <circle class="cls-1" cx="21.4" cy="7.3" r="1.6"/>
+    <path class="cls-1" d="M55.19,39.81l2.12-2.12-9.06-9.06a12.19,12.19,0,0,0-2.25-17V0H0V60H46V30.91l.17-.13ZM47.75,21.25A9.25,9.25,0,0,1,29.67,24H38V21H29.26a9.18,9.18,0,0,1,1-4H38V14H32.77a9.24,9.24,0,0,1,15,7.25ZM43,57H3V3H43V9.87A12.18,12.18,0,0,0,28.65,14H7v3H27a12.16,12.16,0,0,0-.76,4H7v3H26.57A12.21,12.21,0,0,0,43,32.63Z"/>
+    <rect class="cls-1" x="7" y="28" width="15" height="3"/>
+    <rect class="cls-1" x="7" y="35" width="28" height="3"/>
+    <rect class="cls-1" x="7" y="42" width="19" height="3"/>
+  </g>
+</svg>

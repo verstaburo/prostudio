@@ -1,0 +1,33 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0081cb;
+      }
+    </style>
+  </defs>
+  <title>logo</title>
+  <g>
+    <path class="cls-1" d="M15.15,47.16,21.07,35.1H38.93l5.92,12.06,2.69-1.32-16.2-33H28.65l-16.2,33ZM30,16.91,37.46,32.1H22.54Z" transform="translate(1.5 1.5)"/>
+    <path class="cls-1" d="M52.5-1.5v9h9v-9Zm6,6h-3v-3h3Z" transform="translate(1.5 1.5)"/>
+    <path class="cls-1" d="M-1.5,61.5h9v-9h-9Zm3-6h3v3h-3Z" transform="translate(1.5 1.5)"/>
+    <path class="cls-1" d="M52.5,61.5h9v-9h-9Zm3-6h3v3h-3Z" transform="translate(1.5 1.5)"/>
+    <rect class="cls-1" x="12.83" y="57" width="5.33" height="3"/>
+    <rect class="cls-1" x="23.5" y="57" width="5.33" height="3"/>
+    <rect class="cls-1" x="34.17" y="57" width="5.33" height="3"/>
+    <rect class="cls-1" x="44.83" y="57" width="5.33" height="3"/>
+    <rect class="cls-1" x="3" y="23.5" width="3" height="5.33"/>
+    <rect class="cls-1" x="3" y="12.83" width="3" height="5.33"/>
+    <rect class="cls-1" x="3" y="34.17" width="3" height="5.33"/>
+    <rect class="cls-1" x="3" y="44.83" width="3" height="5.33"/>
+    <rect class="cls-1" x="44.83" y="3" width="5.33" height="3"/>
+    <rect class="cls-1" x="34.17" y="3" width="5.33" height="3"/>
+    <rect class="cls-1" x="12.83" y="3" width="5.33" height="3"/>
+    <rect class="cls-1" x="23.5" y="3" width="5.33" height="3"/>
+    <rect class="cls-1" x="57" y="34.17" width="3" height="5.33"/>
+    <rect class="cls-1" x="57" y="12.83" width="3" height="5.33"/>
+    <rect class="cls-1" x="57" y="44.83" width="3" height="5.33"/>
+    <rect class="cls-1" x="57" y="23.5" width="3" height="5.33"/>
+    <path class="cls-1" d="M-1.5,7.5h9v-9h-9Zm3-6h3v3h-3Z" transform="translate(1.5 1.5)"/>
+  </g>
+</svg>

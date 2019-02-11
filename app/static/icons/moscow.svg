@@ -1,0 +1,11 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="36" height="34.24" viewBox="0 0 36 34.24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c9c9c9;
+      }
+    </style>
+  </defs>
+  <title>moscow</title>
+  <path class="cls-1" d="M18,10.09l2.07,6.37h6.7L21.35,20.4l2.07,6.37L18,22.83l-5.42,3.94,2.07-6.37L9.23,16.46h6.7ZM18,.38,13.75,13.46H0l11.12,8.08L6.87,34.62,18,26.54l11.12,8.08L24.87,21.54,36,13.46H22.25Z" transform="translate(0 -0.38)"/>
+</svg>
