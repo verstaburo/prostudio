@@ -272,6 +272,21 @@
       width: 50%;
     }
 
+    &__bg {
+      svg {
+        @include center-image;
+        transition: fill $ease-main;
+      }
+    }
+
+    &:not(:hover) {
+      .usluga__bg {
+        svg {
+          fill: #F4F4F4 !important;
+        }
+      }
+    }
+
     &__title {
       position: absolute;
       left: calc(50% - 145px);
@@ -291,30 +306,6 @@
       // &__link {
       //   //display: block;
       // }
-    }
-
-    &:first-child .usluga__bg {
-      background: url('../images/site_bg.png') no-repeat center center;
-    }
-
-    &:nth-child(2) .usluga__bg {
-      background: url('../images/promo_bg.png') no-repeat center center;
-    }
-
-    &:nth-child(3) .usluga__bg {
-      background: url('../images/brand_bg.png') no-repeat center center;
-    }
-
-    &:nth-child(4) .usluga__bg {
-      background: url('../images/app_bg.png') no-repeat center center;
-    }
-
-    &:nth-child(5) .usluga__bg {
-      background: url('../images/analit_bg.png') no-repeat center center;
-    }
-
-    &:nth-child(6) .usluga__bg {
-      background: url('../images/support_bg.png') no-repeat center center;
     }
   }
 }

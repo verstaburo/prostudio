@@ -9,12 +9,6 @@
     top: 0;
     right: 0;
     bottom: 0;
-    transition: filter $ease-main;
-    filter: grayscale(100%);
-
-    #{$b}:hover & {
-      filter: grayscale(0);
-    }
   }
 
   &__title {
