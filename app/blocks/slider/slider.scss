@@ -105,10 +105,10 @@
             .button {
 
               &_huge {
-                padding: 10px 24px;
+                padding: 0 24px;
                 font-size: 22px;
                 letter-spacing: .35px;
-                line-height: 1.05;
+                line-height: 43px;
               }
             }
           }
@@ -117,6 +117,11 @@
             text-align: center;
             color: white;
             margin-bottom: 17px;
+            transition: opacity $ease-main;
+
+            &:hover {
+              opacity: .5;
+            }
 
             @include text-tel;
 
@@ -233,8 +238,9 @@
       width: 65px;
       opacity: .7;
       letter-spacing: 1px;
-      transition: all $ease-main;
+      transition: opacity $ease-main;
       text-align: center;
+      height: 96px;
 
       @include screen('xl-b', max) {
         width: 55px;
@@ -262,14 +268,13 @@
       &::before {
         @include pseudo;
 
-        height: 1px;
+        height: 69px;
         width: 1px;
         background: white;
         bottom: 0;
         left: 50%;
-        transition: all $ease-main;
+        transition: height $ease-main;
         transform-origin: left bottom;
-        transform: scale3d(1, 69, 1);
       }
 
       &.active {
@@ -281,7 +286,7 @@
         }
 
         &::before {
-          transform: scale3d(1, 54, 1);
+          height: 54px;
         }
       }
     }

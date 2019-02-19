@@ -19,8 +19,8 @@ mixin slide-bg(leftimage, rightimage)
 
 mixin plate(title, button)
   .slide__plate
-    h2.slide__title!= title
-    +button._fullwhite._huge!= button
+    a.slide__title(href="#")!= title
+    +button._fullwhite._huge(href="#")!= button
 
 mixin slide()
   .swiper-slide

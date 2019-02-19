@@ -31,7 +31,7 @@ $(window).on('load', function () {
 
   scale = screenSize / siteWidth;
 
-  document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+  document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+', maximum-scale='+scale);
 });
 
 $(document).ready(() => {
@@ -102,29 +102,6 @@ $(document).ready(() => {
     marginRight: - $('.header .buttons__project').outerWidth(),
   });
 
-  $('.slideToUnlock').each(function () {
-    document.querySelector("input[type=\"range\"]").onmouseup = function() {
-      var theRange = this.value;
-      if (theRange == 100) {
-        unlock();
-      }
-
-      document.init = setInterval(function() {
-        if(document.querySelector("input[type=\"range\"]").value != 0) {
-          document.querySelector("input[type=\"range\"]").value = theRange--;
-        }
-      }, 1);
-    };
-
-    document.querySelector("input[type=\"range\"]").onmousedown = function() {
-      clearInterval(document.init);
-    };
-
-    function unlock() {
-      document.querySelector(".js-fancybox").click();
-    };
-  });
-
   $('.js-vacancy-hot .switcher__box').click(() => {
     $('.vacancy__title').not('.vacancy__title_hot').each(function () {
       $(this).parents('.accordion').slideToggle(300);
@@ -144,6 +121,42 @@ $(document).ready(() => {
     $.fancybox.close();
     $('.contact__step1').fadeIn();
     $('.contact__step2').removeClass('is-active');
+  });
+
+  $('.uslugi-item_left .uslugi-item__icon-right').hover(function (){
+    $(this).parents('.uslugi-item').find('.uslugi-item__img-wrap').css({
+      transform: 'translate3d(10px, 0, 0)'
+    });
+  }, function () {
+    $(this).parents('.uslugi-item').find('.uslugi-item__img-wrap').css({
+      transform: 'translate3d(0, 0, 0)'
+    });
+  });
+
+  if ($('.uslugi-item__icon-right').length > 0) {
+    $('.uslugi-item__icon-right, .uslugi-item__img-wrap').hover(function () {
+      $(this).parents('.uslugi-item').find('.uslugi-item__img-wrap, .uslugi-item__icon-right').addClass('is-active');
+    }, function () {
+      $(this).parents('.uslugi-item').find('.uslugi-item__img-wrap, .uslugi-item__icon-right').removeClass('is-active');
+    });
+  }
+
+  $(window).on('load resize', function () {
+    var header = $(document).find('.header_index');
+
+    if ($(window).width() < 1310) {
+      header.addClass('header_wide header_inner');
+    } else {
+      header.removeClass('header_wide header_inner');
+    }
+  });
+
+  if (navigator.userAgent.indexOf('Mac') > 0) {
+    $('body').addClass('mac-os');
+  }
+
+  $('window').on('load', function () {
+    window.dispatchEvent(new Event('resize'));
   });
 
 });

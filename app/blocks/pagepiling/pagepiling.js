@@ -58,6 +58,10 @@ export default function mainSlider() {
     }, 500);
 
     $(document).find('html').addClass('html_index');
+
+    $('.slide-footer__scroll').click(() => {
+      $.fn.pagepiling.moveSectionDown();
+    });
   }
 }
 

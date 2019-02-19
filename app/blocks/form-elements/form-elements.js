@@ -65,17 +65,33 @@ $('.textareabox .textarea').focusout(function () {
 
 export function sliders() {
   // Параметры берутся из дата-атрибутов
-  $('.js-range').each(function () {
-    const el = $(this);
+  const slider = $('.js-range')[0];
 
-    noUiSlider.create(el.get(0), {
-      start: el.data('start'),
-      connect: el.data('connect'),
-      range: {
-        min: el.data('min'),
-        max: el.data('max'),
-      },
-    });
+  noUiSlider.create(slider, {
+    start: 0,
+    connect: true,
+    range: {
+      min: 0,
+      max: 100,
+    },
+    animate: true,
+    animationDuration: 300,
+  });
+
+  function unlock() {
+    document.querySelector('.js-fancybox').click();
+  }
+
+  slider.noUiSlider.on('update', () => {
+    const theRange = parseInt(slider.noUiSlider.get(), 0);
+
+    if (theRange === 100) {
+      unlock();
+    }
+  });
+
+  slider.noUiSlider.on('end', () => {
+    slider.noUiSlider.set(0);
   });
 }
 

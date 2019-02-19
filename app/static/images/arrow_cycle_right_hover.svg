@@ -1,0 +1,21 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0081cb;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <title>arrow_cycle_right_hover</title>
+  <g id="фон">
+    <circle class="cls-1" cx="27.5" cy="27.5" r="27.5"/>
+  </g>
+  <g id="стрелка">
+    <polygon class="cls-2" points="28.39 19 26.15 21.18 31 25.96 18.16 25.96 18.16 29.04 31 29.04 26.15 33.81 28.39 36 37 27.5 28.39 19"/>
+  </g>
+</svg>

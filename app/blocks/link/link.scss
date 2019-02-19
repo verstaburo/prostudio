@@ -197,13 +197,14 @@
   }
 
   &_hover-btn {
-    padding: 9px 26px 8px;
+    padding: 9px 22px 8px;
     border-radius: 50px;
     border: 2px solid transparent;
+    margin: 0 5px;
 
     @include screen('lg-r', max) {
-      padding-left: 23px;
-      padding-right: 23px;
+      padding-left: 19px;
+      padding-right: 19px;
     }
 
     &:hover, &.active {

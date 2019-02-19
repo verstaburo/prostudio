@@ -615,34 +615,36 @@
 
 .slideToUnlock {
     width: 100%;
-    background: transparent;
-    border: 0;
-    -webkit-appearance: none;
-    border-radius: 0;
-    padding: 0;
-    position: relative;
-    background-image: url('../images/blue_round.png');
-    background-size: 29px 29px;
-    background-repeat: no-repeat;
-    background-position: right 14px center;
+    height: 100%;
     position: absolute;
     left: 0;
-    right: 0;
     top: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: 0;
+    bottom: 0;
+    width: 29px;
+    height: 29px;
+    border: 3px solid $color-main;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin: auto;
+  }
+
+  .js-range {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 55px;
+    z-index: 2;
+  }
 
   @include screen('lg') {
     display: none;
-  }
-
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    z-index: 1;
-    width: 56px;
-    position: relative;
-    height: 56px;
-    background-image: url('../images/next_blue.svg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
   }
 }
 
@@ -670,6 +672,12 @@
   &__scroll {
     display: flex;
     align-items: center;
+    transition: opacity $ease-main;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .5;
+    }
 
     @include screen('lg', max) {
 
@@ -834,6 +842,16 @@
 
       @include text-button-big;
 
+      .link {
+        &:not(:hover) {
+          color: #bababa !important;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
       &:not(:last-child) {
         margin-right: 55px;
       }
@@ -863,7 +881,7 @@
     @include screen('md', max) {
       font-size: 41px;
       line-height: 1.6;
-      margin-top: 124px;
+      margin-top: 140px;
     }
   }
 
@@ -1423,8 +1441,11 @@
     span {
       &::before {
         @include pseudo;
-        top: 4px;
-        left: 4px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
         background-color: $color-main;
         border-radius: 50%;
         transform: scale(0);
@@ -1542,4 +1563,50 @@
       transform: translate3d(0px, 100%, 0px) !important;
     }
   }
+}
+
+.main-page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  transition: filter $ease-main, transform $ease-main;
+  filter: blur(0);
+
+  &.is-active {
+    filter: blur(10px);
+    transform: scale(.9);
+  }
+}
+
+.fancybox-bg {
+  background: black;
+}
+
+.fancybox-is-open .fancybox-bg {
+  opacity: .6;
+}
+
+.mac-os .slide2 .advantage-inner__num {
+  position: relative;
+  top: 13px;
+}
+
+.js-range {
+  .noUi-base {
+    width: 100%;
+    height: 100%;
+  }
+
+  .noUi-handle {
+    width: 55px;
+    height: 55px;
+    background: url('../images/arrow_cycle_right_hover.svg') no-repeat;
+  }
+
+  .noUi-origin {
+    position: relative;
+  }
+}
+
+.noUi-state-tap .noUi-origin {
+  transition: all $ease-main;
 }

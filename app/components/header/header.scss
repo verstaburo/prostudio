@@ -53,7 +53,7 @@
   }
 
   &_fixed-dark {
-    background-color: $color-bg-dark;
+    background-color: $color-bg-dark !important;
   }
 
   &_inner {
@@ -328,12 +328,16 @@
     @include screen('lg') {
       background-color: transparent;
     }
+
+    @include screen('lg', max) {
+      border-bottom: 1px solid #dcdcdc;
+    }
   }
 
   &_index {
     @include screen('lg', max) {
       padding-left: 0;
-      padding-top: 29px;
+      padding-top: 24px;
     }
 
     @include screen('lg', max) {

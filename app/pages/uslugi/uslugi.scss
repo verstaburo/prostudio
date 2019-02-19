@@ -373,7 +373,7 @@
 
     &__img-wrap {
       display: block;
-      transition: opacity $ease-main;
+      transition: opacity $ease-main, transform $ease-main;
 
       &:hover {
         opacity: .5;
@@ -626,7 +626,7 @@
     transition: transform $ease-main;
   }
 
-  &:hover {
+  &:hover, &.is-active {
     svg {
       transform: translateX(5px);
     }
@@ -649,7 +649,7 @@
     transition: transform $ease-main;
   }
 
-  &:hover {
+  &:hover, &.is-active {
     svg {
       transform: translateX(-5px);
     }
@@ -657,5 +657,17 @@
     & + .uslugi-item__line {
       transform: scaleX(1.2);
     }
+  }
+}
+
+.uslugi-item_right .uslugi-item__img-wrap {
+  &.is-active {
+    transform: translate3d(-10px, 0, 0);
+  }
+}
+
+.uslugi-item_left .uslugi-item__img-wrap {
+  &.is-active {
+    transform: translate3d(10px, 0, 0);
   }
 }

@@ -19,7 +19,7 @@ block content
           +b.slide-footer.slide__footer
             .slide-footer__container
               +e.scroll
-                +e.IMG(src='./assets/images/mouse.png').mouse
+                +e.IMG(src='./assets/images/mouse_grey.svg').mouse
                 +e.text листайте вниз
               +e.portfolio
                 a(href="portfolio.html").index-link портфолио
@@ -192,17 +192,17 @@ block content
               +b.menu
                 ul
                   li.menu__item
-                    +link(href='google.com')._nounder._gray Vkontake
+                    +link(href='google.com' style="color: #4c75a3")._nounder._gray Vkontake
                   li.menu__item
-                    +link(href='google.com')._nounder._gray behance
+                    +link(href='google.com' style="color: #053eff")._nounder._gray behance
                   li.menu__item
-                    +link(href='google.com')._nounder._gray youtube
+                    +link(href='google.com' style="color: #ff0000")._nounder._gray youtube
                   li.menu__item
-                    +link(href='google.com')._nounder._gray instagram
+                    +link(href='google.com' style="color: #ce2e8f")._nounder._gray instagram
                   li.menu__item
-                    +link(href='google.com')._nounder._gray facebook
+                    +link(href='google.com' style="color: #4267B2")._nounder._gray facebook
                   li.menu__item
-                    +link(href='google.com')._nounder._gray telegram
+                    +link(href='google.com' style="color: #0088cc")._nounder._gray telegram
               //+e.lang RU EN
               +switcher('RU', 'EN').js-switcher-lang
 
@@ -216,7 +216,8 @@ block content
           //  img(src='./assets/images/next_blue.svg')
           +e.pag
           //+e.IMG(src='./assets/images/blue_round.png').img-round
-          <input type="range" class="slideToUnlock" value="0" max="100">
+          .slideToUnlock
+            .js-range
         +slider(false, false).slider_padportfolio
           +slide
             .slide__tag #Сайты
