@@ -18,8 +18,7 @@
 //     alert(false);
 //   }
 // });
-
-$(window).on('load', function () {
+$(document).ready(function(){
   var
     siteWidth,
     screenSize = $(window).width();
