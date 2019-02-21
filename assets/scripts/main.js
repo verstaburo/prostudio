@@ -30,7 +30,7 @@ $(document).ready(function(){
 
   scale = screenSize / siteWidth;
 
-  document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+', maximum-scale='+scale);
+  document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale=1, maximum-scale=1);
 });
 
 $(document).ready(() => {
