@@ -65,6 +65,8 @@ $('.textareabox .textarea').focusout(function () {
 
 export function sliders() {
   // Параметры берутся из дата-атрибутов
+  if ($('.js-range').length < 1) return;
+
   const slider = $('.js-range')[0];
 
   noUiSlider.create(slider, {
