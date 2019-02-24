@@ -91,13 +91,17 @@
 
   &__title {
     color: $color-main;
-    display: inline;
+    display: block;
     position: relative;
 
     @include text-city;
 
     //line-height: 40px;
     letter-spacing: .6px;
+
+    h2, h3, h4, h5, h6, h7 {
+      display: inline;
+    }
 
     &_hot {
 

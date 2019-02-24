@@ -33,7 +33,20 @@ if (screenSize > 768) {
   document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=' + siteWidth);
 }
 
-$(document).ready(() => {
+function headerIndex () {
+  var header = $(document).find('.header_index');
+
+  if ($(window).width() < 1310) {
+    header.addClass('header_wide header_inner');
+  } else {
+    header.removeClass('header_wide header_inner');
+  }
+}
+
+headerIndex();
+$(window).on('resize', headerIndex);
+
+$(document).ready(function () {
 
   function checkMenuLinks() {
     var links = document.querySelectorAll('.menu__item .link'),
@@ -97,10 +110,6 @@ $(document).ready(() => {
     $('#pp-nav').toggleClass('hidden');
   });
 
-  $('.header .buttons__ico').css({
-    marginRight: - $('.header .buttons__project').outerWidth(),
-  });
-
   $('.js-vacancy-hot .switcher__box').click(() => {
     $('.vacancy__title').not('.vacancy__title_hot').each(function () {
       $(this).parents('.accordion').slideToggle(300);
@@ -148,16 +157,6 @@ $(document).ready(() => {
     window.dispatchEvent(new Event('resize'));
   });
 
-});
-
-$(window).on('load resize', function () {
-  var header = $(document).find('.header_index');
-
-  if ($(window).width() < 1310) {
-    header.addClass('header_wide header_inner');
-  } else {
-    header.removeClass('header_wide header_inner');
-  }
 });
 
 /* eslint-enable */

@@ -125,12 +125,12 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    top: 79px;
+    top: 78px;
     left: 0;
     padding-bottom: 30px !important;
     width: 100%;
     box-sizing: border-box;
-    height: calc(100% - 79px);
+    height: calc(100% - 78px);
     overflow: auto;
     margin: 0;
     text-align: center;
@@ -232,19 +232,21 @@
     white-space: nowrap;
 
     &__wrap {
-      overflow: hidden;
+      display: flex;
     }
 
     &__ico {
       display: inline-block;
-      margin-right: -180px;
+      margin-right: 27px;
       transition: margin $ease-main, opacity $ease-main;
+      overflow: hidden;
+      padding: 1px 0;
     }
 
     &__project {
-      display: inline-block;
-      opacity: 0;
       transition: opacity $ease-main;
+      overflow: hidden;
+      padding: 1px 0;
     }
 
     &__burger {
@@ -549,12 +551,37 @@
   }
 }
 
-@media (max-width: 1550px) {
-  .header_index .buttons__wrap {
+@media (max-width: 600px) and (max-height: 720px) {
+
+  .menu__item_present {
+    display: none !important;
+  }
+}
+
+.header_index {
+  .buttons__project {
     display: none;
   }
 
-  .header_index .menu {
+  .buttons__ico {
+    @media (max-width: 1500px) {
+      display: none;
+    }
+  }
+
+  .menu {
+    transition: padding $ease-main;
+  }
+}
+
+@media (max-width: 1500px) {
+  .header_index:not(.header_wide) .menu {
     padding-right: 0;
+  }
+}
+
+@include screen('lg', max) {
+  .header .buttons__wrap {
+    display: none !important;
   }
 }

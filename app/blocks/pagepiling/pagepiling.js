@@ -1,10 +1,83 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable */
 // https://github.com/alvarotrigo/pagePiling.js
 import * as Pagepiling from 'pagepiling.js/dist/jquery.pagepiling.min';
 
 const $ = window.$;
+const velocity = window.velocity;
 
 export default function mainSlider() {
+  $.fn.actualSize = function (margins) {
+    var el = this,
+      previousCSS = el.attr('style'),
+      size;
+
+    el.css({
+      position: 'absolute',
+      visibility: 'hidden',
+      display: 'block',
+    });
+
+    size = {
+      'width': el.width(),
+      'height': el.height(),
+      'innerWidth': el.innerWidth(),
+      'innerHeight': el.innerHeight(),
+      'outerWidth': el.outerWidth(margins || false),
+      'outerHeight': el.outerHeight(margins || false),
+    };
+
+    el.attr('style', previousCSS ? previousCSS : '');
+
+    return size;
+  };
+
+///////////////////////////////////////////////////////
+
+  $.fn.smartToggle = function (dimension, options) {
+    var el = this,
+      options = options || '',
+      toggleXClass = 'toggled-x',
+      toggleYClass = 'toggled-y',
+      easing = options.easing || 'swing',
+      timing = options.timing || 500,
+      type = options.display || 'block', // Display 'block' by default
+      param = dimension || 'height', // Animate height by default
+      size = el.actualSize(),
+      toggledX = el.hasClass(toggleXClass),
+      toggledY = el.hasClass(toggleYClass),
+      realWidth = size.width,
+      realHeight = size.height,
+      isWidth = (param != 'height'),
+      isHeight = (param != 'width');
+
+    function elStart() {
+      el.css({
+        width: toggledX || (isHeight && !isWidth) ? realWidth : 0,
+        height: toggledY || (!isHeight && isWidth) ? realHeight : 0,
+      });
+    };
+
+    function animEnd() {
+      el.css({
+        display: toggledX || toggledY ? '' : type,
+        height: toggledY || (!isHeight && isWidth) ? 'auto' : '',
+        width: toggledX || (isHeight && !isWidth) ? 'auto' : '',
+      });
+    };
+
+    el.show(0, elStart).velocity({
+      height: toggledY ? 0 : realHeight + 'px',
+      width: toggledX ? 0 : realWidth + 'px',
+    }, {
+      duration: timing,
+      easing: easing,
+      complete: animEnd,
+    });
+
+    !toggledX && isWidth ? el.addClass(toggleXClass) : el.removeClass(toggleXClass);
+    !toggledY && isHeight ? el.addClass(toggleYClass) : el.removeClass(toggleYClass);
+  }
+
   if ($('#pagepiling')[0]) {
     let headerTimeout;
 
@@ -36,12 +109,30 @@ export default function mainSlider() {
           clearTimeout(headerTimeout);
           $('.header__container').removeClass('header__container_wide');
           $('.header').removeClass('header_wide');
+          if ($('.header .buttons__project').hasClass('toggled-x')) {
+            $('.header .buttons__project').smartToggle('width', {easing: 'ease', timing: 300, display: 'inline-block'});
+          }
+
+          if ($('.header .buttons__ico').hasClass('toggled-x')) {
+            if ($(window).width() <= 1500) {
+              $('.header .buttons__ico').smartToggle('width', {easing: 'ease', timing: 300, display: 'inline-block'});
+            }
+          }
         }
 
         if (index === 1) {
           headerTimeout = setTimeout(() => {
             $('.header__container').addClass('header__container_wide');
             $('.header').addClass('header_wide');
+            if (!$('.header .buttons__project').hasClass('toggled-x')) {
+              $('.header .buttons__project').smartToggle('width', {easing: 'ease', timing: 300, display: 'inline-block'});
+            }
+
+            if (!$('.header .buttons__ico').hasClass('toggled-x')) {
+              if ($(window).width() <= 1500) {
+                $('.header .buttons__ico').smartToggle('width', {easing: 'ease', timing: 300, display: 'inline-block'});
+              }
+            }
           }, 700);
         }
       },
@@ -51,6 +142,8 @@ export default function mainSlider() {
 
     setTimeout(() => {
       $.fn.pagepiling.moveTo(1);
+
+      window.headerIndex();
     }, 1);
 
     setTimeout(() => {
@@ -65,4 +158,4 @@ export default function mainSlider() {
   }
 }
 
-/* eslint-enable no-unused-vars */
+/* eslint-enable */

@@ -27,14 +27,14 @@ mixin header(fixed)
             | скачать презентацию<br>5 MB
       +b.buttons
         +e.wrap
-          +button.buttons__ico ico
-          +button(href='#contact')._blue.buttons__project.js-fancybox обсудить проект
+          .buttons__ico
+            +button ico
+          .buttons__project
+            +button(href='#contact')._blue.js-fancybox обсудить проект
         +e.burger.js-padmenu
           span
 
     block
-
-  +popup-contact
 
 
 
@@ -67,14 +67,14 @@ mixin header_index(fixed)
             | скачать презентацию<br>5 MB
       +b.buttons
         +e.wrap
-          +button.buttons__ico ico
-          +button(href='#contact')._blue.buttons__project.js-fancybox обсудить проект
+          .buttons__ico
+            +button ico
+          .buttons__project
+            +button(href='#contact')._blue.js-fancybox обсудить проект
         +e.burger.js-padmenu
           span
 
     block
-
-  +popup-contact
 
 
 
@@ -106,11 +106,11 @@ mixin header_dark(fixed)
             | скачать презентацию<br>5МБ
       +b.buttons
         +e.wrap
-          +button.buttons__ico ico
-          +button(href='#contact')._blue.buttons__project.js-fancybox обсудить проект
+          .buttons__ico
+            +button ico
+          .buttons__project
+            +button(href='#contact')._blue.js-fancybox обсудить проект
         +e.burger_white.js-padmenu
           span
 
     block
-
-  +popup-contact
