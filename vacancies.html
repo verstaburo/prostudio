@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;subset=cyrillic" rel="stylesheet">
     <link href="assets/styles/app.min.css" rel="stylesheet">
     <script src="assets/scripts/libs/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
 </head>
 
 <body>
@@ -30,8 +31,513 @@
                 <li class="menu__item menu__item_present"><a class="link link_nounder link_gray link_flex"><span class="link__text"><img src="./assets/images/pdf.png" />скачать презентацию<br>5 MB</span></a></li>
             </ul>
             <div class="buttons">
-                <div class="buttons__wrap"><a class="button buttons__ico">ico</a><a class="button button_blue buttons__project js-fancybox" href="#contact">обсудить проект</a></div>
+                <div class="buttons__wrap">
+                    <div class="buttons__ico"><a class="button">ico</a></div>
+                    <div class="buttons__project"><a class="button button_blue js-fancybox" href="#contact">обсудить проект</a></div>
+                </div>
                 <div class="buttons__burger js-padmenu"><span></span></div>
+            </div>
+        </div>
+    </div>
+    <section class="vacancies">
+        <div class="container container_inner">
+            <div class="vacancies__title">
+                <h1>Вакансии</h1>
+            </div>
+            <p class="vacancies__subtitle">Мы быстро растем, у нас все время появляются новые задачии направления — и значит, нам часто требуются новые люди.</p><label class="switcher vacancies__selector js-vacancy-hot"><input type="checkbox" />
+                <div class="switcher__value switcher__value_on">Все</div>
+                <div class="switcher__box">
+                    <div class="switcher__mover">
+                        <div class="switcher__circle"></div>
+                    </div>
+                </div>
+                <div class="switcher__value switcher__value_off">горячие</div>
+            </label>
+            <div class="accordions vacancies__list" data-accordion-multiple="false">
+                <div class="accordion">
+                    <div class="accordion__header accordion__header_noarrow js-accordion-button">
+                        <div class="vacancy">
+                            <div class="vacancy__left">
+                                <div class="vacancy__title">
+                                    <h2>Team Lead-разработчик Bitrix24</h2>
+                                </div>
+                                <p class="vacancy__description">Мы ищем разработчика Bitrix24 для крупных проектов. Цель проектов – оптимизация бизнес-процессов и повышение эффективности. Поэтому нам нужен ответственный и въедливый программист, знающий толк в своем деле.</p>
+                            </div>
+                            <div class="vacancy__button"><a class="button">подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="accordion__body">
+                        <div class="requirements">
+                            <p class="requirements__description">Мы ищем разработчика Bitrix24 для крупных проектов. Цель проектов – оптимизация бизнес-процессов и повышение эффективности. Поэтому нам нужен ответственный и въедливый программист, знающий толк в своем деле.</p>
+                            <div class="requirements__title">
+                                <h3>Требования:</h3>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Обязательные:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Уверенное знание PHP, MySQL, APl «1C-Битрикс», HTML/CSS, Javascript, JQuery, Ajax, ООП(MVC);</li>
+                                    <li>Знание платформы CMS 1С-Bitrix (умение разрабатывать свои компоненты/модули);</li>
+                                    <li>Знание Bitrix API, CommerceML, опыт интеграции сайтов на Bitrix с внешними системами;</li>
+                                    <li>Опыт написания собственных компонентов;</li>
+                                    <li>Опыт разработки и внедрения интернет-магазинов на Bitrix;</li>
+                                    <li>Уверенная работа в GIT;</li>
+                                    <li>Умение работы с «чужим» кодом;</li>
+                                    <li>Умение аргументированно отстаивать свою точку зрения;</li>
+                                    <li>Умение предлагать рациональные решения поставленных задач.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Приветствуется:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Наличие сертификатов 1С-Битрикс;</li>
+                                    <li>Опыт участия в высоконагруженных проектах;</li>
+                                    <li>Опыт работы с веб-сервисами (SOAP+WSDL, REST);</li>
+                                    <li>Опыт оптимизации SQL-запросов;</li>
+                                    <li>Опыт работы в среде Linux.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Условия:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Работа в топовом digital агентстве;</li>
+                                    <li>Профессиональная команда;</li>
+                                    <li>Интересные и сложные проекты, возможность внедрять новые технологии;</li>
+                                    <li>График работы: 10:00 - 19:00 , Сб, Вс - выходные;</li>
+                                    <li>Официальное трудоустройство, полностью белая зарплата, оплачиваемый отпуск, больничный лист;</li>
+                                    <li>Офис – 7 минут от метро.</li>
+                                    <li>Оклад по результатам собеседования.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__buttons"><a class="button button_blue">откликнуться на hh.ru</a><a class="button button_red">hh.ru</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion__header accordion__header_noarrow js-accordion-button">
+                        <div class="vacancy">
+                            <div class="vacancy__left">
+                                <div class="vacancy__title vacancy__title_hot">
+                                    <h2>Web-дизайнер</h2>
+                                </div>
+                                <p class="vacancy__description">Ищем в свои ряды эксперта, который понимает что такое качественный дизайн!</p>
+                            </div>
+                            <div class="vacancy__button"><a class="button">подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="accordion__body">
+                        <div class="requirements">
+                            <div class="requirements__title">
+                                <h3>Требования:</h3>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Обязательные:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Уверенное знание PHP, MySQL, APl «1C-Битрикс», HTML/CSS, Javascript, JQuery, Ajax, ООП(MVC);</li>
+                                    <li>Знание платформы CMS 1С-Bitrix (умение разрабатывать свои компоненты/модули);</li>
+                                    <li>Знание Bitrix API, CommerceML, опыт интеграции сайтов на Bitrix с внешними системами;</li>
+                                    <li>Опыт написания собственных компонентов;</li>
+                                    <li>Опыт разработки и внедрения интернет-магазинов на Bitrix;</li>
+                                    <li>Уверенная работа в GIT;</li>
+                                    <li>Умение работы с «чужим» кодом;</li>
+                                    <li>Умение аргументированно отстаивать свою точку зрения;</li>
+                                    <li>Умение предлагать рациональные решения поставленных задач.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Приветствуется:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Наличие сертификатов 1С-Битрикс;</li>
+                                    <li>Опыт участия в высоконагруженных проектах;</li>
+                                    <li>Опыт работы с веб-сервисами (SOAP+WSDL, REST);</li>
+                                    <li>Опыт оптимизации SQL-запросов;</li>
+                                    <li>Опыт работы в среде Linux.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Условия:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Работа в топовом digital агентстве;</li>
+                                    <li>Профессиональная команда;</li>
+                                    <li>Интересные и сложные проекты, возможность внедрять новые технологии;</li>
+                                    <li>График работы: 10:00 - 19:00 , Сб, Вс - выходные;</li>
+                                    <li>Официальное трудоустройство, полностью белая зарплата, оплачиваемый отпуск, больничный лист;</li>
+                                    <li>Офис – 7 минут от метро.</li>
+                                    <li>Оклад по результатам собеседования.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__buttons"><a class="button button_blue">откликнуться на hh.ru</a><a class="button button_red">hh.ru</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion__header accordion__header_noarrow js-accordion-button">
+                        <div class="vacancy">
+                            <div class="vacancy__left">
+                                <div class="vacancy__title">
+                                    <h2>Руководитель digital-проектов</h2>
+                                </div>
+                                <p class="vacancy__description">Мы ищем разработчика Bitrix24 для крупных проектов. Цель проектов – оптимизация бизнес-процессов и повышениеэффективности. Поэтому нам нужен ответственный и въедливый программист, знающий толк в своем деле.</p>
+                            </div>
+                            <div class="vacancy__button"><a class="button">подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="accordion__body">
+                        <div class="requirements">
+                            <div class="requirements__title">
+                                <h3>Требования:</h3>
+                            </div>
+                            <div class="requirements__block">
+                                <h4 class="requirements__subtitle">Обязательные:</h4>
+                                <ul class="list">
+                                    <li>Уверенное знание PHP, MySQL, APl «1C-Битрикс», HTML/CSS, Javascript, JQuery, Ajax, ООП(MVC);</li>
+                                    <li>Знание платформы CMS 1С-Bitrix (умение разрабатывать свои компоненты/модули);</li>
+                                    <li>Знание Bitrix API, CommerceML, опыт интеграции сайтов на Bitrix с внешними системами;</li>
+                                    <li>Опыт написания собственных компонентов;</li>
+                                    <li>Опыт разработки и внедрения интернет-магазинов на Bitrix;</li>
+                                    <li>Уверенная работа в GIT;</li>
+                                    <li>Умение работы с «чужим» кодом;</li>
+                                    <li>Умение аргументированно отстаивать свою точку зрения;</li>
+                                    <li>Умение предлагать рациональные решения поставленных задач.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Приветствуется:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Наличие сертификатов 1С-Битрикс;</li>
+                                    <li>Опыт участия в высоконагруженных проектах;</li>
+                                    <li>Опыт работы с веб-сервисами (SOAP+WSDL, REST);</li>
+                                    <li>Опыт оптимизации SQL-запросов;</li>
+                                    <li>Опыт работы в среде Linux.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">Условия:</div>
+                                <ul class="list">
+                                    <li>Работа в топовом digital агентстве;</li>
+                                    <li>Профессиональная команда;</li>
+                                    <li>Интересные и сложные проекты, возможность внедрять новые технологии;</li>
+                                    <li>График работы: 10:00 - 19:00 , Сб, Вс - выходные;</li>
+                                    <li>Официальное трудоустройство, полностью белая зарплата, оплачиваемый отпуск, больничный лист;</li>
+                                    <li>Офис – 7 минут от метро.</li>
+                                    <li>Оклад по результатам собеседования.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__buttons"><a class="button button_blue">откликнуться на hh.ru</a><a class="button button_red">hh.ru</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion__header accordion__header_noarrow js-accordion-button">
+                        <div class="vacancy">
+                            <div class="vacancy__left">
+                                <div class="vacancy__title">
+                                    <h2>PHP-разработчик</h2>
+                                </div>
+                                <p class="vacancy__description">Мы ищем разработчика Bitrix24 для крупных проектов. Цель проектов – оптимизация бизнес-процессов и повышениеэффективности. Поэтому нам нужен ответственный и въедливый программист, знающий толк в своем деле.</p>
+                            </div>
+                            <div class="vacancy__button"><a class="button">подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="accordion__body">
+                        <div class="requirements">
+                            <p class="requirements__description">Мы ищем разработчика Bitrix24 для крупных проектов. Цель проектов – оптимизация бизнес-процессов и повышениеэффективности. Поэтому нам нужен ответственный и въедливый программист, знающий толк в своем деле.</p>
+                            <div class="requirements__title">
+                                <h3>Требования:</h3>
+                            </div>
+                            <div class="requirements__block">
+                                <h4 class="requirements__subtitle">Обязательные:</h4>
+                                <ul class="list">
+                                    <li>Уверенное знание PHP, MySQL, APl «1C-Битрикс», HTML/CSS, Javascript, JQuery, Ajax, ООП(MVC);</li>
+                                    <li>Знание платформы CMS 1С-Bitrix (умение разрабатывать свои компоненты/модули);</li>
+                                    <li>Знание Bitrix API, CommerceML, опыт интеграции сайтов на Bitrix с внешними системами;</li>
+                                    <li>Опыт написания собственных компонентов;</li>
+                                    <li>Опыт разработки и внедрения интернет-магазинов на Bitrix;</li>
+                                    <li>Уверенная работа в GIT;</li>
+                                    <li>Умение работы с «чужим» кодом;</li>
+                                    <li>Умение аргументированно отстаивать свою точку зрения;</li>
+                                    <li>Умение предлагать рациональные решения поставленных задач.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Приветствуется:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Наличие сертификатов 1С-Битрикс;</li>
+                                    <li>Опыт участия в высоконагруженных проектах;</li>
+                                    <li>Опыт работы с веб-сервисами (SOAP+WSDL, REST);</li>
+                                    <li>Опыт оптимизации SQL-запросов;</li>
+                                    <li>Опыт работы в среде Linux.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Условия:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Работа в топовом digital агентстве;</li>
+                                    <li>Профессиональная команда;</li>
+                                    <li>Интересные и сложные проекты, возможность внедрять новые технологии;</li>
+                                    <li>График работы: 10:00 - 19:00 , Сб, Вс - выходные;</li>
+                                    <li>Официальное трудоустройство, полностью белая зарплата, оплачиваемый отпуск, больничный лист;</li>
+                                    <li>Офис – 7 минут от метро.</li>
+                                    <li>Оклад по результатам собеседования.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__buttons"><a class="button button_blue">откликнуться на hh.ru</a><a class="button button_red">hh.ru</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion__header accordion__header_noarrow js-accordion-button">
+                        <div class="vacancy">
+                            <div class="vacancy__left">
+                                <div class="vacancy__title vacancy__title_hot">
+                                    <h2>Аккаунт менеджер</h2>
+                                </div>
+                                <p class="vacancy__description">Мы ищем разработчика Bitrix24 для крупных проектов. Цель проектов – оптимизация бизнес-процессов и повышениеэффективности. Поэтому нам нужен ответственный и въедливый программист, знающий толк в своем деле.</p>
+                            </div>
+                            <div class="vacancy__button"><a class="button">подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="accordion__body">
+                        <div class="requirements">
+                            <div class="requirements__title">
+                                <h3>Требования:</h3>
+                            </div>
+                            <div class="requirements__block">
+                                <h4 class="requirements__subtitle">Обязательные:</h4>
+                                <ul class="list">
+                                    <li>Уверенное знание PHP, MySQL, APl «1C-Битрикс», HTML/CSS, Javascript, JQuery, Ajax, ООП(MVC);</li>
+                                    <li>Знание платформы CMS 1С-Bitrix (умение разрабатывать свои компоненты/модули);</li>
+                                    <li>Знание Bitrix API, CommerceML, опыт интеграции сайтов на Bitrix с внешними системами;</li>
+                                    <li>Опыт написания собственных компонентов;</li>
+                                    <li>Опыт разработки и внедрения интернет-магазинов на Bitrix;</li>
+                                    <li>Уверенная работа в GIT;</li>
+                                    <li>Умение работы с «чужим» кодом;</li>
+                                    <li>Умение аргументированно отстаивать свою точку зрения;</li>
+                                    <li>Умение предлагать рациональные решения поставленных задач.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Приветствуется:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Наличие сертификатов 1С-Битрикс;</li>
+                                    <li>Опыт участия в высоконагруженных проектах;</li>
+                                    <li>Опыт работы с веб-сервисами (SOAP+WSDL, REST);</li>
+                                    <li>Опыт оптимизации SQL-запросов;</li>
+                                    <li>Опыт работы в среде Linux.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Условия:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Работа в топовом digital агентстве;</li>
+                                    <li>Профессиональная команда;</li>
+                                    <li>Интересные и сложные проекты, возможность внедрять новые технологии;</li>
+                                    <li>График работы: 10:00 - 19:00 , Сб, Вс - выходные;</li>
+                                    <li>Официальное трудоустройство, полностью белая зарплата, оплачиваемый отпуск, больничный лист;</li>
+                                    <li>Офис – 7 минут от метро.</li>
+                                    <li>Оклад по результатам собеседования.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__buttons"><a class="button button_blue">откликнуться на hh.ru</a><a class="button button_red">hh.ru</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion__header accordion__header_noarrow js-accordion-button">
+                        <div class="vacancy">
+                            <div class="vacancy__left">
+                                <div class="vacancy__title vacancy__title_hot">
+                                    <h2>SMM-маркетолог</h2>
+                                </div>
+                                <p class="vacancy__description">Ищем в свои ряды эксперта, который понимает что такое качественный дизайн!</p>
+                            </div>
+                            <div class="vacancy__button"><a class="button">подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="accordion__body">
+                        <div class="requirements">
+                            <div class="requirements__title">
+                                <h3>Требования:</h3>
+                            </div>
+                            <div class="requirements__block">
+                                <h4 class="requirements__subtitle">Обязательные:</h4>
+                                <ul class="list">
+                                    <li>Уверенное знание PHP, MySQL, APl «1C-Битрикс», HTML/CSS, Javascript, JQuery, Ajax, ООП(MVC);</li>
+                                    <li>Знание платформы CMS 1С-Bitrix (умение разрабатывать свои компоненты/модули);</li>
+                                    <li>Знание Bitrix API, CommerceML, опыт интеграции сайтов на Bitrix с внешними системами;</li>
+                                    <li>Опыт написания собственных компонентов;</li>
+                                    <li>Опыт разработки и внедрения интернет-магазинов на Bitrix;</li>
+                                    <li>Уверенная работа в GIT;</li>
+                                    <li>Умение работы с «чужим» кодом;</li>
+                                    <li>Умение аргументированно отстаивать свою точку зрения;</li>
+                                    <li>Умение предлагать рациональные решения поставленных задач.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Приветствуется:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Наличие сертификатов 1С-Битрикс;</li>
+                                    <li>Опыт участия в высоконагруженных проектах;</li>
+                                    <li>Опыт работы с веб-сервисами (SOAP+WSDL, REST);</li>
+                                    <li>Опыт оптимизации SQL-запросов;</li>
+                                    <li>Опыт работы в среде Linux.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Условия:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Работа в топовом digital агентстве;</li>
+                                    <li>Профессиональная команда;</li>
+                                    <li>Интересные и сложные проекты, возможность внедрять новые технологии;</li>
+                                    <li>График работы: 10:00 - 19:00 , Сб, Вс - выходные;</li>
+                                    <li>Официальное трудоустройство, полностью белая зарплата, оплачиваемый отпуск, больничный лист;</li>
+                                    <li>Офис – 7 минут от метро.</li>
+                                    <li>Оклад по результатам собеседования.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__buttons"><a class="button button_blue">откликнуться на hh.ru</a><a class="button button_red">hh.ru</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion__header accordion__header_noarrow js-accordion-button">
+                        <div class="vacancy">
+                            <div class="vacancy__left">
+                                <div class="vacancy__title">
+                                    <h2>Программист 1с-bitrix</h2>
+                                </div>
+                                <p class="vacancy__description">Мы ищем разработчика Bitrix24 для крупных проектов. Цель проектов – оптимизация бизнес-процессов и повышениеэффективности. Поэтому нам нужен ответственный и въедливый программист, знающий толк в своем деле.</p>
+                            </div>
+                            <div class="vacancy__button"><a class="button">подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="accordion__body">
+                        <div class="requirements">
+                            <h3 class="requirements__title">Требования:</h3>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Обязательные:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Уверенное знание PHP, MySQL, APl «1C-Битрикс», HTML/CSS, Javascript, JQuery, Ajax, ООП(MVC);</li>
+                                    <li>Знание платформы CMS 1С-Bitrix (умение разрабатывать свои компоненты/модули);</li>
+                                    <li>Знание Bitrix API, CommerceML, опыт интеграции сайтов на Bitrix с внешними системами;</li>
+                                    <li>Опыт написания собственных компонентов;</li>
+                                    <li>Опыт разработки и внедрения интернет-магазинов на Bitrix;</li>
+                                    <li>Уверенная работа в GIT;</li>
+                                    <li>Умение работы с «чужим» кодом;</li>
+                                    <li>Умение аргументированно отстаивать свою точку зрения;</li>
+                                    <li>Умение предлагать рациональные решения поставленных задач.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Приветствуется:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Наличие сертификатов 1С-Битрикс;</li>
+                                    <li>Опыт участия в высоконагруженных проектах;</li>
+                                    <li>Опыт работы с веб-сервисами (SOAP+WSDL, REST);</li>
+                                    <li>Опыт оптимизации SQL-запросов;</li>
+                                    <li>Опыт работы в среде Linux.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__block">
+                                <div class="requirements__subtitle">
+                                    <h4>Условия:</h4>
+                                </div>
+                                <ul class="list">
+                                    <li>Работа в топовом digital агентстве;</li>
+                                    <li>Профессиональная команда;</li>
+                                    <li>Интересные и сложные проекты, возможность внедрять новые технологии;</li>
+                                    <li>График работы: 10:00 - 19:00 , Сб, Вс - выходные;</li>
+                                    <li>Официальное трудоустройство, полностью белая зарплата, оплачиваемый отпуск, больничный лист;</li>
+                                    <li>Офис – 7 минут от метро.</li>
+                                    <li>Оклад по результатам собеседования.</li>
+                                </ul>
+                            </div>
+                            <div class="requirements__buttons"><a class="button button_blue">откликнуться на hh.ru</a><a class="button button_red">hh.ru</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact vacancies__contact"><img src="./assets/images/bigplus.svg">
+                <div class="contact__right">
+                    <div class="contact__title">
+                        <h2>Если вы не нашли то, что искали, напишите нам на <a class="link link_blue link_nounder contact__link" href="hr@prostudio.ru"><span class="link__text">hr@prostudio.ru</span></a></h2>
+                    </div>
+                    <div class="contact__text">Возможно, мы просто еще не знаем, что нам нужны именно вы.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <div class="container container_inner footer__container">
+            <div class="footer__left">
+                <div class="footer__contacts"><a class="link link_nounder link_gray link_lg" href="tel:+78126456596"><span class="link__text">+7 (812) 645-65-96</span></a><a class="link link_nounder link_gray link_lg" href="tel:+74956456596"><span class="link__text">+7 (495) 645-65-96</span></a><a class="link link_nounder link_gray link_lg footer__mail" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a></div>
+                <div class="footer__copyright footer__second">© 2009-2017 ООО «Цифровая империя»</div>
+            </div>
+            <div class="footer__center"><a class="link link_nounder link_gray link_lg" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a>
+                <div class="apps footer__second">
+                    <div class="apps__title">cкачать приложение:</div><A class="footer__appstore" href="#"><img src="assets/images/appstore.svg" /></A>
+                </div>
+            </div>
+            <div class="footer__right">
+                <div class="icons"><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg><span class="link__text"></span></a><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_behance"></use></svg><span class="link__text"></span></a><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_youtube"></use></svg><span class="link__text"></span></a><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_instagram"></use></svg><span class="link__text"></span></a><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_facebook"></use></svg><span class="link__text"></span></a><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_telegram"></use></svg><span class="link__text"></span></a></div>
+                <div class="footer__second"><a class="link link_nounder link_gray link_flex footer__doc"><span class="link__text"><img src="./assets/images/file_pdf.svg" /><span>скачать презентацию<br>5 MB</span></span></a>
+                    <div class="langs footer__langs"><a class="link link_nounder link_gray langs__lang langs__lang_active"><span class="link__text">RU</span></a><a class="link link_nounder link_gray langs__lang"><span class="link__text">EN</span></a></div>
+                </div>
+                <div class="footer__third">
+                    <div class="apps">
+                        <div class="apps__title">cкачать приложение:</div><A class="footer__appstore" href="#"><img src="assets/images/appstore.svg" /></A>
+                    </div>
+                    <div class="langs"><a class="link link_nounder link_gray langs__lang langs__lang_active"><span class="link__text">RU</span></a><a class="link link_nounder link_gray langs__lang"><span class="link__text">EN</span></a></div>
+                </div>
+            </div>
+            <div class="footer__mobil">
+                <div class="city">
+                    <div class="city__name">Петербург</div><a class="link link_nounder link_xl link_img city__address"><span class="link__text"><img src="./assets/images/ext_link.png" />Ленинский проспект, 151</span></a><a class="link link_dashed link_xl city__tel" href="tel:+78126456596"><span class="link__text">+7(812) 645-65-96</span></a>
+                </div>
+                <div class="city">
+                    <div class="city__name">Москва</div><a class="link link_nounder link_xl link_img city__address"><span class="link__text"><img src="./assets/images/ext_link.png" />Проспект вернадского, 43</span></a><a class="link link_dashed link_xl city__tel" href="tel:+74956456596"><span class="link__text">+7(495) 645-65-96</span></a>
+                </div><a class="link link_nounder link_xl link_blue footer__mail footer__mail_mobil" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a>
+                <div class="apps apps_mobil">
+                    <div class="apps__title">Cкачать приложение:</div><A class="footer__appstore" href="#"><img src="assets/images/appstore.svg" /></A>
+                </div><label class="switcher js-switcher-lang footer__switcher"><input type="checkbox" />
+                    <div class="switcher__value switcher__value_on">RU</div>
+                    <div class="switcher__box">
+                        <div class="switcher__mover">
+                            <div class="switcher__circle"></div>
+                        </div>
+                    </div>
+                    <div class="switcher__value switcher__value_off">EN</div>
+                </label>
+                <div class="footer__copyright footer__copyright_mobil">© 2009-2017 ООО «Цифровая империя»</div>
             </div>
         </div>
     </div>
@@ -80,448 +586,6 @@
             <div class="contact__step2"><img src="./assets/images/msg_send.jpg" />
                 <div class="contact__title">Отправлено!</div>
                 <div class="contact__subtitle">Спасибо за обращение в нашу студию.</div><a class="button button_blue button_big contact__btn contact__btn_mt js-popup-close">на главную</a>
-            </div>
-        </div>
-    </div>
-    <section class="vacancies">
-        <div class="container container_inner">
-            <div class="vacancies__title">
-                <h1>Вакансии</h1>
-            </div>
-            <p class="vacancies__subtitle">Мы быстро растем, у нас все время появляются новые задачии направления — и значит, нам часто требуются новые люди.</p><label class="switcher vacancies__selector js-vacancy-hot"><input type="checkbox" />
-                <div class="switcher__value switcher__value_on">Все</div>
-                <div class="switcher__box">
-                    <div class="switcher__mover">
-                        <div class="switcher__circle"></div>
-                    </div>
-                </div>
-                <div class="switcher__value switcher__value_off">горячие</div>
-            </label>
-            <div class="accordions vacancies__list" data-accordion-multiple="false">
-                <div class="accordion">
-                    <div class="accordion__header accordion__header_noarrow js-accordion-button">
-                        <div class="vacancy">
-                            <div class="vacancy__left">
-                                <h2 class="vacancy__title">Team Lead-разработчик Bitrix24</h2>
-                                <p class="vacancy__description">Мы ищем разработчика Bitrix24 для крупных проектов. Цель проектов – оптимизация бизнес-процессов и повышение эффективности. Поэтому нам нужен ответственный и въедливый программист, знающий толк в своем деле.</p>
-                            </div>
-                            <div class="vacancy__button"><a class="button">подробнее</a></div>
-                        </div>
-                    </div>
-                    <div class="accordion__body">
-                        <div class="requirements">
-                            <p class="requirements__description">Мы ищем разработчика Bitrix24 для крупных проектов. Цель проектов – оптимизация бизнес-процессов и повышение эффективности. Поэтому нам нужен ответственный и въедливый программист, знающий толк в своем деле.</p>
-                            <h3 class="requirements__title">Требования:</h3>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Обязательные:</h4>
-                                <ul class="list">
-                                    <li>Уверенное знание PHP, MySQL, APl «1C-Битрикс», HTML/CSS, Javascript, JQuery, Ajax, ООП(MVC);</li>
-                                    <li>Знание платформы CMS 1С-Bitrix (умение разрабатывать свои компоненты/модули);</li>
-                                    <li>Знание Bitrix API, CommerceML, опыт интеграции сайтов на Bitrix с внешними системами;</li>
-                                    <li>Опыт написания собственных компонентов;</li>
-                                    <li>Опыт разработки и внедрения интернет-магазинов на Bitrix;</li>
-                                    <li>Уверенная работа в GIT;</li>
-                                    <li>Умение работы с «чужим» кодом;</li>
-                                    <li>Умение аргументированно отстаивать свою точку зрения;</li>
-                                    <li>Умение предлагать рациональные решения поставленных задач.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Приветствуется:</h4>
-                                <ul class="list">
-                                    <li>Наличие сертификатов 1С-Битрикс;</li>
-                                    <li>Опыт участия в высоконагруженных проектах;</li>
-                                    <li>Опыт работы с веб-сервисами (SOAP+WSDL, REST);</li>
-                                    <li>Опыт оптимизации SQL-запросов;</li>
-                                    <li>Опыт работы в среде Linux.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Условия:</h4>
-                                <ul class="list">
-                                    <li>Работа в топовом digital агентстве;</li>
-                                    <li>Профессиональная команда;</li>
-                                    <li>Интересные и сложные проекты, возможность внедрять новые технологии;</li>
-                                    <li>График работы: 10:00 - 19:00 , Сб, Вс - выходные;</li>
-                                    <li>Официальное трудоустройство, полностью белая зарплата, оплачиваемый отпуск, больничный лист;</li>
-                                    <li>Офис – 7 минут от метро.</li>
-                                    <li>Оклад по результатам собеседования.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__buttons"><a class="button button_blue">откликнуться на hh.ru</a><a class="button button_red">hh.ru</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion__header accordion__header_noarrow js-accordion-button">
-                        <div class="vacancy">
-                            <div class="vacancy__left">
-                                <h2 class="vacancy__title vacancy__title_hot">Web-дизайнер</h2>
-                                <p class="vacancy__description">Ищем в свои ряды эксперта, который понимает что такое качественный дизайн!</p>
-                            </div>
-                            <div class="vacancy__button"><a class="button">подробнее</a></div>
-                        </div>
-                    </div>
-                    <div class="accordion__body">
-                        <div class="requirements">
-                            <h3 class="requirements__title">Требования:</h3>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Обязательные:</h4>
-                                <ul class="list">
-                                    <li>Уверенное знание PHP, MySQL, APl «1C-Битрикс», HTML/CSS, Javascript, JQuery, Ajax, ООП(MVC);</li>
-                                    <li>Знание платформы CMS 1С-Bitrix (умение разрабатывать свои компоненты/модули);</li>
-                                    <li>Знание Bitrix API, CommerceML, опыт интеграции сайтов на Bitrix с внешними системами;</li>
-                                    <li>Опыт написания собственных компонентов;</li>
-                                    <li>Опыт разработки и внедрения интернет-магазинов на Bitrix;</li>
-                                    <li>Уверенная работа в GIT;</li>
-                                    <li>Умение работы с «чужим» кодом;</li>
-                                    <li>Умение аргументированно отстаивать свою точку зрения;</li>
-                                    <li>Умение предлагать рациональные решения поставленных задач.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Приветствуется:</h4>
-                                <ul class="list">
-                                    <li>Наличие сертификатов 1С-Битрикс;</li>
-                                    <li>Опыт участия в высоконагруженных проектах;</li>
-                                    <li>Опыт работы с веб-сервисами (SOAP+WSDL, REST);</li>
-                                    <li>Опыт оптимизации SQL-запросов;</li>
-                                    <li>Опыт работы в среде Linux.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Условия:</h4>
-                                <ul class="list">
-                                    <li>Работа в топовом digital агентстве;</li>
-                                    <li>Профессиональная команда;</li>
-                                    <li>Интересные и сложные проекты, возможность внедрять новые технологии;</li>
-                                    <li>График работы: 10:00 - 19:00 , Сб, Вс - выходные;</li>
-                                    <li>Официальное трудоустройство, полностью белая зарплата, оплачиваемый отпуск, больничный лист;</li>
-                                    <li>Офис – 7 минут от метро.</li>
-                                    <li>Оклад по результатам собеседования.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__buttons"><a class="button button_blue">откликнуться на hh.ru</a><a class="button button_red">hh.ru</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion__header accordion__header_noarrow js-accordion-button">
-                        <div class="vacancy">
-                            <div class="vacancy__left">
-                                <h2 class="vacancy__title">Руководитель digital-проектов</h2>
-                                <p class="vacancy__description">Мы ищем разработчика Bitrix24 для крупных проектов. Цель проектов – оптимизация бизнес-процессов и повышениеэффективности. Поэтому нам нужен ответственный и въедливый программист, знающий толк в своем деле.</p>
-                            </div>
-                            <div class="vacancy__button"><a class="button">подробнее</a></div>
-                        </div>
-                    </div>
-                    <div class="accordion__body">
-                        <div class="requirements">
-                            <h3 class="requirements__title">Требования:</h3>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Обязательные:</h4>
-                                <ul class="list">
-                                    <li>Уверенное знание PHP, MySQL, APl «1C-Битрикс», HTML/CSS, Javascript, JQuery, Ajax, ООП(MVC);</li>
-                                    <li>Знание платформы CMS 1С-Bitrix (умение разрабатывать свои компоненты/модули);</li>
-                                    <li>Знание Bitrix API, CommerceML, опыт интеграции сайтов на Bitrix с внешними системами;</li>
-                                    <li>Опыт написания собственных компонентов;</li>
-                                    <li>Опыт разработки и внедрения интернет-магазинов на Bitrix;</li>
-                                    <li>Уверенная работа в GIT;</li>
-                                    <li>Умение работы с «чужим» кодом;</li>
-                                    <li>Умение аргументированно отстаивать свою точку зрения;</li>
-                                    <li>Умение предлагать рациональные решения поставленных задач.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Приветствуется:</h4>
-                                <ul class="list">
-                                    <li>Наличие сертификатов 1С-Битрикс;</li>
-                                    <li>Опыт участия в высоконагруженных проектах;</li>
-                                    <li>Опыт работы с веб-сервисами (SOAP+WSDL, REST);</li>
-                                    <li>Опыт оптимизации SQL-запросов;</li>
-                                    <li>Опыт работы в среде Linux.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__block">
-                                <div class="requirements__subtitl"> e Условия:</div>
-                                <ul class="list">
-                                    <li>Работа в топовом digital агентстве;</li>
-                                    <li>Профессиональная команда;</li>
-                                    <li>Интересные и сложные проекты, возможность внедрять новые технологии;</li>
-                                    <li>График работы: 10:00 - 19:00 , Сб, Вс - выходные;</li>
-                                    <li>Официальное трудоустройство, полностью белая зарплата, оплачиваемый отпуск, больничный лист;</li>
-                                    <li>Офис – 7 минут от метро.</li>
-                                    <li>Оклад по результатам собеседования.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__buttons"><a class="button button_blue">откликнуться на hh.ru</a><a class="button button_red">hh.ru</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion__header accordion__header_noarrow js-accordion-button">
-                        <div class="vacancy">
-                            <div class="vacancy__left">
-                                <h2 class="vacancy__title">PHP-разработчик</h2>
-                                <p class="vacancy__description">Мы ищем разработчика Bitrix24 для крупных проектов. Цель проектов – оптимизация бизнес-процессов и повышениеэффективности. Поэтому нам нужен ответственный и въедливый программист, знающий толк в своем деле.</p>
-                            </div>
-                            <div class="vacancy__button"><a class="button">подробнее</a></div>
-                        </div>
-                    </div>
-                    <div class="accordion__body">
-                        <div class="requirements">
-                            <p class="requirements__description">Мы ищем разработчика Bitrix24 для крупных проектов. Цель проектов – оптимизация бизнес-процессов и повышениеэффективности. Поэтому нам нужен ответственный и въедливый программист, знающий толк в своем деле.</p>
-                            <h3 class="requirements__title">Требования:</h3>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Обязательные:</h4>
-                                <ul class="list">
-                                    <li>Уверенное знание PHP, MySQL, APl «1C-Битрикс», HTML/CSS, Javascript, JQuery, Ajax, ООП(MVC);</li>
-                                    <li>Знание платформы CMS 1С-Bitrix (умение разрабатывать свои компоненты/модули);</li>
-                                    <li>Знание Bitrix API, CommerceML, опыт интеграции сайтов на Bitrix с внешними системами;</li>
-                                    <li>Опыт написания собственных компонентов;</li>
-                                    <li>Опыт разработки и внедрения интернет-магазинов на Bitrix;</li>
-                                    <li>Уверенная работа в GIT;</li>
-                                    <li>Умение работы с «чужим» кодом;</li>
-                                    <li>Умение аргументированно отстаивать свою точку зрения;</li>
-                                    <li>Умение предлагать рациональные решения поставленных задач.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Приветствуется:</h4>
-                                <ul class="list">
-                                    <li>Наличие сертификатов 1С-Битрикс;</li>
-                                    <li>Опыт участия в высоконагруженных проектах;</li>
-                                    <li>Опыт работы с веб-сервисами (SOAP+WSDL, REST);</li>
-                                    <li>Опыт оптимизации SQL-запросов;</li>
-                                    <li>Опыт работы в среде Linux.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Условия:</h4>
-                                <ul class="list">
-                                    <li>Работа в топовом digital агентстве;</li>
-                                    <li>Профессиональная команда;</li>
-                                    <li>Интересные и сложные проекты, возможность внедрять новые технологии;</li>
-                                    <li>График работы: 10:00 - 19:00 , Сб, Вс - выходные;</li>
-                                    <li>Официальное трудоустройство, полностью белая зарплата, оплачиваемый отпуск, больничный лист;</li>
-                                    <li>Офис – 7 минут от метро.</li>
-                                    <li>Оклад по результатам собеседования.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__buttons"><a class="button button_blue">откликнуться на hh.ru</a><a class="button button_red">hh.ru</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion__header accordion__header_noarrow js-accordion-button">
-                        <div class="vacancy">
-                            <div class="vacancy__left">
-                                <h2 class="vacancy__title vacancy__title_hot">Аккаунт менеджер</h2>
-                                <p class="vacancy__description">Мы ищем разработчика Bitrix24 для крупных проектов. Цель проектов – оптимизация бизнес-процессов и повышениеэффективности. Поэтому нам нужен ответственный и въедливый программист, знающий толк в своем деле.</p>
-                            </div>
-                            <div class="vacancy__button"><a class="button">подробнее</a></div>
-                        </div>
-                    </div>
-                    <div class="accordion__body">
-                        <div class="requirements">
-                            <h3 class="requirements__title">Требования:</h3>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Обязательные:</h4>
-                                <ul class="list">
-                                    <li>Уверенное знание PHP, MySQL, APl «1C-Битрикс», HTML/CSS, Javascript, JQuery, Ajax, ООП(MVC);</li>
-                                    <li>Знание платформы CMS 1С-Bitrix (умение разрабатывать свои компоненты/модули);</li>
-                                    <li>Знание Bitrix API, CommerceML, опыт интеграции сайтов на Bitrix с внешними системами;</li>
-                                    <li>Опыт написания собственных компонентов;</li>
-                                    <li>Опыт разработки и внедрения интернет-магазинов на Bitrix;</li>
-                                    <li>Уверенная работа в GIT;</li>
-                                    <li>Умение работы с «чужим» кодом;</li>
-                                    <li>Умение аргументированно отстаивать свою точку зрения;</li>
-                                    <li>Умение предлагать рациональные решения поставленных задач.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Приветствуется:</h4>
-                                <ul class="list">
-                                    <li>Наличие сертификатов 1С-Битрикс;</li>
-                                    <li>Опыт участия в высоконагруженных проектах;</li>
-                                    <li>Опыт работы с веб-сервисами (SOAP+WSDL, REST);</li>
-                                    <li>Опыт оптимизации SQL-запросов;</li>
-                                    <li>Опыт работы в среде Linux.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Условия:</h4>
-                                <ul class="list">
-                                    <li>Работа в топовом digital агентстве;</li>
-                                    <li>Профессиональная команда;</li>
-                                    <li>Интересные и сложные проекты, возможность внедрять новые технологии;</li>
-                                    <li>График работы: 10:00 - 19:00 , Сб, Вс - выходные;</li>
-                                    <li>Официальное трудоустройство, полностью белая зарплата, оплачиваемый отпуск, больничный лист;</li>
-                                    <li>Офис – 7 минут от метро.</li>
-                                    <li>Оклад по результатам собеседования.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__buttons"><a class="button button_blue">откликнуться на hh.ru</a><a class="button button_red">hh.ru</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion__header accordion__header_noarrow js-accordion-button">
-                        <div class="vacancy">
-                            <div class="vacancy__left">
-                                <h2 class="vacancy__title vacancy__title_hot">SMM-маркетолог</h2>
-                                <p class="vacancy__description">Ищем в свои ряды эксперта, который понимает что такое качественный дизайн!</p>
-                            </div>
-                            <div class="vacancy__button"><a class="button">подробнее</a></div>
-                        </div>
-                    </div>
-                    <div class="accordion__body">
-                        <div class="requirements">
-                            <h3 class="requirements__title">Требования:</h3>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Обязательные:</h4>
-                                <ul class="list">
-                                    <li>Уверенное знание PHP, MySQL, APl «1C-Битрикс», HTML/CSS, Javascript, JQuery, Ajax, ООП(MVC);</li>
-                                    <li>Знание платформы CMS 1С-Bitrix (умение разрабатывать свои компоненты/модули);</li>
-                                    <li>Знание Bitrix API, CommerceML, опыт интеграции сайтов на Bitrix с внешними системами;</li>
-                                    <li>Опыт написания собственных компонентов;</li>
-                                    <li>Опыт разработки и внедрения интернет-магазинов на Bitrix;</li>
-                                    <li>Уверенная работа в GIT;</li>
-                                    <li>Умение работы с «чужим» кодом;</li>
-                                    <li>Умение аргументированно отстаивать свою точку зрения;</li>
-                                    <li>Умение предлагать рациональные решения поставленных задач.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Приветствуется:</h4>
-                                <ul class="list">
-                                    <li>Наличие сертификатов 1С-Битрикс;</li>
-                                    <li>Опыт участия в высоконагруженных проектах;</li>
-                                    <li>Опыт работы с веб-сервисами (SOAP+WSDL, REST);</li>
-                                    <li>Опыт оптимизации SQL-запросов;</li>
-                                    <li>Опыт работы в среде Linux.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Условия:</h4>
-                                <ul class="list">
-                                    <li>Работа в топовом digital агентстве;</li>
-                                    <li>Профессиональная команда;</li>
-                                    <li>Интересные и сложные проекты, возможность внедрять новые технологии;</li>
-                                    <li>График работы: 10:00 - 19:00 , Сб, Вс - выходные;</li>
-                                    <li>Официальное трудоустройство, полностью белая зарплата, оплачиваемый отпуск, больничный лист;</li>
-                                    <li>Офис – 7 минут от метро.</li>
-                                    <li>Оклад по результатам собеседования.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__buttons"><a class="button button_blue">откликнуться на hh.ru</a><a class="button button_red">hh.ru</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion__header accordion__header_noarrow js-accordion-button">
-                        <div class="vacancy">
-                            <div class="vacancy__left">
-                                <h2 class="vacancy__title">Программист 1с-bitrix</h2>
-                                <p class="vacancy__description">Мы ищем разработчика Bitrix24 для крупных проектов. Цель проектов – оптимизация бизнес-процессов и повышениеэффективности. Поэтому нам нужен ответственный и въедливый программист, знающий толк в своем деле.</p>
-                            </div>
-                            <div class="vacancy__button"><a class="button">подробнее</a></div>
-                        </div>
-                    </div>
-                    <div class="accordion__body">
-                        <div class="requirements">
-                            <h3 class="requirements__title">Требования:</h3>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Обязательные:</h4>
-                                <ul class="list">
-                                    <li>Уверенное знание PHP, MySQL, APl «1C-Битрикс», HTML/CSS, Javascript, JQuery, Ajax, ООП(MVC);</li>
-                                    <li>Знание платформы CMS 1С-Bitrix (умение разрабатывать свои компоненты/модули);</li>
-                                    <li>Знание Bitrix API, CommerceML, опыт интеграции сайтов на Bitrix с внешними системами;</li>
-                                    <li>Опыт написания собственных компонентов;</li>
-                                    <li>Опыт разработки и внедрения интернет-магазинов на Bitrix;</li>
-                                    <li>Уверенная работа в GIT;</li>
-                                    <li>Умение работы с «чужим» кодом;</li>
-                                    <li>Умение аргументированно отстаивать свою точку зрения;</li>
-                                    <li>Умение предлагать рациональные решения поставленных задач.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Приветствуется:</h4>
-                                <ul class="list">
-                                    <li>Наличие сертификатов 1С-Битрикс;</li>
-                                    <li>Опыт участия в высоконагруженных проектах;</li>
-                                    <li>Опыт работы с веб-сервисами (SOAP+WSDL, REST);</li>
-                                    <li>Опыт оптимизации SQL-запросов;</li>
-                                    <li>Опыт работы в среде Linux.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__block">
-                                <h4 class="requirements__subtitle">Условия:</h4>
-                                <ul class="list">
-                                    <li>Работа в топовом digital агентстве;</li>
-                                    <li>Профессиональная команда;</li>
-                                    <li>Интересные и сложные проекты, возможность внедрять новые технологии;</li>
-                                    <li>График работы: 10:00 - 19:00 , Сб, Вс - выходные;</li>
-                                    <li>Официальное трудоустройство, полностью белая зарплата, оплачиваемый отпуск, больничный лист;</li>
-                                    <li>Офис – 7 минут от метро.</li>
-                                    <li>Оклад по результатам собеседования.</li>
-                                </ul>
-                            </div>
-                            <div class="requirements__buttons"><a class="button button_blue">откликнуться на hh.ru</a><a class="button button_red">hh.ru</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="contact vacancies__contact"><img src="./assets/images/bigplus.svg">
-                <div class="contact__right">
-                    <h2 class="contact__title">Если вы не нашли то, что искали, напишите нам на <a class="link link_blue link_nounder contact__link" href="hr@prostudio.ru"><span class="link__text">hr@prostudio.ru</span></a></h2>
-                    <div class="contact__text">Возможно, мы просто еще не знаем, что нам нужны именно вы.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="footer">
-        <div class="container container_inner footer__container">
-            <div class="footer__left">
-                <div class="footer__contacts"><a class="link link_nounder link_gray link_lg" href="tel:+78126456596"><span class="link__text">+7 (812) 645-65-96</span></a><a class="link link_nounder link_gray link_lg" href="tel:+74956456596"><span class="link__text">+7 (495) 645-65-96</span></a><a class="link link_nounder link_gray link_lg footer__mail" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a></div>
-                <div class="footer__copyright footer__second">© 2009-2017 ООО «Цифровая империя»</div>
-            </div>
-            <div class="footer__center"><a class="link link_nounder link_gray link_lg" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a>
-                <div class="apps footer__second">
-                    <div class="apps__title">cкачать приложение:</div><A class="footer__appstore" href="#"><img src="assets/images/appstore.svg" /></A>
-                </div>
-            </div>
-            <div class="footer__right">
-                <div class="icons"><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_vk"></use></svg><span class="link__text"></span></a><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_behance"></use></svg><span class="link__text"></span></a><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_youtube"></use></svg><span class="link__text"></span></a><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_instagram"></use></svg><span class="link__text"></span></a><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_facebook"></use></svg><span class="link__text"></span></a><a class="link link_icon link_gray"><svg class="link__icon"><use xlink:href="assets/images/icon.svg#icon_telegram"></use></svg><span class="link__text"></span></a></div>
-                <div class="footer__second"><a class="link link_nounder link_gray link_flex footer__doc"><span class="link__text"><img src="./assets/images/file_pdf.svg" /><span>скачать презентацию<br>5 MB</span></span></a>
-                    <div class="langs footer__langs"><a class="link link_nounder link_gray langs__lang langs__lang_active"><span class="link__text">RU</span></a><a class="link link_nounder link_gray langs__lang"><span class="link__text">EN</span></a></div>
-                </div>
-                <div class="footer__third">
-                    <div class="apps">
-                        <div class="apps__title">cкачать приложение:</div><A class="footer__appstore" href="#"><img src="assets/images/appstore.svg" /></A>
-                    </div>
-                    <div class="langs"><a class="link link_nounder link_gray langs__lang langs__lang_active"><span class="link__text">RU</span></a><a class="link link_nounder link_gray langs__lang"><span class="link__text">EN</span></a></div>
-                </div>
-            </div>
-            <div class="footer__mobil">
-                <div class="city">
-                    <div class="city__name">Петербург</div><a class="link link_nounder link_xl link_img city__address"><span class="link__text"><img src="./assets/images/ext_link.png" />Ленинский проспект, 151</span></a><a class="link link_dashed link_xl city__tel" href="tel:+78126456596"><span class="link__text">+7(812) 645-65-96</span></a>
-                </div>
-                <div class="city">
-                    <div class="city__name">Москва</div><a class="link link_nounder link_xl link_img city__address"><span class="link__text"><img src="./assets/images/ext_link.png" />Проспект вернадского, 43</span></a><a class="link link_dashed link_xl city__tel" href="tel:+74956456596"><span class="link__text">+7(495) 645-65-96</span></a>
-                </div><a class="link link_nounder link_xl link_blue footer__mail footer__mail_mobil" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a>
-                <div class="apps apps_mobil">
-                    <div class="apps__title">Cкачать приложение:</div><A class="footer__appstore" href="#"><img src="assets/images/appstore.svg" /></A>
-                </div><label class="switcher js-switcher-lang footer__switcher"><input type="checkbox" />
-                    <div class="switcher__value switcher__value_on">RU</div>
-                    <div class="switcher__box">
-                        <div class="switcher__mover">
-                            <div class="switcher__circle"></div>
-                        </div>
-                    </div>
-                    <div class="switcher__value switcher__value_off">EN</div>
-                </label>
-                <div class="footer__copyright footer__copyright_mobil">© 2009-2017 ООО «Цифровая империя»</div>
             </div>
         </div>
     </div>

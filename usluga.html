@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;subset=cyrillic" rel="stylesheet">
     <link href="assets/styles/app.min.css" rel="stylesheet">
     <script src="assets/scripts/libs/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
 </head>
 
 <body>
@@ -30,56 +31,11 @@
                 <li class="menu__item menu__item_present"><a class="link link_nounder link_gray link_flex"><span class="link__text"><img src="./assets/images/pdf.png" />скачать презентацию<br>5 MB</span></a></li>
             </ul>
             <div class="buttons">
-                <div class="buttons__wrap"><a class="button buttons__ico">ico</a><a class="button button_blue buttons__project js-fancybox" href="#contact">обсудить проект</a></div>
+                <div class="buttons__wrap">
+                    <div class="buttons__ico"><a class="button">ico</a></div>
+                    <div class="buttons__project"><a class="button button_blue js-fancybox" href="#contact">обсудить проект</a></div>
+                </div>
                 <div class="buttons__burger js-padmenu"><span></span></div>
-            </div>
-        </div>
-    </div>
-    <div class="contact popup-contact" id="contact">
-        <div class="contact__wrapper">
-            <div class="contact__step1">
-                <div class="contact__title">Заполните заявку на проект?</div>
-                <form class="contact__form">
-                    <div class="contact__box">
-                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half">Выберите проект:<select class="select js-select">
-                                <option value="Веб-сайт">Веб-сайт</option>
-                                <option value="Продвижение">Продвижение</option>
-                                <option value="Брендинг">Брендинг</option>
-                                <option value="Приложение">Приложение</option>
-                                <option value="Аналитика">Аналитика</option>
-                                <option value="Поддержка">Поддержка</option>
-                            </select>
-                            <div class="inputbox__placeholder"></div>
-                        </div>
-                        <div class="inputbox inputbox inputbox_noborder contact__inputbox contact__inputbox contact__inputbox_half contact__inputbox contact__inputbox_flexstart">
-                            <!--+input(placeholder="Плейсхолдер")-->
-                            <div class="inputbox__title">Бюджет:</div><label class="checkradio"><input class="checkradio__input" name="budget" value="test" checked="true" type="radio" />
-                                <!--+e.SPAN.box--><span class="checkradio__content">100-200 тыс. руб</span></label><label class="checkradio"><input class="checkradio__input" name="budget" value="test-2" type="radio" />
-                                <!--+e.SPAN.box--><span class="checkradio__content">от 500 тыс. руб</span></label>
-                            <div class="inputbox__placeholder"></div>
-                        </div>
-                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
-                            <div class="inputbox__placeholder">Имя</div>
-                        </div>
-                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
-                            <div class="inputbox__placeholder">Телефон</div>
-                        </div>
-                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
-                            <div class="inputbox__placeholder">Email</div>
-                        </div>
-                        <div class="inputbox inputbox_file contact__inputbox contact__inputbox contact__inputbox_half"><label><input class="input" type="file" /><span class="filename">Добавить файл</span><img class="addfile" src="./assets/images/addfile.svg" /></label>
-                            <div class="inputbox__placeholder"></div>
-                        </div>
-                        <div class="textareabox contact__textarea"><textarea class="textarea"></textarea>
-                            <div class="textareabox__placeholder">Сообщение</div>
-                        </div>
-                    </div>
-                    <div class="contact__text">Нажимая на кнопку «Отправить», вы соглашаетесь на обработку персональных данных<br>в соответсвии с<a class="link link_blue"><span class="link__text"> Политикой конфиденциальности.</span></a></div><input class="button button_blue button_big contact__btn js-submit" type="submit" value="отправить заявку" />
-                </form>
-            </div>
-            <div class="contact__step2"><img src="./assets/images/msg_send.jpg" />
-                <div class="contact__title">Отправлено!</div>
-                <div class="contact__subtitle">Спасибо за обращение в нашу студию.</div><a class="button button_blue button_big contact__btn contact__btn_mt js-popup-close">на главную</a>
             </div>
         </div>
     </div>
@@ -109,10 +65,14 @@
     <section>
         <div class="usluga-how">
             <div class="container container_inner">
-                <h2 class="usluga-how__title"> Как мы работаем</h2>
+                <div class="usluga-how__title">
+                    <h2>Как мы работаем</h2>
+                </div>
                 <div class="usluga-how__box">
                     <div class="usluga-card">
-                        <h3 class="usluga-card__title">Первое знакомство</h3>
+                        <div class="usluga-card__title">
+                            <h3>Первое знакомство</h3>
+                        </div>
                         <div class="usluga-card__text">
                             <p>Получение и обработки заявки</p>
                             <p>Встреча и <a href="/">заполнение брифа</a></p>
@@ -125,7 +85,9 @@
                         </div>
                     </div>
                     <div class="usluga-card">
-                        <h3 class="usluga-card__title">Согласование документов</h3>
+                        <div class="usluga-card__title">
+                            <h3>Согласование документов</h3>
+                        </div>
                         <div class="usluga-card__text">
                             <p>Утверждение коммерческого предложения</p>
                             <p>Подготовка и согласование договора</p>
@@ -137,7 +99,9 @@
                         </div>
                     </div>
                     <div class="usluga-card">
-                        <h3 class="usluga-card__title">Начало работ</h3>
+                        <div class="usluga-card__title">
+                            <h3>Начало работ</h3>
+                        </div>
                         <div class="usluga-card__text">
                             <p>Начало сотрудничества</p>
                             <p>Отчет о проделанной работе</p>
@@ -155,7 +119,9 @@
                         <div class="swiper-slide">
                             <div class="slider__slide">
                                 <div class="usluga-card">
-                                    <h3 class="usluga-card__title">Первое знакомство</h3>
+                                    <div class="usluga-card__title">
+                                        <h3>Первое знакомство</h3>
+                                    </div>
                                     <div class="usluga-card__text">
                                         <p>Получение и обработки заявки</p>
                                         <p>Встреча и <a href="/">заполнение брифа</a></p>
@@ -172,7 +138,9 @@
                         <div class="swiper-slide">
                             <div class="slider__slide">
                                 <div class="usluga-card">
-                                    <h3 class="usluga-card__title">Согласование документов</h3>
+                                    <div class="usluga-card__title">
+                                        <h3>Согласование документов</h3>
+                                    </div>
                                     <div class="usluga-card__text">
                                         <p>Утверждение коммерческого предложения</p>
                                         <p>Подготовка и согласование договора</p>
@@ -188,7 +156,9 @@
                         <div class="swiper-slide">
                             <div class="slider__slide">
                                 <div class="usluga-card">
-                                    <h3 class="usluga-card__title">Начало работ</h3>
+                                    <div class="usluga-card__title">
+                                        <h3>Начало работ</h3>
+                                    </div>
                                     <div class="usluga-card__text">
                                         <p>Начало сотрудничества</p>
                                         <p>Отчет о проделанной работе</p>
@@ -216,19 +186,27 @@
             <div class="container container_inner">
                 <div class="usluga-cms__box">
                     <div class="usluga-cms__item usluga-cms__item_no-padding">
-                        <h3 class="usluga-cms__head">1С Битрикс</h3>
+                        <div class="usluga-cms__head">
+                            <h3>1С Битрикс</h3>
+                        </div>
                         <p class="usluga-cms__text">Этот текст предназначен для того, чтобыпоказать, как будет выглядить текств данном текстовом блоке.</p>
                     </div>
                     <div class="usluga-cms__item">
-                        <h3 class="usluga-cms__head">WordPress</h3>
+                        <div class="usluga-cms__head">
+                            <h3>WordPress</h3>
+                        </div>
                         <p class="usluga-cms__text">Этот текст предназначен для того, чтобыпоказать, как будет выглядить текств данном текстовом блоке.</p>
                     </div>
                     <div class="usluga-cms__item">
-                        <h3 class="usluga-cms__head">Yii Framework</h3>
+                        <div class="usluga-cms__head">
+                            <h3>Yii Framework</h3>
+                        </div>
                         <p class="usluga-cms__text">Этот текст предназначен для того, чтобыпоказать, как будет выглядить текств данном текстовом блоке.</p>
                     </div>
                     <div class="usluga-cms__item">
-                        <h3 class="usluga-cms__head">CMS Prostudio</h3>
+                        <div class="usluga-cms__head">
+                            <h3>CMS Prostudio</h3>
+                        </div>
                         <p class="usluga-cms__text">Этот текст предназначен для того, чтобыпоказать, как будет выглядить текств данном текстовом блоке.</p>
                     </div>
                 </div>
@@ -238,7 +216,9 @@
     <section>
         <div class="usluga-steps">
             <div class="container container_inner">
-                <div class="usluga-steps__title">Мы делаем</div>
+                <div class="usluga-steps__title">
+                    <h2>Мы делаем</h2>
+                </div>
             </div>
             <div class="usluga-steps__wrapper">
                 <div class="container container_inner usluga-steps__svg-container">
@@ -405,7 +385,9 @@
     <section>
         <div class="usluga-work">
             <div class="container container_inner">
-                <h2 class="usluga-work__title">Кто работает над вашим проектом?</h2>
+                <div class="usluga-work__title">
+                    <h2>Кто работает над вашим проектом?</h2>
+                </div>
                 <div class="usluga-work__box">
                     <div class="usluga-workers">
                         <div class="usluga-workers__plus"></div>
@@ -456,7 +438,9 @@
             <div class="container container_inner">
                 <div class="care__box">
                     <div class="care__left">
-                        <h3 class="care__title">Мы заботимся,</h3>
+                        <div class="care__title">
+                            <h3>Мы заботимся,</h3>
+                        </div>
                         <div class="care__text">
                             <p>о вашем времени, нервах и деньгах, поэтому разработали приложение для контроля процесса выполнения вашего проекта.</p>
                             <p>Вы можете отслеживать стадии выполнения проекта, задать вопросы поддержке и вести обсуждение прямо в приложении.</p>
@@ -476,7 +460,9 @@
         <div class="container container_inner">
             <div class="contact contact_about">
                 <!--+e.wrapper//+e.step1-->
-                <h2 class="contact__title">Хотите заказать проект?</h2>
+                <div class="contact__title">
+                    <h2>Хотите заказать проект?</h2>
+                </div>
                 <form class="contact__form">
                     <div class="contact__box">
                         <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_third contact__inputbox contact__inputbox_mr">Выберите проект:<select class="select js-select">
@@ -560,6 +546,54 @@
                     <div class="switcher__value switcher__value_off">EN</div>
                 </label>
                 <div class="footer__copyright footer__copyright_mobil">© 2009-2017 ООО «Цифровая империя»</div>
+            </div>
+        </div>
+    </div>
+    <div class="contact popup-contact" id="contact">
+        <div class="contact__wrapper">
+            <div class="contact__step1">
+                <div class="contact__title">Заполните заявку на проект?</div>
+                <form class="contact__form">
+                    <div class="contact__box">
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half">Выберите проект:<select class="select js-select">
+                                <option value="Веб-сайт">Веб-сайт</option>
+                                <option value="Продвижение">Продвижение</option>
+                                <option value="Брендинг">Брендинг</option>
+                                <option value="Приложение">Приложение</option>
+                                <option value="Аналитика">Аналитика</option>
+                                <option value="Поддержка">Поддержка</option>
+                            </select>
+                            <div class="inputbox__placeholder"></div>
+                        </div>
+                        <div class="inputbox inputbox inputbox_noborder contact__inputbox contact__inputbox contact__inputbox_half contact__inputbox contact__inputbox_flexstart">
+                            <!--+input(placeholder="Плейсхолдер")-->
+                            <div class="inputbox__title">Бюджет:</div><label class="checkradio"><input class="checkradio__input" name="budget" value="test" checked="true" type="radio" />
+                                <!--+e.SPAN.box--><span class="checkradio__content">100-200 тыс. руб</span></label><label class="checkradio"><input class="checkradio__input" name="budget" value="test-2" type="radio" />
+                                <!--+e.SPAN.box--><span class="checkradio__content">от 500 тыс. руб</span></label>
+                            <div class="inputbox__placeholder"></div>
+                        </div>
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
+                            <div class="inputbox__placeholder">Имя</div>
+                        </div>
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
+                            <div class="inputbox__placeholder">Телефон</div>
+                        </div>
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
+                            <div class="inputbox__placeholder">Email</div>
+                        </div>
+                        <div class="inputbox inputbox_file contact__inputbox contact__inputbox contact__inputbox_half"><label><input class="input" type="file" /><span class="filename">Добавить файл</span><img class="addfile" src="./assets/images/addfile.svg" /></label>
+                            <div class="inputbox__placeholder"></div>
+                        </div>
+                        <div class="textareabox contact__textarea"><textarea class="textarea"></textarea>
+                            <div class="textareabox__placeholder">Сообщение</div>
+                        </div>
+                    </div>
+                    <div class="contact__text">Нажимая на кнопку «Отправить», вы соглашаетесь на обработку персональных данных<br>в соответсвии с<a class="link link_blue"><span class="link__text"> Политикой конфиденциальности.</span></a></div><input class="button button_blue button_big contact__btn js-submit" type="submit" value="отправить заявку" />
+                </form>
+            </div>
+            <div class="contact__step2"><img src="./assets/images/msg_send.jpg" />
+                <div class="contact__title">Отправлено!</div>
+                <div class="contact__subtitle">Спасибо за обращение в нашу студию.</div><a class="button button_blue button_big contact__btn contact__btn_mt js-popup-close">на главную</a>
             </div>
         </div>
     </div>

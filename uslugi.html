@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;subset=cyrillic" rel="stylesheet">
     <link href="assets/styles/app.min.css" rel="stylesheet">
     <script src="assets/scripts/libs/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
 </head>
 
 <body>
@@ -30,56 +31,11 @@
                 <li class="menu__item menu__item_present"><a class="link link_nounder link_gray link_flex"><span class="link__text"><img src="./assets/images/pdf.png" />скачать презентацию<br>5 MB</span></a></li>
             </ul>
             <div class="buttons">
-                <div class="buttons__wrap"><a class="button buttons__ico">ico</a><a class="button button_blue buttons__project js-fancybox" href="#contact">обсудить проект</a></div>
+                <div class="buttons__wrap">
+                    <div class="buttons__ico"><a class="button">ico</a></div>
+                    <div class="buttons__project"><a class="button button_blue js-fancybox" href="#contact">обсудить проект</a></div>
+                </div>
                 <div class="buttons__burger js-padmenu"><span></span></div>
-            </div>
-        </div>
-    </div>
-    <div class="contact popup-contact" id="contact">
-        <div class="contact__wrapper">
-            <div class="contact__step1">
-                <div class="contact__title">Заполните заявку на проект?</div>
-                <form class="contact__form">
-                    <div class="contact__box">
-                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half">Выберите проект:<select class="select js-select">
-                                <option value="Веб-сайт">Веб-сайт</option>
-                                <option value="Продвижение">Продвижение</option>
-                                <option value="Брендинг">Брендинг</option>
-                                <option value="Приложение">Приложение</option>
-                                <option value="Аналитика">Аналитика</option>
-                                <option value="Поддержка">Поддержка</option>
-                            </select>
-                            <div class="inputbox__placeholder"></div>
-                        </div>
-                        <div class="inputbox inputbox inputbox_noborder contact__inputbox contact__inputbox contact__inputbox_half contact__inputbox contact__inputbox_flexstart">
-                            <!--+input(placeholder="Плейсхолдер")-->
-                            <div class="inputbox__title">Бюджет:</div><label class="checkradio"><input class="checkradio__input" name="budget" value="test" checked="true" type="radio" />
-                                <!--+e.SPAN.box--><span class="checkradio__content">100-200 тыс. руб</span></label><label class="checkradio"><input class="checkradio__input" name="budget" value="test-2" type="radio" />
-                                <!--+e.SPAN.box--><span class="checkradio__content">от 500 тыс. руб</span></label>
-                            <div class="inputbox__placeholder"></div>
-                        </div>
-                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
-                            <div class="inputbox__placeholder">Имя</div>
-                        </div>
-                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
-                            <div class="inputbox__placeholder">Телефон</div>
-                        </div>
-                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
-                            <div class="inputbox__placeholder">Email</div>
-                        </div>
-                        <div class="inputbox inputbox_file contact__inputbox contact__inputbox contact__inputbox_half"><label><input class="input" type="file" /><span class="filename">Добавить файл</span><img class="addfile" src="./assets/images/addfile.svg" /></label>
-                            <div class="inputbox__placeholder"></div>
-                        </div>
-                        <div class="textareabox contact__textarea"><textarea class="textarea"></textarea>
-                            <div class="textareabox__placeholder">Сообщение</div>
-                        </div>
-                    </div>
-                    <div class="contact__text">Нажимая на кнопку «Отправить», вы соглашаетесь на обработку персональных данных<br>в соответсвии с<a class="link link_blue"><span class="link__text"> Политикой конфиденциальности.</span></a></div><input class="button button_blue button_big contact__btn js-submit" type="submit" value="отправить заявку" />
-                </form>
-            </div>
-            <div class="contact__step2"><img src="./assets/images/msg_send.jpg" />
-                <div class="contact__title">Отправлено!</div>
-                <div class="contact__subtitle">Спасибо за обращение в нашу студию.</div><a class="button button_blue button_big contact__btn contact__btn_mt js-popup-close">на главную</a>
             </div>
         </div>
     </div>
@@ -91,7 +47,9 @@
                 </div>
                 <div class="uslugi-item uslugi-item_left uslugi-item_sites">
                     <div class="uslugi-item__text uslugi-item__text_left">
-                        <h3 class="uslugi-item__title uslugi-item__title_sites">Сайты</h3>
+                        <div class="uslugi-item__title uslugi-item__title_sites">
+                            <h3>Сайты</h3>
+                        </div>
                         <ul class="uslugi-item__list uslugi-item__list_sites">
                             <li class="uslugi-item__list-item uslugi-item__list-item_sites"><a class="uslugi-item__list-link">Сайт визитка</a></li>
                             <li class="uslugi-item__list-item uslugi-item__list-item_sites"><a class="uslugi-item__list-link">Landing Page</a></li>
@@ -106,7 +64,9 @@
                 </div>
                 <div class="uslugi-item uslugi-item_right uslugi-item_prodv">
                     <div class="uslugi-item__text uslugi-item__text_right uslugi-item__text_prodv">
-                        <h3 class="uslugi-item__title uslugi-item__title_prodv">Продвижение</h3>
+                        <div class="uslugi-item__title uslugi-item__title_prodv">
+                            <h3>Продвижение</h3>
+                        </div>
                         <ul class="uslugi-item__list">
                             <li class="uslugi-item__list-item"><a class="uslugi-item__list-link">SEO</a></li>
                             <li class="uslugi-item__list-item"><a class="uslugi-item__list-link">SMM</a></li>
@@ -121,7 +81,9 @@
                 </div>
                 <div class="uslugi-item uslugi-item_left uslugi-item_brending">
                     <div class="uslugi-item__text uslugi-item__text_left">
-                        <h3 class="uslugi-item__title uslugi-item__title_brending">Брендинг</h3>
+                        <div class="uslugi-item__title uslugi-item__title_brending">
+                            <h3>Брендинг</h3>
+                        </div>
                         <ul class="uslugi-item__list">
                             <li class="uslugi-item__list-item"><a class="uslugi-item__list-link">Логотип</a></li>
                             <li class="uslugi-item__list-item"><a class="uslugi-item__list-link">Фирменный стиль</a></li>
@@ -135,7 +97,9 @@
                 </div>
                 <div class="uslugi-item uslugi-item_right uslugi-item_soft">
                     <div class="uslugi-item__text uslugi-item__text_right uslugi-item__text_soft">
-                        <h3 class="uslugi-item__title uslugi-item__title_soft">Приложения</h3>
+                        <div class="uslugi-item__title uslugi-item__title_soft">
+                            <h3>Приложения</h3>
+                        </div>
                         <ul class="uslugi-item__list">
                             <li class="uslugi-item__list-item"><a class="uslugi-item__list-link">OS</a></li>
                             <li class="uslugi-item__list-item"><a class="uslugi-item__list-link">Android</a></li>
@@ -150,7 +114,9 @@
                 </div>
                 <div class="uslugi-item uslugi-item_left uslugi-item_analitic">
                     <div class="uslugi-item__text uslugi-item__text_left">
-                        <h3 class="uslugi-item__title uslugi-item__title_analitic">Аналитика</h3>
+                        <div class="uslugi-item__title uslugi-item__title_analitic">
+                            <h3>Аналитика</h3>
+                        </div>
                         <ul class="uslugi-item__list">
                             <li class="uslugi-item__list-item"><a class="uslugi-item__list-link">Техническое задание</a></li>
                             <li class="uslugi-item__list-item"><a class="uslugi-item__list-link">Аудит проекта</a></li>
@@ -165,7 +131,9 @@
                 </div>
                 <div class="uslugi-item uslugi-item_right uslugi-item_support">
                     <div class="uslugi-item__text uslugi-item__text_right uslugi-item__text_support">
-                        <h3 class="uslugi-item__title uslugi-item__title_support">Поддержка</h3>
+                        <div class="uslugi-item__title uslugi-item__title_support">
+                            <h3>Поддержка</h3>
+                        </div>
                         <ul class="uslugi-item__list">
                             <li class="uslugi-item__list-item"><a class="uslugi-item__list-link">Техническая поддержка</a></li>
                             <li class="uslugi-item__list-item"><a class="uslugi-item__list-link">Хостинг</a></li>
@@ -222,6 +190,54 @@
                     <div class="switcher__value switcher__value_off">EN</div>
                 </label>
                 <div class="footer__copyright footer__copyright_mobil">© 2009-2017 ООО «Цифровая империя»</div>
+            </div>
+        </div>
+    </div>
+    <div class="contact popup-contact" id="contact">
+        <div class="contact__wrapper">
+            <div class="contact__step1">
+                <div class="contact__title">Заполните заявку на проект?</div>
+                <form class="contact__form">
+                    <div class="contact__box">
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half">Выберите проект:<select class="select js-select">
+                                <option value="Веб-сайт">Веб-сайт</option>
+                                <option value="Продвижение">Продвижение</option>
+                                <option value="Брендинг">Брендинг</option>
+                                <option value="Приложение">Приложение</option>
+                                <option value="Аналитика">Аналитика</option>
+                                <option value="Поддержка">Поддержка</option>
+                            </select>
+                            <div class="inputbox__placeholder"></div>
+                        </div>
+                        <div class="inputbox inputbox inputbox_noborder contact__inputbox contact__inputbox contact__inputbox_half contact__inputbox contact__inputbox_flexstart">
+                            <!--+input(placeholder="Плейсхолдер")-->
+                            <div class="inputbox__title">Бюджет:</div><label class="checkradio"><input class="checkradio__input" name="budget" value="test" checked="true" type="radio" />
+                                <!--+e.SPAN.box--><span class="checkradio__content">100-200 тыс. руб</span></label><label class="checkradio"><input class="checkradio__input" name="budget" value="test-2" type="radio" />
+                                <!--+e.SPAN.box--><span class="checkradio__content">от 500 тыс. руб</span></label>
+                            <div class="inputbox__placeholder"></div>
+                        </div>
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
+                            <div class="inputbox__placeholder">Имя</div>
+                        </div>
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
+                            <div class="inputbox__placeholder">Телефон</div>
+                        </div>
+                        <div class="inputbox contact__inputbox contact__inputbox contact__inputbox_half"><input class="input" />
+                            <div class="inputbox__placeholder">Email</div>
+                        </div>
+                        <div class="inputbox inputbox_file contact__inputbox contact__inputbox contact__inputbox_half"><label><input class="input" type="file" /><span class="filename">Добавить файл</span><img class="addfile" src="./assets/images/addfile.svg" /></label>
+                            <div class="inputbox__placeholder"></div>
+                        </div>
+                        <div class="textareabox contact__textarea"><textarea class="textarea"></textarea>
+                            <div class="textareabox__placeholder">Сообщение</div>
+                        </div>
+                    </div>
+                    <div class="contact__text">Нажимая на кнопку «Отправить», вы соглашаетесь на обработку персональных данных<br>в соответсвии с<a class="link link_blue"><span class="link__text"> Политикой конфиденциальности.</span></a></div><input class="button button_blue button_big contact__btn js-submit" type="submit" value="отправить заявку" />
+                </form>
+            </div>
+            <div class="contact__step2"><img src="./assets/images/msg_send.jpg" />
+                <div class="contact__title">Отправлено!</div>
+                <div class="contact__subtitle">Спасибо за обращение в нашу студию.</div><a class="button button_blue button_big contact__btn contact__btn_mt js-popup-close">на главную</a>
             </div>
         </div>
     </div>
