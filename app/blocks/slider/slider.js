@@ -226,10 +226,10 @@ export default function slider() {
     // effect: 'coverflow',
     // slidesPerView: 'auto',
     // spaceBetween: 27,
-    navigation: {
-      nextEl: '.case__next',
-      prevEl: '.case__prev',
-    },
+    // navigation: {
+    //   nextEl: '.case__next',
+    //   prevEl: '.case__prev',
+    // },
     // pagination: {
     //   el: '.slider__dots',
     //   clickable: true,

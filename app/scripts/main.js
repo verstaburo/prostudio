@@ -22,16 +22,22 @@ var
   siteWidth,
   screenSize = $(window).width();
 
-if (screenSize > 768) {
-  if (screenSize < 768) siteWidth = 480;
-  if (screenSize >= 768) siteWidth = 768;
+function checkSize() {
+  if (screenSize < 750) siteWidth = 480;
+  if (screenSize >= 750) siteWidth = 768;
   if (screenSize >= 1024) siteWidth = 1366;
   if (screenSize >= 1366) siteWidth = 1920;
+}
 
-  scale = screenSize / siteWidth;
+checkSize();
+
+document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=' + siteWidth);
+
+$(window).resize(function () {
+  checkSize();
 
   document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=' + siteWidth);
-}
+});
 
 function headerIndex () {
   var header = $(document).find('.header_index');

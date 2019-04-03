@@ -46,6 +46,11 @@
 
     @include screen('md', max) {
       margin-bottom: 46px;
+      padding-right: 0;
+
+      .card-journal__date {
+        margin-left: 27px;
+      }
     }
   }
 

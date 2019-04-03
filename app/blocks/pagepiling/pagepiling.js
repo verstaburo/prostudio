@@ -113,11 +113,11 @@ export default function mainSlider() {
             $('.header .buttons__project').smartToggle('width', {easing: 'ease', timing: 300, display: 'inline-block'});
           }
 
-          if ($('.header .buttons__ico').hasClass('toggled-x')) {
-            if ($(window).width() <= 1500) {
-              $('.header .buttons__ico').smartToggle('width', {easing: 'ease', timing: 300, display: 'inline-block'});
-            }
-          }
+          //if ($('.header .buttons__ico').hasClass('toggled-x')) {
+          //  if ($(window).width() <= 1500) {
+          //    $('.header .buttons__ico').smartToggle('width', {easing: 'ease', timing: 300, display: 'inline-block'});
+          //  }
+          //}
         }
 
         if (index === 1) {
@@ -128,11 +128,11 @@ export default function mainSlider() {
               $('.header .buttons__project').smartToggle('width', {easing: 'ease', timing: 300, display: 'inline-block'});
             }
 
-            if (!$('.header .buttons__ico').hasClass('toggled-x')) {
-              if ($(window).width() <= 1500) {
-                $('.header .buttons__ico').smartToggle('width', {easing: 'ease', timing: 300, display: 'inline-block'});
-              }
-            }
+            //if (!$('.header .buttons__ico').hasClass('toggled-x')) {
+            //  if ($(window).width() <= 1500) {
+            //    $('.header .buttons__ico').smartToggle('width', {easing: 'ease', timing: 300, display: 'inline-block'});
+            //  }
+            //}
           }, 700);
         }
       },

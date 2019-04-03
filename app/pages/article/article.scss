@@ -225,7 +225,7 @@
   }
 
   &.active {
-    height: 8px;
+    height: 6px;
 
     @include screen('md', max) {
       height: 4px;

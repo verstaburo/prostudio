@@ -102,6 +102,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    @include screen("lg-r", max) {
+      display: block;
+    }
   }
 
   &__aside-menu {

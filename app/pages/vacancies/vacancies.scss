@@ -54,10 +54,20 @@
 
   .contact {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     width: 100%;
     box-sizing: border-box;
+    justify-content: center;
+
+    img {
+      transition: transform $ease-main;
+    }
+
+    &:hover {
+      img {
+        transform: rotate(90deg);
+      }
+    }
 
     &__right {
       margin-top: -7px;

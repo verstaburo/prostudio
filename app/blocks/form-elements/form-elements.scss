@@ -275,7 +275,8 @@
       box-sizing: border-box;
 
       .choices__item {
-        padding: 10px;
+        padding: 10px !important;
+        display: block;
 
         &--selectable {
           transition: opacity $ease-main;

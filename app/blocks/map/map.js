@@ -53,7 +53,7 @@ export default function maps() {
   }).addTo(mapMoscow);
 
   const officeIcon = L.icon({
-    iconUrl: './assets/images/marker.png',
+    iconUrl: './assets/images/marker.svg',
     iconSize: [62, 53],
     iconAnchor: [60, 26],
   });

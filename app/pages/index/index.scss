@@ -229,6 +229,8 @@
 
     @include heading-5;
 
+    text-align: center;
+
     @include screen('xl-b', max) {
       margin-top: 0;
     }
@@ -657,6 +659,25 @@
 }
 
 .slide-footer {
+
+  &__mouse {
+    animation-name: mouse;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+  }
+
+  @keyframes mouse {
+    0% {
+      transform: translate3d(0, -5px, 0);
+    }
+    50% {
+      transform: translate3d(0, 5px, 0);
+    }
+    100% {
+      transform: translate3d(0, -5px, 0);
+    }
+  }
 
   &__container {
     display: flex;
@@ -1178,7 +1199,7 @@
   margin-bottom: 0;
 
   &__wrapper {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     display: inline-flex;
     flex-direction: column;
@@ -1274,11 +1295,6 @@
 
         .choices {
           width: 48.5%;
-
-          &__item {
-            padding-top: 0!important;
-            padding-bottom: 0!important;
-          }
         }
       }
 
@@ -1287,6 +1303,11 @@
         font-size: 16px;
         letter-spacing: .6px;
         line-height: 1.4;
+
+        a {
+          line-height: inherit;
+          font-size: inherit;
+        }
       }
     }
 

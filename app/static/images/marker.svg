@@ -1,0 +1,22 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="60.77" height="53" viewBox="0 0 60.77 53">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0081ce;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>marker</title>
+  <g>
+    <polygon class="cls-1" points="60.77 26.5 53 18.73 53 0 0 0 0 53 53 53 53 34.27 60.77 26.5"/>
+    <g>
+      <path class="cls-2" d="M29.7,15.33H16.56v11L32.75,15.88A8.68,8.68,0,0,0,29.7,15.33Z"/>
+      <path class="cls-2" d="M16.56,26.35V37.67H27.82A11.29,11.29,0,0,0,16.56,26.35Z"/>
+      <path class="cls-2" d="M32.86,15.92l-.12,0L28.88,33h.81a8.82,8.82,0,0,0,3.17-17Z"/>
+    </g>
+  </g>
+</svg>

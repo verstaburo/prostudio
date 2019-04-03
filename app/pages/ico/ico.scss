@@ -148,6 +148,25 @@
       margin: 105px auto 0;
       display: table;
 
+      img {
+        animation-name: mouse;
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+
+        @keyframes mouse {
+          0% {
+            transform: translate3d(0, -5px, 0);
+          }
+          50% {
+            transform: translate3d(0, 5px, 0);
+          }
+          100% {
+            transform: translate3d(0, -5px, 0);
+          }
+        }
+      }
+
       @include screen("lg", max) {
         display: none;
       }

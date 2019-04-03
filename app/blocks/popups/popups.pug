@@ -39,8 +39,9 @@ mixin popup-contact()
                 img(src='./assets/images/addfile.svg').addfile
             +textareabox("Сообщение").contact__textarea
               +textarea()
-          +e.text Нажимая на кнопку  «Отправить», вы соглашаетесь на обработку персональных данных<br>в соответсвии с
-            +link._blue  Политикой конфиденциальности.
+          +e.text
+            != 'Нажимая на кнопку  «Отправить», вы соглашаетесь на обработку персональных данных в соответсвии с '
+            +link._blue Политикой конфиденциальности.
           +button('input')(type='submit', value='отправить заявку')._blue._big.contact__btn.js-submit
       +e.step2
         img(src='./assets/images/msg_send.jpg')

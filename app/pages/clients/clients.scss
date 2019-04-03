@@ -28,6 +28,7 @@
 
   &__subtitle {
     margin-top: 52px;
+    text-align: center;
 
     @include inner-title;
   }
@@ -48,9 +49,16 @@
     margin: 50px 25px 0;
     display: block;
 
+    @include screen('md', max) {
+      height: 0 !important;
+      padding-bottom: 100%;
+    }
+
     img {
       max-width: 66%;
       max-height: 66%;
+
+      @include center-image;
     }
 
     &:not(&_more) {

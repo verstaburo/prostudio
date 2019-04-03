@@ -276,9 +276,6 @@
         margin-bottom: 0;
         padding: 0 15px;
         box-sizing: border-box;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
       }
 
       @include screen("sm", max) {

@@ -7,7 +7,7 @@
   box-sizing: border-box;
   color: $color-main;
   background-color: $color-bg-button;
-  transition: opacity $ease-main;
+  transition: opacity $ease-main, background $ease-main, color $ease-main, border-color $ease-main;
   cursor: pointer;
   font-family: 'Intro Bold Alt';
 
@@ -23,12 +23,26 @@
     background: white;
     border: 2px solid $color-main;
     color: $color-main;
+
+    &:hover {
+      opacity: 1 !important;
+      background: $color-main;
+      color: white;
+      border-color: $color-main !important;
+    }
   }
 
   &_fullwhite {
     background: transparent;
     color: white;
     border: 1px solid white;
+
+    &:hover {
+      opacity: 1 !important;
+      background: $color-main;
+      color: white;
+      border-color: $color-main !important;
+    }
   }
 
   &_border-size-2 {
@@ -57,11 +71,11 @@
       }
 
   &_big-big {
-    padding: 27px 48px;
+    padding: 0 48px;
     height: 75px;
 
     @include btn-big-big;
-
+    line-height: 75px;
   }
 
   &_huge {
