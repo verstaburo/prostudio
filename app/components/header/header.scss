@@ -210,6 +210,10 @@
 
     .menu__item {
       @include screen('lg', max) {
+        @include responsiveMenu;
+      }
+
+      @include screen('lg', max) {
         .header_inner & {
           @include responsiveMenu;
         }
@@ -224,6 +228,8 @@
 
     &_active {
       @include screen('lg', max) {
+        @include responsiveActive;
+        
         .header_inner & {
           @include responsiveActive;
         }
