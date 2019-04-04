@@ -108,7 +108,7 @@ block content
 
             +e.bottom
               +e.empty
-              +button._big._blue Хочу такой проект
+              +button()(href="#contact")._big._blue.js-fancybox Хочу такой проект
               +link._blue._nounder._xl._center._nowrap
                 img(src='./assets/images/icon_share.svg')
                 | Поделиться
@@ -134,29 +134,8 @@ block content
                 +e.position Владимир
                 +e.name Симосненко Семен
 
-      +slide
-        +b.SECTION.case_process
-          +e.wrapper
-            .container.container_inner
-              +e.box
-                +e.title
-                  h1 Velvet
-                +e.P.subtitle Процесс создания сайта и приложения Velvet.
-                +e.buttons
-                  +link._nounder._lg._hover-btn.active Логотип
-                  +link._nounder._lg._hover-btn Приложение
-                  +link._nounder._lg._hover-btn Сайт
-                  +link._nounder._lg._hover-btn Продвижение
-                  +link._nounder._lg._hover-btn Описание
-                //+link-icon-right('open_link')._nounder._lite._xxl._white.case__link velvet.money
-        +b.SECTION.case2_process
-          img(src="./assets/images/case2_bg21.jpg").case__img_lg
-          img(src="./assets/images/case2_bg3.jpg").case2__img2.case__img_lg
-          img(src="./assets/images/case2_bg4.jpg").case2__img2.case__img_lg
-          img(src="./assets/images/case2_bg5.jpg").case2__img5.case__img_lg
-
-    a.case__next.case__arrow(href="index.html")
+    a.case__next.case__arrow(href="case_2.html")
       +icon('arrow_right')
-    a.case__prev.case__arrow(href="index.html")
+    a.case__prev.case__arrow(href="case_2.html")
       +icon('arrow_left')
   +footer

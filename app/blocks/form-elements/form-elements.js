@@ -10,18 +10,12 @@ import 'air-datepicker';
 // https://github.com/RobinHerbots/Inputmask
 import Inputmask from 'inputmask';
 
+import autosize from 'autosize';
+
 const $ = window.$;
 
 export function textareabox() {
-  const textarea = document.querySelector('.textareabox .textarea');
-  textarea.setAttribute('style', `height: ${textarea.scrollHeight}px;`);
-
-  function OnInput() {
-    this.style.height = '20px';
-    this.style.height = `${this.scrollHeight}px`;
-  }
-
-  textarea.addEventListener('input', OnInput, false);
+  autosize($('.js-autosize'));
 }
 
 export function selects() {
@@ -35,12 +29,12 @@ export function selects() {
   /* eslint-enable no-unused-vars */
 }
 
-$('.inputbox .input').focus(function () {
+$('.inputbox .input, .inputbox .textarea').focus(function () {
   const placeHolder = $(this).next('.inputbox__placeholder');
   placeHolder.addClass('inputbox__placeholder_active');
 });
 
-$('.inputbox .input').focusout(function () {
+$('.inputbox .input, .inputbox .textarea').focusout(function () {
   const placeHolder = $(this).next('.inputbox__placeholder');
   if ($(this).val().length >= 1) {
     placeHolder.addClass('inputbox__placeholder_active');
@@ -108,6 +102,7 @@ export function datepicker() {
 export function inputmask() {
   Inputmask({
     mask: '+7 (999) 999-99-99',
+    showMaskOnHover: false,
   }).mask('input[data-type="tel"]');
 
   Inputmask({

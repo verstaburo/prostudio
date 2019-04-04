@@ -24,7 +24,7 @@ mixin popup-contact()
             +inputbox.inputbox_noborder.contact__inputbox.contact__inputbox_half.contact__inputbox_flexstart
               //+input(placeholder="Плейсхолдер")
               .inputbox__title Бюджет:
-              +radio('budget', 'test', 'true') 100-200 тыс. руб
+              +radio('budget', 'test', true) 100-200 тыс. руб
               +radio('budget', 'test-2') от 500 тыс. руб
             +inputbox('Имя').contact__inputbox.contact__inputbox_half
               +input()
@@ -38,7 +38,7 @@ mixin popup-contact()
                 span.filename Добавить файл
                 img(src='./assets/images/addfile.svg').addfile
             +textareabox("Сообщение").contact__textarea
-              +textarea()
+              +textarea().js-autosize
           +e.text
             != 'Нажимая на кнопку  «Отправить», вы соглашаетесь на обработку персональных данных в соответсвии с '
             +link._blue Политикой конфиденциальности.

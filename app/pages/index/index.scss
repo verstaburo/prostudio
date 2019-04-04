@@ -1346,6 +1346,15 @@
       width: 400px;
     }
 
+    &_textarea {
+      height: auto;
+      min-height: 0;
+
+      .textarea {
+        padding-bottom: 0;
+      }
+    }
+
     &_third {
       width: 360px;
     }
@@ -1630,4 +1639,13 @@
 
 .noUi-state-tap .noUi-origin {
   transition: all $ease-main;
+}
+
+.contact {
+  &__textarea {
+    .textarea {
+      height: auto;
+      min-height: 20px;
+    }
+  }
 }

@@ -7,9 +7,6 @@ $padding: $height/2;
 .switcher {
   display: flex;
   align-items: center;
-  //width: $width;
-  //margin: 0 12px;
-
   &__box {
     box-sizing: border-box;
     border-radius: 100px;
@@ -18,9 +15,7 @@ $padding: $height/2;
     background: $color-main;
     padding: 0 $padding;
     margin: 0 12px;
-    //height: $height;
-    //display: inline-block;
-    // border: 1px solid rgba(black, .15);
+    display: block;
     transition: all $ease-main;
 
     input:checked + & {
@@ -38,6 +33,7 @@ $padding: $height/2;
     position: relative;
     transform: translate3d(-50%, 0, 0);
     transition: transform $ease;
+    display: block;
 
     input:checked ~ .switcher__box & {
       transform: translate3d(150%, 0, 0);
@@ -110,6 +106,7 @@ $padding: $height/2;
     @include text-button-md;
 
     transition: color $ease-main;
+    display: block;
 
     &_on {
       color: $color-main;

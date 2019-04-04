@@ -1,0 +1,35 @@
+extends ../../layouts/default
+
+block head
+  - var pageTitle = 'Prostudio'
+
+block content
+  +header._wide._inner
+  .slider-wrapper
+    +slider(false, false).slider_case
+      +slide
+        +b.SECTION.case_process
+          +e.wrapper
+            .container.container_inner
+              +e.box
+                +e.title
+                  h1 Velvet
+                +e.P.subtitle Процесс создания сайта и приложения Velvet.
+                +e.buttons
+                  +link._nounder._lg._hover-btn.active Логотип
+                  +link._nounder._lg._hover-btn Приложение
+                  +link._nounder._lg._hover-btn Сайт
+                  +link._nounder._lg._hover-btn Продвижение
+                  +link._nounder._lg._hover-btn Описание
+                //+link-icon-right('open_link')._nounder._lite._xxl._white.case__link velvet.money
+        +b.SECTION.case2_process
+          img(src="./assets/images/case2_bg21.jpg").case__img_lg
+          img(src="./assets/images/case2_bg3.jpg").case2__img2.case__img_lg
+          img(src="./assets/images/case2_bg4.jpg").case2__img2.case__img_lg
+          img(src="./assets/images/case2_bg5.jpg").case2__img5.case__img_lg
+
+    a.case__next.case__arrow(href="case.html")
+      +icon('arrow_right')
+    a.case__prev.case__arrow(href="case.html")
+      +icon('arrow_left')
+  +footer

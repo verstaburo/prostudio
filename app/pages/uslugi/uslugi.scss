@@ -634,6 +634,20 @@
   }
 }
 
+.uslugi-item__icon-right {
+  transition: fill $ease-main, opacity $ease-main, background-color $ease-main;
+
+  svg {
+    fill: inherit;
+  }
+
+  &:hover {
+    fill: white;
+    background-color: $color-main;
+    opacity: 1;
+  }
+}
+
 .uslugi-item_right .uslugi-item__icon-right {
   $b: &;
 

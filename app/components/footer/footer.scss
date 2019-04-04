@@ -410,3 +410,26 @@
     }
   }
 }
+
+.footer .link__text, .footer .link__text span {
+  border-bottom: 1px solid transparent;
+  transition: border-color $ease-main;
+}
+
+.footer .link:hover {
+  opacity: 1;
+
+  .link__text, .link__text span {
+    border-color: inherit;
+  }
+}
+
+.footer__doc .link__text {
+  border: 0 !important;
+}
+
+.footer .icons {
+  .link:hover {
+    opacity: .7;
+  }
+}

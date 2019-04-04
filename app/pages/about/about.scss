@@ -109,6 +109,7 @@
     display: flex;
     align-items: center;
     height: 66px;
+    pointer-events: none;
   }
 
   &__prev {
@@ -120,6 +121,11 @@
     border-radius: 50%;
     background: #fff;
     transition: all .5s ease;
+    pointer-events: all;
+
+    @include screen('md', max) {
+      opacity: .5;
+    }
 
     svg {
       width: 19px;
@@ -132,6 +138,7 @@
     &:hover {
       transform: scale(1.1);
       background: $color-main;
+      opacity: 1;
 
       svg {
         fill: #fff;
@@ -149,6 +156,11 @@
     border-radius: 50%;
     background: #fff;
     transition: all .5s ease;
+    pointer-events: all;
+
+    @include screen('md', max) {
+      opacity: .5;
+    }
 
     svg {
       width: 19px;
@@ -161,6 +173,7 @@
     &:hover {
       transform: scale(1.1);
       background: $color-main;
+      opacity: 1;
 
       svg {
         fill: #fff;

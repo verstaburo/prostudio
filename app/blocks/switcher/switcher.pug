@@ -1,9 +1,9 @@
 mixin switcher(on, off)
   +b.LABEL.switcher&attributes(attributes)
     input(type="checkbox")
-    .switcher__value.switcher__value_on= on
-    +e.DIV.box
-      +e.DIV.mover
-        +e.DIV.circle
-    .switcher__value.switcher__value_off= off
+    span.switcher__value.switcher__value_on= on
+    +e.box
+      +e.mover
+        +e.circle
+    span.switcher__value.switcher__value_off= off
   block
