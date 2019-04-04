@@ -141,7 +141,7 @@
                                     </table>
                                 </div>
                                 <div class="case3__bottom">
-                                    <div class="case3__empty"></div><a class="button button_big button_blue">Хочу такой проект</a><a class="link link_blue link_nounder link_xl link_center link_nowrap"><span class="link__text"><img src="./assets/images/icon_share.svg">Поделиться</span></a>
+                                    <div class="case3__empty"></div><a class="button button_big button_blue js-fancybox" href="#contact">Хочу такой проект</a><a class="link link_blue link_nounder link_xl link_center link_nowrap"><span class="link__text"><img src="./assets/images/icon_share.svg">Поделиться</span></a>
                                 </div>
                             </div>
                         </section>
@@ -177,27 +177,8 @@
                         </secion>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="slider__slide">
-                        <section class="case case_process">
-                            <div class="case__wrapper">
-                                <div class="container container_inner">
-                                    <div class="case__box">
-                                        <div class="case__title">
-                                            <h1>Velvet</h1>
-                                        </div>
-                                        <p class="case__subtitle">Процесс создания сайта и приложения Velvet.</p>
-                                        <div class="case__buttons"><a class="link link_nounder link_lg link_hover-btn active"><span class="link__text">Логотип</span></a><a class="link link_nounder link_lg link_hover-btn"><span class="link__text">Приложение</span></a><a class="link link_nounder link_lg link_hover-btn"><span class="link__text">Сайт</span></a><a class="link link_nounder link_lg link_hover-btn"><span class="link__text">Продвижение</span></a><a class="link link_nounder link_lg link_hover-btn"><span class="link__text">Описание</span></a></div>
-                                        <!--+link-icon-right('open_link')._nounder._lite._xxl._white.case__link velvet.money-->
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="case2 case2_process"><img class="case__img_lg" src="./assets/images/case2_bg21.jpg"><img class="case2__img2 case__img_lg" src="./assets/images/case2_bg3.jpg"><img class="case2__img2 case__img_lg" src="./assets/images/case2_bg4.jpg"><img class="case2__img5 case__img_lg" src="./assets/images/case2_bg5.jpg"></section>
-                    </div>
-                </div>
             </div>
-        </div><a class="case__next case__arrow" href="index.html"><svg><use xlink:href="assets/images/icon.svg#icon_arrow_right"></use></svg></a><a class="case__prev case__arrow" href="index.html"><svg><use xlink:href="assets/images/icon.svg#icon_arrow_left"></use></svg></a>
+        </div><a class="case__next case__arrow" href="case_2.html"><svg><use xlink:href="assets/images/icon.svg#icon_arrow_right"></use></svg></a><a class="case__prev case__arrow" href="case_2.html"><svg><use xlink:href="assets/images/icon.svg#icon_arrow_left"></use></svg></a>
     </div>
     <div class="footer">
         <div class="container container_inner footer__container">
@@ -231,15 +212,7 @@
                 </div><a class="link link_nounder link_xl link_blue footer__mail footer__mail_mobil" href="mailto:mail@prostudio.ru"><span class="link__text">mail@prostudio.ru</span></a>
                 <div class="apps apps_mobil">
                     <div class="apps__title">Cкачать приложение:</div><A class="footer__appstore" href="#"><img src="assets/images/appstore.svg" /></A>
-                </div><label class="switcher js-switcher-lang footer__switcher"><input type="checkbox" />
-                    <div class="switcher__value switcher__value_on">RU</div>
-                    <div class="switcher__box">
-                        <div class="switcher__mover">
-                            <div class="switcher__circle"></div>
-                        </div>
-                    </div>
-                    <div class="switcher__value switcher__value_off">EN</div>
-                </label>
+                </div><label class="switcher js-switcher-lang footer__switcher"><input type="checkbox" /><span class="switcher__value switcher__value_on">RU</span><span class="switcher__box"><span class="switcher__mover"><span class="switcher__circle"></span></span></span><span class="switcher__value switcher__value_off">EN</span></label>
                 <div class="footer__copyright footer__copyright_mobil">© 2009-2017 ООО «Цифровая империя»</div>
             </div>
         </div>
@@ -262,7 +235,7 @@
                         </div>
                         <div class="inputbox inputbox inputbox_noborder contact__inputbox contact__inputbox contact__inputbox_half contact__inputbox contact__inputbox_flexstart">
                             <!--+input(placeholder="Плейсхолдер")-->
-                            <div class="inputbox__title">Бюджет:</div><label class="checkradio"><input class="checkradio__input" name="budget" value="test" checked="true" type="radio" />
+                            <div class="inputbox__title">Бюджет:</div><label class="checkradio"><input class="checkradio__input" name="budget" value="test" checked="checked" type="radio" />
                                 <!--+e.SPAN.box--><span class="checkradio__content">100-200 тыс. руб</span></label><label class="checkradio"><input class="checkradio__input" name="budget" value="test-2" type="radio" />
                                 <!--+e.SPAN.box--><span class="checkradio__content">от 500 тыс. руб</span></label>
                             <div class="inputbox__placeholder"></div>
@@ -279,7 +252,7 @@
                         <div class="inputbox inputbox_file contact__inputbox contact__inputbox contact__inputbox_half"><label><input class="input" type="file" /><span class="filename">Добавить файл</span><img class="addfile" src="./assets/images/addfile.svg" /></label>
                             <div class="inputbox__placeholder"></div>
                         </div>
-                        <div class="textareabox contact__textarea"><textarea class="textarea"></textarea>
+                        <div class="textareabox contact__textarea"><textarea class="textarea js-autosize"></textarea>
                             <div class="textareabox__placeholder">Сообщение</div>
                         </div>
                     </div>

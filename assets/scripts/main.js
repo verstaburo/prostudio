@@ -137,23 +137,23 @@ $(document).ready(function () {
     $('.contact__step2').removeClass('is-active');
   });
 
-  $('.uslugi-item_left .uslugi-item__icon-right').hover(function (){
-    $(this).parents('.uslugi-item').find('.uslugi-item__img-wrap').css({
-      transform: 'translate3d(10px, 0, 0)'
-    });
-  }, function () {
-    $(this).parents('.uslugi-item').find('.uslugi-item__img-wrap').css({
-      transform: 'translate3d(0, 0, 0)'
-    });
-  });
-
-  if ($('.uslugi-item__icon-right').length > 0) {
-    $('.uslugi-item__icon-right, .uslugi-item__img-wrap').hover(function () {
-      $(this).parents('.uslugi-item').find('.uslugi-item__img-wrap, .uslugi-item__icon-right').addClass('is-active');
-    }, function () {
-      $(this).parents('.uslugi-item').find('.uslugi-item__img-wrap, .uslugi-item__icon-right').removeClass('is-active');
-    });
-  }
+  //$('.uslugi-item_left .uslugi-item__icon-right').hover(function (){
+  //  $(this).parents('.uslugi-item').find('.uslugi-item__img-wrap').css({
+  //    transform: 'translate3d(10px, 0, 0)'
+  //  });
+  //}, function () {
+  //  $(this).parents('.uslugi-item').find('.uslugi-item__img-wrap').css({
+  //    transform: 'translate3d(0, 0, 0)'
+  //  });
+  //});
+//
+  //if ($('.uslugi-item__icon-right').length > 0) {
+  //  $('.uslugi-item__icon-right, .uslugi-item__img-wrap').hover(function () {
+  //    $(this).parents('.uslugi-item').find('.uslugi-item__img-wrap, .uslugi-item__icon-right').addClass('is-active');
+  //  }, function () {
+  //    $(this).parents('.uslugi-item').find('.uslugi-item__img-wrap, .uslugi-item__icon-right').removeClass('is-active');
+  //  });
+  //}
 
   if (navigator.userAgent.indexOf('Mac') > 0) {
     $('body').addClass('mac-os');
