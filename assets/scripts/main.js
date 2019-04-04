@@ -25,8 +25,6 @@ var
 function checkSize() {
   if (screenSize < 750) siteWidth = 480;
   if (screenSize >= 750) siteWidth = 768;
-  if (screenSize >= 1024) siteWidth = 1366;
-  if (screenSize >= 1366) siteWidth = 1920;
 }
 
 checkSize();
