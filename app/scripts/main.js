@@ -41,7 +41,7 @@ function headerIndex () {
   var header = $(document).find('.header_index');
 
   if ($(window).width() < 1310) {
-    header.addClass('header_wide header_inner');
+    header.addClass('header_wide header_inner').removeClass('header_index');
   } else {
     header.removeClass('header_wide header_inner');
   }
